@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C5C7684-69DA-40E9-9F49-03F61681A3BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PL.RentACar</RootNamespace>
+    <AssemblyName>PL.RentACar</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaSayfa.Designer.cs">
+      <DependentUpon>frmAnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAracIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAracIslemleri.Designer.cs">
+      <DependentUpon>frmAracIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAracSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAracSorgulama.Designer.cs">
+      <DependentUpon>frmAracSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGiris.Designer.cs">
+      <DependentUpon>frmGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKasaDetaylari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKasaDetaylari.Designer.cs">
+      <DependentUpon>frmKasaDetaylari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKirala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKirala.Designer.cs">
+      <DependentUpon>frmKirala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKullaniciTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKullaniciTanimlama.Designer.cs">
+      <DependentUpon>frmKullaniciTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaasOdeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaasOdeme.Designer.cs">
+      <DependentUpon>frmMaasOdeme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMusteriIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMusteriIslemleri.Designer.cs">
+      <DependentUpon>frmMusteriIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMusteriSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMusteriSorgulama.Designer.cs">
+      <DependentUpon>frmMusteriSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonelIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersonelIslemleri.Designer.cs">
+      <DependentUpon>frmPersonelIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonelSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersonelSorgulama.Designer.cs">
+      <DependentUpon>frmPersonelSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRaporlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRaporlar.Designer.cs">
+      <DependentUpon>frmRaporlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSozlesmeKayitAc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSozlesmeKayitAc.Designer.cs">
+      <DependentUpon>frmSozlesmeKayitAc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSozlesmeSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSozlesmeSorgulama.Designer.cs">
+      <DependentUpon>frmSozlesmeSorgulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeslimAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeslimAl.Designer.cs">
+      <DependentUpon>frmTeslimAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmGiris.resx">
+      <DependentUpon>frmGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BLL.RentACar\BLL.RentACar.csproj">
+      <Project>{b044344a-2fdb-43c3-908b-35f81641b99d}</Project>
+      <Name>BLL.RentACar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL.RentACar\DAL.RentACar.csproj">
+      <Project>{d49ad391-ba24-4189-b4de-6fa87b2952ee}</Project>
+      <Name>DAL.RentACar</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Icon\Custom-Icon-Design-Pretty-Office-8-User-blue.ico" />
+    <Content Include="Images\Icon\Double-J-Design-Origami-Colored-Pencil-Blue-cross.ico" />
+    <Content Include="Images\Icon\Graphicloads-Flat-Finance-Person.ico" />
+    <Content Include="Images\Icon\Iconsmind-Outline-Key.ico" />
+    <Content Include="Images\Png\AnasayfaArkaplan.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
