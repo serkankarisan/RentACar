@@ -128,9 +128,12 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
-            this.lvDetaylar.Location = new System.Drawing.Point(31, 62);
+            this.lvDetaylar.ContextMenuStrip = this.cmView;
+            this.lvDetaylar.LargeImageList = this.ilLarge;
+            this.lvDetaylar.Location = new System.Drawing.Point(8, 57);
             this.lvDetaylar.Name = "lvDetaylar";
-            this.lvDetaylar.Size = new System.Drawing.Size(767, 272);
+            this.lvDetaylar.Size = new System.Drawing.Size(793, 272);
+            this.lvDetaylar.SmallImageList = this.ilSmall;
             this.lvDetaylar.TabIndex = 7;
             this.lvDetaylar.UseCompatibleStateImageBehavior = false;
             this.lvDetaylar.View = System.Windows.Forms.View.Details;
