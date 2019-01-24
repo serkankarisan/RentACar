@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AracRepository.cs" />
+    <Compile Include="Repositories\GelirGiderRepository.cs" />
     <Compile Include="Repositories\Genel.cs" />
     <Compile Include="Repositories\Giris.cs" />
     <Compile Include="Repositories\IAracRepository.cs" />
@@ -63,6 +65,14 @@
     <Compile Include="Repositories\ISozlesmeDetayRepository.cs" />
     <Compile Include="Repositories\ISozlesmeRepository.cs" />
     <Compile Include="Repositories\IYetkiRepository.cs" />
+    <Compile Include="Repositories\KasaHareketRepository.cs" />
+    <Compile Include="Repositories\KullaniciRepository.cs" />
+    <Compile Include="Repositories\MusteriHareketRepository.cs" />
+    <Compile Include="Repositories\MusteriRepository.cs" />
+    <Compile Include="Repositories\PersonelRepository.cs" />
+    <Compile Include="Repositories\SozlesmeDetayRepository.cs" />
+    <Compile Include="Repositories\SozlesmeRepository.cs" />
+    <Compile Include="Repositories\YetkiRepository.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
