@@ -39,11 +39,20 @@
             this.ilLarge = new System.Windows.Forms.ImageList(this.components);
             this.ilSmall = new System.Windows.Forms.ImageList(this.components);
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox18 = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lvDetaylar = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -54,16 +63,6 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbMarkalar = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.cmView.SuspendLayout();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -150,6 +149,40 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Onay";
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(406, 307);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(122, 17);
+            this.label23.TabIndex = 199;
+            this.label23.Text = "Toplam Tutar :";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(553, 304);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(248, 25);
+            this.textBox19.TabIndex = 198;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(19, 307);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(103, 17);
+            this.label22.TabIndex = 197;
+            this.label22.Text = "Araç Sayısı :";
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(133, 304);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(100, 25);
+            this.textBox18.TabIndex = 196;
+            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -210,11 +243,57 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Araç Seçim";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.Location = new System.Drawing.Point(546, 352);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(257, 35);
+            this.button1.TabIndex = 201;
+            this.button1.Text = "Sepete Ekle";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(182, 378);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(274, 26);
+            this.dateTimePicker1.TabIndex = 200;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(17, 386);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(89, 18);
+            this.label11.TabIndex = 199;
+            this.label11.Text = "Bitiş Tarihi";
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Location = new System.Drawing.Point(182, 351);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(274, 26);
+            this.dateTimePicker4.TabIndex = 198;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(17, 359);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(129, 18);
+            this.label12.TabIndex = 197;
+            this.label12.Text = "Başlangıç Tarihi";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 27);
+            this.label2.Location = new System.Drawing.Point(11, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 18);
             this.label2.TabIndex = 8;
@@ -231,7 +310,7 @@
             this.columnHeader5});
             this.lvDetaylar.ContextMenuStrip = this.cmView;
             this.lvDetaylar.LargeImageList = this.ilLarge;
-            this.lvDetaylar.Location = new System.Drawing.Point(8, 57);
+            this.lvDetaylar.Location = new System.Drawing.Point(10, 75);
             this.lvDetaylar.Name = "lvDetaylar";
             this.lvDetaylar.Size = new System.Drawing.Size(793, 266);
             this.lvDetaylar.SmallImageList = this.ilSmall;
@@ -277,7 +356,7 @@
             "Audi",
             "Renault",
             "Toyota"});
-            this.cbMarkalar.Location = new System.Drawing.Point(98, 23);
+            this.cbMarkalar.Location = new System.Drawing.Point(100, 41);
             this.cbMarkalar.Name = "cbMarkalar";
             this.cbMarkalar.Size = new System.Drawing.Size(153, 28);
             this.cbMarkalar.TabIndex = 6;
@@ -285,7 +364,6 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -295,95 +373,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(817, 450);
             this.tabControl1.TabIndex = 1;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(180, 360);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(274, 26);
-            this.dateTimePicker1.TabIndex = 200;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 368);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(89, 18);
-            this.label11.TabIndex = 199;
-            this.label11.Text = "Bitiş Tarihi";
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(180, 333);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(274, 26);
-            this.dateTimePicker4.TabIndex = 198;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(15, 341);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(129, 18);
-            this.label12.TabIndex = 197;
-            this.label12.Text = "Başlangıç Tarihi";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(544, 334);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(257, 35);
-            this.button1.TabIndex = 201;
-            this.button1.Text = "Sepete Ekle";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(19, 307);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(103, 17);
-            this.label22.TabIndex = 197;
-            this.label22.Text = "Araç Sayısı :";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(133, 304);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(100, 25);
-            this.textBox18.TabIndex = 196;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(406, 307);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(122, 17);
-            this.label23.TabIndex = 199;
-            this.label23.Text = "Toplam Tutar :";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(553, 304);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(248, 25);
-            this.textBox19.TabIndex = 198;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(809, 420);
-            this.tabPage2.TabIndex = 6;
-            this.tabPage2.Text = "Müşteri Seçim";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // frmKirala
             // 
@@ -438,6 +427,5 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TabPage tabPage2;
     }
 }
