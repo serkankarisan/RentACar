@@ -154,6 +154,12 @@
     <EmbeddedResource Include="frmGiris.resx">
       <DependentUpon>frmGiris.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMusteriIslemleri.resx">
+      <DependentUpon>frmMusteriIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMusteriSorgulama.resx">
+      <DependentUpon>frmMusteriSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -162,6 +168,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -194,6 +201,35 @@
     <Content Include="Images\Icon\Graphicloads-Flat-Finance-Person.ico" />
     <Content Include="Images\Icon\Iconsmind-Outline-Key.ico" />
     <Content Include="Images\Png\AnasayfaArkaplan.jpg" />
+    <Content Include="Images\Png\button_cancel.png" />
+    <Content Include="Images\Png\button_ok.png" />
+    <Content Include="Images\Png\Configuration Settings.png" />
+    <Content Include="Images\Png\edit_add.png" />
+    <Content Include="Images\Png\edit_remove.png" />
+    <Content Include="Images\Png\Error.png" />
+    <Content Include="Images\Png\exec.png" />
+    <Content Include="Images\Png\exit.png" />
+    <Content Include="Images\Png\Floppy Drive 3.png" />
+    <Content Include="Images\Png\Floppy Drive 5.png" />
+    <Content Include="Images\Png\Floppy.png" />
+    <Content Include="Images\Png\Floppy22.png" />
+    <Content Include="Images\Png\folder_home.png" />
+    <Content Include="Images\Png\LaST %28Cobalt%29 Floppy.png" />
+    <Content Include="Images\Png\LaST %28Cobalt%29 Run.png" />
+    <Content Include="Images\Png\reload.png" />
+    <Content Include="Images\Png\restart.png" />
+    <Content Include="Images\Png\right_symbol.png" />
+    <Content Include="Images\Png\search22.png" />
+    <Content Include="Images\Png\Search44.png" />
+    <Content Include="Images\Png\tab.png" />
+    <Content Include="Images\Png\tab_new.png" />
+    <Content Include="Images\Png\Users.png" />
+    <Content Include="Images\Png\utils_222.png" />
+    <Content Include="Images\Png\viewmag.png" />
+    <Content Include="Images\Png\windowlist.png" />
+    <Content Include="Images\Png\window_fullscreen.png" />
+    <Content Include="Images\Png\window_new.png" />
+    <Content Include="Images\Png\window_nofullscreen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
