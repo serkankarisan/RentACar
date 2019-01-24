@@ -97,5 +97,7 @@ namespace PL.RentACar
             lvDetaylar.View = View.Tile;
 
         }
+
+       
     }
 }
