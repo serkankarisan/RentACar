@@ -248,16 +248,16 @@
             this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Location = new System.Drawing.Point(546, 352);
+            this.button1.Location = new System.Drawing.Point(546, 334);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(257, 35);
             this.button1.TabIndex = 201;
-            this.button1.Text = "Sepete Ekle";
+            this.button1.Text = "Sözleşmeye Ekle";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(182, 378);
+            this.dateTimePicker1.Location = new System.Drawing.Point(182, 360);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(274, 26);
             this.dateTimePicker1.TabIndex = 200;
@@ -266,7 +266,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(17, 386);
+            this.label11.Location = new System.Drawing.Point(17, 368);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(89, 18);
             this.label11.TabIndex = 199;
@@ -274,7 +274,7 @@
             // 
             // dateTimePicker4
             // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(182, 351);
+            this.dateTimePicker4.Location = new System.Drawing.Point(182, 333);
             this.dateTimePicker4.Name = "dateTimePicker4";
             this.dateTimePicker4.Size = new System.Drawing.Size(274, 26);
             this.dateTimePicker4.TabIndex = 198;
@@ -283,7 +283,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(17, 359);
+            this.label12.Location = new System.Drawing.Point(17, 341);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(129, 18);
             this.label12.TabIndex = 197;
@@ -293,7 +293,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 45);
+            this.label2.Location = new System.Drawing.Point(11, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 18);
             this.label2.TabIndex = 8;
@@ -310,7 +310,7 @@
             this.columnHeader5});
             this.lvDetaylar.ContextMenuStrip = this.cmView;
             this.lvDetaylar.LargeImageList = this.ilLarge;
-            this.lvDetaylar.Location = new System.Drawing.Point(10, 75);
+            this.lvDetaylar.Location = new System.Drawing.Point(10, 57);
             this.lvDetaylar.Name = "lvDetaylar";
             this.lvDetaylar.Size = new System.Drawing.Size(793, 266);
             this.lvDetaylar.SmallImageList = this.ilSmall;
@@ -356,7 +356,7 @@
             "Audi",
             "Renault",
             "Toyota"});
-            this.cbMarkalar.Location = new System.Drawing.Point(100, 41);
+            this.cbMarkalar.Location = new System.Drawing.Point(100, 23);
             this.cbMarkalar.Name = "cbMarkalar";
             this.cbMarkalar.Size = new System.Drawing.Size(153, 28);
             this.cbMarkalar.TabIndex = 6;
