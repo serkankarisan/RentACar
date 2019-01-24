@@ -19,7 +19,12 @@ namespace PL.RentACar
 
         private void btnCikis_Click(object sender, EventArgs e)
         {
-            this.Parent.FindForm().Close();
+            Application.Exit();
+        }
+
+        private void pnlHeader_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
