@@ -166,6 +166,12 @@
     <EmbeddedResource Include="frmAnaSayfa.resx">
       <DependentUpon>frmAnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAracIslemleri.resx">
+      <DependentUpon>frmAracIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAracSorgulama.resx">
+      <DependentUpon>frmAracSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGiris.resx">
       <DependentUpon>frmGiris.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmKirala.resx">
       <DependentUpon>frmKirala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKullaniciIslemleri.resx">
+      <DependentUpon>frmKullaniciIslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMaasOdeme.resx">
       <DependentUpon>frmMaasOdeme.cs</DependentUpon>
@@ -186,6 +195,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMusteriSorgulama.resx">
       <DependentUpon>frmMusteriSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPersonelIslemleri.resx">
+      <DependentUpon>frmPersonelIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPersonelSorgulama.resx">
+      <DependentUpon>frmPersonelSorgulama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRaporlar.resx">
       <DependentUpon>frmRaporlar.cs</DependentUpon>
