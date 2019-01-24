@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKullaniciTanimlama));
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -67,10 +66,11 @@
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.tsYetki = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
+            this.tsYetki = new System.Windows.Forms.ToolStripLabel();
+            this.btnCikis = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,19 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.Color.Brown;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.White;
-            this.textBox8.Location = new System.Drawing.Point(998, 0);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(56, 24);
-            this.textBox8.TabIndex = 27;
-            this.textBox8.Text = "X";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel4
             // 
@@ -437,12 +424,6 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(88, 24);
             this.toolStripLabel2.Text = "                           ";
             // 
-            // tsYetki
-            // 
-            this.tsYetki.Name = "tsYetki";
-            this.tsYetki.Size = new System.Drawing.Size(65, 24);
-            this.tsYetki.Text = "           Yetki";
-            // 
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
@@ -461,13 +442,32 @@
             this.toolStripLabel6.Size = new System.Drawing.Size(88, 24);
             this.toolStripLabel6.Text = "                           ";
             // 
+            // tsYetki
+            // 
+            this.tsYetki.Name = "tsYetki";
+            this.tsYetki.Size = new System.Drawing.Size(65, 24);
+            this.tsYetki.Text = "           Yetki";
+            // 
+            // btnCikis
+            // 
+            this.btnCikis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCikis.BackColor = System.Drawing.Color.Transparent;
+            this.btnCikis.FlatAppearance.BorderSize = 0;
+            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
+            this.btnCikis.Location = new System.Drawing.Point(1029, 0);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(25, 27);
+            this.btnCikis.TabIndex = 9;
+            this.btnCikis.UseVisualStyleBackColor = false;
+            // 
             // frmKullaniciTanimlama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1054, 537);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -496,8 +496,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Panel panel3;
@@ -539,5 +537,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel5;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel6;
+        private System.Windows.Forms.Button btnCikis;
     }
 }
