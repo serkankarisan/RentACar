@@ -16,7 +16,7 @@ namespace PL.RentACar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMusteriSorgulama());
+            Application.Run(new frmAnaSayfa());
         }
     }
 }

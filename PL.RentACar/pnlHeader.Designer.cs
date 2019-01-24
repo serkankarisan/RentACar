@@ -48,6 +48,7 @@
             this.btnCikis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCikis.BackColor = System.Drawing.Color.Transparent;
             this.btnCikis.FlatAppearance.BorderSize = 0;
+            this.btnCikis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikis.Image = global::PL.RentACar.Properties.Resources.Double_J_Design_Origami_Colored_Pencil_Blue_cross;
             this.btnCikis.Location = new System.Drawing.Point(772, 3);
@@ -55,6 +56,7 @@
             this.btnCikis.Size = new System.Drawing.Size(25, 25);
             this.btnCikis.TabIndex = 9;
             this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // pnlHeader
             // 

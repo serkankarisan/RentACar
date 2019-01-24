@@ -28,7 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pnlHeader1 = new PL.RentACar.pnlHeader();
             this.SuspendLayout();
+            // 
+            // pnlHeader1
+            // 
+            this.pnlHeader1.BackColor = System.Drawing.Color.Lavender;
+            this.pnlHeader1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.pnlHeader1.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlHeader1.Name = "pnlHeader1";
+            this.pnlHeader1.Size = new System.Drawing.Size(792, 30);
+            this.pnlHeader1.TabIndex = 0;
             // 
             // frmAnaSayfa
             // 
@@ -36,6 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(792, 435);
+            this.Controls.Add(this.pnlHeader1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -47,5 +60,7 @@
         }
 
         #endregion
+
+        private pnlHeader pnlHeader1;
     }
 }
