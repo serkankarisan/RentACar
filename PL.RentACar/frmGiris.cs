@@ -1,4 +1,5 @@
-﻿using DAL.RentACar.Context;
+﻿using BLL.RentACar.Repositories;
+using DAL.RentACar.Context;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,11 +18,10 @@ namespace PL.RentACar
         {
             InitializeComponent();
         }
-        RentContext ent = new RentContext();
+        Giris g = new Giris();
         private void frmGiris_Load(object sender, EventArgs e)
         {
-            ent.Database.CreateIfNotExists();
-            //dataGridView1.DataSource = ent.Kullanicilar.ToList();
+
         }
 
         private void btnCikis_Click(object sender, EventArgs e)
@@ -31,20 +31,69 @@ namespace PL.RentACar
 
         private void txtKullaniciAdi_Click(object sender, EventArgs e)
         {
-            if (txtKullaniciAdi.Text== "Kullanici Adi")
-            {
-                txtKullaniciAdi.Clear();
-            }
+
         }
 
         private void txtSifre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
+            if (g.KullaniciKontrol(txtKullaniciAdi.Text,txtSifre.Text))
+            {
+                frmAnaSayfa frm = new frmAnaSayfa();
+                frm.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("Hatalı Şifre veya Kullanıcı Adı!!!", "Giriş Yapılamadı!!!");
+            }
+        }
+
+        private void txtSifre_Enter(object sender, EventArgs e)
         {
             if (txtSifre.Text == "Sifre")
             {
                 txtSifre.Clear();
             }
+            txtSifre.PasswordChar = '*';
+
         }
 
-       
+        private void txtKullaniciAdi_Enter(object sender, EventArgs e)
+        {
+            if (txtKullaniciAdi.Text == "Kullanici Adi")
+            {
+                txtKullaniciAdi.Clear();
+            }
+        }
+
+
+
+        //public void FormAcikmi(Form AcilacakForm)
+        //{
+        //    bool Varmi = false;
+        //    for (int i = 0; i < this.MdiChildren.Length; i++)
+        //    {
+        //        if (AcilacakForm.Name == MdiChildren[i].Name)
+        //        {
+        //            MdiChildren[i].Focus();
+        //            Varmi = true;
+        //        }
+        //    }
+        //    if (Varmi == false)
+        //    {
+        //        AcilacakForm.MdiParent = this;
+        //        AcilacakForm.Show();
+        //    }
+        //    else
+        //    {
+        //        AcilacakForm.Dispose(); //Nesne hafızadan atılır.
+        //    }
+        //}
     }
 }
