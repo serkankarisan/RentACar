@@ -1,6 +1,6 @@
 ﻿namespace PL.RentACar
 {
-    partial class frmKullaniciTanimlama
+    partial class frmKullaniciIslemleri
     {
         /// <summary>
         /// Required designer variable.

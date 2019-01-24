@@ -89,17 +89,23 @@
     <Compile Include="frmKirala.Designer.cs">
       <DependentUpon>frmKirala.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKullaniciTanimlama.cs">
+    <Compile Include="frmKullaniciIslemleri.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKullaniciTanimlama.Designer.cs">
-      <DependentUpon>frmKullaniciTanimlama.cs</DependentUpon>
+    <Compile Include="frmKullaniciIslemleri.Designer.cs">
+      <DependentUpon>frmKullaniciIslemleri.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMaasOdeme.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMaasOdeme.Designer.cs">
       <DependentUpon>frmMaasOdeme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMusteriDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMusteriDetay.Designer.cs">
+      <DependentUpon>frmMusteriDetay.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMusteriIslemleri.cs">
       <SubType>Form</SubType>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMaasOdeme.resx">
       <DependentUpon>frmMaasOdeme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMusteriDetay.resx">
+      <DependentUpon>frmMusteriDetay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMusteriIslemleri.resx">
       <DependentUpon>frmMusteriIslemleri.cs</DependentUpon>

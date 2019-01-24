@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PL.RentACar
 {
-    public partial class frmKullaniciTanimlama : Form
+    public partial class frmMusteriDetay : Form
     {
-        public frmKullaniciTanimlama()
+        public frmMusteriDetay()
         {
             InitializeComponent();
         }

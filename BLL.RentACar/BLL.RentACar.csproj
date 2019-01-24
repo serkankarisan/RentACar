@@ -48,12 +48,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IAracRepository.cs" />
+    <Compile Include="Repositories\IGelirGiderRepository.cs" />
+    <Compile Include="Repositories\IGiris.cs" />
+    <Compile Include="Repositories\IKasaHareketRepository.cs" />
+    <Compile Include="Repositories\IKullaniciRepository.cs" />
+    <Compile Include="Repositories\IMusteriHareketRepository.cs" />
+    <Compile Include="Repositories\IMusteriRepository.cs" />
+    <Compile Include="Repositories\IPersonelRepository.cs" />
+    <Compile Include="Repositories\ISozlesmeDetayRepository.cs" />
+    <Compile Include="Repositories\ISozlesmeRepository.cs" />
+    <Compile Include="Repositories\IYetkiRepository.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
