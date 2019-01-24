@@ -163,11 +163,32 @@
     <EmbeddedResource Include="frmGiris.resx">
       <DependentUpon>frmGiris.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmKasaDetaylari.resx">
+      <DependentUpon>frmKasaDetaylari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKirala.resx">
+      <DependentUpon>frmKirala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaasOdeme.resx">
+      <DependentUpon>frmMaasOdeme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMusteriIslemleri.resx">
       <DependentUpon>frmMusteriIslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMusteriSorgulama.resx">
       <DependentUpon>frmMusteriSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRaporlar.resx">
+      <DependentUpon>frmRaporlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSozlesmeKayitAc.resx">
+      <DependentUpon>frmSozlesmeKayitAc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSozlesmeSorgulama.resx">
+      <DependentUpon>frmSozlesmeSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeslimAl.resx">
+      <DependentUpon>frmTeslimAl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pnlHeader.resx">
       <DependentUpon>pnlHeader.cs</DependentUpon>

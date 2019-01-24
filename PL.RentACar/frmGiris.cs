@@ -20,8 +20,7 @@ namespace PL.RentACar
         RentContext ent = new RentContext();
         private void frmGiris_Load(object sender, EventArgs e)
         {
-            ent.Database.CreateIfNotExists();
-            //dataGridView1.DataSource = ent.Kullanicilar.ToList();
+
         }
 
         private void btnCikis_Click(object sender, EventArgs e)

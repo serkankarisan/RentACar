@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMusteriSorgulama));
             this.label8 = new System.Windows.Forms.Label();
             this.txtEhliyetNo = new System.Windows.Forms.TextBox();
             this.dgvMusteriler = new System.Windows.Forms.DataGridView();
@@ -37,6 +38,7 @@
             this.txtTCKNo = new System.Windows.Forms.TextBox();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtAd = new System.Windows.Forms.TextBox();
+            this.btnCikis = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,12 +118,27 @@
             this.txtAd.Size = new System.Drawing.Size(100, 26);
             this.txtAd.TabIndex = 78;
             // 
+            // btnCikis
+            // 
+            this.btnCikis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCikis.BackColor = System.Drawing.Color.Transparent;
+            this.btnCikis.FlatAppearance.BorderSize = 0;
+            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
+            this.btnCikis.Location = new System.Drawing.Point(803, 12);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(25, 25);
+            this.btnCikis.TabIndex = 87;
+            this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
+            // 
             // frmMusteriSorgulama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(840, 425);
+            this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtEhliyetNo);
             this.Controls.Add(this.dgvMusteriler);
@@ -153,5 +170,6 @@
         private System.Windows.Forms.TextBox txtTCKNo;
         private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.Button btnCikis;
     }
 }
