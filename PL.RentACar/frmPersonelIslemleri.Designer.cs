@@ -64,6 +64,8 @@
             this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel9 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel10 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -73,76 +75,76 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 301);
+            this.label6.Location = new System.Drawing.Point(30, 271);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 25);
+            this.label6.Size = new System.Drawing.Size(48, 20);
             this.label6.TabIndex = 27;
             this.label6.Text = "Maaş";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 191);
+            this.label5.Location = new System.Drawing.Point(27, 161);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 25);
+            this.label5.Size = new System.Drawing.Size(51, 20);
             this.label5.TabIndex = 26;
             this.label5.Text = "Adres";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 153);
+            this.label4.Location = new System.Drawing.Point(23, 123);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 25);
+            this.label4.Size = new System.Drawing.Size(53, 20);
             this.label4.TabIndex = 25;
             this.label4.Text = "E-Mail";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 115);
+            this.label3.Location = new System.Drawing.Point(13, 85);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 25);
+            this.label3.Size = new System.Drawing.Size(62, 20);
             this.label3.TabIndex = 24;
             this.label3.Text = "Telefon";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 77);
+            this.label2.Location = new System.Drawing.Point(22, 47);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 25);
+            this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 23;
             this.label2.Text = "Soyad";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 39);
+            this.label1.Location = new System.Drawing.Point(54, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 25);
+            this.label1.Size = new System.Drawing.Size(29, 20);
             this.label1.TabIndex = 22;
             this.label1.Text = "Ad";
             // 
             // textBox6
             // 
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(98, 298);
+            this.textBox6.Location = new System.Drawing.Point(99, 268);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(149, 30);
+            this.textBox6.Size = new System.Drawing.Size(149, 26);
             this.textBox6.TabIndex = 21;
             // 
             // textBox5
             // 
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(98, 189);
+            this.textBox5.Location = new System.Drawing.Point(99, 159);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
@@ -152,42 +154,42 @@
             // textBox4
             // 
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(98, 151);
+            this.textBox4.Location = new System.Drawing.Point(99, 121);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(203, 30);
+            this.textBox4.Size = new System.Drawing.Size(203, 26);
             this.textBox4.TabIndex = 19;
             // 
             // textBox3
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(98, 113);
+            this.textBox3.Location = new System.Drawing.Point(99, 83);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 30);
+            this.textBox3.Size = new System.Drawing.Size(149, 26);
             this.textBox3.TabIndex = 18;
             // 
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(98, 75);
+            this.textBox2.Location = new System.Drawing.Point(99, 45);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 30);
+            this.textBox2.Size = new System.Drawing.Size(149, 26);
             this.textBox2.TabIndex = 17;
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(98, 37);
+            this.textBox1.Location = new System.Drawing.Point(99, 7);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 30);
+            this.textBox1.Size = new System.Drawing.Size(149, 26);
             this.textBox1.TabIndex = 16;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(389, 71);
@@ -198,7 +200,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.Azure;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
@@ -212,29 +214,29 @@
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Location = new System.Drawing.Point(29, 107);
+            this.panel1.Location = new System.Drawing.Point(30, 138);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(325, 373);
+            this.panel1.Size = new System.Drawing.Size(325, 308);
             this.panel1.TabIndex = 29;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel4.BackColor = System.Drawing.Color.Azure;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.textBox8);
-            this.panel4.Location = new System.Drawing.Point(65, 71);
+            this.panel4.Location = new System.Drawing.Point(66, 102);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(253, 30);
             this.panel4.TabIndex = 31;
             // 
             // textBox8
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.textBox8.BackColor = System.Drawing.Color.Azure;
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox8.Location = new System.Drawing.Point(22, 3);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(206, 20);
+            this.textBox8.Size = new System.Drawing.Size(206, 16);
             this.textBox8.TabIndex = 1;
             this.textBox8.Text = "PERSONEL BİLGİLERİ";
             this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -247,14 +249,14 @@
             this.textBox9.ForeColor = System.Drawing.Color.White;
             this.textBox9.Location = new System.Drawing.Point(998, 0);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(56, 28);
+            this.textBox9.Size = new System.Drawing.Size(56, 24);
             this.textBox9.TabIndex = 34;
             this.textBox9.Text = "X";
             this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // toolStrip2
             // 
-            this.toolStrip2.BackColor = System.Drawing.Color.White;
+            this.toolStrip2.BackColor = System.Drawing.Color.MediumTurquoise;
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator8,
@@ -272,8 +274,10 @@
             this.toolStripLabel6,
             this.toolStripLabel7,
             this.toolStripLabel8,
-            this.toolStripLabel9,
-            this.toolStripLabel10});
+            this.toolStripLabel10,
+            this.toolStripLabel5,
+            this.toolStripLabel2,
+            this.toolStripLabel9});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(1054, 27);
@@ -288,7 +292,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(92, 24);
+            this.toolStripLabel1.Size = new System.Drawing.Size(73, 24);
             this.toolStripLabel1.Text = "Kullanıcı Adı";
             // 
             // toolStripSeparator9
@@ -311,7 +315,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(61, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(53, 24);
             this.toolStripButton1.Text = "&Yeni";
             // 
             // toolStripSeparator12
@@ -325,7 +329,7 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(79, 24);
+            this.toolStripButton2.Size = new System.Drawing.Size(67, 24);
             this.toolStripButton2.Text = "&Kaydet";
             // 
             // toolStripSeparator13
@@ -339,7 +343,7 @@
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(85, 24);
+            this.toolStripButton3.Size = new System.Drawing.Size(71, 24);
             this.toolStripButton3.Text = "&Değiştir";
             // 
             // toolStripSeparator14
@@ -353,44 +357,56 @@
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(49, 24);
+            this.toolStripButton4.Size = new System.Drawing.Size(43, 24);
             this.toolStripButton4.Text = "&Sil";
             // 
             // toolStripLabel6
             // 
             this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(117, 24);
+            this.toolStripLabel6.Size = new System.Drawing.Size(88, 24);
             this.toolStripLabel6.Text = "                           ";
             // 
             // toolStripLabel7
             // 
             this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(117, 24);
+            this.toolStripLabel7.Size = new System.Drawing.Size(88, 24);
             this.toolStripLabel7.Text = "                           ";
             // 
             // toolStripLabel8
             // 
             this.toolStripLabel8.Name = "toolStripLabel8";
-            this.toolStripLabel8.Size = new System.Drawing.Size(117, 24);
+            this.toolStripLabel8.Size = new System.Drawing.Size(88, 24);
             this.toolStripLabel8.Text = "                           ";
             // 
             // toolStripLabel9
             // 
             this.toolStripLabel9.Name = "toolStripLabel9";
-            this.toolStripLabel9.Size = new System.Drawing.Size(85, 24);
+            this.toolStripLabel9.Size = new System.Drawing.Size(65, 24);
             this.toolStripLabel9.Text = "           Yetki";
             // 
             // toolStripLabel10
             // 
             this.toolStripLabel10.Name = "toolStripLabel10";
-            this.toolStripLabel10.Size = new System.Drawing.Size(117, 24);
+            this.toolStripLabel10.Size = new System.Drawing.Size(88, 24);
             this.toolStripLabel10.Text = "                           ";
+            // 
+            // toolStripLabel5
+            // 
+            this.toolStripLabel5.Name = "toolStripLabel5";
+            this.toolStripLabel5.Size = new System.Drawing.Size(88, 24);
+            this.toolStripLabel5.Text = "                           ";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(88, 24);
+            this.toolStripLabel2.Text = "                           ";
             // 
             // frmPersonelIslemleri
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1054, 537);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.toolStrip2);
@@ -451,5 +467,7 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel8;
         private System.Windows.Forms.ToolStripLabel toolStripLabel9;
         private System.Windows.Forms.ToolStripLabel toolStripLabel10;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel5;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
     }
 }
