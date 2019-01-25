@@ -9,8 +9,8 @@ namespace BLL.RentACar.Repositories
 {
     public interface IGelirGiderRepository
     {
-        List<GelirGider> GelirGiderGetir();
-        List<GelirGider> GelirGiderGetirById(int ID);
+        List<GelirGider> GelirGiderLİstele();
+        GelirGider GelirGiderGetirById(int ID);
 
         bool GelirGiderEkle(GelirGider gg);
         bool GelirGiderGuncelle(GelirGider gg);

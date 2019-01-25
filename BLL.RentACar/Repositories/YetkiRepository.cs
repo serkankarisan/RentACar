@@ -11,27 +11,70 @@ namespace BLL.RentACar.Repositories
     {
         public bool YetkiEkle(Yetki y)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+
+            Genel.ent.Yetkiler.Add(y);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
-        public List<Yetki> YetkiGetir()
+        public Yetki YetkiGetirById(int ID)
         {
-            throw new NotImplementedException();
+            Yetki bulunan = (from a in Genel.ent.Yetkiler
+                            where a.Id == ID
+                            select a).FirstOrDefault();
+
+            return bulunan;
         }
 
-        public List<Yetki> YetkiGetirById(int ID)
+        public List<Yetki> YetkiListele()
         {
-            throw new NotImplementedException();
+            return Genel.ent.Yetkiler.ToList();
         }
 
         public bool YetkiSil(int ID)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            Yetki silinen = (from a in Genel.ent.Yetkiler
+                            where a.Id == ID
+                            select a).FirstOrDefault();
+            Genel.ent.Yetkiler.Remove(silinen);
+
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
         public bool YetkiSil(Yetki y)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+
+            Genel.ent.Yetkiler.Remove(y);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
     }
 }

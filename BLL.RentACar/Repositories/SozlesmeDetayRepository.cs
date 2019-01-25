@@ -11,42 +11,108 @@ namespace BLL.RentACar.Repositories
     {
         public bool SozlesmeDetayEkle(SozlesmeDetay s)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+
+            Genel.ent.SozlesmeDetaylar.Add(s);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
-        public List<SozlesmeDetay> SozlesmeDetayGetir()
+        public SozlesmeDetay SozlesmeDetayGetirBySozlesmeId(int ID)
         {
-            throw new NotImplementedException();
-        }
+            SozlesmeDetay bulunan = (from a in Genel.ent.SozlesmeDetaylar
+                            where a.Id == ID
+                            select a).FirstOrDefault();
 
-        public List<SozlesmeDetay> SozlesmeDetayGetirById(int ID)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<SozlesmeDetay> SozlesmeDetayGetirByMusteri(string Ad, string Soyad, string TCKNo, string EhliyetNo)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<SozlesmeDetay> SozlesmeDetayGetirByTarih(DateTime baslangic, DateTime bitis)
-        {
-            throw new NotImplementedException();
+            return bulunan;
         }
 
         public bool SozlesmeDetayGuncelle(SozlesmeDetay s)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
+        }
+
+        public List<SozlesmeDetay> SozlesmeDetayListele()
+        {
+            return Genel.ent.SozlesmeDetaylar.ToList();
+        }
+
+        public List<SozlesmeDetay> SozlesmeDetayListeleByAranan(string Ad, string Soyad, string TCKNo, string EhliyetNo)
+        {
+           Musteri Musteri = (from m in Genel.ent.Musteriler
+                            where m.Adi.Substring(0,1).Substring(1)==Ad && m.Soyadi==Soyad && m.TcKimlikNo==TCKNo && m.EhliyetNo==EhliyetNo
+                            select m).FirstOrDefault();
+            Sozlesme Sozlesme = (from s in Genel.ent.Sozlesmeler
+                                       where s.MusteriId == Musteri.Id
+                                       select s).FirstOrDefault();
+            List<SozlesmeDetay> SozlesmeDetay = (from soz in Genel.ent.SozlesmeDetaylar
+                                 where soz.SozlesmeId == Sozlesme.Id
+                                 select soz).ToList();
+
+            return SozlesmeDetay;
+        }
+
+        public List<SozlesmeDetay> SozlesmeDetayListeleByTarih(DateTime baslangic, DateTime bitis)
+        {
+            List<SozlesmeDetay> SozlesmeDetay = (from s in Genel.ent.SozlesmeDetaylar
+                               where s.BaslangicTarihi==baslangic && s.BitisTarihi==bitis
+                               select s).ToList();
+
+            return SozlesmeDetay;
         }
 
         public bool SozlesmeDetaySil(int ID)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            SozlesmeDetay silinen = (from a in Genel.ent.SozlesmeDetaylar
+                            where a.Id == ID
+                            select a).FirstOrDefault();
+            silinen.Silindi = true;
+
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
         public bool SozlesmeDetaySil(SozlesmeDetay s)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            Genel.ent.SozlesmeDetaylar.Remove(s);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
     }
 }

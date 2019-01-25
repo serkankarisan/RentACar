@@ -11,32 +11,82 @@ namespace BLL.RentACar.Repositories
     {
         public bool GelirGiderEkle(GelirGider gg)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            Genel.ent.GelirGider.Add(gg);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
-        public List<GelirGider> GelirGiderGetir()
+        public GelirGider GelirGiderGetirById(int ID)
         {
-            throw new NotImplementedException();
-        }
+            GelirGider gelirgider = (from gg in Genel.ent.GelirGider
+                               where gg.Id == ID
+                               select gg).FirstOrDefault();
 
-        public List<GelirGider> GelirGiderGetirById(int ID)
-        {
-            throw new NotImplementedException();
+            return gelirgider;
         }
 
         public bool GelirGiderGuncelle(GelirGider gg)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
+        }
+
+        public List<GelirGider> GelirGiderLİstele()
+        {
+            return Genel.ent.GelirGider.Where(m => m.Silindi == false).ToList();
         }
 
         public bool GelirGiderSil(int ID)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            GelirGider silinen = (from gg in Genel.ent.GelirGider
+                               where gg.Id == ID
+                               select gg).FirstOrDefault();
+            silinen.Silindi = true;
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
         public bool GelirGiderSil(GelirGider gg)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            Genel.ent.GelirGider.Remove(gg);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
     }
 }

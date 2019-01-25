@@ -9,9 +9,11 @@ namespace BLL.RentACar.Repositories
 {
     public interface IMusteriRepository
     {
-        List<Musteri> MusteriGetir();
-        List<Musteri> MusteriGetirById(int ID);
+        bool MusteriKontrol(Musteri yeni);
+        List<Musteri> MusteriListele();
         List<Musteri> MusteriSorgula(string Ad,string Soyad,string TCKNo,string EhliyetNo);
+
+        Musteri MusteriGetirById(int ID);
 
         bool MusteriEkle(Musteri M);
         bool MusteriGuncelle(Musteri M);

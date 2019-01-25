@@ -33,7 +33,6 @@
             this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
             this.tsDegistir = new System.Windows.Forms.ToolStripButton();
             this.dtpEhliyetTarihi = new System.Windows.Forms.DateTimePicker();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.label10 = new System.Windows.Forms.Label();
             this.cbCinsiyet = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -41,19 +40,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dgvMusteriler = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsYeni = new System.Windows.Forms.ToolStripButton();
             this.tsKaydet = new System.Windows.Forms.ToolStripButton();
-            this.tsKullanici = new System.Windows.Forms.ToolStripLabel();
             this.tsSil = new System.Windows.Forms.ToolStripButton();
             this.label5 = new System.Windows.Forms.Label();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.tsYetki = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -105,11 +99,6 @@
             this.dtpEhliyetTarihi.Name = "dtpEhliyetTarihi";
             this.dtpEhliyetTarihi.Size = new System.Drawing.Size(240, 26);
             this.dtpEhliyetTarihi.TabIndex = 82;
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // label10
             // 
@@ -174,11 +163,6 @@
             this.label6.TabIndex = 73;
             this.label6.Text = "TC Kimlik No";
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
             // tsYeni
             // 
             this.tsYeni.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold);
@@ -188,6 +172,7 @@
             this.tsYeni.Name = "tsYeni";
             this.tsYeni.Size = new System.Drawing.Size(51, 22);
             this.tsYeni.Text = "&Yeni";
+            this.tsYeni.Click += new System.EventHandler(this.tsYeni_Click);
             // 
             // tsKaydet
             // 
@@ -199,14 +184,7 @@
             this.tsKaydet.Name = "tsKaydet";
             this.tsKaydet.Size = new System.Drawing.Size(67, 22);
             this.tsKaydet.Text = "&Kaydet";
-            // 
-            // tsKullanici
-            // 
-            this.tsKullanici.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold);
-            this.tsKullanici.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tsKullanici.Name = "tsKullanici";
-            this.tsKullanici.Size = new System.Drawing.Size(76, 22);
-            this.tsKullanici.Text = "Kullanıcı Adı";
+            this.tsKaydet.Click += new System.EventHandler(this.tsKaydet_Click);
             // 
             // tsSil
             // 
@@ -247,26 +225,6 @@
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripLabel4
-            // 
-            this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(397, 22);
-            this.toolStripLabel4.Text = "                                                                                 " +
-    "                                                 ";
-            // 
-            // tsYetki
-            // 
-            this.tsYetki.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold);
-            this.tsYetki.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tsYetki.Name = "tsYetki";
-            this.tsYetki.Size = new System.Drawing.Size(35, 22);
-            this.tsYetki.Text = "Yetki";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // label4
             // 
@@ -343,10 +301,6 @@
             // 
             this.tsMusteriIslemleri.BackColor = System.Drawing.Color.MediumTurquoise;
             this.tsMusteriIslemleri.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator1,
-            this.tsKullanici,
-            this.toolStripSeparator2,
-            this.toolStripSeparator3,
             this.toolStripSeparator4,
             this.tsYeni,
             this.toolStripSeparator5,
@@ -354,9 +308,7 @@
             this.toolStripSeparator6,
             this.tsDegistir,
             this.toolStripSeparator7,
-            this.tsSil,
-            this.toolStripLabel4,
-            this.tsYetki});
+            this.tsSil});
             this.tsMusteriIslemleri.Location = new System.Drawing.Point(0, 0);
             this.tsMusteriIslemleri.Name = "tsMusteriIslemleri";
             this.tsMusteriIslemleri.Size = new System.Drawing.Size(840, 25);
@@ -401,13 +353,13 @@
             // btnCikis
             // 
             this.btnCikis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCikis.BackColor = System.Drawing.Color.Transparent;
+            this.btnCikis.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnCikis.FlatAppearance.BorderSize = 0;
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
             this.btnCikis.Location = new System.Drawing.Point(815, 0);
             this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(25, 25);
+            this.btnCikis.Size = new System.Drawing.Size(25, 24);
             this.btnCikis.TabIndex = 84;
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
@@ -443,7 +395,6 @@
         private System.Windows.Forms.DateTimePicker dtpDogumTarihi;
         private System.Windows.Forms.ToolStripButton tsDegistir;
         private System.Windows.Forms.DateTimePicker dtpEhliyetTarihi;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbCinsiyet;
         private System.Windows.Forms.Label label9;
@@ -451,19 +402,14 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvMusteriler;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton tsYeni;
         private System.Windows.Forms.ToolStripButton tsKaydet;
-        private System.Windows.Forms.ToolStripLabel tsKullanici;
         private System.Windows.Forms.ToolStripButton tsSil;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
-        private System.Windows.Forms.ToolStripLabel tsYetki;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

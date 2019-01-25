@@ -14,17 +14,17 @@ namespace BLL.RentACar.Repositories
             throw new NotImplementedException();
         }
 
-        public List<Personel> PersonelGetir()
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Personel> PersonelGetirById(int ID)
+        public Personel PersonelGetirById(int ID)
         {
             throw new NotImplementedException();
         }
 
         public bool PersonelGuncelle(Personel P)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Personel> PersonelListele()
         {
             throw new NotImplementedException();
         }

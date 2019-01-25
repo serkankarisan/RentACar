@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAracIslemleri));
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,41 +47,18 @@
             this.txtMarka = new System.Windows.Forms.TextBox();
             this.dgvAraclar = new System.Windows.Forms.DataGridView();
             this.btnCikis = new System.Windows.Forms.Button();
-            this.btnSil = new System.Windows.Forms.Button();
-            this.btnDegistir = new System.Windows.Forms.Button();
-            this.btnEkle = new System.Windows.Forms.Button();
+            this.tsMusteriIslemleri = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsYeni = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsKaydet = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsDegistir = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsSil = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAraclar)).BeginInit();
+            this.tsMusteriIslemleri.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(606, 338);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(26, 20);
-            this.label11.TabIndex = 46;
-            this.label11.Text = "Sil";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(479, 338);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 20);
-            this.label10.TabIndex = 45;
-            this.label10.Text = "Degistir";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(381, 338);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 20);
-            this.label9.TabIndex = 44;
-            this.label9.Text = "Ekle";
             // 
             // label5
             // 
@@ -242,58 +216,106 @@
             // btnCikis
             // 
             this.btnCikis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCikis.BackColor = System.Drawing.Color.Transparent;
+            this.btnCikis.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnCikis.FlatAppearance.BorderSize = 0;
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
-            this.btnCikis.Location = new System.Drawing.Point(759, 19);
+            this.btnCikis.Location = new System.Drawing.Point(775, 0);
             this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(25, 25);
-            this.btnCikis.TabIndex = 47;
+            this.btnCikis.Size = new System.Drawing.Size(25, 24);
+            this.btnCikis.TabIndex = 86;
             this.btnCikis.UseVisualStyleBackColor = false;
             // 
-            // btnSil
+            // tsMusteriIslemleri
             // 
-            this.btnSil.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSil.Image = ((System.Drawing.Image)(resources.GetObject("btnSil.Image")));
-            this.btnSil.Location = new System.Drawing.Point(591, 380);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(56, 39);
-            this.btnSil.TabIndex = 43;
-            this.btnSil.UseVisualStyleBackColor = false;
+            this.tsMusteriIslemleri.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.tsMusteriIslemleri.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator4,
+            this.tsYeni,
+            this.toolStripSeparator5,
+            this.tsKaydet,
+            this.toolStripSeparator6,
+            this.tsDegistir,
+            this.toolStripSeparator7,
+            this.tsSil});
+            this.tsMusteriIslemleri.Location = new System.Drawing.Point(0, 0);
+            this.tsMusteriIslemleri.Name = "tsMusteriIslemleri";
+            this.tsMusteriIslemleri.Size = new System.Drawing.Size(800, 25);
+            this.tsMusteriIslemleri.TabIndex = 85;
+            this.tsMusteriIslemleri.Text = "toolStrip1";
             // 
-            // btnDegistir
+            // toolStripSeparator4
             // 
-            this.btnDegistir.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDegistir.Image = ((System.Drawing.Image)(resources.GetObject("btnDegistir.Image")));
-            this.btnDegistir.Location = new System.Drawing.Point(483, 380);
-            this.btnDegistir.Name = "btnDegistir";
-            this.btnDegistir.Size = new System.Drawing.Size(56, 39);
-            this.btnDegistir.TabIndex = 42;
-            this.btnDegistir.UseVisualStyleBackColor = false;
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
-            // btnEkle
+            // tsYeni
             // 
-            this.btnEkle.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnEkle.Image")));
-            this.btnEkle.Location = new System.Drawing.Point(385, 380);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(56, 39);
-            this.btnEkle.TabIndex = 41;
-            this.btnEkle.UseVisualStyleBackColor = false;
+            this.tsYeni.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold);
+            this.tsYeni.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tsYeni.Image = global::PL.RentACar.Properties.Resources.edit_add;
+            this.tsYeni.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsYeni.Name = "tsYeni";
+            this.tsYeni.Size = new System.Drawing.Size(51, 22);
+            this.tsYeni.Text = "&Yeni";
+            this.tsYeni.Click += new System.EventHandler(this.tsYeni_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsKaydet
+            // 
+            this.tsKaydet.Enabled = false;
+            this.tsKaydet.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold);
+            this.tsKaydet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tsKaydet.Image = global::PL.RentACar.Properties.Resources.Floppy22;
+            this.tsKaydet.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsKaydet.Name = "tsKaydet";
+            this.tsKaydet.Size = new System.Drawing.Size(67, 22);
+            this.tsKaydet.Text = "&Kaydet";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsDegistir
+            // 
+            this.tsDegistir.Enabled = false;
+            this.tsDegistir.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold);
+            this.tsDegistir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tsDegistir.Image = global::PL.RentACar.Properties.Resources.utils_222;
+            this.tsDegistir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsDegistir.Name = "tsDegistir";
+            this.tsDegistir.Size = new System.Drawing.Size(71, 22);
+            this.tsDegistir.Text = "&Değiştir";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsSil
+            // 
+            this.tsSil.Enabled = false;
+            this.tsSil.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold);
+            this.tsSil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tsSil.Image = global::PL.RentACar.Properties.Resources.edit_remove;
+            this.tsSil.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsSil.Name = "tsSil";
+            this.tsSil.Size = new System.Drawing.Size(41, 22);
+            this.tsSil.Text = "&Sil";
             // 
             // frmAracIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCikis);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnSil);
-            this.Controls.Add(this.btnDegistir);
-            this.Controls.Add(this.btnEkle);
+            this.Controls.Add(this.tsMusteriIslemleri);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
@@ -315,20 +337,14 @@
             this.Name = "frmAracIslemleri";
             this.Text = "frmAracIslemleri";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAraclar)).EndInit();
+            this.tsMusteriIslemleri.ResumeLayout(false);
+            this.tsMusteriIslemleri.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCikis;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnSil;
-        private System.Windows.Forms.Button btnDegistir;
-        private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -346,5 +362,15 @@
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtMarka;
         private System.Windows.Forms.DataGridView dgvAraclar;
+        private System.Windows.Forms.Button btnCikis;
+        private System.Windows.Forms.ToolStrip tsMusteriIslemleri;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton tsYeni;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton tsKaydet;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripButton tsDegistir;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripButton tsSil;
     }
 }

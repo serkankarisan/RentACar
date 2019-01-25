@@ -9,10 +9,11 @@ namespace BLL.RentACar.Repositories
 {
     public interface IMusteriHareketRepository
     {
-        List<MusteriHareket> MusteriHareketGetir();
-        List<MusteriHareket> MusteriHareketGetirById(int ID);
-        List<MusteriHareket> MusteriHareketGetirByMusteri(string Ad,string Soyad,string TCKNo,string EhliyetNo);
-        List<MusteriHareket> MusteriHareketGetirByTarih(DateTime baslangic, DateTime bitis);
+        List<MusteriHareket> MusteriHareketListele();
+        List<MusteriHareket> MusteriHareketListeleByMusteri(int MusteriId);
+        List<MusteriHareket> MusteriHareketListeleByTarih(DateTime baslangic, DateTime bitis);
+
+        MusteriHareket MusteriHareketGetirById(int ID);
 
         bool MusteriHareketEkle(MusteriHareket mh);
         bool MusteriHareketGuncelle(MusteriHareket mh);

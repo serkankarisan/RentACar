@@ -11,42 +11,92 @@ namespace BLL.RentACar.Repositories
     {
         public bool MusteriHareketEkle(MusteriHareket mh)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            Genel.ent.MusteriHareketler.Add(mh);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
-        public List<MusteriHareket> MusteriHareketGetir()
+        public MusteriHareket MusteriHareketGetirById(int ID)
         {
-            throw new NotImplementedException();
-        }
+            MusteriHareket musterihareket = (from mh in Genel.ent.MusteriHareketler
+                                      where mh.Id == ID
+                                      select mh).FirstOrDefault();
 
-        public List<MusteriHareket> MusteriHareketGetirById(int ID)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<MusteriHareket> MusteriHareketGetirByMusteri(string Ad, string Soyad, string TCKNo, string EhliyetNo)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<MusteriHareket> MusteriHareketGetirByTarih(DateTime baslangic, DateTime bitis)
-        {
-            throw new NotImplementedException();
+            return musterihareket;
         }
 
         public bool MusteriHareketGuncelle(MusteriHareket mh)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
+        }
+
+        public List<MusteriHareket> MusteriHareketListele()
+        {
+            return Genel.ent.MusteriHareketler.Where(mh => mh.Silindi == false).ToList();
+        }
+
+        public List<MusteriHareket> MusteriHareketListeleByMusteri(int MusteriId)
+        {
+            return Genel.ent.MusteriHareketler.Where(mh => mh.Silindi == false && mh.MusteriId == MusteriId).ToList();
+        }
+
+        public List<MusteriHareket> MusteriHareketListeleByTarih(DateTime baslangic, DateTime bitis)
+        {
+            return Genel.ent.MusteriHareketler.Where(mh => mh.Silindi == false && mh.Tarih>=baslangic && mh.Tarih<=bitis).ToList();
         }
 
         public bool MusteriHareketSil(int ID)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            MusteriHareket silinen = (from mh in Genel.ent.MusteriHareketler
+                                where mh.Id == ID
+                                select mh).FirstOrDefault();
+            silinen.Silindi = true;
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
         public bool MusteriHareketSil(MusteriHareket mh)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            Genel.ent.MusteriHareketler.Remove(mh);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
     }
 }

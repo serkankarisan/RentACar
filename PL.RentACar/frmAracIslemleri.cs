@@ -16,5 +16,13 @@ namespace PL.RentACar
         {
             InitializeComponent();
         }
+
+        private void tsYeni_Click(object sender, EventArgs e)
+        {
+            tsKaydet.Enabled = true;
+            tsDegistir.Enabled = false;
+            tsSil.Enabled = false;
+            txtMarka.Focus();
+        }
     }
 }
