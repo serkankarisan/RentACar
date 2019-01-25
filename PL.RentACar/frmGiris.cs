@@ -36,7 +36,6 @@ namespace PL.RentACar
                 frmAnaSayfa frm = new frmAnaSayfa();
                 frm.Show();
                 this.Hide();
-
             }
             else
             {

@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pnlHeader));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCikis = new System.Windows.Forms.Button();
+            this.btnSimgeDurumu = new System.Windows.Forms.Button();
+            this.btnMaxMin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,11 +61,43 @@
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
+            // btnSimgeDurumu
+            // 
+            this.btnSimgeDurumu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSimgeDurumu.BackColor = System.Drawing.Color.Transparent;
+            this.btnSimgeDurumu.FlatAppearance.BorderSize = 0;
+            this.btnSimgeDurumu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnSimgeDurumu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSimgeDurumu.Image = ((System.Drawing.Image)(resources.GetObject("btnSimgeDurumu.Image")));
+            this.btnSimgeDurumu.Location = new System.Drawing.Point(710, 3);
+            this.btnSimgeDurumu.Name = "btnSimgeDurumu";
+            this.btnSimgeDurumu.Size = new System.Drawing.Size(25, 25);
+            this.btnSimgeDurumu.TabIndex = 11;
+            this.btnSimgeDurumu.UseVisualStyleBackColor = false;
+            this.btnSimgeDurumu.Click += new System.EventHandler(this.btnSimgeDurumu_Click);
+            // 
+            // btnMaxMin
+            // 
+            this.btnMaxMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaxMin.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaxMin.FlatAppearance.BorderSize = 0;
+            this.btnMaxMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnMaxMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaxMin.Image = ((System.Drawing.Image)(resources.GetObject("btnMaxMin.Image")));
+            this.btnMaxMin.Location = new System.Drawing.Point(741, 3);
+            this.btnMaxMin.Name = "btnMaxMin";
+            this.btnMaxMin.Size = new System.Drawing.Size(25, 25);
+            this.btnMaxMin.TabIndex = 12;
+            this.btnMaxMin.UseVisualStyleBackColor = false;
+            this.btnMaxMin.Click += new System.EventHandler(this.btnMaxMin_Click);
+            // 
             // pnlHeader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
+            this.Controls.Add(this.btnMaxMin);
+            this.Controls.Add(this.btnSimgeDurumu);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCikis);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -79,5 +114,7 @@
 
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnSimgeDurumu;
+        private System.Windows.Forms.Button btnMaxMin;
     }
 }
