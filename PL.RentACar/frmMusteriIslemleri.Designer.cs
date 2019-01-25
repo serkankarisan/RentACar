@@ -188,6 +188,7 @@
             this.tsYeni.Name = "tsYeni";
             this.tsYeni.Size = new System.Drawing.Size(51, 22);
             this.tsYeni.Text = "&Yeni";
+            this.tsYeni.Click += new System.EventHandler(this.tsYeni_Click);
             // 
             // tsKaydet
             // 
@@ -199,6 +200,7 @@
             this.tsKaydet.Name = "tsKaydet";
             this.tsKaydet.Size = new System.Drawing.Size(67, 22);
             this.tsKaydet.Text = "&Kaydet";
+            this.tsKaydet.Click += new System.EventHandler(this.tsKaydet_Click);
             // 
             // tsKullanici
             // 
