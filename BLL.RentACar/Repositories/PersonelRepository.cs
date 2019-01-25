@@ -11,37 +11,89 @@ namespace BLL.RentACar.Repositories
     {
         public bool PersonelEkle(Personel P)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            Genel.ent.Personeller.Add(P);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
-        public List<Personel> PersonelGetir()
+        public List<Personel> PersonelListele()
         {
-            throw new NotImplementedException();
+            return Genel.ent.Personeller.ToList();
         }
 
-        public List<Personel> PersonelGetirById(int ID)
+        public Personel PersonelGetirById(int ID)
         {
-            throw new NotImplementedException();
+            Personel getirilen = (from p in Genel.ent.Personeller
+                                where p.Id == ID
+                                select p).FirstOrDefault();
+            return getirilen;
         }
 
         public bool PersonelGuncelle(Personel P)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
         public bool PersonelSil(int ID)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            Personel supurge = (from p in Genel.ent.Personeller
+                                where p.Id == ID
+                                select p).FirstOrDefault();
+            supurge.Silindi = true;
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
         public bool PersonelSil(Personel P)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            Genel.ent.Personeller.Remove(P);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
         public List<Personel> PersonelSorgula(string Ad, string Soyad)
         {
-            throw new NotImplementedException();
+            List<Personel> sorgu = (from s in Genel.ent.Personeller
+                                    where s.Adi == Ad && s.Soyadi == Soyad
+                                    select s).ToList();
+            return sorgu;
         }
     }
 }

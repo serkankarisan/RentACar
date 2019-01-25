@@ -9,8 +9,8 @@ namespace BLL.RentACar.Repositories
 {
     public interface IPersonelRepository
     {
-        List<Personel> PersonelGetir();
-        List<Personel> PersonelGetirById(int ID);
+        List<Personel> PersonelListele();
+        Personel PersonelGetirById(int ID);
         List<Personel> PersonelSorgula(string Ad,string Soyad);
 
         bool PersonelEkle(Personel P);
