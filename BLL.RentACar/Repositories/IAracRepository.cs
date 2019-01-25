@@ -9,9 +9,9 @@ namespace BLL.RentACar.Repositories
 {
     public interface IAracRepository
     {
-        List<Arac> AracGetir();
-        List<Arac> AracGetirById(int ID);
-        List<Arac> AracGetirByPlaka(string Plaka);
+        List<Arac> AracListele();
+        Arac AracGetirById(int ID);
+        Arac AracGetirByPlaka(string Plaka);
 
         bool AracEkle(Arac A);
         bool AracGuncelle(Arac A);

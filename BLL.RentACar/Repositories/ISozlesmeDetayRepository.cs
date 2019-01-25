@@ -9,10 +9,10 @@ namespace BLL.RentACar.Repositories
 {
     public interface ISozlesmeDetayRepository
     {
-        List<SozlesmeDetay> SozlesmeDetayGetir();
-        List<SozlesmeDetay> SozlesmeDetayGetirById(int ID);
-        List<SozlesmeDetay> SozlesmeDetayGetirByMusteri(string Ad, string Soyad, string TCKNo, string EhliyetNo);
-        List<SozlesmeDetay> SozlesmeDetayGetirByTarih(DateTime baslangic, DateTime bitis);
+        List<SozlesmeDetay> SozlesmeDetayListele();
+        SozlesmeDetay SozlesmeDetayGetirById(int ID);
+        List<SozlesmeDetay> SozlesmeDetayListeleByMusteri(string Ad, string Soyad, string TCKNo, string EhliyetNo);
+        List<SozlesmeDetay> SozlesmeDetayListeleByTarih(DateTime baslangic, DateTime bitis);
 
         bool SozlesmeDetayEkle(SozlesmeDetay s);
         bool SozlesmeDetayGuncelle(SozlesmeDetay s);

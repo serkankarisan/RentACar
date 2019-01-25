@@ -14,22 +14,22 @@ namespace BLL.RentACar.Repositories
             throw new NotImplementedException();
         }
 
-        public List<Arac> AracGetir()
+        public Arac AracGetirById(int ID)
         {
             throw new NotImplementedException();
         }
 
-        public List<Arac> AracGetirById(int ID)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Arac> AracGetirByPlaka(string Plaka)
+        public Arac AracGetirByPlaka(string Plaka)
         {
             throw new NotImplementedException();
         }
 
         public bool AracGuncelle(Arac A)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Arac> AracListele()
         {
             throw new NotImplementedException();
         }

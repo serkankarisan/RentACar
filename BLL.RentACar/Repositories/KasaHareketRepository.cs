@@ -14,22 +14,22 @@ namespace BLL.RentACar.Repositories
             throw new NotImplementedException();
         }
 
-        public List<KasaHareket> KasaHareketGetir()
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<KasaHareket> KasaHareketGetirById(int ID)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<KasaHareket> KasaHareketGetirByTarih(DateTime baslangic, DateTime bitis)
+        public KasaHareket KasaHareketGetirById(int ID)
         {
             throw new NotImplementedException();
         }
 
         public bool KasaHareketGuncelle(KasaHareket kh)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<KasaHareket> KasaHareketListele()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<KasaHareket> KasaHareketListeleByTarih(DateTime baslangic, DateTime bitis)
         {
             throw new NotImplementedException();
         }

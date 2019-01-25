@@ -14,12 +14,12 @@ namespace BLL.RentACar.Repositories
             throw new NotImplementedException();
         }
 
-        public List<Yetki> YetkiGetir()
+        public Yetki YetkiGetirById(int ID)
         {
             throw new NotImplementedException();
         }
 
-        public List<Yetki> YetkiGetirById(int ID)
+        public List<Yetki> YetkiListele()
         {
             throw new NotImplementedException();
         }

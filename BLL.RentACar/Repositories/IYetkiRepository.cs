@@ -9,8 +9,8 @@ namespace BLL.RentACar.Repositories
 {
     public interface IYetkiRepository
     {
-        List<Yetki> YetkiGetir();
-        List<Yetki> YetkiGetirById(int ID);
+        List<Yetki> YetkiListele();
+        Yetki YetkiGetirById(int ID);
 
         bool YetkiEkle(Yetki y);
 

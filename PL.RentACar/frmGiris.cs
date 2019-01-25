@@ -29,16 +29,6 @@ namespace PL.RentACar
             this.Close();
         }
 
-        private void txtKullaniciAdi_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSifre_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGiris_Click(object sender, EventArgs e)
         {
             if (g.KullaniciKontrol(txtKullaniciAdi.Text,txtSifre.Text))

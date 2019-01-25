@@ -14,27 +14,27 @@ namespace BLL.RentACar.Repositories
             throw new NotImplementedException();
         }
 
-        public List<Sozlesme> SozlesmeGetir()
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Sozlesme> SozlesmeGetirById(int ID)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Sozlesme> SozlesmeGetirByMusteri(string Ad, string Soyad, string TCKNo, string EhliyetNo)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Sozlesme> SozlesmeGetirByTarih(DateTime baslangic, DateTime bitis)
+        public Sozlesme SozlesmeGetirById(int ID)
         {
             throw new NotImplementedException();
         }
 
         public bool SozlesmeGuncelle(Sozlesme s)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Sozlesme> SozlesmeListele()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Sozlesme> SozlesmeListeleByMusteri(string Ad, string Soyad, string TCKNo, string EhliyetNo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Sozlesme> SozlesmeListeleByTarih(DateTime baslangic, DateTime bitis)
         {
             throw new NotImplementedException();
         }

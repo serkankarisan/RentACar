@@ -9,9 +9,10 @@ namespace BLL.RentACar.Repositories
 {
     public interface IKullaniciRepository
     {
-        List<Kullanici> KullaniciGetir();
-        List<Kullanici> KullaniciGetirById(int ID);
-        List<Kullanici> KullaniciGetirByPeronel(string Ad,string Soyad);
+        bool KullaniciKontrol(Kullanici yeni);
+        List<Kullanici> KullaniciListele();
+        Kullanici KullaniciGetirById(int ID);
+        List<Kullanici> KullaniciListeleByPeronel(string Ad,string Soyad);
 
         bool KullaniciEkle(Kullanici k);
         bool KullaniciGuncelle(Kullanici k);

@@ -114,7 +114,6 @@
             this.txtKullaniciAdi.Size = new System.Drawing.Size(144, 29);
             this.txtKullaniciAdi.TabIndex = 2;
             this.txtKullaniciAdi.Text = "Kullanici Adi";
-            this.txtKullaniciAdi.Click += new System.EventHandler(this.txtKullaniciAdi_Click);
             this.txtKullaniciAdi.Enter += new System.EventHandler(this.txtKullaniciAdi_Enter);
             // 
             // btnGiris
@@ -141,7 +140,6 @@
             this.txtSifre.Size = new System.Drawing.Size(144, 26);
             this.txtSifre.TabIndex = 3;
             this.txtSifre.Text = "Sifre";
-            this.txtSifre.Click += new System.EventHandler(this.txtSifre_Click);
             this.txtSifre.Enter += new System.EventHandler(this.txtSifre_Enter);
             // 
             // frmGiris
