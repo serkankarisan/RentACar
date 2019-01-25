@@ -251,6 +251,7 @@
             this.btnCikis.Size = new System.Drawing.Size(25, 25);
             this.btnCikis.TabIndex = 47;
             this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // btnSil
             // 

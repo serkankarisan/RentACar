@@ -42,15 +42,16 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cbMarkalar = new System.Windows.Forms.ComboBox();
-            this.ilSmall = new System.Windows.Forms.ImageList(this.components);
-            this.ilLarge = new System.Windows.Forms.ImageList(this.components);
             this.cmView = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mitmLargeIcon = new System.Windows.Forms.ToolStripMenuItem();
             this.mitmDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.mitmSmallIcon = new System.Windows.Forms.ToolStripMenuItem();
             this.mitmList = new System.Windows.Forms.ToolStripMenuItem();
             this.mitmTile = new System.Windows.Forms.ToolStripMenuItem();
+            this.ilLarge = new System.Windows.Forms.ImageList(this.components);
+            this.ilSmall = new System.Windows.Forms.ImageList(this.components);
+            this.cbMarkalar = new System.Windows.Forms.ComboBox();
+            this.btnCikis = new System.Windows.Forms.Button();
             this.cmView.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -149,6 +150,68 @@
             this.columnHeader5.Text = "Günlük Fiyat";
             this.columnHeader5.Width = 136;
             // 
+            // cmView
+            // 
+            this.cmView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mitmLargeIcon,
+            this.mitmDetails,
+            this.mitmSmallIcon,
+            this.mitmList,
+            this.mitmTile});
+            this.cmView.Name = "cmView";
+            this.cmView.Size = new System.Drawing.Size(130, 114);
+            // 
+            // mitmLargeIcon
+            // 
+            this.mitmLargeIcon.Name = "mitmLargeIcon";
+            this.mitmLargeIcon.Size = new System.Drawing.Size(129, 22);
+            this.mitmLargeIcon.Text = "Large Icon";
+            this.mitmLargeIcon.Click += new System.EventHandler(this.mitmLargeIcon_Click);
+            // 
+            // mitmDetails
+            // 
+            this.mitmDetails.Name = "mitmDetails";
+            this.mitmDetails.Size = new System.Drawing.Size(129, 22);
+            this.mitmDetails.Text = "Details";
+            this.mitmDetails.Click += new System.EventHandler(this.mitmDetails_Click);
+            // 
+            // mitmSmallIcon
+            // 
+            this.mitmSmallIcon.Name = "mitmSmallIcon";
+            this.mitmSmallIcon.Size = new System.Drawing.Size(129, 22);
+            this.mitmSmallIcon.Text = "Small Icon";
+            this.mitmSmallIcon.Click += new System.EventHandler(this.mitmSmallIcon_Click);
+            // 
+            // mitmList
+            // 
+            this.mitmList.Name = "mitmList";
+            this.mitmList.Size = new System.Drawing.Size(129, 22);
+            this.mitmList.Text = "List";
+            this.mitmList.Click += new System.EventHandler(this.mitmList_Click);
+            // 
+            // mitmTile
+            // 
+            this.mitmTile.Name = "mitmTile";
+            this.mitmTile.Size = new System.Drawing.Size(129, 22);
+            this.mitmTile.Text = "Tile";
+            this.mitmTile.Click += new System.EventHandler(this.mitmTile_Click);
+            // 
+            // ilLarge
+            // 
+            this.ilLarge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilLarge.ImageStream")));
+            this.ilLarge.TransparentColor = System.Drawing.Color.Transparent;
+            this.ilLarge.Images.SetKeyName(0, "q7.jpg");
+            this.ilLarge.Images.SetKeyName(1, "a7.jpg");
+            this.ilLarge.Images.SetKeyName(2, "a3hatchback.jpg");
+            // 
+            // ilSmall
+            // 
+            this.ilSmall.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilSmall.ImageStream")));
+            this.ilSmall.TransparentColor = System.Drawing.Color.Transparent;
+            this.ilSmall.Images.SetKeyName(0, "q7.jpg");
+            this.ilSmall.Images.SetKeyName(1, "a7.jpg");
+            this.ilSmall.Images.SetKeyName(2, "a3hatchback.jpg");
+            // 
             // cbMarkalar
             // 
             this.cbMarkalar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -161,69 +224,27 @@
             this.cbMarkalar.Name = "cbMarkalar";
             this.cbMarkalar.Size = new System.Drawing.Size(153, 21);
             this.cbMarkalar.TabIndex = 10;
+            this.cbMarkalar.SelectedIndexChanged += new System.EventHandler(this.cbMarkalar_SelectedIndexChanged);
             // 
-            // ilSmall
+            // btnCikis
             // 
-            this.ilSmall.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilSmall.ImageStream")));
-            this.ilSmall.TransparentColor = System.Drawing.Color.Transparent;
-            this.ilSmall.Images.SetKeyName(0, "q7.jpg");
-            this.ilSmall.Images.SetKeyName(1, "a7.jpg");
-            this.ilSmall.Images.SetKeyName(2, "a3hatchback.jpg");
-            // 
-            // ilLarge
-            // 
-            this.ilLarge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilLarge.ImageStream")));
-            this.ilLarge.TransparentColor = System.Drawing.Color.Transparent;
-            this.ilLarge.Images.SetKeyName(0, "q7.jpg");
-            this.ilLarge.Images.SetKeyName(1, "a7.jpg");
-            this.ilLarge.Images.SetKeyName(2, "a3hatchback.jpg");
-            // 
-            // cmView
-            // 
-            this.cmView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mitmLargeIcon,
-            this.mitmDetails,
-            this.mitmSmallIcon,
-            this.mitmList,
-            this.mitmTile});
-            this.cmView.Name = "cmView";
-            this.cmView.Size = new System.Drawing.Size(181, 136);
-            // 
-            // mitmLargeIcon
-            // 
-            this.mitmLargeIcon.Name = "mitmLargeIcon";
-            this.mitmLargeIcon.Size = new System.Drawing.Size(180, 22);
-            this.mitmLargeIcon.Text = "Large Icon";
-            // 
-            // mitmDetails
-            // 
-            this.mitmDetails.Name = "mitmDetails";
-            this.mitmDetails.Size = new System.Drawing.Size(180, 22);
-            this.mitmDetails.Text = "Details";
-            // 
-            // mitmSmallIcon
-            // 
-            this.mitmSmallIcon.Name = "mitmSmallIcon";
-            this.mitmSmallIcon.Size = new System.Drawing.Size(180, 22);
-            this.mitmSmallIcon.Text = "Small Icon";
-            // 
-            // mitmList
-            // 
-            this.mitmList.Name = "mitmList";
-            this.mitmList.Size = new System.Drawing.Size(180, 22);
-            this.mitmList.Text = "List";
-            // 
-            // mitmTile
-            // 
-            this.mitmTile.Name = "mitmTile";
-            this.mitmTile.Size = new System.Drawing.Size(180, 22);
-            this.mitmTile.Text = "Tile";
+            this.btnCikis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCikis.BackColor = System.Drawing.Color.Transparent;
+            this.btnCikis.FlatAppearance.BorderSize = 0;
+            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
+            this.btnCikis.Location = new System.Drawing.Point(763, 12);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(25, 25);
+            this.btnCikis.TabIndex = 48;
+            this.btnCikis.UseVisualStyleBackColor = false;
             // 
             // frmAracSorgulama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lvDetaylar);
             this.Controls.Add(this.cbMarkalar);
@@ -263,5 +284,6 @@
         private System.Windows.Forms.ToolStripMenuItem mitmTile;
         private System.Windows.Forms.ImageList ilLarge;
         private System.Windows.Forms.ImageList ilSmall;
+        private System.Windows.Forms.Button btnCikis;
     }
 }
