@@ -32,7 +32,7 @@
             // 
             // frmAracSorgulama
             // 
-            this.ClientSize = new System.Drawing.Size(694, 324);
+            this.ClientSize = new System.Drawing.Size(694, 424);
             this.Name = "frmAracSorgulama";
             this.ResumeLayout(false);
 
