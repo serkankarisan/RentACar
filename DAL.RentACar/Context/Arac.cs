@@ -32,10 +32,16 @@ namespace DAL.RentACar.Context
         public string YakıtDurumu { get; set; }
         [DefaultValue(true)]
         public bool Varmi { get; set; }
+        [Required]
         [DefaultValue(false)]
         public bool Silindi { get; set; }
 
         //Relations
         public virtual List<SozlesmeDetay> SozlesmeDetaylar { get; set; }
+
+        public Arac()
+        {
+            Silindi = false;
+        }
     }
 }

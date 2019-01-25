@@ -33,7 +33,7 @@ namespace DAL.RentACar.Context
         [Required]
         public string EhliyetNo { get; set; }
         [Required]
-        public string EhliyetTarihi { get; set; }
+        public DateTime EhliyetTarihi { get; set; }
         [DefaultValue(false)]
         public bool Silindi { get; set; }
 

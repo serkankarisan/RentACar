@@ -38,8 +38,10 @@
             this.txtTCKNo = new System.Windows.Forms.TextBox();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtAd = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnCikis = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label8
@@ -60,14 +62,16 @@
             // 
             // dgvMusteriler
             // 
-            this.dgvMusteriler.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMusteriler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMusteriler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvMusteriler.BackgroundColor = System.Drawing.Color.White;
             this.dgvMusteriler.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvMusteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMusteriler.Location = new System.Drawing.Point(48, 78);
             this.dgvMusteriler.Name = "dgvMusteriler";
-            this.dgvMusteriler.Size = new System.Drawing.Size(744, 289);
+            this.dgvMusteriler.Size = new System.Drawing.Size(744, 335);
             this.dgvMusteriler.TabIndex = 84;
             // 
             // label6
@@ -118,17 +122,27 @@
             this.txtAd.Size = new System.Drawing.Size(100, 26);
             this.txtAd.TabIndex = 78;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel1.Controls.Add(this.btnCikis);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(840, 24);
+            this.panel1.TabIndex = 88;
+            // 
             // btnCikis
             // 
             this.btnCikis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCikis.BackColor = System.Drawing.Color.Transparent;
+            this.btnCikis.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnCikis.FlatAppearance.BorderSize = 0;
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
-            this.btnCikis.Location = new System.Drawing.Point(803, 12);
+            this.btnCikis.Location = new System.Drawing.Point(815, 1);
             this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(25, 25);
-            this.btnCikis.TabIndex = 87;
+            this.btnCikis.Size = new System.Drawing.Size(24, 22);
+            this.btnCikis.TabIndex = 88;
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
@@ -138,7 +152,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(840, 425);
-            this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtEhliyetNo);
             this.Controls.Add(this.dgvMusteriler);
@@ -148,12 +161,14 @@
             this.Controls.Add(this.txtTCKNo);
             this.Controls.Add(this.txtSoyad);
             this.Controls.Add(this.txtAd);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMusteriSorgulama";
             this.Text = "MusteriSorgulama";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,6 +185,7 @@
         private System.Windows.Forms.TextBox txtTCKNo;
         private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCikis;
     }
 }
