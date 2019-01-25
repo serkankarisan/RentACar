@@ -16,5 +16,11 @@ namespace PL.RentACar
         {
             InitializeComponent();
         }
+
+        private void frmAnaSayfa_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

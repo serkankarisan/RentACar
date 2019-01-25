@@ -28,12 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmAracSorgulama";
+            this.SuspendLayout();
+            // 
+            // frmAracSorgulama
+            // 
+            this.ClientSize = new System.Drawing.Size(694, 324);
+            this.Name = "frmAracSorgulama";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtAracModel;
+        private System.Windows.Forms.TextBox txtPlaka;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListView lvDetaylar;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ComboBox cbMarkalar;
+        private System.Windows.Forms.ContextMenuStrip cmView;
+        private System.Windows.Forms.ToolStripMenuItem mitmLargeIcon;
+        private System.Windows.Forms.ToolStripMenuItem mitmDetails;
+        private System.Windows.Forms.ToolStripMenuItem mitmSmallIcon;
+        private System.Windows.Forms.ToolStripMenuItem mitmList;
+        private System.Windows.Forms.ToolStripMenuItem mitmTile;
+        private System.Windows.Forms.ImageList ilLarge;
+        private System.Windows.Forms.ImageList ilSmall;
+        private System.Windows.Forms.Button btnCikis;
     }
 }

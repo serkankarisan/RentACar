@@ -16,5 +16,10 @@ namespace PL.RentACar
         {
             InitializeComponent();
         }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
