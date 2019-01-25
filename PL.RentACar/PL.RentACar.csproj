@@ -89,17 +89,23 @@
     <Compile Include="frmKirala.Designer.cs">
       <DependentUpon>frmKirala.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKullaniciTanimlama.cs">
+    <Compile Include="frmKullaniciIslemleri.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKullaniciTanimlama.Designer.cs">
-      <DependentUpon>frmKullaniciTanimlama.cs</DependentUpon>
+    <Compile Include="frmKullaniciIslemleri.Designer.cs">
+      <DependentUpon>frmKullaniciIslemleri.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMaasOdeme.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMaasOdeme.Designer.cs">
       <DependentUpon>frmMaasOdeme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMusteriDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMusteriDetay.Designer.cs">
+      <DependentUpon>frmMusteriDetay.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMusteriIslemleri.cs">
       <SubType>Form</SubType>
@@ -149,22 +155,67 @@
     <Compile Include="frmTeslimAl.Designer.cs">
       <DependentUpon>frmTeslimAl.cs</DependentUpon>
     </Compile>
+    <Compile Include="pnlHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pnlHeader.Designer.cs">
+      <DependentUpon>pnlHeader.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAnaSayfa.resx">
+      <DependentUpon>frmAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAracIslemleri.resx">
       <DependentUpon>frmAracIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAracSorgulama.resx">
+      <DependentUpon>frmAracSorgulama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGiris.resx">
       <DependentUpon>frmGiris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKullaniciTanimlama.resx">
-      <DependentUpon>frmKullaniciTanimlama.cs</DependentUpon>
+    <EmbeddedResource Include="frmKasaDetaylari.resx">
+      <DependentUpon>frmKasaDetaylari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKirala.resx">
+      <DependentUpon>frmKirala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKullaniciIslemleri.resx">
+      <DependentUpon>frmKullaniciIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaasOdeme.resx">
+      <DependentUpon>frmMaasOdeme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMusteriDetay.resx">
+      <DependentUpon>frmMusteriDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMusteriIslemleri.resx">
+      <DependentUpon>frmMusteriIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMusteriSorgulama.resx">
+      <DependentUpon>frmMusteriSorgulama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPersonelIslemleri.resx">
       <DependentUpon>frmPersonelIslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPersonelSorgulama.resx">
       <DependentUpon>frmPersonelSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRaporlar.resx">
+      <DependentUpon>frmRaporlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSozlesmeKayitAc.resx">
+      <DependentUpon>frmSozlesmeKayitAc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSozlesmeSorgulama.resx">
+      <DependentUpon>frmSozlesmeSorgulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeslimAl.resx">
+      <DependentUpon>frmTeslimAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnlHeader.resx">
+      <DependentUpon>pnlHeader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -174,6 +225,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -206,6 +258,36 @@
     <Content Include="Images\Icon\Graphicloads-Flat-Finance-Person.ico" />
     <Content Include="Images\Icon\Iconsmind-Outline-Key.ico" />
     <Content Include="Images\Png\AnasayfaArkaplan.jpg" />
+    <Content Include="Images\Png\button_cancel.png" />
+    <Content Include="Images\Png\button_ok.png" />
+    <Content Include="Images\Png\Configuration Settings.png" />
+    <None Include="Images\Png\cooltext312921869210611.png" />
+    <Content Include="Images\Png\edit_add.png" />
+    <Content Include="Images\Png\edit_remove.png" />
+    <Content Include="Images\Png\Error.png" />
+    <Content Include="Images\Png\exec.png" />
+    <Content Include="Images\Png\exit.png" />
+    <Content Include="Images\Png\Floppy Drive 3.png" />
+    <Content Include="Images\Png\Floppy Drive 5.png" />
+    <Content Include="Images\Png\Floppy.png" />
+    <Content Include="Images\Png\Floppy22.png" />
+    <Content Include="Images\Png\folder_home.png" />
+    <Content Include="Images\Png\LaST %28Cobalt%29 Floppy.png" />
+    <Content Include="Images\Png\LaST %28Cobalt%29 Run.png" />
+    <Content Include="Images\Png\reload.png" />
+    <Content Include="Images\Png\restart.png" />
+    <Content Include="Images\Png\right_symbol.png" />
+    <Content Include="Images\Png\search22.png" />
+    <Content Include="Images\Png\Search44.png" />
+    <Content Include="Images\Png\tab.png" />
+    <Content Include="Images\Png\tab_new.png" />
+    <Content Include="Images\Png\Users.png" />
+    <Content Include="Images\Png\utils_222.png" />
+    <Content Include="Images\Png\viewmag.png" />
+    <Content Include="Images\Png\windowlist.png" />
+    <Content Include="Images\Png\window_fullscreen.png" />
+    <Content Include="Images\Png\window_new.png" />
+    <Content Include="Images\Png\window_nofullscreen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

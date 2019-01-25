@@ -58,6 +58,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 375);
             this.panel1.TabIndex = 7;
+         
             // 
             // btnCikis
             // 
@@ -114,6 +115,7 @@
             this.txtKullaniciAdi.TabIndex = 2;
             this.txtKullaniciAdi.Text = "Kullanici Adi";
             this.txtKullaniciAdi.Click += new System.EventHandler(this.txtKullaniciAdi_Click);
+            this.txtKullaniciAdi.Enter += new System.EventHandler(this.txtKullaniciAdi_Enter);
             // 
             // btnGiris
             // 
@@ -128,6 +130,7 @@
             this.btnGiris.TabIndex = 0;
             this.btnGiris.Text = "Giriş";
             this.btnGiris.UseVisualStyleBackColor = false;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // txtSifre
             // 
@@ -139,9 +142,11 @@
             this.txtSifre.TabIndex = 3;
             this.txtSifre.Text = "Sifre";
             this.txtSifre.Click += new System.EventHandler(this.txtSifre_Click);
+            this.txtSifre.Enter += new System.EventHandler(this.txtSifre_Enter);
             // 
             // frmGiris
             // 
+            this.AcceptButton = this.btnGiris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(300, 375);
