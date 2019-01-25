@@ -9,6 +9,7 @@ namespace BLL.RentACar.Repositories
 {
     public interface ISozlesmeRepository
     {
+        bool SozlesmeKontrol(Sozlesme yeni);
         List<Sozlesme> SozlesmeListele();
         Sozlesme SozlesmeGetirById(int ID);
         List<Sozlesme> SozlesmeListeleByMusteri(string Ad, string Soyad, string TCKNo, string EhliyetNo);

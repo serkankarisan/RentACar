@@ -33,6 +33,7 @@
             this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
             this.tsDegistir = new System.Windows.Forms.ToolStripButton();
             this.dtpEhliyetTarihi = new System.Windows.Forms.DateTimePicker();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.label10 = new System.Windows.Forms.Label();
             this.cbCinsiyet = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.tsKaydet = new System.Windows.Forms.ToolStripButton();
             this.tsSil = new System.Windows.Forms.ToolStripButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
@@ -61,9 +61,11 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCikis = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).BeginInit();
             this.tsMusteriIslemleri.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -100,6 +102,11 @@
             this.dtpEhliyetTarihi.Size = new System.Drawing.Size(240, 26);
             this.dtpEhliyetTarihi.TabIndex = 82;
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -130,7 +137,7 @@
             // 
             this.txtEhliyetNo.Location = new System.Drawing.Point(112, 238);
             this.txtEhliyetNo.Name = "txtEhliyetNo";
-            this.txtEhliyetNo.Size = new System.Drawing.Size(100, 26);
+            this.txtEhliyetNo.Size = new System.Drawing.Size(150, 26);
             this.txtEhliyetNo.TabIndex = 76;
             // 
             // label7
@@ -144,14 +151,16 @@
             // 
             // dgvMusteriler
             // 
-            this.dgvMusteriler.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMusteriler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMusteriler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvMusteriler.BackgroundColor = System.Drawing.Color.White;
             this.dgvMusteriler.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvMusteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMusteriler.Location = new System.Drawing.Point(380, 55);
+            this.dgvMusteriler.Location = new System.Drawing.Point(383, 44);
             this.dgvMusteriler.Name = "dgvMusteriler";
-            this.dgvMusteriler.Size = new System.Drawing.Size(448, 289);
+            this.dgvMusteriler.Size = new System.Drawing.Size(525, 525);
             this.dgvMusteriler.TabIndex = 74;
             // 
             // label6
@@ -205,11 +214,6 @@
             this.label5.Size = new System.Drawing.Size(51, 20);
             this.label5.TabIndex = 72;
             this.label5.Text = "Adres";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripSeparator5
             // 
@@ -266,42 +270,42 @@
             // 
             this.txtTCKNo.Location = new System.Drawing.Point(112, 149);
             this.txtTCKNo.Name = "txtTCKNo";
-            this.txtTCKNo.Size = new System.Drawing.Size(100, 26);
+            this.txtTCKNo.Size = new System.Drawing.Size(150, 26);
             this.txtTCKNo.TabIndex = 67;
             // 
             // txtAdres
             // 
             this.txtAdres.Location = new System.Drawing.Point(112, 120);
             this.txtAdres.Name = "txtAdres";
-            this.txtAdres.Size = new System.Drawing.Size(100, 26);
+            this.txtAdres.Size = new System.Drawing.Size(150, 26);
             this.txtAdres.TabIndex = 66;
             // 
             // txtTelefon
             // 
             this.txtTelefon.Location = new System.Drawing.Point(112, 62);
             this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(100, 26);
+            this.txtTelefon.Size = new System.Drawing.Size(150, 26);
             this.txtTelefon.TabIndex = 64;
             // 
             // txtSoyad
             // 
             this.txtSoyad.Location = new System.Drawing.Point(112, 33);
             this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(100, 26);
+            this.txtSoyad.Size = new System.Drawing.Size(150, 26);
             this.txtSoyad.TabIndex = 63;
             // 
             // txtAd
             // 
             this.txtAd.Location = new System.Drawing.Point(112, 4);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(100, 26);
+            this.txtAd.Size = new System.Drawing.Size(150, 26);
             this.txtAd.TabIndex = 62;
             // 
             // tsMusteriIslemleri
             // 
             this.tsMusteriIslemleri.BackColor = System.Drawing.Color.MediumTurquoise;
             this.tsMusteriIslemleri.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator4,
+            this.toolStripSeparator1,
             this.tsYeni,
             this.toolStripSeparator5,
             this.tsKaydet,
@@ -311,7 +315,7 @@
             this.tsSil});
             this.tsMusteriIslemleri.Location = new System.Drawing.Point(0, 0);
             this.tsMusteriIslemleri.Name = "tsMusteriIslemleri";
-            this.tsMusteriIslemleri.Size = new System.Drawing.Size(840, 25);
+            this.tsMusteriIslemleri.Size = new System.Drawing.Size(920, 25);
             this.tsMusteriIslemleri.TabIndex = 61;
             this.tsMusteriIslemleri.Text = "toolStrip1";
             // 
@@ -319,11 +323,13 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(112, 91);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 26);
+            this.txtEmail.Size = new System.Drawing.Size(150, 26);
             this.txtEmail.TabIndex = 65;
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label8);
@@ -345,9 +351,9 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(12, 49);
+            this.panel1.Location = new System.Drawing.Point(12, 265);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(365, 306);
+            this.panel1.Size = new System.Drawing.Size(365, 303);
             this.panel1.TabIndex = 83;
             // 
             // btnCikis
@@ -357,19 +363,29 @@
             this.btnCikis.FlatAppearance.BorderSize = 0;
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
-            this.btnCikis.Location = new System.Drawing.Point(815, 0);
+            this.btnCikis.Location = new System.Drawing.Point(895, 0);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(25, 24);
             this.btnCikis.TabIndex = 84;
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(12, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(365, 209);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 86;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmMusteriIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(840, 400);
+            this.ClientSize = new System.Drawing.Size(920, 580);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvMusteriler);
@@ -379,11 +395,13 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMusteriIslemleri";
             this.Text = "frmMusteriIslemleri";
+            this.Load += new System.EventHandler(this.frmMusteriIslemleri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).EndInit();
             this.tsMusteriIslemleri.ResumeLayout(false);
             this.tsMusteriIslemleri.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,6 +413,7 @@
         private System.Windows.Forms.DateTimePicker dtpDogumTarihi;
         private System.Windows.Forms.ToolStripButton tsDegistir;
         private System.Windows.Forms.DateTimePicker dtpEhliyetTarihi;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbCinsiyet;
         private System.Windows.Forms.Label label9;
@@ -406,7 +425,6 @@
         private System.Windows.Forms.ToolStripButton tsKaydet;
         private System.Windows.Forms.ToolStripButton tsSil;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
@@ -423,5 +441,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCikis;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

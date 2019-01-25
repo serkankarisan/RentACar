@@ -46,7 +46,7 @@ namespace PL.RentACar
                 yeni.DogumTarihi = Convert.ToDateTime(dtpDogumTarihi.Text);
                 yeni.Cinsiyet = cbCinsiyet.Text;
                 yeni.EhliyetNo = txtEhliyetNo.Text;
-                yeni.EhliyetTarihi = dtpEhliyetTarihi.Text;
+                yeni.EhliyetTarihi = Convert.ToDateTime(dtpEhliyetTarihi.Text);
                 if (musrepo.MusteriKontrol(yeni))
                 {
                     MessageBox.Show("Bu müşteri kayıtlı!", "Aynı müşteri zaten var!");
@@ -67,6 +67,11 @@ namespace PL.RentACar
                 MessageBox.Show("Kategori ismi girilmelidir!", "Dikkat! Eksik Bilgi!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             txtAd.Focus();
+        }
+
+        private void frmMusteriIslemleri_Load(object sender, EventArgs e)
+        {
+            dgvMusteriler.DataSource = musrepo.MusteriListele();
         }
     }
 }

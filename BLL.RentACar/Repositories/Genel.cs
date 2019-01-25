@@ -11,6 +11,8 @@ namespace BLL.RentACar.Repositories
     public class Genel
     {
       public static RentContext ent = new RentContext();
-        
+      public static string UserName;
+      public static string Yetki;
+
     }
 }
