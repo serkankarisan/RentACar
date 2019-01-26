@@ -272,6 +272,7 @@
     <Content Include="Images\Png\Floppy.png" />
     <Content Include="Images\Png\Floppy22.png" />
     <Content Include="Images\Png\folder_home.png" />
+    <Content Include="Images\Png\kullanıcıikon.png" />
     <Content Include="Images\Png\LaST %28Cobalt%29 Floppy.png" />
     <Content Include="Images\Png\LaST %28Cobalt%29 Run.png" />
     <Content Include="Images\Png\reload.png" />

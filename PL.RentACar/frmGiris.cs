@@ -37,10 +37,6 @@ namespace PL.RentACar
                 frm.Show();
                 this.Hide();
             }
-            else
-            {
-                MessageBox.Show("Hatalı Şifre veya Kullanıcı Adı!!!", "Giriş Yapılamadı!!!");
-            }
         }
 
         private void txtSifre_Enter(object sender, EventArgs e)
@@ -61,28 +57,16 @@ namespace PL.RentACar
             }
         }
 
-
-
-        //public void FormAcikmi(Form AcilacakForm)
-        //{
-        //    bool Varmi = false;
-        //    for (int i = 0; i < this.MdiChildren.Length; i++)
-        //    {
-        //        if (AcilacakForm.Name == MdiChildren[i].Name)
-        //        {
-        //            MdiChildren[i].Focus();
-        //            Varmi = true;
-        //        }
-        //    }
-        //    if (Varmi == false)
-        //    {
-        //        AcilacakForm.MdiParent = this;
-        //        AcilacakForm.Show();
-        //    }
-        //    else
-        //    {
-        //        AcilacakForm.Dispose(); //Nesne hafızadan atılır.
-        //    }
-        //}
+        private void pbSifreGizle_Click(object sender, EventArgs e)
+        {
+            if (txtSifre.PasswordChar == '*')
+            {
+                txtSifre.PasswordChar = '\0';
+            }
+            else
+            {
+                txtSifre.PasswordChar = '*';
+            }
+        }
     }
 }
