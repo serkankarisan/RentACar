@@ -24,5 +24,10 @@ namespace PL.RentACar
             tsSil.Enabled = false;
             txtMarka.Focus();
         }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
