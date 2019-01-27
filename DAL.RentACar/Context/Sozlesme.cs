@@ -14,6 +14,10 @@ namespace DAL.RentACar.Context
     {
         [Key]
         public int Id { get; set; }
+        [NotMapped]
+        public string MusteriAdiSoyadi { get; set; }
+        [NotMapped]
+        public string PersonelAdiSoyadi { get; set; }
         public int PersonelId { get; set; }
         public int MusteriId { get; set; }
         [Required]
@@ -32,5 +36,6 @@ namespace DAL.RentACar.Context
         public virtual Musteri Musteri { get; set; }
 
         public virtual List<SozlesmeDetay> SozlesmeDetaylar { get; set; }
+
     }
 }

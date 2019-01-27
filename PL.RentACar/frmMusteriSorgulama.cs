@@ -64,5 +64,25 @@ namespace PL.RentACar
         {
             ListeGoster(musrepo.MusteriListele());
         }
+
+        private void btnMusteriSec_Click(object sender, EventArgs e)
+        {
+            frmMusteriIslemleri frm = new frmMusteriIslemleri();
+            frm.ShowDialog();
+        }
+
+        private void dgvMusteriler_DoubleClick(object sender, EventArgs e)
+        {
+            Genel.MusteriID = Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value);
+            Genel.MusteriAdi = dgvMusteriler.SelectedRows[0].Cells[1].Value.ToString();
+            Genel.MusteriSoyadi = dgvMusteriler.SelectedRows[0].Cells[2].Value.ToString();
+            Genel.MusteriTelefon = dgvMusteriler.SelectedRows[0].Cells[3].Value.ToString();
+            Genel.MusteriEmail = dgvMusteriler.SelectedRows[0].Cells[4].Value.ToString();
+            Genel.MusteriAdres = dgvMusteriler.SelectedRows[0].Cells[5].Value.ToString();
+            Genel.MusteriTCKNo = dgvMusteriler.SelectedRows[0].Cells[6].Value.ToString();
+            Genel.MusteriCinsiyet = dgvMusteriler.SelectedRows[0].Cells[8].Value.ToString();
+            Genel.MusteriEhliyetNo = dgvMusteriler.SelectedRows[0].Cells[9].Value.ToString();
+            this.Close();
+        }
     }
 }

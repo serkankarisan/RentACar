@@ -51,7 +51,7 @@ namespace BLL.RentACar.Repositories
 
         public bool SozlesmeKontrol(Sozlesme yeni)
         {
-            return Convert.ToBoolean(Genel.ent.Sozlesmeler.Where(s => s.Id == yeni.Id).ToList().Count);
+            return Convert.ToBoolean(Genel.ent.Sozlesmeler.Where(s => s.SozlesmeTarihi == yeni.SozlesmeTarihi && s.MusteriId==yeni.MusteriId && s.PersonelId == yeni.PersonelId).ToList().Count);
         }
 
         public List<Sozlesme> SozlesmeListele()
@@ -59,10 +59,9 @@ namespace BLL.RentACar.Repositories
             return Genel.ent.Sozlesmeler.Where(s => s.Silindi == false).ToList();
         }
 
-        public List<Sozlesme> SozlesmeListeleByMusteri(string Ad, string Soyad, string TCKNo, string EhliyetNo)
+        public List<Sozlesme> SozlesmeListeleByMusteriId(int ID)
         {
-           Musteri secilen = Genel.ent.Musteriler.Where(m => m.Silindi == false && m.Adi == Ad && m.Soyadi.Contains(Soyad) && m.TcKimlikNo.Contains(TCKNo) && m.EhliyetNo.Contains(EhliyetNo)).FirstOrDefault();
-            return Genel.ent.Sozlesmeler.Where(s => s.Silindi == false && s.MusteriId == secilen.Id).ToList();
+            return Genel.ent.Sozlesmeler.Where(s => s.MusteriId == ID).ToList();
         }
 
         public List<Sozlesme> SozlesmeListeleByTarih(DateTime baslangic, DateTime bitis)

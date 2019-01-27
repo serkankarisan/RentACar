@@ -66,9 +66,12 @@
             this.btnMenuKapat = new System.Windows.Forms.Button();
             this.btnMenuAc = new System.Windows.Forms.Button();
             this.pnlUst = new System.Windows.Forms.Panel();
+            this.lblSaat = new System.Windows.Forms.Label();
+            this.lblTarih = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.lblYetki = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTarih = new System.Windows.Forms.Label();
             this.lblKullanici = new System.Windows.Forms.Label();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.pnlKasaMenu = new System.Windows.Forms.Panel();
@@ -90,10 +93,6 @@
             this.btnTeslimAl = new System.Windows.Forms.Button();
             this.btnKirala = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblSaat = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.pnlHeader1 = new PL.RentACar.pnlHeader();
             this.pnlMenu.SuspendLayout();
             this.pnlMenuSimge.SuspendLayout();
@@ -610,7 +609,6 @@
             this.pnlUst.Controls.Add(this.lblTarih);
             this.pnlUst.Controls.Add(this.label19);
             this.pnlUst.Controls.Add(this.label18);
-            this.pnlUst.Controls.Add(this.label17);
             this.pnlUst.Controls.Add(this.lblYetki);
             this.pnlUst.Controls.Add(this.pictureBox1);
             this.pnlUst.Controls.Add(this.lblKullanici);
@@ -619,6 +617,54 @@
             this.pnlUst.Name = "pnlUst";
             this.pnlUst.Size = new System.Drawing.Size(920, 38);
             this.pnlUst.TabIndex = 3;
+            // 
+            // lblSaat
+            // 
+            this.lblSaat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSaat.AutoSize = true;
+            this.lblSaat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSaat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSaat.Location = new System.Drawing.Point(824, 8);
+            this.lblSaat.Name = "lblSaat";
+            this.lblSaat.Size = new System.Drawing.Size(51, 22);
+            this.lblSaat.TabIndex = 5;
+            this.lblSaat.Text = "Saat";
+            // 
+            // lblTarih
+            // 
+            this.lblTarih.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTarih.AutoSize = true;
+            this.lblTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTarih.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTarih.Location = new System.Drawing.Point(585, 7);
+            this.lblTarih.Name = "lblTarih";
+            this.lblTarih.Size = new System.Drawing.Size(57, 22);
+            this.lblTarih.TabIndex = 1;
+            this.lblTarih.Text = "Tarih";
+            // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label19.Location = new System.Drawing.Point(805, -2);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(27, 39);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "I";
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label18.Location = new System.Drawing.Point(566, -2);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(27, 39);
+            this.label18.TabIndex = 8;
+            this.label18.Text = "I";
             // 
             // lblYetki
             // 
@@ -641,18 +687,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblTarih
-            // 
-            this.lblTarih.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTarih.AutoSize = true;
-            this.lblTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTarih.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTarih.Location = new System.Drawing.Point(585, 7);
-            this.lblTarih.Name = "lblTarih";
-            this.lblTarih.Size = new System.Drawing.Size(57, 22);
-            this.lblTarih.TabIndex = 1;
-            this.lblTarih.Text = "Tarih";
             // 
             // lblKullanici
             // 
@@ -975,54 +1009,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lblSaat
-            // 
-            this.lblSaat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSaat.AutoSize = true;
-            this.lblSaat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSaat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSaat.Location = new System.Drawing.Point(824, 8);
-            this.lblSaat.Name = "lblSaat";
-            this.lblSaat.Size = new System.Drawing.Size(51, 22);
-            this.lblSaat.TabIndex = 5;
-            this.lblSaat.Text = "Saat";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Location = new System.Drawing.Point(432, -2);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(27, 39);
-            this.label17.TabIndex = 7;
-            this.label17.Text = "I";
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label18.Location = new System.Drawing.Point(566, -2);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(27, 39);
-            this.label18.TabIndex = 8;
-            this.label18.Text = "I";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label19.Location = new System.Drawing.Point(805, -2);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(27, 39);
-            this.label19.TabIndex = 9;
-            this.label19.Text = "I";
-            // 
             // pnlHeader1
             // 
             this.pnlHeader1.BackColor = System.Drawing.Color.Lavender;
@@ -1145,6 +1131,5 @@
         private System.Windows.Forms.Label lblSaat;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
     }
 }
