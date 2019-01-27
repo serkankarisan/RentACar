@@ -32,13 +32,13 @@
             this.toolStripLabel9 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.tsbYeni = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.tsbKaydet = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.tsbDegistir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.tsbSil = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
@@ -47,18 +47,18 @@
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.btnCikis = new System.Windows.Forms.Button();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.tsbKullaniciAdi = new System.Windows.Forms.ToolStripLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtAd = new System.Windows.Forms.TextBox();
+            this.txtSoyad = new System.Windows.Forms.TextBox();
+            this.txtTelefon = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtAdres = new System.Windows.Forms.TextBox();
+            this.txtMaas = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -75,7 +75,7 @@
             // toolStripLabel9
             // 
             this.toolStripLabel9.Name = "toolStripLabel9";
-            this.toolStripLabel9.Size = new System.Drawing.Size(66, 24);
+            this.toolStripLabel9.Size = new System.Drawing.Size(65, 24);
             this.toolStripLabel9.Text = "           Yetki";
             // 
             // toolStripSeparator10
@@ -88,55 +88,57 @@
             this.toolStripSeparator11.Name = "toolStripSeparator11";
             this.toolStripSeparator11.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripButton1
+            // tsbYeni
             // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(54, 24);
-            this.toolStripButton1.Text = "&Yeni";
+            this.tsbYeni.Image = ((System.Drawing.Image)(resources.GetObject("tsbYeni.Image")));
+            this.tsbYeni.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbYeni.Name = "tsbYeni";
+            this.tsbYeni.Size = new System.Drawing.Size(53, 24);
+            this.tsbYeni.Text = "&Yeni";
+            this.tsbYeni.Click += new System.EventHandler(this.tsbYeni_Click);
             // 
             // toolStripSeparator12
             // 
             this.toolStripSeparator12.Name = "toolStripSeparator12";
             this.toolStripSeparator12.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripButton2
+            // tsbKaydet
             // 
-            this.toolStripButton2.Enabled = false;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(67, 24);
-            this.toolStripButton2.Text = "&Kaydet";
+            this.tsbKaydet.Enabled = false;
+            this.tsbKaydet.Image = ((System.Drawing.Image)(resources.GetObject("tsbKaydet.Image")));
+            this.tsbKaydet.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbKaydet.Name = "tsbKaydet";
+            this.tsbKaydet.Size = new System.Drawing.Size(67, 24);
+            this.tsbKaydet.Text = "&Kaydet";
+            this.tsbKaydet.Click += new System.EventHandler(this.tsbKaydet_Click);
             // 
             // toolStripSeparator13
             // 
             this.toolStripSeparator13.Name = "toolStripSeparator13";
             this.toolStripSeparator13.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripButton3
+            // tsbDegistir
             // 
-            this.toolStripButton3.Enabled = false;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(71, 24);
-            this.toolStripButton3.Text = "&Değiştir";
+            this.tsbDegistir.Enabled = false;
+            this.tsbDegistir.Image = ((System.Drawing.Image)(resources.GetObject("tsbDegistir.Image")));
+            this.tsbDegistir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDegistir.Name = "tsbDegistir";
+            this.tsbDegistir.Size = new System.Drawing.Size(71, 24);
+            this.tsbDegistir.Text = "&Değiştir";
             // 
             // toolStripSeparator14
             // 
             this.toolStripSeparator14.Name = "toolStripSeparator14";
             this.toolStripSeparator14.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripButton4
+            // tsbSil
             // 
-            this.toolStripButton4.Enabled = false;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(43, 24);
-            this.toolStripButton4.Text = "&Sil";
+            this.tsbSil.Enabled = false;
+            this.tsbSil.Image = ((System.Drawing.Image)(resources.GetObject("tsbSil.Image")));
+            this.tsbSil.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSil.Name = "tsbSil";
+            this.tsbSil.Size = new System.Drawing.Size(43, 24);
+            this.tsbSil.Text = "&Sil";
             // 
             // toolStripLabel6
             // 
@@ -192,11 +194,11 @@
             this.btnCikis.TabIndex = 39;
             this.btnCikis.UseVisualStyleBackColor = false;
             // 
-            // toolStripLabel1
+            // tsbKullaniciAdi
             // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(73, 24);
-            this.toolStripLabel1.Text = "Kullanıcı Adı";
+            this.tsbKullaniciAdi.Name = "tsbKullaniciAdi";
+            this.tsbKullaniciAdi.Size = new System.Drawing.Size(73, 24);
+            this.tsbKullaniciAdi.Text = "Kullanıcı Adı";
             // 
             // label1
             // 
@@ -243,77 +245,77 @@
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(6, 27);
             // 
-            // textBox1
+            // txtAd
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(99, 7);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 20);
-            this.textBox1.TabIndex = 16;
+            this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAd.Location = new System.Drawing.Point(99, 7);
+            this.txtAd.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAd.Name = "txtAd";
+            this.txtAd.Size = new System.Drawing.Size(149, 20);
+            this.txtAd.TabIndex = 16;
             // 
-            // textBox2
+            // txtSoyad
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(99, 45);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 20);
-            this.textBox2.TabIndex = 17;
+            this.txtSoyad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSoyad.Location = new System.Drawing.Point(99, 45);
+            this.txtSoyad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.Size = new System.Drawing.Size(149, 20);
+            this.txtSoyad.TabIndex = 17;
             // 
-            // textBox3
+            // txtTelefon
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(99, 83);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 20);
-            this.textBox3.TabIndex = 18;
+            this.txtTelefon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefon.Location = new System.Drawing.Point(99, 83);
+            this.txtTelefon.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefon.Name = "txtTelefon";
+            this.txtTelefon.Size = new System.Drawing.Size(149, 20);
+            this.txtTelefon.TabIndex = 18;
             // 
-            // textBox4
+            // txtEmail
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(99, 121);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(203, 20);
-            this.textBox4.TabIndex = 19;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Location = new System.Drawing.Point(99, 121);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(203, 20);
+            this.txtEmail.TabIndex = 19;
             // 
-            // textBox5
+            // txtAdres
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(99, 159);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(203, 101);
-            this.textBox5.TabIndex = 20;
+            this.txtAdres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAdres.Location = new System.Drawing.Point(99, 159);
+            this.txtAdres.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdres.Multiline = true;
+            this.txtAdres.Name = "txtAdres";
+            this.txtAdres.Size = new System.Drawing.Size(203, 101);
+            this.txtAdres.TabIndex = 20;
             // 
-            // textBox6
+            // txtMaas
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(99, 268);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(149, 20);
-            this.textBox6.TabIndex = 21;
+            this.txtMaas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaas.Location = new System.Drawing.Point(99, 268);
+            this.txtMaas.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaas.Name = "txtMaas";
+            this.txtMaas.Size = new System.Drawing.Size(149, 20);
+            this.txtMaas.TabIndex = 21;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtAd);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtSoyad);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txtTelefon);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtAdres);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.txtMaas);
             this.panel1.Location = new System.Drawing.Point(23, 182);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(325, 308);
@@ -367,17 +369,17 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator8,
-            this.toolStripLabel1,
+            this.tsbKullaniciAdi,
             this.toolStripSeparator9,
             this.toolStripSeparator10,
             this.toolStripSeparator11,
-            this.toolStripButton1,
+            this.tsbYeni,
             this.toolStripSeparator12,
-            this.toolStripButton2,
+            this.tsbKaydet,
             this.toolStripSeparator13,
-            this.toolStripButton3,
+            this.tsbDegistir,
             this.toolStripSeparator14,
-            this.toolStripButton4,
+            this.tsbSil,
             this.toolStripLabel6,
             this.toolStripLabel7,
             this.toolStripLabel8,
@@ -431,13 +433,13 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel9;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton tsbYeni;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton tsbKaydet;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton tsbDegistir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton tsbSil;
         private System.Windows.Forms.ToolStripLabel toolStripLabel6;
         private System.Windows.Forms.ToolStripLabel toolStripLabel7;
         private System.Windows.Forms.ToolStripLabel toolStripLabel8;
@@ -446,18 +448,18 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
         private System.Windows.Forms.Button btnCikis;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel tsbKullaniciAdi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.TextBox txtSoyad;
+        private System.Windows.Forms.TextBox txtTelefon;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtAdres;
+        private System.Windows.Forms.TextBox txtMaas;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

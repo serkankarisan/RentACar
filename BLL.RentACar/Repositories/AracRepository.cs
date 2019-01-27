@@ -110,7 +110,6 @@ namespace BLL.RentACar.Repositories
             {
                 Sonuc = true;
             }
-
             return Sonuc;
         }
     }
