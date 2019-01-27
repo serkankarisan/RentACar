@@ -75,6 +75,7 @@
             this.txtEhliyetNo.Name = "txtEhliyetNo";
             this.txtEhliyetNo.Size = new System.Drawing.Size(100, 20);
             this.txtEhliyetNo.TabIndex = 95;
+            this.txtEhliyetNo.TextChanged += new System.EventHandler(this.txtEhliyetNo_TextChanged);
             // 
             // dgvMusteriler
             // 
@@ -121,6 +122,7 @@
             this.txtTCKNo.Name = "txtTCKNo";
             this.txtTCKNo.Size = new System.Drawing.Size(100, 20);
             this.txtTCKNo.TabIndex = 90;
+            this.txtTCKNo.TextChanged += new System.EventHandler(this.txtTCKNo_TextChanged);
             // 
             // txtSoyad
             // 
@@ -128,6 +130,7 @@
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(100, 20);
             this.txtSoyad.TabIndex = 89;
+            this.txtSoyad.TextChanged += new System.EventHandler(this.txtSoyad_TextChanged);
             // 
             // txtAd
             // 
@@ -135,6 +138,7 @@
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(100, 20);
             this.txtAd.TabIndex = 88;
+            this.txtAd.TextChanged += new System.EventHandler(this.txtAd_TextChanged);
             // 
             // label3
             // 
@@ -198,6 +202,7 @@
             this.Controls.Add(this.txtAd);
             this.Name = "frmMusteriDetay";
             this.Text = "frmMusteriDetay";
+            this.Load += new System.EventHandler(this.frmMusteriDetay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
