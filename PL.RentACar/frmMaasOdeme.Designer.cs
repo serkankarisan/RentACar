@@ -181,6 +181,7 @@
             this.Name = "frmMaasOdeme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMaasOdeme";
+            this.Load += new System.EventHandler(this.frmMaasOdeme_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

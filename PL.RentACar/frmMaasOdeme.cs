@@ -78,5 +78,10 @@ namespace PL.RentACar
             Total = ToplamMaas + ToplamPirim;
             txtToplamOdeme.Text = Total.ToString();
         }
+
+        private void frmMaasOdeme_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
