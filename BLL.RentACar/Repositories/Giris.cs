@@ -16,8 +16,14 @@ namespace BLL.RentACar.Repositories
             bool Sonuc = false;
             
             Kullanici kullanici= Genel.ent.Kullanicilar.Where(k => k.UserName == KullaniciAdi && k.Password==Sifre).FirstOrDefault();
-            string Sifrekontrol= kullanici.Password;
-            string Adkontrol = kullanici.UserName;
+
+            string Sifrekontrol="";
+            string Adkontrol="";
+            if (kullanici!=null)
+            {
+                Sifrekontrol = kullanici.Password;
+                Adkontrol = kullanici.UserName;
+            }
             if (String.Compare(Sifre, Sifrekontrol, false)==0)
             {
                 if (String.Compare(KullaniciAdi, Adkontrol, false) == 0)

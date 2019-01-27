@@ -59,6 +59,10 @@ namespace PL.RentACar
 
         private void pbSifreGizle_Click(object sender, EventArgs e)
         {
+            if (txtSifre.Text == "Sifre")
+            {
+                txtSifre.Clear();
+            }
             if (txtSifre.PasswordChar == '*')
             {
                 txtSifre.PasswordChar = '\0';

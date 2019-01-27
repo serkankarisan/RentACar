@@ -59,6 +59,7 @@
             this.txtEhliyetNo.Name = "txtEhliyetNo";
             this.txtEhliyetNo.Size = new System.Drawing.Size(100, 26);
             this.txtEhliyetNo.TabIndex = 85;
+            this.txtEhliyetNo.TextChanged += new System.EventHandler(this.txtEhliyetNo_TextChanged);
             // 
             // dgvMusteriler
             // 
@@ -71,7 +72,8 @@
             this.dgvMusteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMusteriler.Location = new System.Drawing.Point(48, 78);
             this.dgvMusteriler.Name = "dgvMusteriler";
-            this.dgvMusteriler.Size = new System.Drawing.Size(744, 335);
+            this.dgvMusteriler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMusteriler.Size = new System.Drawing.Size(740, 335);
             this.dgvMusteriler.TabIndex = 84;
             // 
             // label6
@@ -107,6 +109,7 @@
             this.txtTCKNo.Name = "txtTCKNo";
             this.txtTCKNo.Size = new System.Drawing.Size(100, 26);
             this.txtTCKNo.TabIndex = 80;
+            this.txtTCKNo.TextChanged += new System.EventHandler(this.txtTCKNo_TextChanged);
             // 
             // txtSoyad
             // 
@@ -114,6 +117,7 @@
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(100, 26);
             this.txtSoyad.TabIndex = 79;
+            this.txtSoyad.TextChanged += new System.EventHandler(this.txtSoyad_TextChanged);
             // 
             // txtAd
             // 
@@ -121,6 +125,7 @@
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(100, 26);
             this.txtAd.TabIndex = 78;
+            this.txtAd.TextChanged += new System.EventHandler(this.txtAd_TextChanged);
             // 
             // panel1
             // 
@@ -167,6 +172,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMusteriSorgulama";
             this.Text = "MusteriSorgulama";
+            this.Load += new System.EventHandler(this.frmMusteriSorgulama_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
