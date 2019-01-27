@@ -13,6 +13,7 @@ namespace BLL.RentACar.Repositories
       public static RentContext ent = new RentContext();
       public static string UserName;
       public static string Yetki;
+        public static int ID;
 
     }
 }
