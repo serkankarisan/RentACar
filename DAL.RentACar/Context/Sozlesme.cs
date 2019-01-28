@@ -14,10 +14,6 @@ namespace DAL.RentACar.Context
     {
         [Key]
         public int Id { get; set; }
-        [NotMapped]
-        public string MusteriAdiSoyadi { get; set; }
-        [NotMapped]
-        public string PersonelAdiSoyadi { get; set; }
         public int PersonelId { get; set; }
         public int MusteriId { get; set; }
         [Required]

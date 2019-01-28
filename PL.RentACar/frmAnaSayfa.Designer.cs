@@ -1073,7 +1073,6 @@
         private System.Windows.Forms.Label lblTarih;
         private System.Windows.Forms.Label lblKullanici;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.Panel pnlBaslik;
         private System.Windows.Forms.PictureBox pbHome;
         private System.Windows.Forms.Label lblMenu;
@@ -1131,5 +1130,6 @@
         private System.Windows.Forms.Label lblSaat;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel pnlContent;
     }
 }

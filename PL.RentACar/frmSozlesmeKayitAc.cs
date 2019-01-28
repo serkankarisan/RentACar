@@ -44,6 +44,7 @@ namespace PL.RentACar
             //txtPersonelSoyadi.Text = Genel.PersonelSoyadi;            
             txtPersonelAdi.Text = "Ali";
             txtPersonelSoyadi.Text = "Kaçar";
+            Genel.PersonelID = 1;
             ListeGoster();
         }
 
@@ -55,30 +56,43 @@ namespace PL.RentACar
         private void btnKayitAc_Click(object sender, EventArgs e)
         {
             Sozlesme s = new Sozlesme();
-            Personel p = perrepo.PersonelGetirById(Genel.PersonelID);
-            Musteri m = musrepo.MusteriGetirById(Genel.MusteriID);
-            s.PersonelAdiSoyadi = p.Adi + " " + p.Soyadi;
-            s.MusteriAdiSoyadi = m.Adi + " " + m.Soyadi;
-            s.AracSayisi = 0;
-            s.MusteriId = Genel.MusteriID;
-            s.PersonelId = 1;
-            //s.PersonelId = Genel.PersonelID;
-            s.Silindi = false;
-            s.SozlesmeTarihi = Convert.ToDateTime(dtpSozlesmeTarihi.Text);
-            s.SozlesmeTutari = 0;
-            if (sozrepo.SozlesmeKontrol(s))
+            if (Genel.MusteriID!=0)
             {
-                MessageBox.Show("Bu Sözleşme Kayıtlı!", "Hatalı Bilgi Girişi!");
+                if (Genel.PersonelID!=0)
+                {
+                    s.AracSayisi = 0;
+                    s.MusteriId = Genel.MusteriID;
+                    s.PersonelId = Genel.PersonelID;
+                    s.Silindi = false;
+                    s.SozlesmeTarihi = Convert.ToDateTime(dtpSozlesmeTarihi.Text);
+                    s.SozlesmeTutari = 0;
+                    if (sozrepo.SozlesmeKontrol(s))
+                    {
+                        MessageBox.Show("Bu Sözleşme Kayıtlı!", "Hatalı Bilgi Girişi!");
+                    }
+                    else
+                    {
+                        if (sozrepo.SozlesmeEkle(s))
+                        {
+                            MessageBox.Show("Yeni Sözleşme Eklendi.", "Kayıt Gerçekleşti.");
+                            ListeGoster();
+                            Temizle();
+                            this.Hide();
+                            frmKirala frm = new frmKirala();
+                            FormAc(frm);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Bu Personel Seçmelisiniz!", "Eksik Bilgi Girişi!");
+                }
             }
             else
             {
-                if (sozrepo.SozlesmeEkle(s))
-                {
-                    MessageBox.Show("Yeni Sözleşme Eklendi.", "Kayıt Gerçekleşti.");
-                    ListeGoster();
-                    Temizle();
-                }
+                MessageBox.Show("Bu Müşteri Seçmelisiniz!", "Eksik Bilgi Girişi!");
             }
+            ListeGoster();
         }
         private void Temizle()
         {
@@ -98,24 +112,30 @@ namespace PL.RentACar
         {
             dgvSozlesmeler.DataSource = sozrepo.SozlesmeListeleByMusteriId(Genel.MusteriID);
             dgvSozlesmeler.Columns[0].Visible = false;
-            dgvSozlesmeler.Columns[1].Width = 175;
-            dgvSozlesmeler.Columns[1].HeaderText = "Müşteri";
-            dgvSozlesmeler.Columns[2].Width = 175;
-            dgvSozlesmeler.Columns[2].HeaderText = "Personel";
-            dgvSozlesmeler.Columns[3].Visible = false;
-            dgvSozlesmeler.Columns[4].Visible = false;
-            dgvSozlesmeler.Columns[5].Width = 125;
-            dgvSozlesmeler.Columns[6].Width = 75;
-            dgvSozlesmeler.Columns[6].HeaderText = "Tutar";
-            dgvSozlesmeler.Columns[7].Width = 125;
-            dgvSozlesmeler.Columns[8].Visible = false;
-            dgvSozlesmeler.Columns[9].Visible = false;
-            dgvSozlesmeler.Columns[10].Visible = false;
+            dgvSozlesmeler.Columns[1].Visible = false;
+            dgvSozlesmeler.Columns[2].Visible = false;
+            dgvSozlesmeler.Columns[3].Width = 150;
+            dgvSozlesmeler.Columns[3].HeaderText = "Sözleşme Tarihi";
+            dgvSozlesmeler.Columns[4].Width = 80;
+            dgvSozlesmeler.Columns[4].HeaderText = "Tutar";
+            dgvSozlesmeler.Columns[5].Width = 75;
+            dgvSozlesmeler.Columns[5].HeaderText = "Araç Sayısı";
+            dgvSozlesmeler.Columns[6].Visible = false;
+            dgvSozlesmeler.Columns[7].Visible = false;
+            dgvSozlesmeler.Columns[8].Width = 160;
+            dgvSozlesmeler.Columns[8].HeaderText = "Müşteri"; ;
         }
 
         private void frmSozlesmeKayitAc_Load(object sender, EventArgs e)
         {
             ListeGoster();
+        }
+        private void FormAc(Form AF)
+        {
+            AF.TopLevel = false;
+            this.Parent.Controls.Add(AF);
+            AF.Dock = DockStyle.Fill;
+            AF.Show();
         }
     }
 }

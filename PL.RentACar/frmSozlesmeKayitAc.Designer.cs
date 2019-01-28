@@ -55,9 +55,9 @@
             this.txtMusteriAdi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnCikis = new System.Windows.Forms.Button();
             this.btnPersonelSec = new System.Windows.Forms.Button();
             this.btnMusteriSec = new System.Windows.Forms.Button();
-            this.btnCikis = new System.Windows.Forms.Button();
             this.dgvSozlesmeler = new System.Windows.Forms.DataGridView();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeler)).BeginInit();
@@ -319,8 +319,23 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(834, 24);
+            this.panel4.Size = new System.Drawing.Size(725, 24);
             this.panel4.TabIndex = 155;
+            // 
+            // btnCikis
+            // 
+            this.btnCikis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCikis.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnCikis.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCikis.FlatAppearance.BorderSize = 0;
+            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
+            this.btnCikis.Location = new System.Drawing.Point(700, 1);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(24, 22);
+            this.btnCikis.TabIndex = 88;
+            this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // btnPersonelSec
             // 
@@ -358,21 +373,6 @@
             this.btnMusteriSec.UseVisualStyleBackColor = false;
             this.btnMusteriSec.Click += new System.EventHandler(this.btnMusteriSec_Click);
             // 
-            // btnCikis
-            // 
-            this.btnCikis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCikis.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnCikis.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCikis.FlatAppearance.BorderSize = 0;
-            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
-            this.btnCikis.Location = new System.Drawing.Point(809, 1);
-            this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(24, 22);
-            this.btnCikis.TabIndex = 88;
-            this.btnCikis.UseVisualStyleBackColor = false;
-            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
-            // 
             // dgvSozlesmeler
             // 
             this.dgvSozlesmeler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -385,7 +385,7 @@
             this.dgvSozlesmeler.Location = new System.Drawing.Point(473, 183);
             this.dgvSozlesmeler.Name = "dgvSozlesmeler";
             this.dgvSozlesmeler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSozlesmeler.Size = new System.Drawing.Size(349, 221);
+            this.dgvSozlesmeler.Size = new System.Drawing.Size(240, 221);
             this.dgvSozlesmeler.TabIndex = 156;
             // 
             // frmSozlesmeKayitAc
@@ -394,7 +394,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(834, 432);
+            this.ClientSize = new System.Drawing.Size(725, 432);
             this.Controls.Add(this.dgvSozlesmeler);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.btnKayitAc);
