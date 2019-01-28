@@ -202,6 +202,7 @@
             this.btnCikis.Size = new System.Drawing.Size(25, 24);
             this.btnCikis.TabIndex = 87;
             this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // label1
             // 
@@ -270,7 +271,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ComboBox cbMarkalar;
-        private System.Windows.Forms.ImageList ilLarge;
         private System.Windows.Forms.ImageList ilSmall;
         private System.Windows.Forms.ContextMenuStrip cmView;
         private System.Windows.Forms.ToolStripMenuItem mitmLargeIcon;
@@ -283,5 +283,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.ImageList ilLarge;
     }
 }

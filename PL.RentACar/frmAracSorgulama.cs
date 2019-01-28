@@ -20,7 +20,6 @@ namespace PL.RentACar
         }
         AracRepository ARep = new AracRepository();
         int x;
-        int ID;
         private void mitmLargeIcon_Click(object sender, EventArgs e)
         {
             lvDetaylar.View = View.LargeIcon;
@@ -79,7 +78,6 @@ namespace PL.RentACar
                         lvDetaylar.Items[j].SubItems.Add(liste[i].GünlükFiyat.ToString());
                         j++;
                     }
-                    
                 }
             }
         }
@@ -93,7 +91,6 @@ namespace PL.RentACar
                 lvDetaylar.Items[i].SubItems.Add(listem[i].Plaka);
                 lvDetaylar.Items[i].SubItems.Add(listem[i].AracDurumu);
                 lvDetaylar.Items[i].SubItems.Add(listem[i].GünlükFiyat.ToString());
-                
             }
             
         }
@@ -105,12 +102,16 @@ namespace PL.RentACar
             {
                 if (lvDetaylar.SelectedItems[0].SubItems[3].Text == liste[i].Plaka)
                 {
-                    ID = liste[i].Id;
+                    Genel.AracID = liste[i].Id;
                     
                 }               
-
             }
-            MessageBox.Show("" + ID);
+            this.Close();
+        }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

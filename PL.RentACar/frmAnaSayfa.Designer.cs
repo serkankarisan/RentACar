@@ -75,6 +75,7 @@
             this.lblKullanici = new System.Windows.Forms.Label();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.pnlKasaMenu = new System.Windows.Forms.Panel();
+            this.btnOdeme = new System.Windows.Forms.Button();
             this.btnMaasOdeme = new System.Windows.Forms.Button();
             this.btnKasaDetay = new System.Windows.Forms.Button();
             this.pnlAracMenu = new System.Windows.Forms.Panel();
@@ -94,7 +95,6 @@
             this.btnKirala = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlHeader1 = new PL.RentACar.pnlHeader();
-            this.btnOdeme = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.pnlMenuSimge.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCikis)).BeginInit();
@@ -727,6 +727,24 @@
             this.pnlKasaMenu.Size = new System.Drawing.Size(0, 102);
             this.pnlKasaMenu.TabIndex = 25;
             // 
+            // btnOdeme
+            // 
+            this.btnOdeme.BackColor = System.Drawing.Color.Transparent;
+            this.btnOdeme.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOdeme.FlatAppearance.BorderSize = 0;
+            this.btnOdeme.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SandyBrown;
+            this.btnOdeme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOdeme.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOdeme.Location = new System.Drawing.Point(0, 64);
+            this.btnOdeme.Name = "btnOdeme";
+            this.btnOdeme.Size = new System.Drawing.Size(0, 32);
+            this.btnOdeme.TabIndex = 23;
+            this.btnOdeme.Text = "Ödeme İşlemleri";
+            this.btnOdeme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOdeme.UseVisualStyleBackColor = false;
+            this.btnOdeme.Click += new System.EventHandler(this.btnOdeme_Click);
+            // 
             // btnMaasOdeme
             // 
             this.btnMaasOdeme.BackColor = System.Drawing.Color.Transparent;
@@ -1022,24 +1040,7 @@
             this.pnlHeader1.Name = "pnlHeader1";
             this.pnlHeader1.Size = new System.Drawing.Size(960, 30);
             this.pnlHeader1.TabIndex = 0;
-            // 
-            // btnOdeme
-            // 
-            this.btnOdeme.BackColor = System.Drawing.Color.Transparent;
-            this.btnOdeme.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOdeme.FlatAppearance.BorderSize = 0;
-            this.btnOdeme.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SandyBrown;
-            this.btnOdeme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOdeme.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOdeme.Location = new System.Drawing.Point(0, 64);
-            this.btnOdeme.Name = "btnOdeme";
-            this.btnOdeme.Size = new System.Drawing.Size(0, 32);
-            this.btnOdeme.TabIndex = 23;
-            this.btnOdeme.Text = "Ödeme İşlemleri";
-            this.btnOdeme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOdeme.UseVisualStyleBackColor = false;
-            this.btnOdeme.Click += new System.EventHandler(this.btnOdeme_Click);
+            this.pnlHeader1.Load += new System.EventHandler(this.pnlHeader1_Load);
             // 
             // frmAnaSayfa
             // 

@@ -25,14 +25,15 @@ namespace PL.RentACar
         {
             frmMusteriSorgulama frm = new frmMusteriSorgulama();
             frm.ShowDialog();
-            txtMusteriAdi.Text = Genel.MusteriAdi;
-            txtMusteriSoyadi.Text = Genel.MusteriSoyadi;
-            txtMusteriTelefon.Text = Genel.MusteriTelefon;
-            txtMusteriEmail.Text = Genel.MusteriEmail;
-            txtMusteriAdres.Text = Genel.MusteriAdres;
-            txtMusteriTCKNo.Text = Genel.MusteriTCKNo;
-            cbMusteriCinsiyet.Text = Genel.MusteriCinsiyet;
-            txtMusteriEhliyetNo.Text = Genel.MusteriEhliyetNo;
+            Musteri m = musrepo.MusteriGetirById(Genel.MusteriID);
+            txtMusteriAdi.Text = m.Adi;
+            txtMusteriSoyadi.Text = m.Soyadi;
+            txtMusteriTelefon.Text = m.Telefon;
+            txtMusteriEmail.Text = m.Email;
+            txtMusteriAdres.Text = m.Adres;
+            txtMusteriTCKNo.Text = m.TcKimlikNo;
+            cbMusteriCinsiyet.Text = m.Cinsiyet;
+            txtMusteriEhliyetNo.Text = m.EhliyetNo;
             ListeGoster();
         }
 
@@ -86,12 +87,12 @@ namespace PL.RentACar
                 }
                 else
                 {
-                    MessageBox.Show("Bu Personel Seçmelisiniz!", "Eksik Bilgi Girişi!");
+                    MessageBox.Show("Bir Personel Seçmelisiniz!", "Eksik Bilgi Girişi!");
                 }
             }
             else
             {
-                MessageBox.Show("Bu Müşteri Seçmelisiniz!", "Eksik Bilgi Girişi!");
+                MessageBox.Show("Bir Müşteri Seçmelisiniz!", "Eksik Bilgi Girişi!");
             }
             ListeGoster();
         }
@@ -137,6 +138,25 @@ namespace PL.RentACar
             this.Parent.Controls.Add(AF);
             AF.Dock = DockStyle.Fill;
             AF.Show();
+        }
+
+        DateTime baslangic = new DateTime();
+        DateTime bugun = new DateTime();
+        private void dtpSozlesmeTarihi_ValueChanged(object sender, EventArgs e)
+        {
+            bugun = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            baslangic = Convert.ToDateTime(dtpSozlesmeTarihi.Value.ToShortDateString());
+            if (baslangic>=bugun)
+            {
+                btnKayitAc.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("İleri Bir Tarih Seçin!", "Tarih Hatalı!");
+                dtpSozlesmeTarihi.Value = DateTime.Now;
+                btnKayitAc.Enabled = false;
+                return;
+            }
         }
     }
 }

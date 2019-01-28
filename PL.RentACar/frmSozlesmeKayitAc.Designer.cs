@@ -70,6 +70,7 @@
             this.dtpSozlesmeTarihi.Name = "dtpSozlesmeTarihi";
             this.dtpSozlesmeTarihi.Size = new System.Drawing.Size(240, 26);
             this.dtpSozlesmeTarihi.TabIndex = 151;
+            this.dtpSozlesmeTarihi.ValueChanged += new System.EventHandler(this.dtpSozlesmeTarihi_ValueChanged);
             // 
             // label24
             // 
@@ -85,6 +86,7 @@
             // 
             this.btnKayitAc.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnKayitAc.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKayitAc.Enabled = false;
             this.btnKayitAc.FlatAppearance.BorderSize = 0;
             this.btnKayitAc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKayitAc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));

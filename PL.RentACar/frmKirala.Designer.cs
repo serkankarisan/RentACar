@@ -84,6 +84,7 @@
             this.txtGunSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtGunSayisi.Location = new System.Drawing.Point(152, 333);
             this.txtGunSayisi.Name = "txtGunSayisi";
+            this.txtGunSayisi.ReadOnly = true;
             this.txtGunSayisi.Size = new System.Drawing.Size(100, 26);
             this.txtGunSayisi.TabIndex = 157;
             // 
@@ -94,6 +95,7 @@
             this.dtpBitis.Name = "dtpBitis";
             this.dtpBitis.Size = new System.Drawing.Size(246, 26);
             this.dtpBitis.TabIndex = 156;
+            this.dtpBitis.ValueChanged += new System.EventHandler(this.dtpBitis_ValueChanged);
             // 
             // label28
             // 
@@ -112,6 +114,7 @@
             this.dtpBaslangic.Name = "dtpBaslangic";
             this.dtpBaslangic.Size = new System.Drawing.Size(246, 26);
             this.dtpBaslangic.TabIndex = 154;
+            this.dtpBaslangic.ValueChanged += new System.EventHandler(this.dtpBaslangic_ValueChanged);
             // 
             // label27
             // 
@@ -138,6 +141,7 @@
             this.txtTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTutar.Location = new System.Drawing.Point(152, 362);
             this.txtTutar.Name = "txtTutar";
+            this.txtTutar.ReadOnly = true;
             this.txtTutar.Size = new System.Drawing.Size(100, 26);
             this.txtTutar.TabIndex = 151;
             // 
@@ -156,6 +160,7 @@
             this.txtSozlesmeTutari.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSozlesmeTutari.Location = new System.Drawing.Point(577, 357);
             this.txtSozlesmeTutari.Name = "txtSozlesmeTutari";
+            this.txtSozlesmeTutari.ReadOnly = true;
             this.txtSozlesmeTutari.Size = new System.Drawing.Size(100, 26);
             this.txtSozlesmeTutari.TabIndex = 144;
             // 
@@ -174,6 +179,7 @@
             this.txtAracSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAracSayisi.Location = new System.Drawing.Point(577, 331);
             this.txtAracSayisi.Name = "txtAracSayisi";
+            this.txtAracSayisi.ReadOnly = true;
             this.txtAracSayisi.Size = new System.Drawing.Size(100, 26);
             this.txtAracSayisi.TabIndex = 142;
             // 
@@ -397,6 +403,7 @@
             this.btnEkle.Text = "Ekle";
             this.btnEkle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // btnTamamla
             // 
@@ -412,6 +419,7 @@
             this.btnTamamla.TabIndex = 162;
             this.btnTamamla.Text = "Sözleşmeyi Tamamla";
             this.btnTamamla.UseVisualStyleBackColor = false;
+            this.btnTamamla.Click += new System.EventHandler(this.btnTamamla_Click);
             // 
             // dgvSozlesmeDetaylar
             // 

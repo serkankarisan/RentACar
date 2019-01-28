@@ -43,5 +43,9 @@ namespace DAL.RentACar.Context
         {
             Silindi = false;
         }
+        public override string ToString()
+        {
+            return Marka+" - "+Model;
+        }
     }
 }
