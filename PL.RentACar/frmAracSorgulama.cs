@@ -20,6 +20,7 @@ namespace PL.RentACar
         }
         AracRepository ARep = new AracRepository();
         int x;
+        int ID;
         private void mitmLargeIcon_Click(object sender, EventArgs e)
         {
             lvDetaylar.View = View.LargeIcon;
@@ -65,21 +66,20 @@ namespace PL.RentACar
             {
                 lvDetaylar.Items.Clear();
                 List<Arac> liste = ARep.AracListele();
-
+                int j = 0;
                 for (int i = 0; i < liste.Count; i++)
                 {
                     if (cbMarkalar.SelectedItem.ToString() == liste[i].Marka)
                     {
                         lvDetaylar.Items.Add(liste[i].Model, i);
-                        lvDetaylar.Items[i].SubItems.Add(liste[i].Tip);
-                        lvDetaylar.Items[i].SubItems.Add(liste[i].Renk);
-                        lvDetaylar.Items[i].SubItems.Add(liste[i].Plaka);
-                        lvDetaylar.Items[i].SubItems.Add(liste[i].AracDurumu);
-                        lvDetaylar.Items[i].SubItems.Add(liste[i].GünlükFiyat.ToString());
-
-
-
+                        lvDetaylar.Items[j].SubItems.Add(liste[i].Tip);
+                        lvDetaylar.Items[j].SubItems.Add(liste[i].Renk);
+                        lvDetaylar.Items[j].SubItems.Add(liste[i].Plaka);
+                        lvDetaylar.Items[j].SubItems.Add(liste[i].AracDurumu);
+                        lvDetaylar.Items[j].SubItems.Add(liste[i].GünlükFiyat.ToString());
+                        j++;
                     }
+                    
                 }
             }
         }
@@ -96,6 +96,21 @@ namespace PL.RentACar
                 
             }
             
+        }
+
+        private void lvDetaylar_DoubleClick(object sender, EventArgs e)
+        {
+            List<Arac> liste = ARep.AracListele();
+            for (int i = 0; i < liste.Count; i++)
+            {
+                if (lvDetaylar.SelectedItems[0].SubItems[3].Text == liste[i].Plaka)
+                {
+                    ID = liste[i].Id;
+                    
+                }               
+
+            }
+            MessageBox.Show("" + ID);
         }
     }
 }
