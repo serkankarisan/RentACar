@@ -143,6 +143,7 @@
             this.tsDegistir.Name = "tsDegistir";
             this.tsDegistir.Size = new System.Drawing.Size(85, 24);
             this.tsDegistir.Text = "&Değiştir";
+            this.tsDegistir.Click += new System.EventHandler(this.tsDegistir_Click);
             // 
             // toolStripSeparator7
             // 
@@ -157,6 +158,7 @@
             this.tsSil.Name = "tsSil";
             this.tsSil.Size = new System.Drawing.Size(49, 24);
             this.tsSil.Text = "&Sil";
+            this.tsSil.Click += new System.EventHandler(this.tsSil_Click);
             // 
             // toolStripLabel4
             // 
@@ -207,7 +209,7 @@
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
             this.btnCikis.Location = new System.Drawing.Point(1371, 9);
-            this.btnCikis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCikis.Margin = new System.Windows.Forms.Padding(4);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(33, 33);
             this.btnCikis.TabIndex = 27;
@@ -219,7 +221,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.textBox7);
             this.panel4.Location = new System.Drawing.Point(121, 96);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(265, 36);
             this.panel4.TabIndex = 33;
@@ -230,7 +232,7 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox7.Location = new System.Drawing.Point(16, 4);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(232, 20);
             this.textBox7.TabIndex = 1;
@@ -252,7 +254,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(15, 140);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(448, 286);
             this.panel1.TabIndex = 30;
@@ -281,7 +283,7 @@
             // 
             this.cbPersonel.FormattingEnabled = true;
             this.cbPersonel.Location = new System.Drawing.Point(175, 172);
-            this.cbPersonel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cbPersonel.Margin = new System.Windows.Forms.Padding(5);
             this.cbPersonel.Name = "cbPersonel";
             this.cbPersonel.Size = new System.Drawing.Size(212, 24);
             this.cbPersonel.TabIndex = 0;
@@ -290,7 +292,7 @@
             // 
             this.txtSifreTekrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSifreTekrar.Location = new System.Drawing.Point(175, 126);
-            this.txtSifreTekrar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSifreTekrar.Margin = new System.Windows.Forms.Padding(5);
             this.txtSifreTekrar.Name = "txtSifreTekrar";
             this.txtSifreTekrar.Size = new System.Drawing.Size(213, 22);
             this.txtSifreTekrar.TabIndex = 14;
@@ -299,7 +301,7 @@
             // 
             this.cbYetki.FormattingEnabled = true;
             this.cbYetki.Location = new System.Drawing.Point(175, 223);
-            this.cbYetki.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cbYetki.Margin = new System.Windows.Forms.Padding(5);
             this.cbYetki.Name = "cbYetki";
             this.cbYetki.Size = new System.Drawing.Size(212, 24);
             this.cbYetki.TabIndex = 1;
@@ -309,7 +311,7 @@
             this.txtKullaniciAdi.BackColor = System.Drawing.Color.White;
             this.txtKullaniciAdi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtKullaniciAdi.Location = new System.Drawing.Point(175, 32);
-            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(5);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(213, 22);
             this.txtKullaniciAdi.TabIndex = 2;
@@ -318,7 +320,7 @@
             // 
             this.txtSifre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSifre.Location = new System.Drawing.Point(175, 79);
-            this.txtSifre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSifre.Margin = new System.Windows.Forms.Padding(5);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(213, 22);
             this.txtSifre.TabIndex = 3;
@@ -359,7 +361,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.textBox6);
             this.panel3.Location = new System.Drawing.Point(121, 442);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(265, 36);
             this.panel3.TabIndex = 32;
@@ -370,7 +372,7 @@
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox6.Location = new System.Drawing.Point(16, 6);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(232, 20);
             this.textBox6.TabIndex = 0;
@@ -386,7 +388,7 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtPersonelSoyadi);
             this.panel2.Location = new System.Drawing.Point(15, 486);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(472, 112);
             this.panel2.TabIndex = 31;
@@ -405,7 +407,7 @@
             // 
             this.txtPersonelAdi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPersonelAdi.Location = new System.Drawing.Point(196, 18);
-            this.txtPersonelAdi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPersonelAdi.Margin = new System.Windows.Forms.Padding(5);
             this.txtPersonelAdi.Name = "txtPersonelAdi";
             this.txtPersonelAdi.Size = new System.Drawing.Size(234, 22);
             this.txtPersonelAdi.TabIndex = 10;
@@ -424,7 +426,7 @@
             // 
             this.txtPersonelSoyadi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPersonelSoyadi.Location = new System.Drawing.Point(196, 64);
-            this.txtPersonelSoyadi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPersonelSoyadi.Margin = new System.Windows.Forms.Padding(5);
             this.txtPersonelSoyadi.Name = "txtPersonelSoyadi";
             this.txtPersonelSoyadi.Size = new System.Drawing.Size(234, 22);
             this.txtPersonelSoyadi.TabIndex = 11;
@@ -435,10 +437,11 @@
             this.dgvKullanicilar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKullanicilar.Location = new System.Drawing.Point(517, 96);
-            this.dgvKullanicilar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgvKullanicilar.Margin = new System.Windows.Forms.Padding(5);
             this.dgvKullanicilar.Name = "dgvKullanicilar";
             this.dgvKullanicilar.Size = new System.Drawing.Size(869, 503);
             this.dgvKullanicilar.TabIndex = 29;
+            this.dgvKullanicilar.DoubleClick += new System.EventHandler(this.dgvKullanicilar_DoubleClick);
             // 
             // toolStrip1
             // 
@@ -482,9 +485,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvKullanicilar);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmKullaniciIslemleri";
             this.Text = "frmKullaniciTanimlama";
+            this.Load += new System.EventHandler(this.frmKullaniciIslemleri_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
