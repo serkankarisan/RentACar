@@ -1,5 +1,6 @@
 namespace DAL.RentACar.Migrations
 {
+    using DAL.RentACar.Context;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -19,6 +20,12 @@ namespace DAL.RentACar.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+
+            context.Araclar.AddOrUpdate(
+                new Arac { Id = 1, Marka = "Audi", Model = "Q7", GünlükFiyat = 100, Tip = "Jeep", Renk = "Beyaz", Plaka = "34ERT12", AracDurumu = "Hasar Yok", YakýtDurumu = "%50", Varmi = true, Silindi = false },
+                new Arac { Id = 2, Marka = "Audi", Model = "A7", GünlükFiyat = 100, Tip = "Sedan", Renk = "Beyaz", Plaka = "34ASD12", AracDurumu = "Hasar Yok", YakýtDurumu = "%75", Varmi = true, Silindi = false },
+                new Arac { Id = 3, Marka = "Toyota", Model = "Corolla", GünlükFiyat = 100, Tip = "Sedan", Renk = "Beyaz", Plaka = "34NMB12", AracDurumu = "Hasar Yok", YakýtDurumu = "%75", Varmi = true, Silindi = false }
+                );
         }
     }
 }

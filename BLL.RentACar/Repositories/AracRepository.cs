@@ -30,6 +30,11 @@ namespace BLL.RentACar.Repositories
         {
             return Genel.ent.Araclar.ToList();
         }
+        public string[] AracListeleByMarka()
+        {
+            string[] araclar = Genel.ent.Araclar.Select(a=>a.Marka).Distinct().ToArray();
+            return araclar;
+        }
 
         public Arac AracGetirById(int ID)
         {

@@ -225,6 +225,7 @@
             this.btnCikis.Size = new System.Drawing.Size(25, 24);
             this.btnCikis.TabIndex = 86;
             this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // tsMusteriIslemleri
             // 
