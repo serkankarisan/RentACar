@@ -75,6 +75,7 @@
             this.columnHeader4,
             this.columnHeader5});
             this.lvDetaylar.ContextMenuStrip = this.cmView;
+            this.lvDetaylar.FullRowSelect = true;
             this.lvDetaylar.LargeImageList = this.ilLarge;
             this.lvDetaylar.Location = new System.Drawing.Point(12, 117);
             this.lvDetaylar.Name = "lvDetaylar";
@@ -82,7 +83,8 @@
             this.lvDetaylar.SmallImageList = this.ilSmall;
             this.lvDetaylar.TabIndex = 10;
             this.lvDetaylar.UseCompatibleStateImageBehavior = false;
-            this.lvDetaylar.View = System.Windows.Forms.View.Details;
+            this.lvDetaylar.View = System.Windows.Forms.View.Tile;
+            this.lvDetaylar.DoubleClick += new System.EventHandler(this.lvDetaylar_DoubleClick);
             // 
             // columnHeader6
             // 
