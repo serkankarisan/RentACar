@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL.RentACar.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,31 @@ namespace PL.RentACar
         public frmKirala()
         {
             InitializeComponent();
+        }
+        SozlesmeDetayRepository sdrepo = new SozlesmeDetayRepository();
+        SozlesmeRepository sozrepo = new SozlesmeRepository();
+        private void btnAracSec_Click(object sender, EventArgs e)
+        {
+            frmAracSorgulama frm = new frmAracSorgulama();
+            frm.ShowDialog();
+            txtMarka.Text = Genel.AracMarka;
+            txtModel.Text = Genel.AracModel;
+            txtTip.Text = Genel.AracTip;
+            txtRenk.Text = Genel.AracRenk;
+            txtPlaka.Text = Genel.AracPlaka;
+            txtYakıtDurumu.Text = Genel.AracYakitDurumu;
+            txtAracDurumu.Text = Genel.AracDurumu;
+            txtGunlukFiyat.Text = Genel.AracGunlukFiyat;
+        }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmKirala_Load(object sender, EventArgs e)
+        {
+            dgvSozlesmeDetaylar.DataSource = sdrepo.SozlesmeDetayGetirBySozlesmeId(Genel.soz.Id);
         }
 
         //private void cbMarkalar_SelectedIndexChanged(object sender, EventArgs e)
@@ -98,6 +124,6 @@ namespace PL.RentACar
 
         //}
 
-       
+
     }
 }

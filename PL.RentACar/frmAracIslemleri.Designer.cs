@@ -210,8 +210,10 @@
             this.dgvAraclar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAraclar.Location = new System.Drawing.Point(327, 82);
             this.dgvAraclar.Name = "dgvAraclar";
-            this.dgvAraclar.Size = new System.Drawing.Size(388, 213);
+            this.dgvAraclar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAraclar.Size = new System.Drawing.Size(447, 268);
             this.dgvAraclar.TabIndex = 24;
+            this.dgvAraclar.DoubleClick += new System.EventHandler(this.dgvAraclar_DoubleClick);
             // 
             // btnCikis
             // 
@@ -276,6 +278,7 @@
             this.tsKaydet.Name = "tsKaydet";
             this.tsKaydet.Size = new System.Drawing.Size(67, 22);
             this.tsKaydet.Text = "&Kaydet";
+            this.tsKaydet.Click += new System.EventHandler(this.tsKaydet_Click);
             // 
             // toolStripSeparator6
             // 
@@ -292,6 +295,7 @@
             this.tsDegistir.Name = "tsDegistir";
             this.tsDegistir.Size = new System.Drawing.Size(71, 22);
             this.tsDegistir.Text = "&Değiştir";
+            this.tsDegistir.Click += new System.EventHandler(this.tsDegistir_Click);
             // 
             // toolStripSeparator7
             // 
@@ -308,6 +312,7 @@
             this.tsSil.Name = "tsSil";
             this.tsSil.Size = new System.Drawing.Size(41, 22);
             this.tsSil.Text = "&Sil";
+            this.tsSil.Click += new System.EventHandler(this.tsSil_Click);
             // 
             // frmAracIslemleri
             // 
@@ -336,7 +341,9 @@
             this.Controls.Add(this.dgvAraclar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAracIslemleri";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAracIslemleri";
+            this.Load += new System.EventHandler(this.frmAracIslemleri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAraclar)).EndInit();
             this.tsMusteriIslemleri.ResumeLayout(false);
             this.tsMusteriIslemleri.PerformLayout();

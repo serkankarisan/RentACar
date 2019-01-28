@@ -51,11 +51,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPersonel = new System.Windows.Forms.DataGridView();
             this.toolStrip2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPersonel)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCikis
@@ -128,7 +128,7 @@
             // toolStripLabel9
             // 
             this.toolStripLabel9.Name = "toolStripLabel9";
-            this.toolStripLabel9.Size = new System.Drawing.Size(66, 22);
+            this.toolStripLabel9.Size = new System.Drawing.Size(65, 22);
             this.toolStripLabel9.Text = "           Yetki";
             // 
             // toolStripSeparator9
@@ -244,16 +244,18 @@
             this.textBox2.Size = new System.Drawing.Size(157, 20);
             this.textBox2.TabIndex = 7;
             // 
-            // dataGridView1
+            // dgvPersonel
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(135, 180);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(780, 364);
-            this.dataGridView1.TabIndex = 40;
+            this.dgvPersonel.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPersonel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPersonel.Location = new System.Drawing.Point(135, 180);
+            this.dgvPersonel.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvPersonel.Name = "dgvPersonel";
+            this.dgvPersonel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPersonel.Size = new System.Drawing.Size(780, 364);
+            this.dgvPersonel.TabIndex = 40;
+            this.dgvPersonel.DoubleClick += new System.EventHandler(this.dgvPersonel_DoubleClick);
             // 
             // frmPersonelSorgulama
             // 
@@ -264,16 +266,17 @@
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPersonel);
             this.Name = "frmPersonelSorgulama";
             this.Text = "frmPersonelSorgulama";
+            this.Load += new System.EventHandler(this.frmPersonelSorgulama_Load);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPersonel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,6 +306,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPersonel;
     }
 }

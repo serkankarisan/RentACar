@@ -12,7 +12,7 @@ namespace BLL.RentACar.Repositories
         bool SozlesmeKontrol(Sozlesme yeni);
         List<Sozlesme> SozlesmeListele();
         Sozlesme SozlesmeGetirById(int ID);
-        List<Sozlesme> SozlesmeListeleByMusteri(string Ad, string Soyad, string TCKNo, string EhliyetNo);
+        List<Sozlesme> SozlesmeListeleByMusteriId(int ID);
         List<Sozlesme> SozlesmeListeleByTarih(DateTime baslangic, DateTime bitis);
 
         bool SozlesmeEkle(Sozlesme s);

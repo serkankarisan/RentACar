@@ -26,11 +26,11 @@ namespace BLL.RentACar.Repositories
             return Sonuc;
         }
 
-        public SozlesmeDetay SozlesmeDetayGetirBySozlesmeId(int ID)
+        public List<SozlesmeDetay> SozlesmeDetayGetirBySozlesmeId(int ID)
         {
-            SozlesmeDetay bulunan = (from a in Genel.ent.SozlesmeDetaylar
-                            where a.Id == ID
-                            select a).FirstOrDefault();
+            List<SozlesmeDetay> bulunan = (from sd in Genel.ent.SozlesmeDetaylar
+                            where sd.Id == ID
+                            select sd).ToList();
 
             return bulunan;
         }
