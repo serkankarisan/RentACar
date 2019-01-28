@@ -147,6 +147,7 @@
             // 
             // label23
             // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label23.Location = new System.Drawing.Point(448, 357);
@@ -157,6 +158,7 @@
             // 
             // txtSozlesmeTutari
             // 
+            this.txtSozlesmeTutari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSozlesmeTutari.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSozlesmeTutari.Location = new System.Drawing.Point(577, 357);
             this.txtSozlesmeTutari.Name = "txtSozlesmeTutari";
@@ -166,6 +168,7 @@
             // 
             // label22
             // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label22.Location = new System.Drawing.Point(448, 331);
@@ -176,6 +179,7 @@
             // 
             // txtAracSayisi
             // 
+            this.txtAracSayisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAracSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAracSayisi.Location = new System.Drawing.Point(577, 331);
             this.txtAracSayisi.Name = "txtAracSayisi";
@@ -389,6 +393,7 @@
             // 
             // btnEkle
             // 
+            this.btnEkle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEkle.BackColor = System.Drawing.Color.Transparent;
             this.btnEkle.FlatAppearance.BorderSize = 0;
             this.btnEkle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -407,6 +412,7 @@
             // 
             // btnTamamla
             // 
+            this.btnTamamla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTamamla.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnTamamla.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnTamamla.FlatAppearance.BorderSize = 0;

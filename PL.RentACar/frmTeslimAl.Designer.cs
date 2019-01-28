@@ -30,38 +30,37 @@
         {
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtGunSayisi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.label30 = new System.Windows.Forms.Label();
+            this.rdnNo = new System.Windows.Forms.RadioButton();
+            this.rdnYes = new System.Windows.Forms.RadioButton();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtEkstraTutar = new System.Windows.Forms.TextBox();
+            this.dgvSozlesmeDetay = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.txtSozlesmeTutari = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtAracSayisi = new System.Windows.Forms.TextBox();
+            this.txtYakitDurumu = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAracDurumu = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtGunlukFiyat = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtPlakaNo = new System.Windows.Forms.TextBox();
+            this.txtRenk = new System.Windows.Forms.TextBox();
+            this.txtTip = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.txtMarka = new System.Windows.Forms.TextBox();
+            this.btnSec = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeDetay)).BeginInit();
             this.SuspendLayout();
             // 
             // label12
@@ -82,12 +81,12 @@
             this.label11.TabIndex = 161;
             this.label11.Text = "Gün Sayısı";
             // 
-            // textBox1
+            // txtGunSayisi
             // 
-            this.textBox1.Location = new System.Drawing.Point(180, 330);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 160;
+            this.txtGunSayisi.Location = new System.Drawing.Point(180, 330);
+            this.txtGunSayisi.Name = "txtGunSayisi";
+            this.txtGunSayisi.Size = new System.Drawing.Size(100, 20);
+            this.txtGunSayisi.TabIndex = 160;
             // 
             // label2
             // 
@@ -98,36 +97,27 @@
             this.label2.TabIndex = 159;
             this.label2.Text = "Zamanında Teslim";
             // 
-            // radioButton2
+            // rdnNo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(230, 282);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(49, 17);
-            this.radioButton2.TabIndex = 158;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Hayır";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdnNo.AutoSize = true;
+            this.rdnNo.Location = new System.Drawing.Point(230, 282);
+            this.rdnNo.Name = "rdnNo";
+            this.rdnNo.Size = new System.Drawing.Size(49, 17);
+            this.rdnNo.TabIndex = 158;
+            this.rdnNo.TabStop = true;
+            this.rdnNo.Text = "Hayır";
+            this.rdnNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdnYes
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(177, 282);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(47, 17);
-            this.radioButton1.TabIndex = 157;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Evet";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(531, 94);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(83, 13);
-            this.label30.TabIndex = 156;
-            this.label30.Text = "Sözleşme Detay";
+            this.rdnYes.AutoSize = true;
+            this.rdnYes.Location = new System.Drawing.Point(177, 282);
+            this.rdnYes.Name = "rdnYes";
+            this.rdnYes.Size = new System.Drawing.Size(47, 17);
+            this.rdnYes.TabIndex = 157;
+            this.rdnYes.TabStop = true;
+            this.rdnYes.Text = "Evet";
+            this.rdnYes.UseVisualStyleBackColor = true;
             // 
             // label26
             // 
@@ -138,20 +128,20 @@
             this.label26.TabIndex = 155;
             this.label26.Text = "Ekstra Tutar";
             // 
-            // textBox20
+            // txtEkstraTutar
             // 
-            this.textBox20.Location = new System.Drawing.Point(180, 355);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(100, 20);
-            this.textBox20.TabIndex = 154;
+            this.txtEkstraTutar.Location = new System.Drawing.Point(180, 355);
+            this.txtEkstraTutar.Name = "txtEkstraTutar";
+            this.txtEkstraTutar.Size = new System.Drawing.Size(100, 20);
+            this.txtEkstraTutar.TabIndex = 154;
             // 
-            // dataGridView1
+            // dgvSozlesmeDetay
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(359, 70);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(413, 206);
-            this.dataGridView1.TabIndex = 153;
+            this.dgvSozlesmeDetay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSozlesmeDetay.Location = new System.Drawing.Point(359, 70);
+            this.dgvSozlesmeDetay.Name = "dgvSozlesmeDetay";
+            this.dgvSozlesmeDetay.Size = new System.Drawing.Size(413, 206);
+            this.dgvSozlesmeDetay.TabIndex = 153;
             // 
             // button5
             // 
@@ -174,13 +164,13 @@
             this.label23.TabIndex = 151;
             this.label23.Text = "Sözleşme Tutarı";
             // 
-            // textBox19
+            // txtSozlesmeTutari
             // 
-            this.textBox19.Location = new System.Drawing.Point(421, 309);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(100, 20);
-            this.textBox19.TabIndex = 150;
+            this.txtSozlesmeTutari.Location = new System.Drawing.Point(421, 309);
+            this.txtSozlesmeTutari.Name = "txtSozlesmeTutari";
+            this.txtSozlesmeTutari.ReadOnly = true;
+            this.txtSozlesmeTutari.Size = new System.Drawing.Size(100, 20);
+            this.txtSozlesmeTutari.TabIndex = 150;
             // 
             // label22
             // 
@@ -191,20 +181,20 @@
             this.label22.TabIndex = 149;
             this.label22.Text = "Araç Sayısı";
             // 
-            // textBox18
+            // txtAracSayisi
             // 
-            this.textBox18.Location = new System.Drawing.Point(421, 283);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(100, 20);
-            this.textBox18.TabIndex = 148;
+            this.txtAracSayisi.Location = new System.Drawing.Point(421, 283);
+            this.txtAracSayisi.Name = "txtAracSayisi";
+            this.txtAracSayisi.ReadOnly = true;
+            this.txtAracSayisi.Size = new System.Drawing.Size(100, 20);
+            this.txtAracSayisi.TabIndex = 148;
             // 
-            // textBox7
+            // txtYakitDurumu
             // 
-            this.textBox7.Location = new System.Drawing.Point(178, 228);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 147;
+            this.txtYakitDurumu.Location = new System.Drawing.Point(178, 228);
+            this.txtYakitDurumu.Name = "txtYakitDurumu";
+            this.txtYakitDurumu.Size = new System.Drawing.Size(100, 20);
+            this.txtYakitDurumu.TabIndex = 147;
             // 
             // label6
             // 
@@ -215,12 +205,12 @@
             this.label6.TabIndex = 146;
             this.label6.Text = "Yakıt Durumu";
             // 
-            // textBox2
+            // txtAracDurumu
             // 
-            this.textBox2.Location = new System.Drawing.Point(177, 200);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 145;
+            this.txtAracDurumu.Location = new System.Drawing.Point(177, 200);
+            this.txtAracDurumu.Name = "txtAracDurumu";
+            this.txtAracDurumu.Size = new System.Drawing.Size(100, 20);
+            this.txtAracDurumu.TabIndex = 145;
             // 
             // label7
             // 
@@ -231,13 +221,13 @@
             this.label7.TabIndex = 144;
             this.label7.Text = "Araç Durumu";
             // 
-            // textBox6
+            // txtGunlukFiyat
             // 
-            this.textBox6.Location = new System.Drawing.Point(177, 174);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 143;
+            this.txtGunlukFiyat.Location = new System.Drawing.Point(177, 174);
+            this.txtGunlukFiyat.Name = "txtGunlukFiyat";
+            this.txtGunlukFiyat.ReadOnly = true;
+            this.txtGunlukFiyat.Size = new System.Drawing.Size(100, 20);
+            this.txtGunlukFiyat.TabIndex = 143;
             // 
             // label9
             // 
@@ -293,57 +283,58 @@
             this.label10.TabIndex = 137;
             this.label10.Text = "Marka";
             // 
-            // textBox5
+            // txtPlakaNo
             // 
-            this.textBox5.Location = new System.Drawing.Point(177, 148);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 136;
+            this.txtPlakaNo.Location = new System.Drawing.Point(177, 148);
+            this.txtPlakaNo.Name = "txtPlakaNo";
+            this.txtPlakaNo.ReadOnly = true;
+            this.txtPlakaNo.Size = new System.Drawing.Size(100, 20);
+            this.txtPlakaNo.TabIndex = 136;
             // 
-            // textBox4
+            // txtRenk
             // 
-            this.textBox4.Location = new System.Drawing.Point(177, 122);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 135;
+            this.txtRenk.Location = new System.Drawing.Point(177, 122);
+            this.txtRenk.Name = "txtRenk";
+            this.txtRenk.ReadOnly = true;
+            this.txtRenk.Size = new System.Drawing.Size(100, 20);
+            this.txtRenk.TabIndex = 135;
             // 
-            // textBox3
+            // txtTip
             // 
-            this.textBox3.Location = new System.Drawing.Point(177, 96);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 134;
+            this.txtTip.Location = new System.Drawing.Point(177, 96);
+            this.txtTip.Name = "txtTip";
+            this.txtTip.ReadOnly = true;
+            this.txtTip.Size = new System.Drawing.Size(100, 20);
+            this.txtTip.TabIndex = 134;
             // 
-            // textBox14
+            // txtModel
             // 
-            this.textBox14.Location = new System.Drawing.Point(177, 70);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(100, 20);
-            this.textBox14.TabIndex = 133;
+            this.txtModel.Location = new System.Drawing.Point(177, 70);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.ReadOnly = true;
+            this.txtModel.Size = new System.Drawing.Size(100, 20);
+            this.txtModel.TabIndex = 133;
             // 
-            // textBox15
+            // txtMarka
             // 
-            this.textBox15.Location = new System.Drawing.Point(177, 44);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(100, 20);
-            this.textBox15.TabIndex = 132;
+            this.txtMarka.Location = new System.Drawing.Point(177, 44);
+            this.txtMarka.Name = "txtMarka";
+            this.txtMarka.ReadOnly = true;
+            this.txtMarka.Size = new System.Drawing.Size(100, 20);
+            this.txtMarka.TabIndex = 132;
             // 
-            // button1
+            // btnSec
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(413, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 27);
-            this.button1.TabIndex = 130;
-            this.button1.Text = "Seç";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSec.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSec.FlatAppearance.BorderSize = 0;
+            this.btnSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSec.Location = new System.Drawing.Point(413, 37);
+            this.btnSec.Name = "btnSec";
+            this.btnSec.Size = new System.Drawing.Size(68, 27);
+            this.btnSec.TabIndex = 130;
+            this.btnSec.Text = "Seç";
+            this.btnSec.UseVisualStyleBackColor = false;
+            this.btnSec.Click += new System.EventHandler(this.btnSec_Click);
             // 
             // label1
             // 
@@ -361,40 +352,40 @@
             this.ClientSize = new System.Drawing.Size(840, 474);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtGunSayisi);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.label30);
+            this.Controls.Add(this.rdnNo);
+            this.Controls.Add(this.rdnYes);
             this.Controls.Add(this.label26);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtEkstraTutar);
+            this.Controls.Add(this.dgvSozlesmeDetay);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.textBox19);
+            this.Controls.Add(this.txtSozlesmeTutari);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtAracSayisi);
+            this.Controls.Add(this.txtYakitDurumu);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtAracDurumu);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtGunlukFiyat);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtPlakaNo);
+            this.Controls.Add(this.txtRenk);
+            this.Controls.Add(this.txtTip);
+            this.Controls.Add(this.txtModel);
+            this.Controls.Add(this.txtMarka);
+            this.Controls.Add(this.btnSec);
             this.Controls.Add(this.label1);
             this.Name = "frmTeslimAl";
             this.Text = "frmTeslimAl";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+          
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeDetay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,36 +395,35 @@
 
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtGunSayisi;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.RadioButton rdnNo;
+        private System.Windows.Forms.RadioButton rdnYes;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtEkstraTutar;
+        private System.Windows.Forms.DataGridView dgvSozlesmeDetay;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox txtSozlesmeTutari;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtAracSayisi;
+        private System.Windows.Forms.TextBox txtYakitDurumu;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAracDurumu;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtGunlukFiyat;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtPlakaNo;
+        private System.Windows.Forms.TextBox txtRenk;
+        private System.Windows.Forms.TextBox txtTip;
+        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.TextBox txtMarka;
+        private System.Windows.Forms.Button btnSec;
         private System.Windows.Forms.Label label1;
     }
 }

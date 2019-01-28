@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL.RentACar.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,16 @@ namespace PL.RentACar
         {
             InitializeComponent();
         }
+
+        frmSozlesmeSorgulama frm = new frmSozlesmeSorgulama();
+        SozlesmeDetayRepository sdr = new SozlesmeDetayRepository();
+        private void btnSec_Click(object sender, EventArgs e)
+        {
+            frm.ShowDialog();
+
+            dgvSozlesmeDetay.DataSource = sdr.SozlesmeDetayListeleBySozlesmeId(Genel.SozID);
+        }
+
+      
     }
 }

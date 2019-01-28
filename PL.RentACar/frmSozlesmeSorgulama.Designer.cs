@@ -122,8 +122,10 @@
             this.dgvMusteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMusteriler.Location = new System.Drawing.Point(21, 64);
             this.dgvMusteriler.Name = "dgvMusteriler";
+            this.dgvMusteriler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMusteriler.Size = new System.Drawing.Size(744, 289);
             this.dgvMusteriler.TabIndex = 101;
+            this.dgvMusteriler.DoubleClick += new System.EventHandler(this.dgvMusteriler_DoubleClick);
             // 
             // label6
             // 
@@ -270,6 +272,7 @@
             this.Name = "frmSozlesmeSorgulama";
             this.Text = "frmSozlesmeSorgulama";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmSozlesmeSorgulama_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

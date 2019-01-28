@@ -1040,7 +1040,6 @@
             this.pnlHeader1.Name = "pnlHeader1";
             this.pnlHeader1.Size = new System.Drawing.Size(960, 30);
             this.pnlHeader1.TabIndex = 0;
-            this.pnlHeader1.Load += new System.EventHandler(this.pnlHeader1_Load);
             // 
             // frmAnaSayfa
             // 

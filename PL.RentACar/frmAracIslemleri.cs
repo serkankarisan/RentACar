@@ -172,7 +172,7 @@ namespace PL.RentACar
             dosya.Title = "www.yazilimkodlama.com";
             dosya.ShowDialog();
             string DosyaYolu = dosya.FileName;
-            pbArac.ImageLocation = DosyaYolu;
+            //pbArac.ImageLocation = DosyaYolu;
             
         }
     }

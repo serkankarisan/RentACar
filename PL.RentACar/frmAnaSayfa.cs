@@ -267,9 +267,6 @@ namespace PL.RentACar
             PanelGizle();
         }
 
-        private void pnlHeader1_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
