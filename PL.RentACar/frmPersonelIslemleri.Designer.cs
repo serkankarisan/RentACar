@@ -75,7 +75,7 @@
             // toolStripLabel9
             // 
             this.toolStripLabel9.Name = "toolStripLabel9";
-            this.toolStripLabel9.Size = new System.Drawing.Size(65, 24);
+            this.toolStripLabel9.Size = new System.Drawing.Size(66, 24);
             this.toolStripLabel9.Text = "           Yetki";
             // 
             // toolStripSeparator10
@@ -93,7 +93,7 @@
             this.tsbYeni.Image = ((System.Drawing.Image)(resources.GetObject("tsbYeni.Image")));
             this.tsbYeni.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbYeni.Name = "tsbYeni";
-            this.tsbYeni.Size = new System.Drawing.Size(53, 24);
+            this.tsbYeni.Size = new System.Drawing.Size(54, 24);
             this.tsbYeni.Text = "&Yeni";
             this.tsbYeni.Click += new System.EventHandler(this.tsbYeni_Click);
             // 
@@ -416,6 +416,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmPersonelIslemleri";
             this.Text = "frmPersonelIslemleri";
+            this.Load += new System.EventHandler(this.frmPersonelIslemleri_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);

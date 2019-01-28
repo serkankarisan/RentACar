@@ -52,5 +52,10 @@ namespace PL.RentACar
             txtAdres.Clear();
             txtMaas.Clear();
         }
+
+        private void frmPersonelIslemleri_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
