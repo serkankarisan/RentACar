@@ -26,7 +26,7 @@ namespace PL.RentACar
 
         private void dgvPersonel_DoubleClick(object sender, EventArgs e)
         {
-            Genel.ID = Convert.ToInt32(dgvPersonel.SelectedRows[0].Cells[0].Value);
+            Genel.PersonelID = Convert.ToInt32(dgvPersonel.SelectedRows[0].Cells[0].Value);
             this.Close();
         }
     }

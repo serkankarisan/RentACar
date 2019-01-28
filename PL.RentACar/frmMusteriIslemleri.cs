@@ -209,7 +209,6 @@ namespace PL.RentACar
                                 degisen.Id = ID;
                                 if (musrepo.MusteriKontrolFromDegistir(degisen))
                                 {
-                                    //txtTCKNo aynı girilince if e giriyor ama tcyi değiştiriyor eski tcnin kalması gerekli.Bunu güncellemeyi repositoryde yaparak çözdüm.
                                     MessageBox.Show("TC Kimlik No Hatalı!", "Hatalı Bilgi Girişi!");
                                     ListeGoster();
                                     txtTCKNo.Focus();

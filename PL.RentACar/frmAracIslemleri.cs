@@ -52,7 +52,7 @@ namespace PL.RentACar
                     a.Renk = txtRenk.Text;
                     a.Silindi = false;
                     a.Tip = txtTip.Text;
-                    a.YakıtDurumu = txtYakitDurumu.Text;
+                    a.YakitDurumu = txtYakitDurumu.Text;
                     a.Varmi = true;
                    
 
@@ -122,7 +122,7 @@ namespace PL.RentACar
                 a.Renk = txtRenk.Text;
                 a.Silindi = false;
                 a.Tip = txtTip.Text;
-                a.YakıtDurumu = txtYakitDurumu.Text;
+                a.YakitDurumu = txtYakitDurumu.Text;
                 a.Varmi = true;
                 if (ar.AracKontrolbyGuncelleme(a))
                 {
@@ -162,11 +162,6 @@ namespace PL.RentACar
                     Temizle();
                 }
             }
-        }
-
-        private void btnCikis_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
