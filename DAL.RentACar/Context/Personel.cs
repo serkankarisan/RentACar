@@ -32,5 +32,9 @@ namespace DAL.RentACar.Context
         //Relations
         public virtual List<Sozlesme> Sozlesmeler { get; set; }
         public virtual List<Kullanici> Kullanicilar { get; set; }
+        public override string ToString()
+        {
+            return Adi+" "+Soyadi;
+        }
     }
 }

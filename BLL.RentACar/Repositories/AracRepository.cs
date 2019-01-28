@@ -30,6 +30,11 @@ namespace BLL.RentACar.Repositories
         {
             return Genel.ent.Araclar.ToList();
         }
+        public string[] AracListeleByMarka()
+        {
+            string[] araclar = Genel.ent.Araclar.Select(a=>a.Marka).Distinct().ToArray();
+            return araclar;
+        }
 
         public Arac AracGetirById(int ID)
         {
@@ -105,6 +110,19 @@ namespace BLL.RentACar.Repositories
             bool Sonuc = false;
             Arac aranan = (from a in Genel.ent.Araclar
                            where a.Plaka == c.Plaka
+                           select a).FirstOrDefault();
+            if (aranan != null)
+            {
+                Sonuc = true;
+            }
+            return Sonuc;
+        }
+
+        public bool AracKontrolbyGuncelleme(Arac c)
+        {
+            bool Sonuc = false;
+            Arac aranan = (from a in Genel.ent.Araclar
+                           where a.Plaka == c.Plaka && a.Id!=c.Id
                            select a).FirstOrDefault();
             if (aranan != null)
             {

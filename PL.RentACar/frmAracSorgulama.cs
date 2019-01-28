@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL.RentACar.Repositories;
+using DAL.RentACar.Context;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,35 +18,8 @@ namespace PL.RentACar
         {
             InitializeComponent();
         }
-
-        private void cbMarkalar_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lvDetaylar.Items.Clear();
-            if (cbMarkalar.SelectedItem.ToString() == "Audi")
-            {
-                lvDetaylar.Items.Add("Q7", 0);
-                lvDetaylar.Items[0].SubItems.Add("Jeep");
-                lvDetaylar.Items[0].SubItems.Add("Beyaz");
-                lvDetaylar.Items[0].SubItems.Add("34ASD12");
-                lvDetaylar.Items[0].SubItems.Add("Hasar Yok");
-                lvDetaylar.Items[0].SubItems.Add("500");
-
-                lvDetaylar.Items.Add("A7", 1);
-                lvDetaylar.Items[1].SubItems.Add("Sedan");
-                lvDetaylar.Items[1].SubItems.Add("Beyaz");
-                lvDetaylar.Items[1].SubItems.Add("34ERT34");
-                lvDetaylar.Items[1].SubItems.Add("Hafif çizik var");
-                lvDetaylar.Items[1].SubItems.Add("600");
-
-                lvDetaylar.Items.Add("A4", 2);
-                lvDetaylar.Items[lvDetaylar.Items.Count - 1].SubItems.Add("Hatchback");
-                lvDetaylar.Items[lvDetaylar.Items.Count - 1].SubItems.Add("Beyaz");
-                lvDetaylar.Items[2].SubItems.Add("34ERT56");
-                lvDetaylar.Items[2].SubItems.Add("Hasar Yok");
-                lvDetaylar.Items[2].SubItems.Add("400");
-            }
-        }
-
+        AracRepository ARep = new AracRepository();
+        int x;
         private void mitmLargeIcon_Click(object sender, EventArgs e)
         {
             lvDetaylar.View = View.LargeIcon;
@@ -72,6 +47,73 @@ namespace PL.RentACar
         {
             lvDetaylar.View = View.Tile;
 
+        }
+
+        private void frmAracSorgulama_Load(object sender, EventArgs e)
+        {
+            txtMarka.Text = "Marka Seçiniz.";
+            cbMarkalar.Items.Clear();
+            cbMarkalar.DisplayMember = "Marka";
+            cbMarkalar.ValueMember = "Id";
+            cbMarkalar.DataSource = ARep.AracListeleByMarka();
+            ShowListView(ARep.AracListele());
+            x = 1;
+        }
+
+        private void cbMarkalar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (x > 0)
+            {
+                lvDetaylar.Items.Clear();
+                txtMarka.Text = cbMarkalar.SelectedItem.ToString();
+                List<Arac> liste = ARep.AracListele();
+                int j = 0;
+                for (int i = 0; i < liste.Count; i++)
+                {
+                    if (cbMarkalar.SelectedItem.ToString() == liste[i].Marka)
+                    {
+                        lvDetaylar.Items.Add(liste[i].Model, i);
+                        lvDetaylar.Items[j].SubItems.Add(liste[i].Tip);
+                        lvDetaylar.Items[j].SubItems.Add(liste[i].Renk);
+                        lvDetaylar.Items[j].SubItems.Add(liste[i].Plaka);
+                        lvDetaylar.Items[j].SubItems.Add(liste[i].AracDurumu);
+                        lvDetaylar.Items[j].SubItems.Add(liste[i].GünlükFiyat.ToString());
+                        j++;
+                    }
+                }
+            }
+        }
+        private void ShowListView(List<Arac> listem)
+        {
+            for (int i = 0; i < listem.Count; i++)
+            {
+                lvDetaylar.Items.Add(listem[i].Model, i);
+                lvDetaylar.Items[i].SubItems.Add(listem[i].Tip);
+                lvDetaylar.Items[i].SubItems.Add(listem[i].Renk);
+                lvDetaylar.Items[i].SubItems.Add(listem[i].Plaka);
+                lvDetaylar.Items[i].SubItems.Add(listem[i].AracDurumu);
+                lvDetaylar.Items[i].SubItems.Add(listem[i].GünlükFiyat.ToString());
+            }
+            
+        }
+
+        private void lvDetaylar_DoubleClick(object sender, EventArgs e)
+        {
+            List<Arac> liste = ARep.AracListele();
+            for (int i = 0; i < liste.Count; i++)
+            {
+                if (lvDetaylar.SelectedItems[0].SubItems[3].Text == liste[i].Plaka)
+                {
+                    Genel.AracID = liste[i].Id;
+                    
+                }               
+            }
+            this.Close();
+        }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

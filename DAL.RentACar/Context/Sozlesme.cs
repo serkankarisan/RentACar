@@ -32,5 +32,6 @@ namespace DAL.RentACar.Context
         public virtual Musteri Musteri { get; set; }
 
         public virtual List<SozlesmeDetay> SozlesmeDetaylar { get; set; }
+
     }
 }

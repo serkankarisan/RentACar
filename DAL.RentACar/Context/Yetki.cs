@@ -21,5 +21,9 @@ namespace DAL.RentACar.Context
 
         //Relations
         public virtual List<Kullanici> Kullanicilar { get; set; }
+        public override string ToString()
+        {
+            return RoleName;
+        }
     }
 }

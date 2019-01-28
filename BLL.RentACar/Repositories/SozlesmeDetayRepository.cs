@@ -26,13 +26,21 @@ namespace BLL.RentACar.Repositories
             return Sonuc;
         }
 
-        public SozlesmeDetay SozlesmeDetayGetirBySozlesmeId(int ID)
+        public List<SozlesmeDetay> SozlesmeDetayListeleBySozlesmeId(int ID)
         {
-            SozlesmeDetay bulunan = (from a in Genel.ent.SozlesmeDetaylar
-                            where a.Id == ID
-                            select a).FirstOrDefault();
+            List<SozlesmeDetay> bulunan = (from sd in Genel.ent.SozlesmeDetaylar
+                            where sd.SozlesmeId == ID
+                            select sd).ToList();
 
             return bulunan;
+        }
+        public decimal SozlesmeTutarGetirBySozlesmeId(int ID)
+        {
+            decimal toplamtutar = (from sd in Genel.ent.SozlesmeDetaylar
+                                           where sd.SozlesmeId == ID
+                                           select sd.Tutar).ToList().Sum();
+
+            return toplamtutar;
         }
 
         public bool SozlesmeDetayGuncelle(SozlesmeDetay s)
@@ -57,17 +65,7 @@ namespace BLL.RentACar.Repositories
 
         public List<SozlesmeDetay> SozlesmeDetayListeleByAranan(string Ad, string Soyad, string TCKNo, string EhliyetNo)
         {
-           Musteri Musteri = (from m in Genel.ent.Musteriler
-                            where m.Adi.Substring(0,1).Substring(1)==Ad && m.Soyadi==Soyad && m.TcKimlikNo==TCKNo && m.EhliyetNo==EhliyetNo
-                            select m).FirstOrDefault();
-            Sozlesme Sozlesme = (from s in Genel.ent.Sozlesmeler
-                                       where s.MusteriId == Musteri.Id
-                                       select s).FirstOrDefault();
-            List<SozlesmeDetay> SozlesmeDetay = (from soz in Genel.ent.SozlesmeDetaylar
-                                 where soz.SozlesmeId == Sozlesme.Id
-                                 select soz).ToList();
-
-            return SozlesmeDetay;
+            throw new NotImplementedException();
         }
 
         public List<SozlesmeDetay> SozlesmeDetayListeleByTarih(DateTime baslangic, DateTime bitis)
@@ -113,6 +111,11 @@ namespace BLL.RentACar.Repositories
                 string hata = ex.Message;
             }
             return Sonuc;
+        }
+
+        public List<SozlesmeDetay> SozlesmeDetayGetirBySozlesmeId(int ID)
+        {
+            throw new NotImplementedException();
         }
     }
 }

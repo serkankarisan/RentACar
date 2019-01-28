@@ -37,15 +37,18 @@
             this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.btnGiris = new System.Windows.Forms.Button();
             this.txtSifre = new System.Windows.Forms.TextBox();
+            this.pbSifreGizle = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSifreGizle)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.panel1.Controls.Add(this.pbSifreGizle);
             this.panel1.Controls.Add(this.btnCikis);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -58,7 +61,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 375);
             this.panel1.TabIndex = 7;
-         
             // 
             // btnCikis
             // 
@@ -142,6 +144,17 @@
             this.txtSifre.Text = "Sifre";
             this.txtSifre.Enter += new System.EventHandler(this.txtSifre_Enter);
             // 
+            // pbSifreGizle
+            // 
+            this.pbSifreGizle.Image = ((System.Drawing.Image)(resources.GetObject("pbSifreGizle.Image")));
+            this.pbSifreGizle.Location = new System.Drawing.Point(224, 247);
+            this.pbSifreGizle.Name = "pbSifreGizle";
+            this.pbSifreGizle.Size = new System.Drawing.Size(20, 20);
+            this.pbSifreGizle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSifreGizle.TabIndex = 9;
+            this.pbSifreGizle.TabStop = false;
+            this.pbSifreGizle.Click += new System.EventHandler(this.pbSifreGizle_Click);
+            // 
             // frmGiris
             // 
             this.AcceptButton = this.btnGiris;
@@ -161,6 +174,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSifreGizle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -175,6 +189,7 @@
         private System.Windows.Forms.TextBox txtKullaniciAdi;
         private System.Windows.Forms.Button btnGiris;
         private System.Windows.Forms.TextBox txtSifre;
+        private System.Windows.Forms.PictureBox pbSifreGizle;
     }
 }
 

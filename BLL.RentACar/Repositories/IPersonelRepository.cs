@@ -15,6 +15,7 @@ namespace BLL.RentACar.Repositories
 
         bool PersonelEkle(Personel P);
         bool PersonelGuncelle(Personel P);
+        bool PersonelKontrol(Personel P);
 
         bool PersonelSil(int ID);
         bool PersonelSil(Personel P);
