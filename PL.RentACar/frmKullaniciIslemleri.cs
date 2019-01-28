@@ -19,6 +19,10 @@ namespace PL.RentACar
             InitializeComponent();
         }
         KullaniciRepository kper = new KullaniciRepository();
+        PersonelRepository per = new PersonelRepository();
+        YetkiRepository yper = new YetkiRepository();
+        int PersonelID;
+        int YetkiID;
         int ID;
         private void tsYeni_Click(object sender, EventArgs e)
         {
@@ -48,14 +52,15 @@ namespace PL.RentACar
                     else
                     {
                         yeni.Password = txtSifre.Text;
-                        yeni.Personel.Adi = cbPersonel.SelectedItem.ToString();
-                        yeni.Yetki.RoleName = cbYetki.SelectedItem.ToString();
+                        yeni.PersonelId = PersonelID;
+                        yeni.RoleId = YetkiID;
                         if (kper.KullaniciEkle(yeni))
                         {
                             MessageBox.Show("Yeni Kullanici eklendi.", "Kayıt gerçekleşti.");
                             dgvKullanicilar.DataSource = kper.KullaniciListele();
                             tsKaydet.Enabled = false;
                             Supurge();
+
                         }
                     }
                 }
@@ -69,27 +74,27 @@ namespace PL.RentACar
                 MessageBox.Show("Girelecek bilgiler boş bırakılamaz.", "Hata");
             }
             txtKullaniciAdi.Focus();
-
-
-            tsYeni.Enabled = true;
-            tsKaydet.Enabled = false;
-            tsDegistir.Enabled = false;
-            tsSil.Enabled = false;
         }
 
         private void frmKullaniciIslemleri_Load(object sender, EventArgs e)
         {
+            tsKaydet.Enabled = true;
+            dgvKullanicilar.DataSource = kper.KullaniciListele();
+            cbPersonel.DataSource = per.PersonelListele();
+            cbPersonel.SelectedIndex = 0;
+            cbYetki.DataSource = yper.YetkiListele();
+            cbYetki.SelectedIndex = 0;
 
         }
 
         private void dgvKullanicilar_DoubleClick(object sender, EventArgs e)
         {
             ID = Convert.ToInt32(dgvKullanicilar.SelectedRows[0].Cells[0].Value);
-            txtKullaniciAdi.Text = dgvKullanicilar.SelectedRows[0].Cells[1].Value.ToString();
-            txtSifre.Text = dgvKullanicilar.SelectedRows[0].Cells[2].Value.ToString();
-            txtSifreTekrar.Text = dgvKullanicilar.SelectedRows[0].Cells[3].Value.ToString();
-            cbPersonel.Text = dgvKullanicilar.SelectedRows[0].Cells[4].Value.ToString();
-            cbYetki.Text = dgvKullanicilar.SelectedRows[0].Cells[5].Value.ToString();
+            txtKullaniciAdi.Text = dgvKullanicilar.SelectedRows[0].Cells[3].Value.ToString();
+            txtSifre.Text = dgvKullanicilar.SelectedRows[0].Cells[4].Value.ToString();
+            txtSifreTekrar.Text = dgvKullanicilar.SelectedRows[0].Cells[4].Value.ToString();
+            cbPersonel.Text = dgvKullanicilar.SelectedRows[0].Cells[6].Value.ToString();
+            cbYetki.Text = dgvKullanicilar.SelectedRows[0].Cells[7].Value.ToString();
             tsDegistir.Enabled = true;
             tsSil.Enabled = true;
             tsKaydet.Enabled = false;
@@ -102,24 +107,21 @@ namespace PL.RentACar
             {
                 if (txtSifre.Text == txtSifreTekrar.Text)
                 {
-                    Kullanici degisen = new Kullanici();
+                    Kullanici degisen = kper.KullaniciGetirById(ID);
                     degisen.UserName = txtKullaniciAdi.Text;
-                    if (kper.KullaniciKontrol(degisen))
+                    degisen.Password = txtSifre.Text;
+                    degisen.PersonelId = PersonelID;
+                    degisen.RoleId = YetkiID;
+
+                    if (kper.KullaniciGuncelle(degisen))
                     {
-                        MessageBox.Show("Bu Kullanıcı kayıtlı!", "Aynı Kullanıcı zaten var!");
-                    }
-                    else
-                    {
-                        degisen.Password = txtSifre.Text;
-                        degisen.Personel.Adi = cbPersonel.SelectedItem.ToString();
-                        degisen.Yetki.RoleName = cbYetki.SelectedItem.ToString();
-                        if (kper.KullaniciGuncelle(degisen))
-                        {
-                            MessageBox.Show("Yeni Kullanici eklendi.", "Kayıt gerçekleşti.");
-                            dgvKullanicilar.DataSource = kper.KullaniciListele();
-                            tsKaydet.Enabled = false;
-                            Supurge();
-                        }
+                        MessageBox.Show("Kullanici Değiştirildi.", "Değişiklik gerçekleşti.");
+                        dgvKullanicilar.DataSource = kper.KullaniciListele();
+                        tsYeni.Enabled = true;
+                        tsKaydet.Enabled = false;
+                        tsDegistir.Enabled = false;
+                        tsSil.Enabled = false;
+                        Supurge();
                     }
                 }
                 else
@@ -132,19 +134,14 @@ namespace PL.RentACar
                 MessageBox.Show("Girelecek bilgiler boş bırakılamaz.", "Hata");
             }
             txtKullaniciAdi.Focus();
-
-
-            tsYeni.Enabled = true;
-            tsKaydet.Enabled = false;
-            tsDegistir.Enabled = false;
-            tsSil.Enabled = false;
         }
 
         private void tsSil_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Silmek İstiyor musunuz?", "SİLİNSİN Mİ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (kper.KullaniciSil(ID))
+                Kullanici silinen = kper.KullaniciGetirById(ID);
+                if (kper.KullaniciSil(silinen))
                 {
                     MessageBox.Show("Personel bilgileri silindi.", "Silme gerçekleşti.");
                     dgvKullanicilar.DataSource = kper.KullaniciListele();
@@ -153,6 +150,24 @@ namespace PL.RentACar
                     Supurge();
                 }
             }
+        }
+
+        private void cbPersonel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Personel p = (Personel)cbPersonel.SelectedItem;
+            PersonelID = p.Id;
+        }
+
+        private void cbYetki_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Yetki y = (Yetki)cbYetki.SelectedItem;
+            YetkiID = y.Id;
+
+        }
+
+        private void dgvKullanicilar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
