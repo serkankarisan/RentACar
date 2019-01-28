@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL.RentACar.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace PL.RentACar
         public frmPersonelSorgulama()
         {
             InitializeComponent();
+        }
+        PersonelRepository pr = new PersonelRepository();
+
+        private void frmPersonelSorgulama_Load(object sender, EventArgs e)
+        {
+            dgvPersonel.DataSource = pr.PersonelListele();
+        }
+
+        private void dgvPersonel_DoubleClick(object sender, EventArgs e)
+        {
+            Genel.PersonelID = Convert.ToInt32(dgvPersonel.SelectedRows[0].Cells[0].Value);
+            this.Close();
         }
     }
 }

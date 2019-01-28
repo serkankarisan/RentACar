@@ -30,17 +30,17 @@
         {
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.txtSoyadi = new System.Windows.Forms.TextBox();
+            this.txtAdi = new System.Windows.Forms.TextBox();
+            this.btnSec = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtPrim = new System.Windows.Forms.TextBox();
+            this.txtMaas = new System.Windows.Forms.TextBox();
+            this.btnOdemeYap = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtToplamOdeme = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label12
@@ -61,31 +61,32 @@
             this.label14.TabIndex = 153;
             this.label14.Text = "Adı";
             // 
-            // textBox16
+            // txtSoyadi
             // 
-            this.textBox16.Location = new System.Drawing.Point(154, 49);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
-            this.textBox16.TabIndex = 152;
+            this.txtSoyadi.Location = new System.Drawing.Point(154, 49);
+            this.txtSoyadi.Name = "txtSoyadi";
+            this.txtSoyadi.Size = new System.Drawing.Size(100, 20);
+            this.txtSoyadi.TabIndex = 152;
             // 
-            // textBox17
+            // txtAdi
             // 
-            this.textBox17.Location = new System.Drawing.Point(154, 23);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(100, 20);
-            this.textBox17.TabIndex = 151;
+            this.txtAdi.Location = new System.Drawing.Point(154, 23);
+            this.txtAdi.Name = "txtAdi";
+            this.txtAdi.Size = new System.Drawing.Size(100, 20);
+            this.txtAdi.TabIndex = 151;
             // 
-            // button3
+            // btnSec
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(260, 16);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 27);
-            this.button3.TabIndex = 149;
-            this.button3.Text = "Seç";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSec.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSec.FlatAppearance.BorderSize = 0;
+            this.btnSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSec.Location = new System.Drawing.Point(260, 16);
+            this.btnSec.Name = "btnSec";
+            this.btnSec.Size = new System.Drawing.Size(103, 27);
+            this.btnSec.TabIndex = 149;
+            this.btnSec.Text = "Seç";
+            this.btnSec.UseVisualStyleBackColor = false;
+            this.btnSec.Click += new System.EventHandler(this.btnSec_Click);
             // 
             // label21
             // 
@@ -114,31 +115,34 @@
             this.label2.TabIndex = 157;
             this.label2.Text = "Maaş";
             // 
-            // textBox1
+            // txtPrim
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 174);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 156;
+            this.txtPrim.Location = new System.Drawing.Point(154, 174);
+            this.txtPrim.Name = "txtPrim";
+            this.txtPrim.Size = new System.Drawing.Size(100, 20);
+            this.txtPrim.TabIndex = 156;
+            this.txtPrim.TextChanged += new System.EventHandler(this.txtPrim_TextChanged);
             // 
-            // textBox2
+            // txtMaas
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 148);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 155;
+            this.txtMaas.Location = new System.Drawing.Point(154, 148);
+            this.txtMaas.Name = "txtMaas";
+            this.txtMaas.Size = new System.Drawing.Size(100, 20);
+            this.txtMaas.TabIndex = 155;
+            this.txtMaas.TextChanged += new System.EventHandler(this.txtMaas_TextChanged);
             // 
-            // button1
+            // btnOdemeYap
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(154, 226);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 27);
-            this.button1.TabIndex = 159;
-            this.button1.Text = "Ödeme Yap";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnOdemeYap.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnOdemeYap.FlatAppearance.BorderSize = 0;
+            this.btnOdemeYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOdemeYap.Location = new System.Drawing.Point(154, 226);
+            this.btnOdemeYap.Name = "btnOdemeYap";
+            this.btnOdemeYap.Size = new System.Drawing.Size(103, 27);
+            this.btnOdemeYap.TabIndex = 159;
+            this.btnOdemeYap.Text = "Ödeme Yap";
+            this.btnOdemeYap.UseVisualStyleBackColor = false;
+            this.btnOdemeYap.Click += new System.EventHandler(this.btnOdemeYap_Click);
             // 
             // label3
             // 
@@ -149,12 +153,12 @@
             this.label3.TabIndex = 161;
             this.label3.Text = "Toplam Ödeme";
             // 
-            // textBox3
+            // txtToplamOdeme
             // 
-            this.textBox3.Location = new System.Drawing.Point(154, 200);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 160;
+            this.txtToplamOdeme.Location = new System.Drawing.Point(154, 200);
+            this.txtToplamOdeme.Name = "txtToplamOdeme";
+            this.txtToplamOdeme.Size = new System.Drawing.Size(100, 20);
+            this.txtToplamOdeme.TabIndex = 160;
             // 
             // frmMaasOdeme
             // 
@@ -162,20 +166,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(381, 306);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtToplamOdeme);
+            this.Controls.Add(this.btnOdemeYap);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtPrim);
+            this.Controls.Add(this.txtMaas);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.txtSoyadi);
+            this.Controls.Add(this.txtAdi);
+            this.Controls.Add(this.btnSec);
             this.Controls.Add(this.label21);
             this.Name = "frmMaasOdeme";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMaasOdeme";
+            this.Load += new System.EventHandler(this.frmMaasOdeme_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,16 +191,16 @@
 
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtSoyadi;
+        private System.Windows.Forms.TextBox txtAdi;
+        private System.Windows.Forms.Button btnSec;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtPrim;
+        private System.Windows.Forms.TextBox txtMaas;
+        private System.Windows.Forms.Button btnOdemeYap;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtToplamOdeme;
     }
 }

@@ -29,7 +29,7 @@ namespace DAL.RentACar.Context
         [Required]
         public string AracDurumu { get; set; }
         [Required]
-        public string YakıtDurumu { get; set; }
+        public string YakitDurumu { get; set; }
         [DefaultValue(true)]
         public bool Varmi { get; set; }
         [Required]
