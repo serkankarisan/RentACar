@@ -58,7 +58,7 @@ namespace BLL.RentACar.Repositories
         public List<KasaHareket> KasaHareketListeleByTarih(DateTime baslangic, DateTime bitis)
         {
             List<KasaHareket> listeTarih = (from kh in Genel.ent.KasaHareketler
-                                            where kh.Tarih > baslangic && kh.Tarih < bitis
+                                            where kh.Tarih >= baslangic && kh.Tarih <= bitis
                                             select kh).ToList();
             return listeTarih;
         }
