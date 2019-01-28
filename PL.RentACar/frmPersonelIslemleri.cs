@@ -20,30 +20,42 @@ namespace PL.RentACar
         }
         PersonelRepository per = new PersonelRepository();
         int ID;
+        decimal result;
         private void tsbKaydet_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtAd.Text) && (!string.IsNullOrEmpty(txtSoyad.Text)) && (!string.IsNullOrEmpty(txtTelefon.Text)) && (!string.IsNullOrEmpty(txtEmail.Text)) && (!string.IsNullOrEmpty(txtAdres.Text)) && (!string.IsNullOrEmpty(txtMaas.Text)))
             {
-                Personel yeni = new Personel();
-                yeni.Adi = txtAd.Text;
-                yeni.Soyadi = txtSoyad.Text;
-                if (per.PersonelKontrol(yeni))
+                if (decimal.TryParse(txtMaas.Text, out result))
                 {
-                    MessageBox.Show("Bu Personel kayıtlı!", "Aynı Personel zaten var!");
+                    Personel yeni = new Personel();
+                    yeni.Adi = txtAd.Text;
+                    yeni.Soyadi = txtSoyad.Text;
+                    if (per.PersonelKontrol(yeni))
+                    {
+                        MessageBox.Show("Bu Personel kayıtlı!", "Aynı Personel zaten var!");
+                    }
+                    else
+                    {
+                        yeni.Telefon = txtTelefon.Text;
+                        yeni.Email = txtEmail.Text;
+                        yeni.Adres = txtAdres.Text;
+                        yeni.Maas = Convert.ToDecimal(txtMaas.Text);
+                        if (per.PersonelEkle(yeni))
+                        {
+                            MessageBox.Show("Yeni Personel eklendi.", "Kayıt gerçekleşti.");
+                            dgvPersoneller.DataSource = per.PersonelListele();
+                            tsbKaydet.Enabled = false;
+                            Supurge();
+                            tsbYeni.Enabled = true;
+                            tsbKaydet.Enabled = false;
+                            tsbDegistir.Enabled = false;
+                            tsbSil.Enabled = false;
+                        }
+                    }
                 }
                 else
                 {
-                    yeni.Telefon = txtTelefon.Text;
-                    yeni.Email = txtEmail.Text;
-                    yeni.Adres = txtAdres.Text;
-                    yeni.Maas = Convert.ToDecimal(txtMaas.Text);
-                    if (per.PersonelEkle(yeni))
-                    {
-                        MessageBox.Show("Yeni Personel eklendi.", "Kayıt gerçekleşti.");
-                        dgvPersoneller.DataSource = per.PersonelListele();
-                        tsbKaydet.Enabled = false;
-                        Supurge();
-                    }
+                    MessageBox.Show("Maas Sayı girilmelidir!", "Maas Hatası!");
                 }
             }
             else
@@ -51,12 +63,6 @@ namespace PL.RentACar
                 MessageBox.Show("Girelecek bilgiler boş bırakılamaz.", "Hata");
             }
             txtAd.Focus();
-
-
-            tsbYeni.Enabled = true;
-            tsbKaydet.Enabled = false;
-            tsbDegistir.Enabled = false;
-            tsbSil.Enabled = false;
         }
 
         private void tsbYeni_Click(object sender, EventArgs e)
@@ -94,26 +100,33 @@ namespace PL.RentACar
         {
             if (!string.IsNullOrEmpty(txtAd.Text) && (!string.IsNullOrEmpty(txtSoyad.Text)) && (!string.IsNullOrEmpty(txtTelefon.Text)) && (!string.IsNullOrEmpty(txtEmail.Text)) && (!string.IsNullOrEmpty(txtAdres.Text)) && (!string.IsNullOrEmpty(txtMaas.Text)))
             {
-                Personel degisen = per.PersonelGetirById(ID);
-                degisen.Adi = txtAd.Text;
-                degisen.Soyadi = txtSoyad.Text;
-                if (per.PersonelKontrol(degisen))
+                if (decimal.TryParse(txtMaas.Text, out result))
                 {
-                    MessageBox.Show("Bu Personel kayıtlı!", "Aynı Personel zaten var!");
-                }
-                else
-                {
+                    Personel degisen = per.PersonelGetirById(ID);
+                    degisen.Adi = txtAd.Text;
+                    degisen.Soyadi = txtSoyad.Text;
+                    //if (per.PersonelKontrol(degisen))
+                    //{
+                    //    MessageBox.Show("Bu Personel kayıtlı!", "Aynı Personel zaten var!");
+                    //}
+                    //else
+                    //{
                     degisen.Telefon = txtTelefon.Text;
                     degisen.Email = txtEmail.Text;
                     degisen.Adres = txtAdres.Text;
                     degisen.Maas = Convert.ToDecimal(txtMaas.Text);
                     if (per.PersonelGuncelle(degisen))
                     {
-                        MessageBox.Show("Yeni Personel eklendi.", "Kayıt gerçekleşti.");
+                        MessageBox.Show("Personel bilgileri değiştirildi.", "Değişiklik gerçekleşti.");
                         dgvPersoneller.DataSource = per.PersonelListele();
                         tsbKaydet.Enabled = false;
                         Supurge();
                     }
+                }
+                //}
+                else
+                {
+                    MessageBox.Show("Maas Sayı girilmelidir!", "Maas Hatası!");
                 }
             }
             else
@@ -127,7 +140,8 @@ namespace PL.RentACar
         {
             if (MessageBox.Show("Silmek İstiyor musunuz?", "SİLİNSİN Mİ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (per.PersonelSil(ID))
+                Personel silinen = per.PersonelGetirById(ID);
+                if (per.PersonelSil(silinen))
                 {
                     MessageBox.Show("Personel bilgileri silindi.", "Silme gerçekleşti.");
                     dgvPersoneller.DataSource = per.PersonelListele();
@@ -136,6 +150,12 @@ namespace PL.RentACar
                     Supurge();
                 }
             }
+        }
+
+        private void frmPersonelIslemleri_Load(object sender, EventArgs e)
+        {
+            dgvPersoneller.DataSource = per.PersonelListele();
+            tsbKaydet.Enabled = true;
         }
     }
 }
