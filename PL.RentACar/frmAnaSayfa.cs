@@ -254,5 +254,17 @@ namespace PL.RentACar
         {
             lblSaat.Text = DateTime.Now.ToLongTimeString();
         }
+
+        private void btnOdeme_Click(object sender, EventArgs e)
+        {
+            frmOdemeIslemleri frm = new frmOdemeIslemleri();
+            PanelGizle();
+            FormAc(frm);
+        }
+
+        private void pnlContent_Click(object sender, EventArgs e)
+        {
+            PanelGizle();
+        }
     }
 }

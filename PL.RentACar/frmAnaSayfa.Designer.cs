@@ -94,6 +94,7 @@
             this.btnKirala = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlHeader1 = new PL.RentACar.pnlHeader();
+            this.btnOdeme = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.pnlMenuSimge.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCikis)).BeginInit();
@@ -712,11 +713,13 @@
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(920, 367);
             this.pnlContent.TabIndex = 4;
+            this.pnlContent.Click += new System.EventHandler(this.pnlContent_Click);
             // 
             // pnlKasaMenu
             // 
             this.pnlKasaMenu.BackColor = System.Drawing.Color.Azure;
             this.pnlKasaMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlKasaMenu.Controls.Add(this.btnOdeme);
             this.pnlKasaMenu.Controls.Add(this.btnMaasOdeme);
             this.pnlKasaMenu.Controls.Add(this.btnKasaDetay);
             this.pnlKasaMenu.Location = new System.Drawing.Point(-2, 180);
@@ -1020,6 +1023,24 @@
             this.pnlHeader1.Size = new System.Drawing.Size(960, 30);
             this.pnlHeader1.TabIndex = 0;
             // 
+            // btnOdeme
+            // 
+            this.btnOdeme.BackColor = System.Drawing.Color.Transparent;
+            this.btnOdeme.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOdeme.FlatAppearance.BorderSize = 0;
+            this.btnOdeme.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SandyBrown;
+            this.btnOdeme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOdeme.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOdeme.Location = new System.Drawing.Point(0, 64);
+            this.btnOdeme.Name = "btnOdeme";
+            this.btnOdeme.Size = new System.Drawing.Size(0, 32);
+            this.btnOdeme.TabIndex = 23;
+            this.btnOdeme.Text = "Ödeme İşlemleri";
+            this.btnOdeme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOdeme.UseVisualStyleBackColor = false;
+            this.btnOdeme.Click += new System.EventHandler(this.btnOdeme_Click);
+            // 
             // frmAnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1131,5 +1152,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel pnlContent;
+        private System.Windows.Forms.Button btnOdeme;
     }
 }
