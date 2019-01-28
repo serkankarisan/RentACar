@@ -31,6 +31,7 @@ namespace PL.RentACar
             p=pr.PersonelGetirById(Genel.PersonelID);
             txtAdi.Text = p.Adi;
             txtSoyadi.Text = p.Soyadi;
+            txtMaas.Text = p.Maas.ToString();
 
         }
 

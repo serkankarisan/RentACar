@@ -46,11 +46,11 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAdi = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSoyadi = new System.Windows.Forms.TextBox();
             this.dgvPersonel = new System.Windows.Forms.DataGridView();
             this.toolStrip2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -70,6 +70,7 @@
             this.btnCikis.Size = new System.Drawing.Size(25, 25);
             this.btnCikis.TabIndex = 44;
             this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // toolStripLabel12
             // 
@@ -193,23 +194,24 @@
             this.panel4.Size = new System.Drawing.Size(294, 30);
             this.panel4.TabIndex = 42;
             // 
-            // textBox3
+            // txtAdi
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(58, 12);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtAdi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAdi.Location = new System.Drawing.Point(58, 12);
+            this.txtAdi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdi.Name = "txtAdi";
+            this.txtAdi.Size = new System.Drawing.Size(157, 20);
+            this.txtAdi.TabIndex = 10;
+            this.txtAdi.TextChanged += new System.EventHandler(this.txtAdi_TextChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txtAdi);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtSoyadi);
             this.panel1.Location = new System.Drawing.Point(294, 116);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(492, 58);
@@ -235,14 +237,15 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Soyad";
             // 
-            // textBox2
+            // txtSoyadi
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(308, 12);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(157, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtSoyadi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSoyadi.Location = new System.Drawing.Point(308, 12);
+            this.txtSoyadi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoyadi.Name = "txtSoyadi";
+            this.txtSoyadi.Size = new System.Drawing.Size(157, 20);
+            this.txtSoyadi.TabIndex = 7;
+            this.txtSoyadi.TextChanged += new System.EventHandler(this.txtSoyadi_TextChanged);
             // 
             // dgvPersonel
             // 
@@ -301,11 +304,11 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAdi;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSoyadi;
         private System.Windows.Forms.DataGridView dgvPersonel;
     }
 }

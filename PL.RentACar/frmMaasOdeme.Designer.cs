@@ -127,6 +127,7 @@
             // 
             this.txtMaas.Location = new System.Drawing.Point(154, 148);
             this.txtMaas.Name = "txtMaas";
+            this.txtMaas.ReadOnly = true;
             this.txtMaas.Size = new System.Drawing.Size(100, 20);
             this.txtMaas.TabIndex = 155;
             this.txtMaas.TextChanged += new System.EventHandler(this.txtMaas_TextChanged);
@@ -157,6 +158,7 @@
             // 
             this.txtToplamOdeme.Location = new System.Drawing.Point(154, 200);
             this.txtToplamOdeme.Name = "txtToplamOdeme";
+            this.txtToplamOdeme.ReadOnly = true;
             this.txtToplamOdeme.Size = new System.Drawing.Size(100, 20);
             this.txtToplamOdeme.TabIndex = 160;
             // 
