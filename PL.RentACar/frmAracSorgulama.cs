@@ -52,6 +52,7 @@ namespace PL.RentACar
 
         private void frmAracSorgulama_Load(object sender, EventArgs e)
         {
+            txtMarka.Text = "Marka Seçiniz.";
             cbMarkalar.Items.Clear();
             cbMarkalar.DisplayMember = "Marka";
             cbMarkalar.ValueMember = "Id";
@@ -65,6 +66,7 @@ namespace PL.RentACar
             if (x > 0)
             {
                 lvDetaylar.Items.Clear();
+                txtMarka.Text = cbMarkalar.SelectedItem.ToString();
                 List<Arac> liste = ARep.AracListele();
                 int j = 0;
                 for (int i = 0; i < liste.Count; i++)

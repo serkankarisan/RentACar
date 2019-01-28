@@ -52,6 +52,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMarka = new System.Windows.Forms.TextBox();
             this.cmView.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -183,10 +184,11 @@
             // cbMarkalar
             // 
             this.cbMarkalar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMarkalar.DropDownWidth = 110;
             this.cbMarkalar.FormattingEnabled = true;
-            this.cbMarkalar.Location = new System.Drawing.Point(91, 78);
+            this.cbMarkalar.Location = new System.Drawing.Point(222, 78);
             this.cbMarkalar.Name = "cbMarkalar";
-            this.cbMarkalar.Size = new System.Drawing.Size(141, 21);
+            this.cbMarkalar.Size = new System.Drawing.Size(19, 21);
             this.cbMarkalar.TabIndex = 9;
             this.cbMarkalar.SelectedIndexChanged += new System.EventHandler(this.cbMarkalar_SelectedIndexChanged);
             // 
@@ -234,13 +236,22 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(535, 78);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 20);
+            this.textBox2.Size = new System.Drawing.Size(134, 20);
             this.textBox2.TabIndex = 91;
+            // 
+            // txtMarka
+            // 
+            this.txtMarka.Location = new System.Drawing.Point(82, 78);
+            this.txtMarka.Name = "txtMarka";
+            this.txtMarka.ReadOnly = true;
+            this.txtMarka.Size = new System.Drawing.Size(142, 20);
+            this.txtMarka.TabIndex = 92;
             // 
             // frmAracSorgulama
             // 
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(694, 424);
+            this.Controls.Add(this.txtMarka);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
@@ -283,5 +294,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMarka;
     }
 }
