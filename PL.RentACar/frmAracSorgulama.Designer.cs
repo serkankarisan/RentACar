@@ -166,7 +166,8 @@
             this.ilLarge.TransparentColor = System.Drawing.Color.Transparent;
             this.ilLarge.Images.SetKeyName(0, "q7.jpg");
             this.ilLarge.Images.SetKeyName(1, "a7.jpg");
-            this.ilLarge.Images.SetKeyName(2, "a3hatchback.jpg");
+            this.ilLarge.Images.SetKeyName(2, "corolla.jpg");
+            this.ilLarge.Images.SetKeyName(3, "a3hatchback.jpg");
             // 
             // ilSmall
             // 
@@ -174,7 +175,8 @@
             this.ilSmall.TransparentColor = System.Drawing.Color.Transparent;
             this.ilSmall.Images.SetKeyName(0, "q7.jpg");
             this.ilSmall.Images.SetKeyName(1, "a7.jpg");
-            this.ilSmall.Images.SetKeyName(2, "a3hatchback.jpg");
+            this.ilSmall.Images.SetKeyName(2, "corolla.jpg");
+            this.ilSmall.Images.SetKeyName(3, "a3hatchback.jpg");
             // 
             // cbMarkalar
             // 

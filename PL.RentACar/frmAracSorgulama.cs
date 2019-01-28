@@ -19,6 +19,7 @@ namespace PL.RentACar
             InitializeComponent();
         }
         AracRepository ARep = new AracRepository();
+        int x;
         private void mitmLargeIcon_Click(object sender, EventArgs e)
         {
             lvDetaylar.View = View.LargeIcon;
@@ -52,57 +53,47 @@ namespace PL.RentACar
         {
             cbMarkalar.Items.Clear();
             cbMarkalar.DisplayMember = "Marka";
-            cbMarkalar.DataSource = ARep.AracListele();
+            cbMarkalar.ValueMember = "Id";
+            cbMarkalar.DataSource = ARep.AracListeleByMarka();
             ShowListView(ARep.AracListele());
-            MessageBox.Show(cbMarkalar.SelectedIndex + "");
+            x = 1;
         }
 
         private void cbMarkalar_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //lvDetaylar.Items.Clear();
-            List<Arac> liste = ARep.AracListele();
-            //if (cbMarkalar.SelectedItem.ToString() == liste[cbMarkalar.SelectedIndex].Marka)
-            //{
-                lvDetaylar.Items.Add(liste[cbMarkalar.SelectedIndex].Model, cbMarkalar.SelectedIndex);
-                lvDetaylar.Items[cbMarkalar.SelectedIndex].SubItems.Add(liste[cbMarkalar.SelectedIndex].Tip);
-                lvDetaylar.Items[cbMarkalar.SelectedIndex].SubItems.Add(liste[cbMarkalar.SelectedIndex].Renk);
-                lvDetaylar.Items[cbMarkalar.SelectedIndex].SubItems.Add(liste[cbMarkalar.SelectedIndex].Plaka);
-                lvDetaylar.Items[cbMarkalar.SelectedIndex].SubItems.Add(liste[cbMarkalar.SelectedIndex].AracDurumu);
-                lvDetaylar.Items[cbMarkalar.SelectedIndex].SubItems.Add(liste[cbMarkalar.SelectedIndex].GünlükFiyat.ToString());
-                //lvDetaylar.Items.Add("Q7", 0);
-                //lvDetaylar.Items[0].SubItems.Add("Jeep");
-                //lvDetaylar.Items[0].SubItems.Add("Beyaz");
-                //lvDetaylar.Items[0].SubItems.Add("34SDF56");
-                //lvDetaylar.Items[0].SubItems.Add("Hasar Yok");
-                //lvDetaylar.Items[0].SubItems.Add("700");
-
-                //lvDetaylar.Items.Add("A7", 1);
-                //lvDetaylar.Items[1].SubItems.Add("Sedan");
-                //lvDetaylar.Items[1].SubItems.Add("Beyaz");
-                //lvDetaylar.Items[1].SubItems.Add("34SDF56");
-                //lvDetaylar.Items[1].SubItems.Add("Hasar Yok");
-                //lvDetaylar.Items[1].SubItems.Add("600");
-
-                //lvDetaylar.Items.Add("A3", 2);
-                //lvDetaylar.Items[lvDetaylar.Items.Count - 1].SubItems.Add("Hatchback");
-                //lvDetaylar.Items[lvDetaylar.Items.Count - 1].SubItems.Add("Beyaz");
-                //lvDetaylar.Items[2].SubItems.Add("34SDF56");
-                //lvDetaylar.Items[2].SubItems.Add("Hasar Yok");
-                //lvDetaylar.Items[2].SubItems.Add("110");
-
-
-            //}
-        }
-        private void ShowListView(List<Arac> liste)
-        {
-            for (int i = 0; i < liste.Count; i++)
+            if (x > 0)
             {
-                lvDetaylar.Items.Add(liste[i].Model, 0);
-                lvDetaylar.Items[i].SubItems.Add(liste[i].Tip);
-                lvDetaylar.Items[i].SubItems.Add(liste[i].Renk);
-                lvDetaylar.Items[i].SubItems.Add(liste[i].Plaka);
-                lvDetaylar.Items[i].SubItems.Add(liste[i].AracDurumu);
-                lvDetaylar.Items[i].SubItems.Add(liste[i].GünlükFiyat.ToString());
+                lvDetaylar.Items.Clear();
+                List<Arac> liste = ARep.AracListele();
+
+                for (int i = 0; i < liste.Count; i++)
+                {
+                    if (cbMarkalar.SelectedItem.ToString() == liste[i].Marka)
+                    {
+                        lvDetaylar.Items.Add(liste[i].Model, i);
+                        lvDetaylar.Items[i].SubItems.Add(liste[i].Tip);
+                        lvDetaylar.Items[i].SubItems.Add(liste[i].Renk);
+                        lvDetaylar.Items[i].SubItems.Add(liste[i].Plaka);
+                        lvDetaylar.Items[i].SubItems.Add(liste[i].AracDurumu);
+                        lvDetaylar.Items[i].SubItems.Add(liste[i].GünlükFiyat.ToString());
+
+
+
+                    }
+                }
+            }
+        }
+        private void ShowListView(List<Arac> listem)
+        {
+            for (int i = 0; i < listem.Count; i++)
+            {
+                lvDetaylar.Items.Add(listem[i].Model, i);
+                lvDetaylar.Items[i].SubItems.Add(listem[i].Tip);
+                lvDetaylar.Items[i].SubItems.Add(listem[i].Renk);
+                lvDetaylar.Items[i].SubItems.Add(listem[i].Plaka);
+                lvDetaylar.Items[i].SubItems.Add(listem[i].AracDurumu);
+                lvDetaylar.Items[i].SubItems.Add(listem[i].GünlükFiyat.ToString());
+                
             }
             
         }
