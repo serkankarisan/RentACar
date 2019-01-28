@@ -90,10 +90,11 @@ namespace BLL.RentACar.Repositories
 
         public List<Personel> PersonelSorgula(string Ad, string Soyad)
         {
-            List<Personel> sorgu = (from s in Genel.ent.Personeller
-                                    where s.Adi == Ad && s.Soyadi == Soyad
-                                    select s).ToList();
-            return sorgu;
+            
+                return Genel.ent.Personeller.Where(m => m.Silindi == false && m.Adi.Substring(0, Ad.Length) == Ad.Substring(0, Ad.Length) && m.Soyadi.Substring(0, Soyad.Length) == Soyad.Substring(0, Soyad.Length)).ToList();
+            
         }
+
+
     }
 }

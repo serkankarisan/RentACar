@@ -28,9 +28,10 @@ namespace PL.RentACar
         private void btnSec_Click(object sender, EventArgs e)
         {
             frm.ShowDialog();
-            p=pr.PersonelGetirById(Genel.ID);
+            p=pr.PersonelGetirById(Genel.PersonelID);
             txtAdi.Text = p.Adi;
             txtSoyadi.Text = p.Soyadi;
+            txtMaas.Text = p.Maas.ToString();
 
         }
 
@@ -41,7 +42,7 @@ namespace PL.RentACar
                 KasaHareket kh = new KasaHareket();
                 kh.AracId = 0;
                 kh.SozlesmeId = 0;
-                kh.PersonelId = Genel.ID;
+                kh.PersonelId = Genel.PersonelID;
                 kh.Tarih = DateTime.Now;
                 kh.GelirGiderId = 1;
                 kh.Tutar = txtMaas.Text;

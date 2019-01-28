@@ -98,5 +98,12 @@ namespace BLL.RentACar.Repositories
             }
             return Sonuc;
         }
+
+        public List<MusteriHareket> MusteriHareketSorgula(int MusteriId, DateTime baslangic, DateTime bitis)
+        {
+            DateTime b = Convert.ToDateTime(baslangic.ToShortDateString());
+            
+            return Genel.ent.MusteriHareketler.Where(m => m.Silindi == false && m.MusteriId==MusteriId && m.Tarih >=b && m.Tarih <=bitis ).ToList();
+        }
     }
 }

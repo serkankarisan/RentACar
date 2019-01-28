@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMusteriDetay));
-            this.btnCikis = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtEhliyetNo = new System.Windows.Forms.TextBox();
             this.dgvMusteriler = new System.Windows.Forms.DataGridView();
@@ -47,18 +47,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnCikis
+            // btnGeri
             // 
-            this.btnCikis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCikis.BackColor = System.Drawing.Color.Transparent;
-            this.btnCikis.FlatAppearance.BorderSize = 0;
-            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
-            this.btnCikis.Location = new System.Drawing.Point(770, 19);
-            this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(25, 25);
-            this.btnCikis.TabIndex = 97;
-            this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnGeri.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGeri.BackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatAppearance.BorderSize = 0;
+            this.btnGeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGeri.Image = ((System.Drawing.Image)(resources.GetObject("btnGeri.Image")));
+            this.btnGeri.Location = new System.Drawing.Point(770, 19);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(25, 25);
+            this.btnGeri.TabIndex = 97;
+            this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // label8
             // 
@@ -86,8 +87,10 @@
             this.dgvMusteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMusteriler.Location = new System.Drawing.Point(15, 85);
             this.dgvMusteriler.Name = "dgvMusteriler";
+            this.dgvMusteriler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMusteriler.Size = new System.Drawing.Size(744, 289);
             this.dgvMusteriler.TabIndex = 94;
+            this.dgvMusteriler.DoubleClick += new System.EventHandler(this.dgvMusteriler_DoubleClick);
             // 
             // label6
             // 
@@ -179,6 +182,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 101;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // frmMusteriDetay
             // 
@@ -190,7 +194,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btnCikis);
+            this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtEhliyetNo);
             this.Controls.Add(this.dgvMusteriler);
@@ -211,7 +215,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnCikis;
+        private System.Windows.Forms.Button btnGeri;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtEhliyetNo;
         private System.Windows.Forms.DataGridView dgvMusteriler;

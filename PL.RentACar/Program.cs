@@ -21,7 +21,7 @@ namespace PL.RentACar
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMaasOdeme());
+            Application.Run(new frmMusteriDetay());
         }
     }
 }
