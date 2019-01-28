@@ -60,9 +60,14 @@ namespace PL.RentACar
             dgvMusteriler.Columns[0].Visible = false;
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void dtpBaslangic_ValueChanged(object sender, EventArgs e)
         {
-            dgvMusteriler.DataSource = mhr.MusteriHareketSorgula(Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value), dateTimePicker1.Value, dateTimePicker2.Value);
+            dgvMusteriler.DataSource = mhr.MusteriHareketSorgula(Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value), dtpBaslangic.Value, dtpBitis.Value);
+        }
+
+        private void dtpBitis_ValueChanged(object sender, EventArgs e)
+        {
+            dgvMusteriler.DataSource = mhr.MusteriHareketSorgula(Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value), dtpBaslangic.Value, dtpBitis.Value);
         }
     }
 }
