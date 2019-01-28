@@ -117,5 +117,18 @@ namespace BLL.RentACar.Repositories
             }
             return Sonuc;
         }
+
+        public bool AracKontrolbyGuncelleme(Arac c)
+        {
+            bool Sonuc = false;
+            Arac aranan = (from a in Genel.ent.Araclar
+                           where a.Plaka == c.Plaka && a.Id!=c.Id
+                           select a).FirstOrDefault();
+            if (aranan != null)
+            {
+                Sonuc = true;
+            }
+            return Sonuc;
+        }
     }
 }
