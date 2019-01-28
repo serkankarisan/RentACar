@@ -53,6 +53,11 @@ namespace BLL.RentACar.Repositories
         {
             return Convert.ToBoolean(Genel.ent.Sozlesmeler.Where(s => s.SozlesmeTarihi == yeni.SozlesmeTarihi && s.MusteriId==yeni.MusteriId && s.PersonelId == yeni.PersonelId).ToList().Count);
         }
+        public int SozlesmeIdBul(Sozlesme yeni)
+        {
+            Sozlesme soz = Genel.ent.Sozlesmeler.Where(s => s.SozlesmeTarihi == yeni.SozlesmeTarihi && s.MusteriId == yeni.MusteriId && s.PersonelId == yeni.PersonelId).FirstOrDefault();
+            return soz.Id;
+        }
 
         public List<Sozlesme> SozlesmeListele()
         {

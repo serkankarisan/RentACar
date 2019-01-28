@@ -76,6 +76,7 @@ namespace PL.RentACar
                         {
                             MessageBox.Show("Yeni Sözleşme Eklendi.", "Kayıt Gerçekleşti.");
                             ListeGoster();
+                            Genel.soz = s;
                             Temizle();
                             this.Hide();
                             frmKirala frm = new frmKirala();

@@ -145,7 +145,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label23.Location = new System.Drawing.Point(451, 417);
+            this.label23.Location = new System.Drawing.Point(448, 357);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(123, 20);
             this.label23.TabIndex = 145;
@@ -154,7 +154,7 @@
             // txtSozlesmeTutari
             // 
             this.txtSozlesmeTutari.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSozlesmeTutari.Location = new System.Drawing.Point(580, 417);
+            this.txtSozlesmeTutari.Location = new System.Drawing.Point(577, 357);
             this.txtSozlesmeTutari.Name = "txtSozlesmeTutari";
             this.txtSozlesmeTutari.Size = new System.Drawing.Size(100, 26);
             this.txtSozlesmeTutari.TabIndex = 144;
@@ -163,7 +163,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label22.Location = new System.Drawing.Point(451, 391);
+            this.label22.Location = new System.Drawing.Point(448, 331);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(87, 20);
             this.label22.TabIndex = 143;
@@ -172,7 +172,7 @@
             // txtAracSayisi
             // 
             this.txtAracSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAracSayisi.Location = new System.Drawing.Point(580, 391);
+            this.txtAracSayisi.Location = new System.Drawing.Point(577, 331);
             this.txtAracSayisi.Name = "txtAracSayisi";
             this.txtAracSayisi.Size = new System.Drawing.Size(100, 26);
             this.txtAracSayisi.TabIndex = 142;
@@ -390,7 +390,7 @@
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnEkle.Image")));
             this.btnEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEkle.Location = new System.Drawing.Point(452, 319);
+            this.btnEkle.Location = new System.Drawing.Point(449, 264);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(86, 32);
             this.btnEkle.TabIndex = 161;
@@ -406,7 +406,7 @@
             this.btnTamamla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTamamla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnTamamla.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTamamla.Location = new System.Drawing.Point(455, 462);
+            this.btnTamamla.Location = new System.Drawing.Point(452, 402);
             this.btnTamamla.Name = "btnTamamla";
             this.btnTamamla.Size = new System.Drawing.Size(225, 32);
             this.btnTamamla.TabIndex = 162;
@@ -425,7 +425,7 @@
             this.dgvSozlesmeDetaylar.Location = new System.Drawing.Point(452, 77);
             this.dgvSozlesmeDetaylar.Name = "dgvSozlesmeDetaylar";
             this.dgvSozlesmeDetaylar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSozlesmeDetaylar.Size = new System.Drawing.Size(447, 221);
+            this.dgvSozlesmeDetaylar.Size = new System.Drawing.Size(369, 179);
             this.dgvSozlesmeDetaylar.TabIndex = 163;
             // 
             // label2
@@ -482,6 +482,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmKirala";
             this.Text = "frmKirala";
+            this.Load += new System.EventHandler(this.frmKirala_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeDetaylar)).EndInit();
             this.ResumeLayout(false);

@@ -50,5 +50,6 @@ namespace BLL.RentACar.Repositories
 
         #endregion
 
+        public static Sozlesme soz;
     }
 }

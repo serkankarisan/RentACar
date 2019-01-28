@@ -17,7 +17,8 @@ namespace PL.RentACar
         {
             InitializeComponent();
         }
-
+        SozlesmeDetayRepository sdrepo = new SozlesmeDetayRepository();
+        SozlesmeRepository sozrepo = new SozlesmeRepository();
         private void btnAracSec_Click(object sender, EventArgs e)
         {
             frmAracSorgulama frm = new frmAracSorgulama();
@@ -35,6 +36,11 @@ namespace PL.RentACar
         private void btnCikis_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmKirala_Load(object sender, EventArgs e)
+        {
+            dgvSozlesmeDetaylar.DataSource = sdrepo.SozlesmeDetayGetirBySozlesmeId(Genel.soz.Id);
         }
 
         //private void cbMarkalar_SelectedIndexChanged(object sender, EventArgs e)
