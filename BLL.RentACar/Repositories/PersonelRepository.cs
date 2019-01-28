@@ -95,5 +95,10 @@ namespace BLL.RentACar.Repositories
                                     select s).ToList();
             return sorgu;
         }
+
+        public bool PersonelKontrol(Personel P)
+        {
+            return Convert.ToBoolean(Genel.ent.Personeller.Where(k => k.Adi == P.Adi && k.Soyadi == P.Soyadi).ToList().Count);
+        }
     }
 }
