@@ -39,13 +39,11 @@ namespace PL.RentACar
 
         private void btnPersonelSec_Click(object sender, EventArgs e)
         {
-            //frmPersonelSorgulama frm = new frmPersonelSorgulama();
-            //frm.ShowDialog();
-            //txtPersonelAdi.Text = Genel.PersonelAdi;
-            //txtPersonelSoyadi.Text = Genel.PersonelSoyadi;            
-            txtPersonelAdi.Text = "Ali";
-            txtPersonelSoyadi.Text = "Kaçar";
-            Genel.PersonelID = 1;
+            frmPersonelSorgulama frm = new frmPersonelSorgulama();
+            frm.ShowDialog();
+            Personel p = perrepo.PersonelGetirById(Genel.PersonelID);
+            txtPersonelAdi.Text = p.Adi;
+            txtPersonelSoyadi.Text = p.Soyadi;
             ListeGoster();
         }
 

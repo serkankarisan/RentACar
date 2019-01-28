@@ -28,6 +28,8 @@ namespace PL.RentACar
         {
             Supurge();
             tsKaydet.Enabled = true;
+            cbPersonel.DataSource = per.PersonelListele();
+            cbYetki.DataSource = yper.YetkiListele();
             txtKullaniciAdi.Focus();
         }
         private void Supurge()
@@ -78,17 +80,16 @@ namespace PL.RentACar
 
         private void frmKullaniciIslemleri_Load(object sender, EventArgs e)
         {
-            tsKaydet.Enabled = true;
+            tsKaydet.Enabled = false;
             dgvKullanicilar.DataSource = kper.KullaniciListele();
-            cbPersonel.DataSource = per.PersonelListele();
-            cbPersonel.SelectedIndex = 0;
-            cbYetki.DataSource = yper.YetkiListele();
-            cbYetki.SelectedIndex = 0;
-
+            cbPersonel.Text = "Personeller";
+            cbYetki.Text = "Yetkiler";
         }
 
         private void dgvKullanicilar_DoubleClick(object sender, EventArgs e)
         {
+            cbPersonel.DataSource = per.PersonelListele();
+            cbYetki.DataSource = yper.YetkiListele();
             ID = Convert.ToInt32(dgvKullanicilar.SelectedRows[0].Cells[0].Value);
             txtKullaniciAdi.Text = dgvKullanicilar.SelectedRows[0].Cells[3].Value.ToString();
             txtSifre.Text = dgvKullanicilar.SelectedRows[0].Cells[4].Value.ToString();
@@ -165,9 +166,9 @@ namespace PL.RentACar
 
         }
 
-        private void dgvKullanicilar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnCikis_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
