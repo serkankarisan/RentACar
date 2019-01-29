@@ -235,6 +235,7 @@
             this.txtPersonelAdi.Name = "txtPersonelAdi";
             this.txtPersonelAdi.Size = new System.Drawing.Size(113, 26);
             this.txtPersonelAdi.TabIndex = 10;
+            
             // 
             // label6
             // 

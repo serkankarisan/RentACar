@@ -115,5 +115,10 @@ namespace PL.RentACar
         {
             this.Close();
         }
+
+        private void txtMarka_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

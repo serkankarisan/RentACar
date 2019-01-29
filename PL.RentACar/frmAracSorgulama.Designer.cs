@@ -49,7 +49,7 @@
             this.cbMarkalar = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPlaka = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtMarka = new System.Windows.Forms.TextBox();
             this.btnCikis = new System.Windows.Forms.Button();
@@ -214,12 +214,12 @@
             this.label3.TabIndex = 89;
             this.label3.Text = "Model :";
             // 
-            // textBox1
+            // txtPlaka
             // 
-            this.textBox1.Location = new System.Drawing.Point(313, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 20);
-            this.textBox1.TabIndex = 90;
+            this.txtPlaka.Location = new System.Drawing.Point(313, 78);
+            this.txtPlaka.Name = "txtPlaka";
+            this.txtPlaka.Size = new System.Drawing.Size(134, 20);
+            this.txtPlaka.TabIndex = 90;
             // 
             // textBox2
             // 
@@ -235,6 +235,7 @@
             this.txtMarka.ReadOnly = true;
             this.txtMarka.Size = new System.Drawing.Size(142, 20);
             this.txtMarka.TabIndex = 92;
+            this.txtMarka.TextChanged += new System.EventHandler(this.txtMarka_TextChanged);
             // 
             // btnCikis
             // 
@@ -268,7 +269,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.txtMarka);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPlaka);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -306,7 +307,7 @@
         private System.Windows.Forms.ToolStripMenuItem mitmTile;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPlaka;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox txtMarka;
         private System.Windows.Forms.Button btnCikis;
