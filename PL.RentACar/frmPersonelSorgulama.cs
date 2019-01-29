@@ -44,5 +44,10 @@ namespace PL.RentACar
         {
             this.Close();
         }
+
+        private void btnCikis_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

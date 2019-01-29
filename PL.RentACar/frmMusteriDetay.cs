@@ -69,5 +69,10 @@ namespace PL.RentACar
         {
             dgvMusteriler.DataSource = mhr.MusteriHareketSorgula(Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value), dtpBaslangic.Value, dtpBitis.Value);
         }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
