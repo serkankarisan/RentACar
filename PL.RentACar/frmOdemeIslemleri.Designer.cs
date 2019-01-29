@@ -101,6 +101,7 @@
             this.txtAlınan.Size = new System.Drawing.Size(96, 26);
             this.txtAlınan.TabIndex = 128;
             this.txtAlınan.Visible = false;
+            this.txtAlınan.TextChanged += new System.EventHandler(this.txtAlınan_TextChanged);
             // 
             // dgvOdeme
             // 
@@ -144,11 +145,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 38);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(12, 39);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 20);
+            this.label5.Size = new System.Drawing.Size(143, 20);
             this.label5.TabIndex = 133;
-            this.label5.Text = "İşlem Türü";
+            this.label5.Text = "İşlem Türü Seçin";
             // 
             // cbIslemTurleri
             // 
@@ -157,7 +159,7 @@
             this.cbIslemTurleri.Items.AddRange(new object[] {
             "Tahsilat",
             "Ödeme"});
-            this.cbIslemTurleri.Location = new System.Drawing.Point(16, 61);
+            this.cbIslemTurleri.Location = new System.Drawing.Point(16, 76);
             this.cbIslemTurleri.Name = "cbIslemTurleri";
             this.cbIslemTurleri.Size = new System.Drawing.Size(163, 28);
             this.cbIslemTurleri.TabIndex = 132;
@@ -273,7 +275,6 @@
             // 
             this.txtAracTutar.Location = new System.Drawing.Point(64, 156);
             this.txtAracTutar.Name = "txtAracTutar";
-            this.txtAracTutar.ReadOnly = true;
             this.txtAracTutar.Size = new System.Drawing.Size(96, 26);
             this.txtAracTutar.TabIndex = 141;
             this.txtAracTutar.Visible = false;
@@ -288,7 +289,7 @@
             this.btnMaasOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMaasOdeme.Image = ((System.Drawing.Image)(resources.GetObject("btnMaasOdeme.Image")));
             this.btnMaasOdeme.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMaasOdeme.Location = new System.Drawing.Point(527, 38);
+            this.btnMaasOdeme.Location = new System.Drawing.Point(289, 39);
             this.btnMaasOdeme.Name = "btnMaasOdeme";
             this.btnMaasOdeme.Size = new System.Drawing.Size(149, 40);
             this.btnMaasOdeme.TabIndex = 177;
@@ -445,11 +446,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 478);
-            this.Controls.Add(this.btnAracOdemeAl);
             this.Controls.Add(this.btnMaasOdeme);
             this.Controls.Add(this.btnSec);
             this.Controls.Add(this.lblToplam);
-            this.Controls.Add(this.txtToplamOdeme);
             this.Controls.Add(this.lblPrim);
             this.Controls.Add(this.lblMaas);
             this.Controls.Add(this.txtPrim);
@@ -460,11 +459,9 @@
             this.Controls.Add(this.txtAdi);
             this.Controls.Add(this.lblPersonel);
             this.Controls.Add(this.lblTutar);
-            this.Controls.Add(this.txtAracTutar);
             this.Controls.Add(this.btnAracSec);
             this.Controls.Add(this.btnSozlesmeSec);
             this.Controls.Add(this.btnOdemeYap);
-            this.Controls.Add(this.lblsozlesme);
             this.Controls.Add(this.txtSozlesmeTutar);
             this.Controls.Add(this.lblborc);
             this.Controls.Add(this.txtBorc);
@@ -475,6 +472,10 @@
             this.Controls.Add(this.txtAlınan);
             this.Controls.Add(this.dgvOdeme);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txtAracTutar);
+            this.Controls.Add(this.lblsozlesme);
+            this.Controls.Add(this.txtToplamOdeme);
+            this.Controls.Add(this.btnAracOdemeAl);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
