@@ -79,7 +79,6 @@
             this.columnHeader5});
             this.lvDetaylar.ContextMenuStrip = this.cmView;
             this.lvDetaylar.FullRowSelect = true;
-            this.lvDetaylar.LargeImageList = this.ilLarge;
             this.lvDetaylar.Location = new System.Drawing.Point(12, 117);
             this.lvDetaylar.Name = "lvDetaylar";
             this.lvDetaylar.Size = new System.Drawing.Size(655, 285);
@@ -172,7 +171,6 @@
             this.ilLarge.Images.SetKeyName(0, "q7.jpg");
             this.ilLarge.Images.SetKeyName(1, "a7.jpg");
             this.ilLarge.Images.SetKeyName(2, "corolla.jpg");
-            this.ilLarge.Images.SetKeyName(3, "a3hatchback.jpg");
             // 
             // ilSmall
             // 
@@ -181,7 +179,6 @@
             this.ilSmall.Images.SetKeyName(0, "q7.jpg");
             this.ilSmall.Images.SetKeyName(1, "a7.jpg");
             this.ilSmall.Images.SetKeyName(2, "corolla.jpg");
-            this.ilSmall.Images.SetKeyName(3, "a3hatchback.jpg");
             // 
             // cbMarkalar
             // 
@@ -298,7 +295,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ComboBox cbMarkalar;
-        private System.Windows.Forms.ImageList ilLarge;
         private System.Windows.Forms.ImageList ilSmall;
         private System.Windows.Forms.ContextMenuStrip cmView;
         private System.Windows.Forms.ToolStripMenuItem mitmLargeIcon;
@@ -313,5 +309,6 @@
         private System.Windows.Forms.TextBox txtMarka;
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.ImageList ilLarge;
     }
 }

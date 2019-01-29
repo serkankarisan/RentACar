@@ -17,7 +17,7 @@ namespace PL.RentACar
         public frmAracSorgulama()
         {
             InitializeComponent();
-        }
+        }        
         AracRepository ARep = new AracRepository();
         int x;
         private void mitmLargeIcon_Click(object sender, EventArgs e)
@@ -51,6 +51,7 @@ namespace PL.RentACar
 
         private void frmAracSorgulama_Load(object sender, EventArgs e)
         {
+            lvDetaylar.LargeImageList = Genel.ResimListesi;
             txtMarka.Text = "Marka Seçiniz.";
             cbMarkalar.Items.Clear();
             cbMarkalar.DisplayMember = "Marka";
@@ -93,8 +94,7 @@ namespace PL.RentACar
                 lvDetaylar.Items[i].SubItems.Add(listem[i].Plaka);
                 lvDetaylar.Items[i].SubItems.Add(listem[i].AracDurumu);
                 lvDetaylar.Items[i].SubItems.Add(listem[i].GünlükFiyat.ToString());
-            }
-            
+            }            
         }
 
         private void lvDetaylar_DoubleClick(object sender, EventArgs e)

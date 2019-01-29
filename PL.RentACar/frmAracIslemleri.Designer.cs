@@ -56,8 +56,12 @@
             this.tsDegistir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.tsSil = new System.Windows.Forms.ToolStripButton();
+            this.pbAracResim = new System.Windows.Forms.PictureBox();
+            this.btnResimEkle = new System.Windows.Forms.Button();
+            this.txtResimYolu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAraclar)).BeginInit();
             this.tsMusteriIslemleri.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAracResim)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -219,7 +223,7 @@
             this.dgvAraclar.Location = new System.Drawing.Point(285, 83);
             this.dgvAraclar.Name = "dgvAraclar";
             this.dgvAraclar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAraclar.Size = new System.Drawing.Size(447, 268);
+            this.dgvAraclar.Size = new System.Drawing.Size(447, 320);
             this.dgvAraclar.TabIndex = 24;
             this.dgvAraclar.DoubleClick += new System.EventHandler(this.dgvAraclar_DoubleClick);
             // 
@@ -322,12 +326,40 @@
             this.tsSil.Text = "&Sil";
             this.tsSil.Click += new System.EventHandler(this.tsSil_Click);
             // 
+            // pbAracResim
+            // 
+            this.pbAracResim.Location = new System.Drawing.Point(149, 340);
+            this.pbAracResim.Name = "pbAracResim";
+            this.pbAracResim.Size = new System.Drawing.Size(120, 63);
+            this.pbAracResim.TabIndex = 87;
+            this.pbAracResim.TabStop = false;
+            // 
+            // btnResimEkle
+            // 
+            this.btnResimEkle.Location = new System.Drawing.Point(40, 374);
+            this.btnResimEkle.Name = "btnResimEkle";
+            this.btnResimEkle.Size = new System.Drawing.Size(102, 29);
+            this.btnResimEkle.TabIndex = 88;
+            this.btnResimEkle.Text = "Resim Ekle";
+            this.btnResimEkle.UseVisualStyleBackColor = true;
+            this.btnResimEkle.Click += new System.EventHandler(this.btnResimEkle_Click);
+            // 
+            // txtResimYolu
+            // 
+            this.txtResimYolu.Location = new System.Drawing.Point(40, 340);
+            this.txtResimYolu.Name = "txtResimYolu";
+            this.txtResimYolu.Size = new System.Drawing.Size(100, 20);
+            this.txtResimYolu.TabIndex = 89;
+            // 
             // frmAracIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtResimYolu);
+            this.Controls.Add(this.btnResimEkle);
+            this.Controls.Add(this.pbAracResim);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.tsMusteriIslemleri);
             this.Controls.Add(this.label5);
@@ -355,6 +387,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAraclar)).EndInit();
             this.tsMusteriIslemleri.ResumeLayout(false);
             this.tsMusteriIslemleri.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAracResim)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,5 +421,8 @@
         private System.Windows.Forms.ToolStripButton tsDegistir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripButton tsSil;
+        private System.Windows.Forms.PictureBox pbAracResim;
+        private System.Windows.Forms.Button btnResimEkle;
+        private System.Windows.Forms.TextBox txtResimYolu;
     }
 }

@@ -165,8 +165,22 @@ namespace PL.RentACar
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnResimEkle_Click(object sender, EventArgs e)
         {
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box  
+                pbAracResim.Image = new Bitmap(open.FileName);
+                // image file path  
+                txtResimYolu.Text = open.FileName;
+                //Genel.ResimListesi.ImageSize = new Size(120, 120);
+                Genel.ResimListesi.Images.Add(pbAracResim.Image);
+            }
+            
             
         }
     }

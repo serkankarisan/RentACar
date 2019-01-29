@@ -21,5 +21,6 @@ namespace BLL.RentACar.Repositories
         public static int PersonelID;
         public static int AracID;
         public static Sozlesme soz;
+        public static ImageList ResimListesi;
     }
 }
