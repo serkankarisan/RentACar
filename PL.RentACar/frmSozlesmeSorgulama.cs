@@ -26,6 +26,7 @@ namespace PL.RentACar
         private void dgvMusteriler_DoubleClick(object sender, EventArgs e)
         {
             Genel.SozID = Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value);
+            Genel.MusteriId = Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[2].Value);
             this.Close();
         }
     }

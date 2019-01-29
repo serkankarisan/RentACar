@@ -37,7 +37,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.txtEkstraTutar = new System.Windows.Forms.TextBox();
             this.dgvSozlesmeDetay = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnTeslimAl = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.txtSozlesmeTutari = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -60,10 +60,10 @@
             this.txtMarka = new System.Windows.Forms.TextBox();
             this.btnSec = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSonYakitDurumu = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtSonAracDurumu = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.cbAracDurumu = new System.Windows.Forms.ComboBox();
+            this.cbYakitDurumu = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeDetay)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,7 +120,6 @@
             this.rdnYes.Name = "rdnYes";
             this.rdnYes.Size = new System.Drawing.Size(47, 17);
             this.rdnYes.TabIndex = 157;
-            this.rdnYes.TabStop = true;
             this.rdnYes.Text = "Evet";
             this.rdnYes.UseVisualStyleBackColor = true;
             // 
@@ -151,17 +150,18 @@
             this.dgvSozlesmeDetay.TabIndex = 153;
             this.dgvSozlesmeDetay.DoubleClick += new System.EventHandler(this.dgvSozlesmeDetay_DoubleClick);
             // 
-            // button5
+            // btnTeslimAl
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(90, 402);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(103, 27);
-            this.button5.TabIndex = 152;
-            this.button5.Text = "Aracı Teslim Al";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnTeslimAl.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnTeslimAl.FlatAppearance.BorderSize = 0;
+            this.btnTeslimAl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeslimAl.Location = new System.Drawing.Point(90, 402);
+            this.btnTeslimAl.Name = "btnTeslimAl";
+            this.btnTeslimAl.Size = new System.Drawing.Size(103, 27);
+            this.btnTeslimAl.TabIndex = 152;
+            this.btnTeslimAl.Text = "Aracı Teslim Al";
+            this.btnTeslimAl.UseVisualStyleBackColor = false;
+            this.btnTeslimAl.Click += new System.EventHandler(this.btnTeslimAl_Click);
             // 
             // label23
             // 
@@ -355,13 +355,6 @@
             this.label1.TabIndex = 131;
             this.label1.Text = "Araç";
             // 
-            // txtSonYakitDurumu
-            // 
-            this.txtSonYakitDurumu.Location = new System.Drawing.Point(277, 254);
-            this.txtSonYakitDurumu.Name = "txtSonYakitDurumu";
-            this.txtSonYakitDurumu.Size = new System.Drawing.Size(100, 20);
-            this.txtSonYakitDurumu.TabIndex = 166;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -370,13 +363,6 @@
             this.label13.Size = new System.Drawing.Size(60, 13);
             this.label13.TabIndex = 165;
             this.label13.Text = "Son Durum";
-            // 
-            // txtSonAracDurumu
-            // 
-            this.txtSonAracDurumu.Location = new System.Drawing.Point(276, 226);
-            this.txtSonAracDurumu.Name = "txtSonAracDurumu";
-            this.txtSonAracDurumu.Size = new System.Drawing.Size(100, 20);
-            this.txtSonAracDurumu.TabIndex = 164;
             // 
             // label14
             // 
@@ -387,14 +373,41 @@
             this.label14.TabIndex = 163;
             this.label14.Text = "Son Durum";
             // 
+            // cbAracDurumu
+            // 
+            this.cbAracDurumu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbAracDurumu.FormattingEnabled = true;
+            this.cbAracDurumu.Items.AddRange(new object[] {
+            "Agir Hasarli",
+            "Hafif Hasarli",
+            "Hasar Yok"});
+            this.cbAracDurumu.Location = new System.Drawing.Point(268, 226);
+            this.cbAracDurumu.Name = "cbAracDurumu";
+            this.cbAracDurumu.Size = new System.Drawing.Size(121, 21);
+            this.cbAracDurumu.TabIndex = 166;
+            // 
+            // cbYakitDurumu
+            // 
+            this.cbYakitDurumu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbYakitDurumu.FormattingEnabled = true;
+            this.cbYakitDurumu.Items.AddRange(new object[] {
+            "%25",
+            "%50",
+            "%75",
+            "%100"});
+            this.cbYakitDurumu.Location = new System.Drawing.Point(268, 254);
+            this.cbYakitDurumu.Name = "cbYakitDurumu";
+            this.cbYakitDurumu.Size = new System.Drawing.Size(121, 21);
+            this.cbYakitDurumu.TabIndex = 167;
+            // 
             // frmTeslimAl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 474);
-            this.Controls.Add(this.txtSonYakitDurumu);
+            this.Controls.Add(this.cbYakitDurumu);
+            this.Controls.Add(this.cbAracDurumu);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtSonAracDurumu);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -405,7 +418,7 @@
             this.Controls.Add(this.label26);
             this.Controls.Add(this.txtEkstraTutar);
             this.Controls.Add(this.dgvSozlesmeDetay);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnTeslimAl);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.txtSozlesmeTutari);
             this.Controls.Add(this.label22);
@@ -448,7 +461,7 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox txtEkstraTutar;
         private System.Windows.Forms.DataGridView dgvSozlesmeDetay;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnTeslimAl;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtSozlesmeTutari;
         private System.Windows.Forms.Label label22;
@@ -471,9 +484,9 @@
         private System.Windows.Forms.TextBox txtMarka;
         private System.Windows.Forms.Button btnSec;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtSonYakitDurumu;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtSonAracDurumu;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cbAracDurumu;
+        private System.Windows.Forms.ComboBox cbYakitDurumu;
     }
 }
