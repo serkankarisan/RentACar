@@ -165,6 +165,7 @@
             this.txtSozlesmeTutari.ReadOnly = true;
             this.txtSozlesmeTutari.Size = new System.Drawing.Size(100, 26);
             this.txtSozlesmeTutari.TabIndex = 144;
+          
             // 
             // label22
             // 
