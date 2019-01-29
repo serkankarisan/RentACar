@@ -27,7 +27,7 @@ namespace BLL.RentACar.Repositories
 
         public List<Personel> PersonelListele()
         {
-            return Genel.ent.Personeller.ToList();
+            return Genel.ent.Personeller.Where(p => p.Silindi == false).ToList();
         }
 
         public Personel PersonelGetirById(int ID)

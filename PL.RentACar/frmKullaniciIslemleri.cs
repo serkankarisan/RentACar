@@ -45,6 +45,7 @@ namespace PL.RentACar
                 {
                     Kullanici yeni = new Kullanici();
                     yeni.UserName = txtKullaniciAdi.Text;
+                    yeni.PersonelId = PersonelID;
                     if (kper.KullaniciKontrol(yeni))
                     {
                         MessageBox.Show("Bu Kullanıcı kayıtlı!", "Aynı Kullanıcı zaten var!");
@@ -52,7 +53,6 @@ namespace PL.RentACar
                     else
                     {
                         yeni.Password = txtSifre.Text;
-                        yeni.PersonelId = PersonelID;
                         yeni.RoleId = YetkiID;
                         if (kper.KullaniciEkle(yeni))
                         {
@@ -165,9 +165,14 @@ namespace PL.RentACar
 
         }
 
-        private void dgvKullanicilar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void txtPersonelAdi_TextChanged(object sender, EventArgs e)
         {
+            dgvKullanicilar.DataSource = kper.KullaniciListeleByPeronel(txtPersonelAdi.Text, txtPersonelSoyadi.Text);
+        }
 
+        private void txtPersonelSoyadi_TextChanged(object sender, EventArgs e)
+        {
+            dgvKullanicilar.DataSource = kper.KullaniciListeleByPeronel(txtPersonelAdi.Text, txtPersonelSoyadi.Text);
         }
     }
 }

@@ -291,6 +291,7 @@
             this.txtSifreTekrar.Location = new System.Drawing.Point(131, 102);
             this.txtSifreTekrar.Margin = new System.Windows.Forms.Padding(4);
             this.txtSifreTekrar.Name = "txtSifreTekrar";
+            this.txtSifreTekrar.PasswordChar = '*';
             this.txtSifreTekrar.Size = new System.Drawing.Size(160, 20);
             this.txtSifreTekrar.TabIndex = 14;
             // 
@@ -320,6 +321,7 @@
             this.txtSifre.Location = new System.Drawing.Point(131, 64);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(4);
             this.txtSifre.Name = "txtSifre";
+            this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(160, 20);
             this.txtSifre.TabIndex = 3;
             // 
@@ -406,6 +408,7 @@
             this.txtPersonelAdi.Name = "txtPersonelAdi";
             this.txtPersonelAdi.Size = new System.Drawing.Size(176, 20);
             this.txtPersonelAdi.TabIndex = 10;
+            this.txtPersonelAdi.TextChanged += new System.EventHandler(this.txtPersonelAdi_TextChanged);
             // 
             // label6
             // 
@@ -425,6 +428,7 @@
             this.txtPersonelSoyadi.Name = "txtPersonelSoyadi";
             this.txtPersonelSoyadi.Size = new System.Drawing.Size(176, 20);
             this.txtPersonelSoyadi.TabIndex = 11;
+            this.txtPersonelSoyadi.TextChanged += new System.EventHandler(this.txtPersonelSoyadi_TextChanged);
             // 
             // dgvKullanicilar
             // 
@@ -437,7 +441,6 @@
             this.dgvKullanicilar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKullanicilar.Size = new System.Drawing.Size(652, 409);
             this.dgvKullanicilar.TabIndex = 29;
-            this.dgvKullanicilar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKullanicilar_CellContentClick);
             this.dgvKullanicilar.DoubleClick += new System.EventHandler(this.dgvKullanicilar_DoubleClick);
             // 
             // toolStrip1
