@@ -120,5 +120,40 @@ namespace PL.RentACar
         {
 
         }
+
+        private void txtPlaka_TextChanged(object sender, EventArgs e)
+        {
+            txtMarka.Text = "Marka Seç.";
+            lvDetaylar.Items.Clear();
+            List<Arac> liste = ARep.AracSorgulaByPlaka(txtPlaka.Text);
+            int j = 0;
+            for (int i = 0; i < liste.Count; i++)
+            {
+                lvDetaylar.Items.Add(liste[i].Model, ResimIndisiGetir(liste[i].Id));
+                lvDetaylar.Items[j].SubItems.Add(liste[i].Tip);
+                lvDetaylar.Items[j].SubItems.Add(liste[i].Renk);
+                lvDetaylar.Items[j].SubItems.Add(liste[i].Plaka);
+                lvDetaylar.Items[j].SubItems.Add(liste[i].AracDurumu);
+                lvDetaylar.Items[j].SubItems.Add(liste[i].GünlükFiyat.ToString());
+                j++;
+            }
+            
+        }
+        private int ResimIndisiGetir(int ID)
+        {
+            int indis = 0;
+            List<Arac> liste = ARep.AracListele();
+            int[] diziID = new int[liste.Count];
+            for (int i = 0; i < liste.Count; i++)
+            {
+                diziID[i] = liste[i].Id;               
+            }
+            for (int j = 0; j < liste.Count; j++)
+            {
+                if (ID == liste[j].Id)
+                    indis = Array.IndexOf(diziID, liste[j].Id);
+            }
+            return indis;
+        }
     }
 }

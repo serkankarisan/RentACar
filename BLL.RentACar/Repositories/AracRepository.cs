@@ -32,7 +32,8 @@ namespace BLL.RentACar.Repositories
         }
         public List<Arac> AracSorgulaByPlaka(string Plaka)
         {
-            return Genel.ent.Araclar.Where(a => a.Silindi == false && a.Plaka.Substring(0, Plaka.Length) == Plaka.Substring(0, Plaka.Length)).ToList();
+            //return Genel.ent.Araclar.Where(a => a.Silindi == false && a.Plaka.Substring(0, Plaka.Length) == Plaka.Substring(0, Plaka.Length)).ToList();
+            return Genel.ent.Araclar.Where(a => a.Silindi == false && a.Plaka.StartsWith(Plaka.ToUpper())).ToList();
         }
         public string[] AracListeleByMarka()
         {

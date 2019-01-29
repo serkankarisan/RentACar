@@ -220,6 +220,7 @@
             this.txtPlaka.Name = "txtPlaka";
             this.txtPlaka.Size = new System.Drawing.Size(134, 20);
             this.txtPlaka.TabIndex = 90;
+            this.txtPlaka.TextChanged += new System.EventHandler(this.txtPlaka_TextChanged);
             // 
             // textBox2
             // 
