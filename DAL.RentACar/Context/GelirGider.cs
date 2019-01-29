@@ -22,5 +22,9 @@ namespace DAL.RentACar.Context
         [DefaultValue(false)]
         public bool Silindi { get; set; }
         public virtual List<KasaHareket> KasaHareketler { get; set; }
+        public override string ToString()
+        {
+            return Aciklama;
+        }
     }
 }

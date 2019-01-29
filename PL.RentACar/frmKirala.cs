@@ -51,6 +51,7 @@ namespace PL.RentACar
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
+            btnTamamla.Enabled = true;
             SozlesmeDetay sd = new SozlesmeDetay();
                 if (Genel.AracID != 0)
                 {
@@ -172,6 +173,7 @@ namespace PL.RentACar
             s.AracSayisi = Convert.ToInt32(txtAracSayisi.Text);
             s.SozlesmeTutari = Convert.ToDecimal(txtSozlesmeTutari.Text);
             sozrepo.SozlesmeGuncelle(s);
+            btnTamamla.Enabled = false;
             frmOdemeIslemleri frm = new frmOdemeIslemleri();
             this.Hide();
             FormAc(frm);
