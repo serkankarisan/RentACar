@@ -87,6 +87,7 @@ namespace PL.RentACar
                 mh.MusteriId = Genel.MusteriId;
                 mh.ParaBirimi = "TL";
                 mh.MusteriGetirisi = Convert.ToDecimal(txtEkstraTutar.Text);
+                mh.MusteriGetiriTuru = "Ekstra Kiralama";
                 mh.Silindi = false;
                 if (txtAracDurumu.Text.Trim() == cbAracDurumu.Text.Trim() && txtYakitDurumu.Text.Trim() == cbYakitDurumu.Text.Trim())
                 {
