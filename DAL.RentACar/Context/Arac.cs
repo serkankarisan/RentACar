@@ -33,6 +33,8 @@ namespace DAL.RentACar.Context
         [DefaultValue(true)]
         public bool Varmi { get; set; }
         [Required]
+        public string ResimYolu { get; set; }
+        [Required]
         [DefaultValue(false)]
         public bool Silindi { get; set; }
 

@@ -55,7 +55,7 @@ namespace PL.RentACar
                     a.Tip = txtTip.Text;
                     a.YakitDurumu = txtYakitDurumu.Text;
                     a.Varmi = true;
-                   
+                    a.ResimYolu = txtResimYolu.Text;
 
                     if (ar.AracEkle(a))
                     {
@@ -67,6 +67,7 @@ namespace PL.RentACar
                 }
             }
             else { MessageBox.Show("Gerekli alanlari doldurunuz!"); }
+            Genel.ResimListesi.Images.Add(pbAracResim.Image);
         }
 
         private void Temizle()
@@ -177,10 +178,10 @@ namespace PL.RentACar
                 pbAracResim.Image = new Bitmap(open.FileName);
                 // image file path  
                 txtResimYolu.Text = open.FileName;
-                //Genel.ResimListesi.ImageSize = new Size(120, 120);
-                Genel.ResimListesi.Images.Add(pbAracResim.Image);
-            }
-            
+                Genel.ResimListesi = new ImageList();
+                Genel.ResimListesi.ImageSize = new Size(120, 120);
+                
+            }          
             
         }
     }
