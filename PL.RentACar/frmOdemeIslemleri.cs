@@ -166,6 +166,14 @@ namespace PL.RentACar
         }
         private void AracGizle()
         {
+            lblmarka.Visible = false;
+            lblModel.Visible = false;
+            lblPlaka.Visible = false;
+            lblAracDurumu.Visible = false;
+            txtMarka.Visible = false;
+            txtModel.Visible = false;
+            txtAracDurumu.Visible = false;
+            txtPlaka.Visible = false;
             lblTutar.Visible = false;
             btnOdemeYap.Visible = false;
             txtAracTutar.Visible = false;
@@ -174,12 +182,26 @@ namespace PL.RentACar
         }
         private void AracGoster()
         {
+            lblmarka.Visible = true;
+            lblModel.Visible = true;
+            lblPlaka.Visible = true;
+            lblAracDurumu.Visible = true;
+            txtMarka.Visible = true;
+            txtModel.Visible = true;
+            txtAracDurumu.Visible = true;
+            txtPlaka.Visible = true;
             lblTutar.Visible = true;
             txtAracTutar.Visible = true;
             btnAracSec.Visible = true;
         }
         private void SozlesmeGizle()
         {
+            txtSozlesmeTarihi.Visible = false;
+            lblSozlesmeTarihi.Visible = false;
+            txtMusteriAdi.Visible = false;
+            txtMusteriSoyadi.Visible = false;
+            lblMusteriAdi.Visible = false;
+            lblMusteriSoyadi.Visible = false;
             txtSozlesmeTutar.Visible = false;
             txtAlınan.Visible = false;
             txtBorc.Visible = false;
@@ -193,6 +215,12 @@ namespace PL.RentACar
         }
         private void SozlesmeGoster()
         {
+            txtSozlesmeTarihi.Visible = true;
+            lblSozlesmeTarihi.Visible = true;
+            txtMusteriAdi.Visible = true;
+            txtMusteriSoyadi.Visible = true;
+            lblMusteriAdi.Visible = true;
+            lblMusteriSoyadi.Visible = true;
             txtSozlesmeTutar.Visible = true;
             txtAlınan.Visible = true;
             txtSozlesmeOdeme.Visible = true;
@@ -215,9 +243,8 @@ namespace PL.RentACar
                 kh.SozlesmeId = 0;
                 kh.PersonelId = 0;
                 kh.Tarih = DateTime.Now;
-                kh.GelirGiderId = 6;
-                //kh.GelirGiderId = 4;//veritabanı farklı
-                kh.Tutar = txtAracTutar.Text;
+                kh.GelirGiderId = 5;
+                kh.Tutar = Convert.ToDecimal(txtAracTutar.Text);
                 kh.ParaBirimi = "TL";
                 kh.Silindi = false;
                 if (khr.KasaHareketEkle(kh))
@@ -252,9 +279,8 @@ namespace PL.RentACar
                 {
                 kh.PersonelId = 0;
                 kh.Tarih = DateTime.Now;
-                kh.GelirGiderId = 4;
-                //kh.GelirGiderId = 2;//veri tabanı farklı
-                kh.Tutar = txtAlınan.Text;
+                kh.GelirGiderId = 2;
+                kh.Tutar = Convert.ToDecimal(txtAlınan.Text);
                 kh.ParaBirimi = "TL";
                 kh.Silindi = false;
                     if (khr.KasaHareketEkle(kh))
@@ -299,8 +325,6 @@ namespace PL.RentACar
             frm.ShowDialog();
             frm.WindowState = FormWindowState.Normal;
             frm.StartPosition = FormStartPosition.CenterParent;
-            SozlesmeRepository sr = new SozlesmeRepository();
-            Genel.soz= sr.SozlesmeGetirById(19); ;
             if (Genel.soz != null)
             {
                 Sozlesme s = new Sozlesme();
@@ -308,6 +332,7 @@ namespace PL.RentACar
                 txtBorc.Text = s.Borc.ToString();
                 txtSozlesmeTutar.Text = s.SozlesmeTutari.ToString();
                 txtAlınan.Text = s.Alınan.ToString();
+                txtSozlesmeTarihi.Text = s.SozlesmeTarihi.ToShortDateString();
             }
         }
 
@@ -322,9 +347,8 @@ namespace PL.RentACar
                     kh.SozlesmeId = 0;
                     kh.PersonelId = 0;
                     kh.Tarih = DateTime.Now;
-                    kh.GelirGiderId = 5;
-                    //kh.GelirGiderId = 3;//veri tabanı farklı
-                    kh.Tutar = txtAracTutar.Text;
+                    kh.GelirGiderId = 6;
+                    kh.Tutar = Convert.ToDecimal(txtAracTutar.Text);
                     kh.ParaBirimi = "TL";
                     kh.Silindi = false;
                     if (khr.KasaHareketEkle(kh))
@@ -359,9 +383,8 @@ namespace PL.RentACar
                 if (kh.PersonelId!=0)
                 {
                 kh.Tarih = DateTime.Now;
-                kh.GelirGiderId = 2;
-                //kh.GelirGiderId = 1;//veri tabanı farklı
-                kh.Tutar = txtMaas.Text;
+                kh.GelirGiderId = 1;
+                kh.Tutar = Convert.ToDecimal(txtMaas.Text);
                 kh.ParaBirimi = "TL";
                 kh.Silindi = false;
                 if (khr.KasaHareketEkle(kh))

@@ -105,12 +105,12 @@ namespace PL.RentACar
 
         private void dtpBaslangıc_ValueChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToDateTime(dtpBaslangıc), Convert.ToDateTime(dtpBitis));
+            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(dtpBaslangıc.Value, dtpBitis.Value);
         }
 
         private void dtpBitis_ValueChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToDateTime(dtpBaslangıc), Convert.ToDateTime(dtpBitis));
+            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(dtpBaslangıc.Value, dtpBitis.Value);
         }
 
         private void dgvSozlesmeDetay_DoubleClick(object sender, EventArgs e)
