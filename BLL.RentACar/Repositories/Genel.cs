@@ -23,5 +23,6 @@ namespace BLL.RentACar.Repositories
         public static Sozlesme soz;
         public static int SozID;
         public static int MusteriId;
+        public static string cbIslem;
     }
 }

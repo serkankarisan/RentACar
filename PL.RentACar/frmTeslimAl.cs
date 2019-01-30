@@ -35,7 +35,6 @@ namespace PL.RentACar
         private void btnSec_Click(object sender, EventArgs e)
         {
             frm.ShowDialog();
-
             dgvSozlesmeDetay.DataSource = sdr.SozlesmeDetayListeleBySozlesmeId(Genel.SozID);
             dgvSozlesmeDetay.Columns[6].Visible = false;
             dgvSozlesmeDetay.Columns[7].Visible = false;
@@ -136,7 +135,11 @@ namespace PL.RentACar
                 sdr.SozlesmeDetaySil(SozlesmeDetayId);
                 dgvSozlesmeDetay.DataSource = sdr.SozlesmeDetayListeleBySozlesmeId(Genel.SozID);             
                 MessageBox.Show("Arac Teslim Alindi");
-
+                Arac a = new Arac();
+                a = ar.AracGetirById(AracID);
+                a.Varmi = true;
+                a.Silindi = true;
+                ar.AracGuncelle(a);
                 if (txtGunSayisi.Text.Trim() != "0")
                 {
                     kh.AracId = 0;
@@ -144,7 +147,7 @@ namespace PL.RentACar
                     kh.SozlesmeId = Genel.SozID;
                     kh.GelirGiderId = 2;
                     kh.Tarih = DateTime.Now;
-                    kh.Tutar = txtEkstraTutar.Text;
+                    kh.Tutar = Convert.ToDecimal(txtEkstraTutar.Text);
                     kh.ParaBirimi = "TL";
                     kh.Silindi = false;
                     khr.KasaHareketEkle(kh);
