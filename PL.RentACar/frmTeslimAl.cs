@@ -30,11 +30,15 @@ namespace PL.RentACar
         MusteriHareket mh = new MusteriHareket();
         MusteriHareketRepository mhr = new MusteriHareketRepository();
         int SozlesmeDetayId;
+        KasaHareket kh = new KasaHareket();
+        KasaHareketRepository khr = new KasaHareketRepository();
         private void btnSec_Click(object sender, EventArgs e)
         {
             frm.ShowDialog();
 
             dgvSozlesmeDetay.DataSource = sdr.SozlesmeDetayListeleBySozlesmeId(Genel.SozID);
+            dgvSozlesmeDetay.Columns[6].Visible = false;
+            dgvSozlesmeDetay.Columns[7].Visible = false;
             txtAracSayisi.Text = dgvSozlesmeDetay.RowCount.ToString();
             txtSozlesmeTutari.Text = sdr.SozlesmeTutarGetirBySozlesmeId(Genel.SozID).ToString();
         }
@@ -129,10 +133,22 @@ namespace PL.RentACar
                 }
 
                 mhr.MusteriHareketEkle(mh);
-
                 sdr.SozlesmeDetaySil(SozlesmeDetayId);
-                dgvSozlesmeDetay.DataSource = sdr.SozlesmeDetayListeleBySozlesmeId(Genel.SozID);
+                dgvSozlesmeDetay.DataSource = sdr.SozlesmeDetayListeleBySozlesmeId(Genel.SozID);             
                 MessageBox.Show("Arac Teslim Alindi");
+
+                if (txtGunSayisi.Text.Trim() != "0")
+                {
+                    kh.AracId = 0;
+                    kh.PersonelId = 0;
+                    kh.SozlesmeId = Genel.SozID;
+                    kh.GelirGiderId = 2;
+                    kh.Tarih = DateTime.Now;
+                    kh.Tutar = txtEkstraTutar.Text;
+                    kh.ParaBirimi = "TL";
+                    kh.Silindi = false;
+                    khr.KasaHareketEkle(kh);
+                }
             }
             else
             {
