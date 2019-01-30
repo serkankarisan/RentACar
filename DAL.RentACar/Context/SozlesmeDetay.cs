@@ -31,5 +31,13 @@ namespace DAL.RentACar.Context
         public virtual Sozlesme Sozlesme { get; set; }
         [ForeignKey("AracId")]
         public virtual Arac Arac { get; set; }
+        public SozlesmeDetay()
+        {
+            Silindi = false;
+            Tutar = 0;
+            AracId = 0;
+            BaslangicTarihi = DateTime.Now;
+            BitisTarihi = DateTime.Now;
+        }
     }
 }

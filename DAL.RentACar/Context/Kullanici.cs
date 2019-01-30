@@ -30,5 +30,10 @@ namespace DAL.RentACar.Context
 
         [ForeignKey("RoleId")]
         public virtual Yetki Yetki { get; set; }
+
+        public Kullanici()
+        {
+            Silindi = false;
+        }
     }
 }

@@ -29,5 +29,15 @@ namespace DAL.RentACar.Context
         //Relations
         [ForeignKey("GelirGiderId")]
         public virtual GelirGider GelirGider { get; set; }
+
+        public KasaHareket()
+        {
+            SozlesmeId = 0;
+            AracId = 0;
+            PersonelId = 0;
+            Tutar = 0;
+            ParaBirimi = "TL";
+            Silindi = false;
+        }
     }
 }

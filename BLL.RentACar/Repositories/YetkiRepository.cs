@@ -37,7 +37,7 @@ namespace BLL.RentACar.Repositories
 
         public List<Yetki> YetkiListele()
         {
-            return Genel.ent.Yetkiler.ToList();
+            return Genel.ent.Yetkiler.Where(y=>y.Silindi==false).ToList();
         }
 
         public bool YetkiSil(int ID)

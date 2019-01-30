@@ -38,17 +38,7 @@ namespace BLL.RentACar.Repositories
         {
             //arakatman sorununu çözmek için değiştirmeyi burada yaptım.
             Musteri degisen = MusteriGetirById(M.Id);
-            degisen.Adi = M.Adi;
-            degisen.Soyadi = M.Soyadi;
-            degisen.Telefon = M.Telefon;
-            degisen.Email = M.Email;
-            degisen.Adres = M.Adres;
-            degisen.TcKimlikNo = M.TcKimlikNo;
-            degisen.DogumTarihi = M.DogumTarihi;
-            degisen.Cinsiyet = M.Cinsiyet;
-            degisen.EhliyetNo = M.EhliyetNo;
-            degisen.EhliyetTarihi = M.EhliyetTarihi;
-            degisen.Silindi = M.Silindi;
+            degisen = M;
             bool Sonuc = false;
             try
             {
@@ -113,7 +103,7 @@ namespace BLL.RentACar.Repositories
 
         public List<Musteri> MusteriSorgula(string Ad, string Soyad, string TCKNo, string EhliyetNo)
         {
-            return Genel.ent.Musteriler.Where(m => m.Silindi == false && m.Adi.Substring(0,Ad.Length)==Ad.Substring(0,Ad.Length) && m.Soyadi.Substring(0, Soyad.Length) == Soyad.Substring(0, Soyad.Length) && m.TcKimlikNo.Substring(0, TCKNo.Length) == TCKNo.Substring(0, TCKNo.Length) && m.EhliyetNo.Substring(0, EhliyetNo.Length) == EhliyetNo.Substring(0, EhliyetNo.Length)).ToList();
+            return Genel.ent.Musteriler.Where(m => m.Silindi == false && m.Adi.StartsWith(Ad) && m.Soyadi.StartsWith(Soyad) && m.TcKimlikNo.StartsWith(TCKNo) && m.EhliyetNo.StartsWith(EhliyetNo)).ToList();
         }
 
         //public List<Musteri> MusteriSorgula(string Ad, string Soyad, string TCKNo, string EhliyetNo,DateTime baslangic,DateTime bitis)

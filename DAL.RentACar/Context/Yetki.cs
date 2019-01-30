@@ -25,5 +25,9 @@ namespace DAL.RentACar.Context
         {
             return RoleName;
         }
+        public Yetki()
+        {
+            Silindi = false;
+        }
     }
 }

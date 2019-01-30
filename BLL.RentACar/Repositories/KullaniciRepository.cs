@@ -37,6 +37,8 @@ namespace BLL.RentACar.Repositories
         public bool KullaniciGuncelle(Kullanici k)
         {
             bool Sonuc = false;
+            Kullanici degisen = KullaniciGetirById(k.Id);
+            degisen = k;
             try
             {
                 Genel.ent.SaveChanges();

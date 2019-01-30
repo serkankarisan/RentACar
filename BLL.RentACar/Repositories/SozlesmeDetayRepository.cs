@@ -34,6 +34,14 @@ namespace BLL.RentACar.Repositories
 
             return bulunan;
         }
+        public SozlesmeDetay SozlesmeDetayGetirById(int ID)
+        {
+            SozlesmeDetay bulunan = (from sd in Genel.ent.SozlesmeDetaylar
+                                     where sd.Id == ID && sd.Silindi == false
+                                           select sd).FirstOrDefault();
+
+            return bulunan;
+        }
         public decimal SozlesmeTutarGetirBySozlesmeId(int ID)
         {
             decimal toplamtutar = (from sd in Genel.ent.SozlesmeDetaylar
@@ -46,6 +54,8 @@ namespace BLL.RentACar.Repositories
         public bool SozlesmeDetayGuncelle(SozlesmeDetay s)
         {
             bool Sonuc = false;
+            SozlesmeDetay degisen = SozlesmeDetayGetirById(s.Id);
+            degisen = s;
             try
             {
                 Genel.ent.SaveChanges();
@@ -111,11 +121,6 @@ namespace BLL.RentACar.Repositories
                 string hata = ex.Message;
             }
             return Sonuc;
-        }
-
-        public List<SozlesmeDetay> SozlesmeDetayGetirBySozlesmeId(int ID)
-        {
-            throw new NotImplementedException();
         }
 
         public List<SozlesmeDetay> SozlesmeDetaySorgula(int SozlesmeId, string TckNo, string EhliyetNo, DateTime Baslangic, DateTime Bitis)

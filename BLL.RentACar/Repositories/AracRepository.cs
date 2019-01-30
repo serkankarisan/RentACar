@@ -76,8 +76,8 @@ namespace BLL.RentACar.Repositories
             Arac silinen = (from a in Genel.ent.Araclar
                             where a.Id == ID
                             select a).FirstOrDefault();
-            Genel.ent.Araclar.Remove(silinen);
-
+            //Genel.ent.Araclar.Remove(silinen);
+            silinen.Silindi = true;
             try
             {
                 Genel.ent.SaveChanges();

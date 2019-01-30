@@ -45,5 +45,10 @@ namespace DAL.RentACar.Context
         {
             return Adi+" "+Soyadi;
         }
+        
+        public Musteri()
+        {
+            Silindi = false;
+        }
     }
 }

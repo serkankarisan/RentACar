@@ -32,5 +32,13 @@ namespace DAL.RentACar.Context
 
         [ForeignKey("MusteriId")]
         public virtual Musteri Musteri { get; set; }
+
+        public MusteriHareket()
+        {
+            ParaBirimi = "TL";
+            MusteriPuanı = 100;
+            MusteriGetirisi = 0;
+            MusteriGetiriTuru = "Sözleşme";
+        }
     }
 }
