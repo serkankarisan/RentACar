@@ -26,6 +26,14 @@ namespace DAL.RentACar.Migrations
                 new Arac { Id = 2, Marka = "Audi", Model = "A7", GünlükFiyat = 100, Tip = "Sedan", Renk = "Beyaz", Plaka = "34ASD12", AracDurumu = "Hasar Yok", YakitDurumu = "%75", Varmi = true, Silindi = false },
                 new Arac { Id = 3, Marka = "Toyota", Model = "Corolla", GünlükFiyat = 100, Tip = "Sedan", Renk = "Beyaz", Plaka = "34NMB12", AracDurumu = "Hasar Yok", YakitDurumu = "%75", Varmi = true, Silindi = false }
                 );
+            context.GelirGider.AddOrUpdate(
+                new GelirGider { Id = 1, Aciklama = "Maaþ Ödeme", Tür = "Gider", Silindi = false },
+                new GelirGider { Id = 2, Aciklama = "Sözleþme", Tür = "Gelir", Silindi = false },
+                new GelirGider { Id = 3, Aciklama = "Araç Satýþ", Tür = "Gelir", Silindi = false }, 
+                new GelirGider { Id = 4, Aciklama = "Araç Vergi", Tür = "Gider", Silindi = false }, 
+                new GelirGider { Id = 5, Aciklama = "Araç Muayene", Tür = "Gider", Silindi = false },
+                new GelirGider { Id = 6, Aciklama = "Araç Diðer", Tür = "Gider", Silindi = false }
+                );
         }
     }
 }
