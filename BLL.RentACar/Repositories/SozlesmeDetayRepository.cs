@@ -29,7 +29,7 @@ namespace BLL.RentACar.Repositories
         public List<SozlesmeDetay> SozlesmeDetayListeleBySozlesmeId(int ID)
         {
             List<SozlesmeDetay> bulunan = (from sd in Genel.ent.SozlesmeDetaylar
-                            where sd.SozlesmeId == ID
+                                           where sd.SozlesmeId == ID && sd.Silindi == false
                             select sd).ToList();
 
             return bulunan;
@@ -60,7 +60,7 @@ namespace BLL.RentACar.Repositories
 
         public List<SozlesmeDetay> SozlesmeDetayListele()
         {
-            return Genel.ent.SozlesmeDetaylar.ToList();
+            return Genel.ent.SozlesmeDetaylar.Where(s=> s.Silindi==false).ToList();
         }
 
         public List<SozlesmeDetay> SozlesmeDetayListeleByAranan(string Ad, string Soyad, string TCKNo, string EhliyetNo)
