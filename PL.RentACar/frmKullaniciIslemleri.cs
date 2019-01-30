@@ -174,5 +174,10 @@ namespace PL.RentACar
         {
             dgvKullanicilar.DataSource = kper.KullaniciListeleByPersonel(txtPersonelAdi.Text, txtPersonelSoyadi.Text);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKullaniciIslemleri));
-            this.tsYetki = new System.Windows.Forms.ToolStripLabel();
-            this.tsKullanici = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsYeni = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsKaydet = new System.Windows.Forms.ToolStripButton();
@@ -41,17 +36,8 @@
             this.tsDegistir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.tsSil = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnCikis = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbPersonel = new System.Windows.Forms.ComboBox();
@@ -62,49 +48,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPersonelAdi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPersonelSoyadi = new System.Windows.Forms.TextBox();
             this.dgvKullanicilar = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tsYetki
-            // 
-            this.tsYetki.Name = "tsYetki";
-            this.tsYetki.Size = new System.Drawing.Size(65, 24);
-            this.tsYetki.Text = "           Yetki";
-            // 
-            // tsKullanici
-            // 
-            this.tsKullanici.Name = "tsKullanici";
-            this.tsKullanici.Size = new System.Drawing.Size(73, 24);
-            this.tsKullanici.Text = "Kullanıcı Adı";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // tsYeni
             // 
@@ -160,148 +114,70 @@
             this.tsSil.Text = "&Sil";
             this.tsSil.Click += new System.EventHandler(this.tsSil_Click);
             // 
-            // toolStripLabel4
-            // 
-            this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(88, 24);
-            this.toolStripLabel4.Text = "                           ";
-            // 
-            // toolStripLabel3
-            // 
-            this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(88, 24);
-            this.toolStripLabel3.Text = "                           ";
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(88, 24);
-            this.toolStripLabel2.Text = "                           ";
-            // 
-            // toolStripLabel5
-            // 
-            this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(88, 24);
-            this.toolStripLabel5.Text = "                           ";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(88, 24);
-            this.toolStripLabel1.Text = "                           ";
-            // 
-            // toolStripLabel6
-            // 
-            this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(88, 24);
-            this.toolStripLabel6.Text = "                           ";
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // btnCikis
-            // 
-            this.btnCikis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCikis.BackColor = System.Drawing.Color.Transparent;
-            this.btnCikis.FlatAppearance.BorderSize = 0;
-            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
-            this.btnCikis.Location = new System.Drawing.Point(1028, 7);
-            this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(25, 27);
-            this.btnCikis.TabIndex = 27;
-            this.btnCikis.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Azure;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.textBox7);
-            this.panel4.Location = new System.Drawing.Point(91, 78);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 30);
-            this.panel4.TabIndex = 33;
             // 
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.Color.Azure;
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox7.Location = new System.Drawing.Point(12, 3);
+            this.textBox7.Location = new System.Drawing.Point(36, 44);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(174, 16);
+            this.textBox7.Size = new System.Drawing.Size(261, 16);
             this.textBox7.TabIndex = 1;
             this.textBox7.Text = "KAYIT BİLGİLERİ";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Azure;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.cbPersonel);
-            this.panel1.Controls.Add(this.txtSifreTekrar);
-            this.panel1.Controls.Add(this.cbYetki);
-            this.panel1.Controls.Add(this.txtKullaniciAdi);
-            this.panel1.Controls.Add(this.txtSifre);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(11, 114);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(337, 233);
-            this.panel1.TabIndex = 30;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 28);
+            this.label1.Location = new System.Drawing.Point(36, 74);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Kullanıcı Adı";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(32, 104);
+            this.label7.Location = new System.Drawing.Point(36, 142);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 13);
+            this.label7.Size = new System.Drawing.Size(91, 20);
             this.label7.TabIndex = 15;
             this.label7.Text = "Şifre Tekrar";
             // 
             // cbPersonel
             // 
             this.cbPersonel.FormattingEnabled = true;
-            this.cbPersonel.Location = new System.Drawing.Point(131, 140);
-            this.cbPersonel.Margin = new System.Windows.Forms.Padding(4);
+            this.cbPersonel.Location = new System.Drawing.Point(167, 173);
+            this.cbPersonel.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.cbPersonel.Name = "cbPersonel";
-            this.cbPersonel.Size = new System.Drawing.Size(160, 21);
+            this.cbPersonel.Size = new System.Drawing.Size(134, 28);
             this.cbPersonel.TabIndex = 0;
             this.cbPersonel.SelectedIndexChanged += new System.EventHandler(this.cbPersonel_SelectedIndexChanged);
             // 
             // txtSifreTekrar
             // 
             this.txtSifreTekrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSifreTekrar.Location = new System.Drawing.Point(131, 102);
-            this.txtSifreTekrar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSifreTekrar.Location = new System.Drawing.Point(167, 141);
+            this.txtSifreTekrar.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.txtSifreTekrar.Name = "txtSifreTekrar";
             this.txtSifreTekrar.PasswordChar = '*';
-            this.txtSifreTekrar.Size = new System.Drawing.Size(160, 20);
+            this.txtSifreTekrar.Size = new System.Drawing.Size(134, 26);
             this.txtSifreTekrar.TabIndex = 14;
             // 
             // cbYetki
             // 
             this.cbYetki.FormattingEnabled = true;
-            this.cbYetki.Location = new System.Drawing.Point(131, 181);
-            this.cbYetki.Margin = new System.Windows.Forms.Padding(4);
+            this.cbYetki.Location = new System.Drawing.Point(167, 207);
+            this.cbYetki.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.cbYetki.Name = "cbYetki";
-            this.cbYetki.Size = new System.Drawing.Size(160, 21);
+            this.cbYetki.Size = new System.Drawing.Size(134, 28);
             this.cbYetki.TabIndex = 1;
             this.cbYetki.SelectedIndexChanged += new System.EventHandler(this.cbYetki_SelectedIndexChanged);
             // 
@@ -309,124 +185,101 @@
             // 
             this.txtKullaniciAdi.BackColor = System.Drawing.Color.White;
             this.txtKullaniciAdi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(131, 26);
-            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(167, 77);
+            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(160, 20);
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(134, 26);
             this.txtKullaniciAdi.TabIndex = 2;
             // 
             // txtSifre
             // 
             this.txtSifre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSifre.Location = new System.Drawing.Point(131, 64);
-            this.txtSifre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSifre.Location = new System.Drawing.Point(167, 109);
+            this.txtSifre.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
-            this.txtSifre.Size = new System.Drawing.Size(160, 20);
+            this.txtSifre.Size = new System.Drawing.Size(134, 26);
             this.txtSifre.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 66);
+            this.label2.Location = new System.Drawing.Point(36, 108);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.Size = new System.Drawing.Size(42, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Şifre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 143);
+            this.label3.Location = new System.Drawing.Point(36, 176);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Personel";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(78, 184);
+            this.label4.Location = new System.Drawing.Point(36, 210);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.Size = new System.Drawing.Size(45, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Yetki";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Azure;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.textBox6);
-            this.panel3.Location = new System.Drawing.Point(91, 359);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 30);
-            this.panel3.TabIndex = 32;
             // 
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.Azure;
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox6.Location = new System.Drawing.Point(12, 5);
+            this.textBox6.Location = new System.Drawing.Point(36, 244);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(174, 16);
+            this.textBox6.Size = new System.Drawing.Size(261, 16);
             this.textBox6.TabIndex = 0;
             this.textBox6.Text = "ARAMA";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Azure;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.txtPersonelAdi);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.txtPersonelSoyadi);
-            this.panel2.Location = new System.Drawing.Point(11, 395);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(355, 92);
-            this.panel2.TabIndex = 31;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 17);
+            this.label5.Location = new System.Drawing.Point(36, 274);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.Size = new System.Drawing.Size(98, 20);
             this.label5.TabIndex = 12;
             this.label5.Text = "Personel Adı";
             // 
             // txtPersonelAdi
             // 
             this.txtPersonelAdi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPersonelAdi.Location = new System.Drawing.Point(147, 15);
-            this.txtPersonelAdi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPersonelAdi.Location = new System.Drawing.Point(167, 276);
+            this.txtPersonelAdi.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.txtPersonelAdi.Name = "txtPersonelAdi";
-            this.txtPersonelAdi.Size = new System.Drawing.Size(176, 20);
+            this.txtPersonelAdi.Size = new System.Drawing.Size(135, 26);
             this.txtPersonelAdi.TabIndex = 10;
             this.txtPersonelAdi.TextChanged += new System.EventHandler(this.txtPersonelAdi_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 54);
+            this.label6.Location = new System.Drawing.Point(36, 308);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 13);
+            this.label6.Size = new System.Drawing.Size(123, 20);
             this.label6.TabIndex = 13;
             this.label6.Text = "Personel Soyadı";
             // 
             // txtPersonelSoyadi
             // 
             this.txtPersonelSoyadi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPersonelSoyadi.Location = new System.Drawing.Point(147, 52);
-            this.txtPersonelSoyadi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPersonelSoyadi.Location = new System.Drawing.Point(167, 308);
+            this.txtPersonelSoyadi.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.txtPersonelSoyadi.Name = "txtPersonelSoyadi";
-            this.txtPersonelSoyadi.Size = new System.Drawing.Size(176, 20);
+            this.txtPersonelSoyadi.Size = new System.Drawing.Size(135, 26);
             this.txtPersonelSoyadi.TabIndex = 11;
             this.txtPersonelSoyadi.TextChanged += new System.EventHandler(this.txtPersonelSoyadi_TextChanged);
             // 
@@ -435,11 +288,11 @@
             this.dgvKullanicilar.BackgroundColor = System.Drawing.Color.White;
             this.dgvKullanicilar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKullanicilar.Location = new System.Drawing.Point(388, 78);
-            this.dgvKullanicilar.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvKullanicilar.Location = new System.Drawing.Point(333, 44);
+            this.dgvKullanicilar.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.dgvKullanicilar.Name = "dgvKullanicilar";
             this.dgvKullanicilar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKullanicilar.Size = new System.Drawing.Size(652, 409);
+            this.dgvKullanicilar.Size = new System.Drawing.Size(356, 290);
             this.dgvKullanicilar.TabIndex = 29;
             this.dgvKullanicilar.DoubleClick += new System.EventHandler(this.dgvKullanicilar_DoubleClick);
             // 
@@ -449,53 +302,65 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
-            this.tsKullanici,
-            this.toolStripSeparator2,
-            this.toolStripSeparator3,
-            this.toolStripSeparator4,
             this.tsYeni,
             this.toolStripSeparator5,
             this.tsKaydet,
             this.toolStripSeparator6,
             this.tsDegistir,
             this.toolStripSeparator7,
-            this.tsSil,
-            this.toolStripLabel4,
-            this.toolStripLabel3,
-            this.toolStripLabel2,
-            this.toolStripLabel5,
-            this.toolStripLabel1,
-            this.toolStripLabel6,
-            this.tsYetki});
+            this.tsSil});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1028, 27);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(712, 27);
             this.toolStrip1.TabIndex = 28;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(687, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 24);
+            this.button1.TabIndex = 85;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmKullaniciIslemleri
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 557);
-            this.Controls.Add(this.btnCikis);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dgvKullanicilar);
+            this.BackColor = System.Drawing.Color.Azure;
+            this.ClientSize = new System.Drawing.Size(712, 347);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtPersonelAdi);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtPersonelSoyadi);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbPersonel);
+            this.Controls.Add(this.txtSifre);
+            this.Controls.Add(this.txtSifreTekrar);
+            this.Controls.Add(this.txtKullaniciAdi);
+            this.Controls.Add(this.cbYetki);
+            this.Controls.Add(this.dgvKullanicilar);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmKullaniciIslemleri";
             this.Text = "frmKullaniciTanimlama";
             this.Load += new System.EventHandler(this.frmKullaniciIslemleri_Load);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -505,12 +370,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStripLabel tsYetki;
-        private System.Windows.Forms.ToolStripLabel tsKullanici;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton tsYeni;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton tsKaydet;
@@ -518,17 +377,8 @@
         private System.Windows.Forms.ToolStripButton tsDegistir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripButton tsSil;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel5;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel6;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.Button btnCikis;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbPersonel;
@@ -539,14 +389,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPersonelAdi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPersonelSoyadi;
         private System.Windows.Forms.DataGridView dgvKullanicilar;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.Button button1;
     }
 }

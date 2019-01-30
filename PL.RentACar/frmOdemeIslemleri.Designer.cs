@@ -230,7 +230,7 @@
             this.btnOdemeYap.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnOdemeYap.Location = new System.Drawing.Point(808, 139);
             this.btnOdemeYap.Name = "btnOdemeYap";
-            this.btnOdemeYap.Size = new System.Drawing.Size(149, 40);
+            this.btnOdemeYap.Size = new System.Drawing.Size(158, 40);
             this.btnOdemeYap.TabIndex = 138;
             this.btnOdemeYap.Text = "Ödeme Yap";
             this.btnOdemeYap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -612,6 +612,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1011, 478);
             this.Controls.Add(this.txtSozlesmeTarihi);
             this.Controls.Add(this.lblSozlesmeTarihi);
@@ -625,12 +626,7 @@
             this.Controls.Add(this.lblMaas);
             this.Controls.Add(this.txtPrim);
             this.Controls.Add(this.txtMaas);
-            this.Controls.Add(this.lblSoyadi);
-            this.Controls.Add(this.lblAdi);
-            this.Controls.Add(this.txtSoyadi);
-            this.Controls.Add(this.txtAdi);
             this.Controls.Add(this.lblPersonel);
-            this.Controls.Add(this.btnSozlesmeSec);
             this.Controls.Add(this.btnOdemeYap);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbIslemTurleri);
@@ -638,7 +634,6 @@
             this.Controls.Add(this.dgvOdeme);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAracOdemeAl);
-            this.Controls.Add(this.btnAracSec);
             this.Controls.Add(this.lblAlınan);
             this.Controls.Add(this.txtSozlesmeTutar);
             this.Controls.Add(this.lblborc);
@@ -659,10 +654,17 @@
             this.Controls.Add(this.txtToplamOdeme);
             this.Controls.Add(this.btnMaasOdeme);
             this.Controls.Add(this.txtAlınan);
+            this.Controls.Add(this.lblSoyadi);
+            this.Controls.Add(this.lblAdi);
+            this.Controls.Add(this.txtSoyadi);
+            this.Controls.Add(this.txtAdi);
+            this.Controls.Add(this.btnSozlesmeSec);
+            this.Controls.Add(this.btnAracSec);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmOdemeIslemleri";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmOdemeIslemleri";
             this.Load += new System.EventHandler(this.frmOdemeIslemleri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdeme)).EndInit();

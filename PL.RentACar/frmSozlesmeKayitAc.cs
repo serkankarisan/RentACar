@@ -54,13 +54,16 @@ namespace PL.RentACar
             frmPersonelSorgulama frm = new frmPersonelSorgulama();
             frm.ShowDialog();
             psec = true;
-            Personel p = perrepo.PersonelGetirById(Genel.PersonelID);
-            txtPersonelAdi.Text = p.Adi;
-            txtPersonelSoyadi.Text = p.Soyadi;
-            ListeGoster();
-            if (msec && psec)
+            if (Genel.PersonelID!=0)
             {
-                btnKayitAc.Enabled = true;
+                Personel p = perrepo.PersonelGetirById(Genel.PersonelID);
+                txtPersonelAdi.Text = p.Adi;
+                txtPersonelSoyadi.Text = p.Soyadi;
+                ListeGoster();
+                if (msec && psec)
+                {
+                    btnKayitAc.Enabled = true;
+                }
             }
         }
 

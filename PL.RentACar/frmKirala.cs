@@ -25,15 +25,18 @@ namespace PL.RentACar
         {
             frmAracSorgulama frm = new frmAracSorgulama();
             frm.ShowDialog();
-            Arac a = arepo.AracGetirById(Genel.AracID);
-            txtMarka.Text = a.Marka;
-            txtModel.Text = a.Model;
-            txtTip.Text = a.Tip;
-            txtRenk.Text = a.Renk;
-            txtPlaka.Text = a.Plaka;
-            txtYakıtDurumu.Text = a.YakitDurumu;
-            txtAracDurumu.Text = a.AracDurumu;
-            txtGunlukFiyat.Text = a.GünlükFiyat.ToString();
+            if (Genel.AracID!=0)
+            {
+                Arac a = arepo.AracGetirById(Genel.AracID);
+                txtMarka.Text = a.Marka;
+                txtModel.Text = a.Model;
+                txtTip.Text = a.Tip;
+                txtRenk.Text = a.Renk;
+                txtPlaka.Text = a.Plaka;
+                txtYakıtDurumu.Text = a.YakitDurumu;
+                txtAracDurumu.Text = a.AracDurumu;
+                txtGunlukFiyat.Text = a.GünlükFiyat.ToString();
+            }
         }
 
         private void btnCikis_Click(object sender, EventArgs e)
