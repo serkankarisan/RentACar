@@ -169,7 +169,7 @@
             this.dgvMusteriler.Location = new System.Drawing.Point(383, 67);
             this.dgvMusteriler.Name = "dgvMusteriler";
             this.dgvMusteriler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMusteriler.Size = new System.Drawing.Size(525, 502);
+            this.dgvMusteriler.Size = new System.Drawing.Size(525, 406);
             this.dgvMusteriler.TabIndex = 0;
             this.dgvMusteriler.DoubleClick += new System.EventHandler(this.dgvMusteriler_DoubleClick);
             // 
@@ -359,9 +359,9 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(12, 200);
+            this.panel1.Location = new System.Drawing.Point(12, 100);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(365, 368);
+            this.panel1.Size = new System.Drawing.Size(365, 373);
             this.panel1.TabIndex = 83;
             // 
             // cbEmail
@@ -402,7 +402,7 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(12, 39);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(365, 155);
+            this.pictureBox1.Size = new System.Drawing.Size(365, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 86;
             this.pictureBox1.TabStop = false;
@@ -441,7 +441,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(920, 580);
+            this.ClientSize = new System.Drawing.Size(920, 485);
             this.Controls.Add(this.btnYenile);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox1);

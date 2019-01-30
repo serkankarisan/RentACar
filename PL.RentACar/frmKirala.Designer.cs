@@ -409,6 +409,7 @@
             // 
             this.btnTamamla.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnTamamla.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnTamamla.Enabled = false;
             this.btnTamamla.FlatAppearance.BorderSize = 0;
             this.btnTamamla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTamamla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));

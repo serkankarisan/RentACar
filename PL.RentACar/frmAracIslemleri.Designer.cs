@@ -64,7 +64,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(36, 328);
+            this.label5.Location = new System.Drawing.Point(36, 293);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 20);
             this.label5.TabIndex = 40;
@@ -74,7 +74,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(36, 292);
+            this.label6.Location = new System.Drawing.Point(36, 263);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 20);
             this.label6.TabIndex = 39;
@@ -84,7 +84,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(36, 260);
+            this.label7.Location = new System.Drawing.Point(36, 233);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 20);
             this.label7.TabIndex = 38;
@@ -94,7 +94,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(36, 224);
+            this.label8.Location = new System.Drawing.Point(36, 203);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 20);
             this.label8.TabIndex = 37;
@@ -104,7 +104,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(36, 187);
+            this.label3.Location = new System.Drawing.Point(36, 173);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 20);
             this.label3.TabIndex = 36;
@@ -114,7 +114,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(36, 151);
+            this.label4.Location = new System.Drawing.Point(36, 143);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 20);
             this.label4.TabIndex = 35;
@@ -124,7 +124,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(36, 119);
+            this.label2.Location = new System.Drawing.Point(36, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
             this.label2.TabIndex = 34;
@@ -143,72 +143,80 @@
             // txtYakitDurumu
             // 
             this.txtYakitDurumu.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.txtYakitDurumu.Location = new System.Drawing.Point(149, 330);
+            this.txtYakitDurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtYakitDurumu.Location = new System.Drawing.Point(149, 293);
             this.txtYakitDurumu.Name = "txtYakitDurumu";
-            this.txtYakitDurumu.Size = new System.Drawing.Size(100, 20);
+            this.txtYakitDurumu.Size = new System.Drawing.Size(120, 26);
             this.txtYakitDurumu.TabIndex = 32;
             // 
             // txtAracDurumu
             // 
             this.txtAracDurumu.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.txtAracDurumu.Location = new System.Drawing.Point(149, 294);
+            this.txtAracDurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAracDurumu.Location = new System.Drawing.Point(149, 263);
             this.txtAracDurumu.Name = "txtAracDurumu";
-            this.txtAracDurumu.Size = new System.Drawing.Size(100, 20);
+            this.txtAracDurumu.Size = new System.Drawing.Size(120, 26);
             this.txtAracDurumu.TabIndex = 31;
             // 
             // txtPlaka
             // 
             this.txtPlaka.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.txtPlaka.Location = new System.Drawing.Point(149, 259);
+            this.txtPlaka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPlaka.Location = new System.Drawing.Point(149, 233);
             this.txtPlaka.Name = "txtPlaka";
-            this.txtPlaka.Size = new System.Drawing.Size(100, 20);
+            this.txtPlaka.Size = new System.Drawing.Size(120, 26);
             this.txtPlaka.TabIndex = 30;
             // 
             // txtRenk
             // 
             this.txtRenk.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.txtRenk.Location = new System.Drawing.Point(149, 223);
+            this.txtRenk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtRenk.Location = new System.Drawing.Point(149, 203);
             this.txtRenk.Name = "txtRenk";
-            this.txtRenk.Size = new System.Drawing.Size(100, 20);
+            this.txtRenk.Size = new System.Drawing.Size(120, 26);
             this.txtRenk.TabIndex = 29;
             // 
             // txtTip
             // 
             this.txtTip.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.txtTip.Location = new System.Drawing.Point(149, 189);
+            this.txtTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTip.Location = new System.Drawing.Point(149, 173);
             this.txtTip.Name = "txtTip";
-            this.txtTip.Size = new System.Drawing.Size(100, 20);
+            this.txtTip.Size = new System.Drawing.Size(120, 26);
             this.txtTip.TabIndex = 28;
             // 
             // txtGunlukFiyat
             // 
             this.txtGunlukFiyat.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.txtGunlukFiyat.Location = new System.Drawing.Point(149, 153);
+            this.txtGunlukFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtGunlukFiyat.Location = new System.Drawing.Point(149, 143);
             this.txtGunlukFiyat.Name = "txtGunlukFiyat";
-            this.txtGunlukFiyat.Size = new System.Drawing.Size(100, 20);
+            this.txtGunlukFiyat.Size = new System.Drawing.Size(120, 26);
             this.txtGunlukFiyat.TabIndex = 27;
             // 
             // txtModel
             // 
             this.txtModel.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.txtModel.Location = new System.Drawing.Point(149, 118);
+            this.txtModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtModel.Location = new System.Drawing.Point(149, 113);
             this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(100, 20);
+            this.txtModel.Size = new System.Drawing.Size(120, 26);
             this.txtModel.TabIndex = 26;
             // 
             // txtMarka
             // 
             this.txtMarka.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtMarka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtMarka.Location = new System.Drawing.Point(149, 82);
             this.txtMarka.Name = "txtMarka";
-            this.txtMarka.Size = new System.Drawing.Size(100, 20);
+            this.txtMarka.Size = new System.Drawing.Size(120, 26);
             this.txtMarka.TabIndex = 25;
             // 
             // dgvAraclar
             // 
             this.dgvAraclar.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvAraclar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAraclar.Location = new System.Drawing.Point(327, 82);
+            this.dgvAraclar.Location = new System.Drawing.Point(285, 83);
             this.dgvAraclar.Name = "dgvAraclar";
             this.dgvAraclar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAraclar.Size = new System.Drawing.Size(447, 268);

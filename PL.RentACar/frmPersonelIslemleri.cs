@@ -44,12 +44,12 @@ namespace PL.RentACar
                         {
                             MessageBox.Show("Yeni Personel eklendi.", "Kayıt gerçekleşti.");
                             dgvPersoneller.DataSource = per.PersonelListele();
-                            tsbKaydet.Enabled = false;
+                            tsKaydet.Enabled = false;
                             Supurge();
-                            tsbYeni.Enabled = true;
-                            tsbKaydet.Enabled = false;
-                            tsbDegistir.Enabled = false;
-                            tsbSil.Enabled = false;
+                            tsYeni.Enabled = true;
+                            tsKaydet.Enabled = false;
+                            tsDegistir.Enabled = false;
+                            tsSil.Enabled = false;
                         }
                     }
                 }
@@ -68,7 +68,7 @@ namespace PL.RentACar
         private void tsbYeni_Click(object sender, EventArgs e)
         {
             Supurge();
-            tsbKaydet.Enabled = true;
+            tsKaydet.Enabled = true;
             txtAd.Focus();
         }
         private void Supurge()
@@ -90,9 +90,9 @@ namespace PL.RentACar
             txtEmail.Text = dgvPersoneller.SelectedRows[0].Cells[4].Value.ToString();
             txtAdres.Text = dgvPersoneller.SelectedRows[0].Cells[5].Value.ToString();
             txtMaas.Text = dgvPersoneller.SelectedRows[0].Cells[6].Value.ToString();
-            tsbDegistir.Enabled = true;
-            tsbSil.Enabled = true;
-            tsbKaydet.Enabled = false;
+            tsDegistir.Enabled = true;
+            tsSil.Enabled = true;
+            tsKaydet.Enabled = false;
             txtAd.Focus();
         }
 
@@ -119,7 +119,7 @@ namespace PL.RentACar
                     {
                         MessageBox.Show("Personel bilgileri değiştirildi.", "Değişiklik gerçekleşti.");
                         dgvPersoneller.DataSource = per.PersonelListele();
-                        tsbKaydet.Enabled = false;
+                        tsKaydet.Enabled = false;
                         Supurge();
                     }
                 }
@@ -145,8 +145,8 @@ namespace PL.RentACar
                 {
                     MessageBox.Show("Personel bilgileri silindi.", "Silme gerçekleşti.");
                     dgvPersoneller.DataSource = per.PersonelListele();
-                    tsbDegistir.Enabled = false;
-                    tsbSil.Enabled = false;
+                    tsDegistir.Enabled = false;
+                    tsSil.Enabled = false;
                     Supurge();
                 }
             }
@@ -155,7 +155,12 @@ namespace PL.RentACar
         private void frmPersonelIslemleri_Load(object sender, EventArgs e)
         {
             dgvPersoneller.DataSource = per.PersonelListele();
-            tsbKaydet.Enabled = true;
+            tsKaydet.Enabled = false;
+        }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

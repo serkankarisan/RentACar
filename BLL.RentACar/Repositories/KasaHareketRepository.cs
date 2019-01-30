@@ -52,7 +52,7 @@ namespace BLL.RentACar.Repositories
 
         public List<KasaHareket> KasaHareketListele()
         {
-            return Genel.ent.KasaHareketler.ToList();
+            return Genel.ent.KasaHareketler.Where(kh=>kh.Silindi==false).ToList();
         }
 
         public List<KasaHareket> KasaHareketListeleByTarih(DateTime baslangic, DateTime bitis)
@@ -61,6 +61,36 @@ namespace BLL.RentACar.Repositories
                                             where kh.Tarih >= baslangic && kh.Tarih <= bitis
                                             select kh).ToList();
             return listeTarih;
+        }
+
+        public List<KasaHareket> KasaHareketListeleBygGelirGiderId(int Id)
+        {
+            List<KasaHareket> liste = (from kh in Genel.ent.KasaHareketler
+                                       where kh.Silindi == false && kh.GelirGiderId ==Id
+                                       select kh).ToList();
+            return liste;
+        }
+        
+        public List<KasaHareket> KasaHareketListeleBySozlesme()
+        {
+            List<KasaHareket> liste = (from kh in Genel.ent.KasaHareketler
+                                            where kh.Silindi == false && kh.SozlesmeId!=0 && kh.AracId==0 && kh.PersonelId==0 
+                                            select kh).ToList();
+            return liste;
+        }
+        public List<KasaHareket> KasaHareketListeleByArac()
+        {
+            List<KasaHareket> liste = (from kh in Genel.ent.KasaHareketler
+                                       where kh.Silindi == false && kh.AracId != 0 && kh.SozlesmeId == 0 && kh.PersonelId == 0
+                                       select kh).ToList();
+            return liste;
+        }
+        public List<KasaHareket> KasaHareketListeleByPersonel()
+        {
+            List<KasaHareket> liste = (from kh in Genel.ent.KasaHareketler
+                                       where kh.Silindi == false && kh.PersonelId != 0 && kh.SozlesmeId == 0 && kh.AracId == 0
+                                       select kh).ToList();
+            return liste;
         }
 
         public bool KasaHareketSil(int ID)

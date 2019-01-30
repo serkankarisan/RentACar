@@ -37,6 +37,9 @@ namespace BLL.RentACar.Repositories
         public bool SozlesmeGuncelle(Sozlesme s)
         {
             bool Sonuc = false;
+            Sozlesme degisen = SozlesmeGetirById(s.Id);
+            degisen.AracSayisi = s.AracSayisi;
+            degisen.SozlesmeTutari = s.SozlesmeTutari;
             try
             {
                 Genel.ent.SaveChanges();

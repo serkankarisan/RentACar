@@ -17,6 +17,10 @@ namespace DAL.RentACar.Context
         public int PersonelId { get; set; }
         public int MusteriId { get; set; }
         [Required]
+        public decimal Alınan { get; set; }
+        [Required]
+        public decimal Borc { get; set; }
+        [Required]
         public DateTime SozlesmeTarihi { get; set; }
         [Required]
         public decimal SozlesmeTutari { get; set; }

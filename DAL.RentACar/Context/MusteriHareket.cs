@@ -23,6 +23,8 @@ namespace DAL.RentACar.Context
         public int MusteriPuanı { get; set; }
         [Required]
         public decimal MusteriGetirisi { get; set; }
+        [Required]
+        public string MusteriGetiriTuru { get; set; }
         [DefaultValue(false)]
         public bool Silindi { get; set; }
 

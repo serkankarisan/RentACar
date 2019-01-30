@@ -21,10 +21,15 @@ namespace PL.RentACar
         SozlesmeRepository sozrepo = new SozlesmeRepository();
         PersonelRepository perrepo = new PersonelRepository();
         MusteriRepository musrepo = new MusteriRepository();
+        DateTime bugun = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+        bool msec = false;
+        bool psec = false;
         private void btnMusteriSec_Click(object sender, EventArgs e)
         {
+
             frmMusteriSorgulama frm = new frmMusteriSorgulama();
             frm.ShowDialog();
+            msec = true;
             Musteri m = musrepo.MusteriGetirById(Genel.MusteriID);
             txtMusteriAdi.Text = m.Adi;
             txtMusteriSoyadi.Text = m.Soyadi;
@@ -35,18 +40,25 @@ namespace PL.RentACar
             cbMusteriCinsiyet.Text = m.Cinsiyet;
             txtMusteriEhliyetNo.Text = m.EhliyetNo;
             ListeGoster();
+            if (msec && psec)
+            {
+                btnKayitAc.Enabled = true;
+            }
         }
 
         private void btnPersonelSec_Click(object sender, EventArgs e)
         {
-            //frmPersonelSorgulama frm = new frmPersonelSorgulama();
-            //frm.ShowDialog();
-            //txtPersonelAdi.Text = Genel.PersonelAdi;
-            //txtPersonelSoyadi.Text = Genel.PersonelSoyadi;            
-            txtPersonelAdi.Text = "Ali";
-            txtPersonelSoyadi.Text = "Kaçar";
-            Genel.PersonelID = 1;
+            frmPersonelSorgulama frm = new frmPersonelSorgulama();
+            frm.ShowDialog();
+            psec = true;
+            Personel p = perrepo.PersonelGetirById(Genel.PersonelID);
+            txtPersonelAdi.Text = p.Adi;
+            txtPersonelSoyadi.Text = p.Soyadi;
             ListeGoster();
+            if (msec && psec)
+            {
+                btnKayitAc.Enabled = true;
+            }
         }
 
         private void btnCikis_Click(object sender, EventArgs e)
@@ -56,6 +68,8 @@ namespace PL.RentACar
 
         private void btnKayitAc_Click(object sender, EventArgs e)
         {
+            msec = false;
+            psec = false;
             Sozlesme s = new Sozlesme();
             if (Genel.MusteriID!=0)
             {
@@ -65,8 +79,10 @@ namespace PL.RentACar
                     s.MusteriId = Genel.MusteriID;
                     s.PersonelId = Genel.PersonelID;
                     s.Silindi = false;
-                    s.SozlesmeTarihi = Convert.ToDateTime(dtpSozlesmeTarihi.Text);
+                    s.SozlesmeTarihi = DateTime.Now;
                     s.SozlesmeTutari = 0;
+                    s.Alınan = 0;
+                    s.Borc = 0;
                     if (sozrepo.SozlesmeKontrol(s))
                     {
                         MessageBox.Show("Bu Sözleşme Kayıtlı!", "Hatalı Bilgi Girişi!");
@@ -130,6 +146,7 @@ namespace PL.RentACar
 
         private void frmSozlesmeKayitAc_Load(object sender, EventArgs e)
         {
+            dtpSozlesmeTarihi.Value = bugun;
             ListeGoster();
         }
         private void FormAc(Form AF)
@@ -140,23 +157,9 @@ namespace PL.RentACar
             AF.Show();
         }
 
-        DateTime baslangic = new DateTime();
-        DateTime bugun = new DateTime();
+        
         private void dtpSozlesmeTarihi_ValueChanged(object sender, EventArgs e)
         {
-            bugun = Convert.ToDateTime(DateTime.Now.ToShortDateString());
-            baslangic = Convert.ToDateTime(dtpSozlesmeTarihi.Value.ToShortDateString());
-            if (baslangic>=bugun)
-            {
-                btnKayitAc.Enabled = true;
-            }
-            else
-            {
-                MessageBox.Show("İleri Bir Tarih Seçin!", "Tarih Hatalı!");
-                dtpSozlesmeTarihi.Value = DateTime.Now;
-                btnKayitAc.Enabled = false;
-                return;
-            }
         }
     }
 }

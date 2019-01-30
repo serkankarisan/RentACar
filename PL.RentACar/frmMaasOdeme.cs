@@ -50,7 +50,7 @@ namespace PL.RentACar
                 kh.Silindi = false;
                 if (khr.KasaHareketEkle(kh))
                 {
-                    MessageBox.Show("Hareket eklendi.", "Kayıt gerçekleşti.");
+                    MessageBox.Show("Maaş Ödendi.", "Kayıt gerçekleşti.");
                     txtAdi.Clear();
                     txtSoyadi.Clear();
                     txtAdi.Focus();
@@ -83,6 +83,11 @@ namespace PL.RentACar
         private void frmMaasOdeme_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
