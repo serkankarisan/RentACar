@@ -45,7 +45,7 @@ namespace PL.RentACar
                 kh.PersonelId = Genel.PersonelID;
                 kh.Tarih = DateTime.Now;
                 kh.GelirGiderId = 1;
-                kh.Tutar = txtMaas.Text;
+                kh.Tutar = Convert.ToDecimal(txtMaas.Text);
                 kh.ParaBirimi = "TL";
                 kh.Silindi = false;
                 if (khr.KasaHareketEkle(kh))

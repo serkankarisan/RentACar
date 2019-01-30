@@ -12,7 +12,7 @@ namespace BLL.RentACar.Repositories
         bool KullaniciKontrol(Kullanici yeni);
         List<Kullanici> KullaniciListele();
         Kullanici KullaniciGetirById(int ID);
-        List<Kullanici> KullaniciListeleByPeronel(string Ad,string Soyad);
+        List<Kullanici> KullaniciListeleByPersonel(string Ad,string Soyad);
 
         bool KullaniciEkle(Kullanici k);
         bool KullaniciGuncelle(Kullanici k);

@@ -167,7 +167,13 @@ namespace PL.RentACar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            //OpenFileDialog dosya = new OpenFileDialog();
+            //dosya.Filter = "Resim Dosyası |*.jpg;*.nef;*.png| Video|*.avi| Tüm Dosyalar |*.*";
+            //dosya.Title = "www.yazilimkodlama.com";
+            //dosya.ShowDialog();
+            //string DosyaYolu = dosya.FileName;
+            //pbArac.ImageLocation = DosyaYolu;
+
         }
     }
 }

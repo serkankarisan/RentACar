@@ -51,7 +51,7 @@ namespace BLL.RentACar.Repositories
 
         public bool KullaniciKontrol(Kullanici yeni)
         {
-            return Convert.ToBoolean(Genel.ent.Kullanicilar.Where(k => k.UserName == yeni.UserName).ToList().Count);
+            return Convert.ToBoolean(Genel.ent.Kullanicilar.Where(k => k.UserName == yeni.UserName || k.PersonelId == yeni.PersonelId).ToList().Count);
         }
 
         public List<Kullanici> KullaniciListele()
@@ -59,9 +59,9 @@ namespace BLL.RentACar.Repositories
             return Genel.ent.Kullanicilar.Where(k => k.Silindi == false).ToList();
         }
 
-        public List<Kullanici> KullaniciListeleByPeronel(string Ad, string Soyad)
+        public List<Kullanici> KullaniciListeleByPersonel(string Ad, string Soyad)
         {
-            return Genel.ent.Kullanicilar.Where(k => k.Silindi == false && k.Personel.Adi.Contains(Ad) && k.Personel.Soyadi.Contains(Soyad)).ToList();
+            return Genel.ent.Kullanicilar.Where(k => k.Silindi == false && k.Personel.Adi.StartsWith(Ad) && k.Personel.Soyadi.StartsWith(Soyad)).ToList();
         }
 
         public bool KullaniciSil(int ID)

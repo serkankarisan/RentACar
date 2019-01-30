@@ -34,27 +34,27 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
             this.txtEhliyetNo = new System.Windows.Forms.TextBox();
-            this.dgvMusteriler = new System.Windows.Forms.DataGridView();
+            this.dgvSozlesmeler = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTCKNo = new System.Windows.Forms.TextBox();
-            this.txtAd = new System.Windows.Forms.TextBox();
+            this.txtSozlesmeId = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpBitis = new System.Windows.Forms.DateTimePicker();
+            this.dtpBaslangıc = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtEhliyetNo2 = new System.Windows.Forms.TextBox();
+            this.dgvSozlesmeDetay = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTckNo2 = new System.Windows.Forms.TextBox();
+            this.txtSozlesmeId2 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeler)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeDetay)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCikis
@@ -69,6 +69,7 @@
             this.btnCikis.Size = new System.Drawing.Size(25, 25);
             this.btnCikis.TabIndex = 97;
             this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // tabControl1
             // 
@@ -84,14 +85,14 @@
             // 
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.txtEhliyetNo);
-            this.tabPage1.Controls.Add(this.dgvMusteriler);
+            this.tabPage1.Controls.Add(this.dgvSozlesmeler);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.txtTCKNo);
-            this.tabPage1.Controls.Add(this.txtAd);
+            this.tabPage1.Controls.Add(this.txtSozlesmeId);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage1.Size = new System.Drawing.Size(771, 387);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Sozlesmeler";
@@ -112,18 +113,21 @@
             this.txtEhliyetNo.Name = "txtEhliyetNo";
             this.txtEhliyetNo.Size = new System.Drawing.Size(100, 20);
             this.txtEhliyetNo.TabIndex = 102;
+            this.txtEhliyetNo.TextChanged += new System.EventHandler(this.txtEhliyetNo_TextChanged);
             // 
-            // dgvMusteriler
+            // dgvSozlesmeler
             // 
-            this.dgvMusteriler.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvMusteriler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgvMusteriler.BackgroundColor = System.Drawing.Color.White;
-            this.dgvMusteriler.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvMusteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMusteriler.Location = new System.Drawing.Point(21, 64);
-            this.dgvMusteriler.Name = "dgvMusteriler";
-            this.dgvMusteriler.Size = new System.Drawing.Size(744, 289);
-            this.dgvMusteriler.TabIndex = 101;
+            this.dgvSozlesmeler.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSozlesmeler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvSozlesmeler.BackgroundColor = System.Drawing.Color.White;
+            this.dgvSozlesmeler.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvSozlesmeler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSozlesmeler.Location = new System.Drawing.Point(21, 64);
+            this.dgvSozlesmeler.Name = "dgvSozlesmeler";
+            this.dgvSozlesmeler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSozlesmeler.Size = new System.Drawing.Size(744, 289);
+            this.dgvSozlesmeler.TabIndex = 101;
+            this.dgvSozlesmeler.DoubleClick += new System.EventHandler(this.dgvSozlesmeler_DoubleClick);
             // 
             // label6
             // 
@@ -149,29 +153,31 @@
             this.txtTCKNo.Name = "txtTCKNo";
             this.txtTCKNo.Size = new System.Drawing.Size(100, 20);
             this.txtTCKNo.TabIndex = 98;
+            this.txtTCKNo.TextChanged += new System.EventHandler(this.txtTCKNo_TextChanged);
             // 
-            // txtAd
+            // txtSozlesmeId
             // 
-            this.txtAd.Location = new System.Drawing.Point(30, 32);
-            this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(100, 20);
-            this.txtAd.TabIndex = 97;
+            this.txtSozlesmeId.Location = new System.Drawing.Point(30, 32);
+            this.txtSozlesmeId.Name = "txtSozlesmeId";
+            this.txtSozlesmeId.Size = new System.Drawing.Size(100, 20);
+            this.txtSozlesmeId.TabIndex = 97;
+            this.txtSozlesmeId.TextChanged += new System.EventHandler(this.txtSozlesmeId_TextChanged);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.dateTimePicker2);
-            this.tabPage2.Controls.Add(this.dateTimePicker1);
+            this.tabPage2.Controls.Add(this.dtpBitis);
+            this.tabPage2.Controls.Add(this.dtpBaslangıc);
             this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.txtEhliyetNo2);
+            this.tabPage2.Controls.Add(this.dgvSozlesmeDetay);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.textBox3);
+            this.tabPage2.Controls.Add(this.txtTckNo2);
+            this.tabPage2.Controls.Add(this.txtSozlesmeId2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage2.Size = new System.Drawing.Size(771, 387);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Sozlesme Detayları";
@@ -186,19 +192,21 @@
             this.label5.TabIndex = 113;
             this.label5.Text = "Tarih aralığı seçin";
             // 
-            // dateTimePicker2
+            // dtpBitis
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(239, 16);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 112;
+            this.dtpBitis.Location = new System.Drawing.Point(239, 16);
+            this.dtpBitis.Name = "dtpBitis";
+            this.dtpBitis.Size = new System.Drawing.Size(200, 20);
+            this.dtpBitis.TabIndex = 112;
+            this.dtpBitis.ValueChanged += new System.EventHandler(this.dtpBitis_ValueChanged);
             // 
-            // dateTimePicker1
+            // dtpBaslangıc
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(33, 16);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 111;
+            this.dtpBaslangıc.Location = new System.Drawing.Point(33, 16);
+            this.dtpBaslangıc.Name = "dtpBaslangıc";
+            this.dtpBaslangıc.Size = new System.Drawing.Size(200, 20);
+            this.dtpBaslangıc.TabIndex = 111;
+            this.dtpBaslangıc.ValueChanged += new System.EventHandler(this.dtpBaslangıc_ValueChanged);
             // 
             // label2
             // 
@@ -209,24 +217,27 @@
             this.label2.TabIndex = 110;
             this.label2.Text = "Ehliyet No";
             // 
-            // textBox1
+            // txtEhliyetNo2
             // 
-            this.textBox1.Location = new System.Drawing.Point(472, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 109;
+            this.txtEhliyetNo2.Location = new System.Drawing.Point(472, 60);
+            this.txtEhliyetNo2.Name = "txtEhliyetNo2";
+            this.txtEhliyetNo2.Size = new System.Drawing.Size(100, 20);
+            this.txtEhliyetNo2.TabIndex = 109;
+            this.txtEhliyetNo2.TextChanged += new System.EventHandler(this.txtEhliyetNo2_TextChanged);
             // 
-            // dataGridView1
+            // dgvSozlesmeDetay
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 92);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(744, 289);
-            this.dataGridView1.TabIndex = 108;
+            this.dgvSozlesmeDetay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSozlesmeDetay.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvSozlesmeDetay.BackgroundColor = System.Drawing.Color.White;
+            this.dgvSozlesmeDetay.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvSozlesmeDetay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSozlesmeDetay.Location = new System.Drawing.Point(24, 92);
+            this.dgvSozlesmeDetay.Name = "dgvSozlesmeDetay";
+            this.dgvSozlesmeDetay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSozlesmeDetay.Size = new System.Drawing.Size(744, 289);
+            this.dgvSozlesmeDetay.TabIndex = 108;
+            this.dgvSozlesmeDetay.DoubleClick += new System.EventHandler(this.dgvSozlesmeDetay_DoubleClick);
             // 
             // label3
             // 
@@ -246,19 +257,21 @@
             this.label4.TabIndex = 106;
             this.label4.Text = "Sözleşme Id";
             // 
-            // textBox2
+            // txtTckNo2
             // 
-            this.textBox2.Location = new System.Drawing.Point(264, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 105;
+            this.txtTckNo2.Location = new System.Drawing.Point(264, 60);
+            this.txtTckNo2.Name = "txtTckNo2";
+            this.txtTckNo2.Size = new System.Drawing.Size(100, 20);
+            this.txtTckNo2.TabIndex = 105;
+            this.txtTckNo2.TextChanged += new System.EventHandler(this.txtTckNo2_TextChanged);
             // 
-            // textBox3
+            // txtSozlesmeId2
             // 
-            this.textBox3.Location = new System.Drawing.Point(33, 60);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 104;
+            this.txtSozlesmeId2.Location = new System.Drawing.Point(33, 60);
+            this.txtSozlesmeId2.Name = "txtSozlesmeId2";
+            this.txtSozlesmeId2.Size = new System.Drawing.Size(100, 20);
+            this.txtSozlesmeId2.TabIndex = 104;
+            this.txtSozlesmeId2.TextChanged += new System.EventHandler(this.txtSozlesmeId2_TextChanged);
             // 
             // frmSozlesmeSorgulama
             // 
@@ -270,13 +283,14 @@
             this.Name = "frmSozlesmeSorgulama";
             this.Text = "frmSozlesmeSorgulama";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmSozlesmeSorgulama_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeler)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeDetay)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,21 +302,21 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtEhliyetNo;
-        private System.Windows.Forms.DataGridView dgvMusteriler;
+        private System.Windows.Forms.DataGridView dgvSozlesmeler;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTCKNo;
-        private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.TextBox txtSozlesmeId;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtEhliyetNo2;
+        private System.Windows.Forms.DataGridView dgvSozlesmeDetay;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTckNo2;
+        private System.Windows.Forms.TextBox txtSozlesmeId2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpBitis;
+        private System.Windows.Forms.DateTimePicker dtpBaslangıc;
     }
 }
