@@ -28,7 +28,7 @@ namespace BLL.RentACar.Repositories
 
         public List<Arac> AracListele()
         {
-            return Genel.ent.Araclar.ToList();
+            return Genel.ent.Araclar.Where(a => a.Silindi == false && a.Varmi == true).ToList();
         }
         public string[] AracListeleByMarka()
         {
@@ -56,6 +56,8 @@ namespace BLL.RentACar.Repositories
         public bool AracGuncelle(Arac A)
         {
             bool Sonuc = false;
+            Arac degisen = AracGetirById(A.Id);
+            degisen = A;
             try
             {
                 Genel.ent.SaveChanges();

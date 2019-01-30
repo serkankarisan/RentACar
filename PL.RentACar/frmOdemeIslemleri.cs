@@ -25,6 +25,7 @@ namespace PL.RentACar
         PersonelRepository pr = new PersonelRepository();
         KasaHareketRepository khr = new KasaHareketRepository();
         SozlesmeRepository sr = new SozlesmeRepository();
+        MusteriRepository mr = new MusteriRepository();
         Personel p = new Personel();
         private void btnSec_Click(object sender, EventArgs e)
         {
@@ -125,11 +126,33 @@ namespace PL.RentACar
             List<GelirGider> liste = ggrepo.GelirGiderLİstele();
             liste.Add(i);
             cbIslemTurleri.DataSource = liste;
-            cbIslemTurleri.SelectedItem = i;
-            PersonelGizle();
-            AracGizle();
-            SozlesmeGizle();
-            dgvOdeme.DataSource = khr.KasaHareketListele();
+            if (Genel.cbIslem== "SozlesmeOdeme")
+            {
+                Genel.cbIslem = "";
+                cbIslemTurleri.SelectedIndex=1;
+                if (Genel.soz != null)
+                {
+                    Sozlesme s = new Sozlesme();
+                    s = Genel.soz;
+                    txtBorc.Text = s.Borc.ToString();
+                    txtSozlesmeTutar.Text = s.SozlesmeTutari.ToString();
+                    txtAlınan.Text = s.Alınan.ToString();
+                    txtSozlesmeTarihi.Text = s.SozlesmeTarihi.ToShortDateString();
+                    Musteri m = new Musteri();
+                    m = mr.MusteriGetirById(s.MusteriId);
+                    txtMusteriAdi.Text = m.Adi;
+                    txtMusteriSoyadi.Text = m.Soyadi;
+                }
+            }
+            else
+            {
+                cbIslemTurleri.SelectedItem = i;
+                PersonelGizle();
+                AracGizle();
+                SozlesmeGizle();
+                dgvOdeme.DataSource = khr.KasaHareketListele();
+            }
+
         }
 
         private void PersonelGizle()
@@ -280,15 +303,15 @@ namespace PL.RentACar
                 kh.PersonelId = 0;
                 kh.Tarih = DateTime.Now;
                 kh.GelirGiderId = 2;
-                kh.Tutar = Convert.ToDecimal(txtAlınan.Text);
+                kh.Tutar = Convert.ToDecimal(txtSozlesmeOdeme.Text);
                 kh.ParaBirimi = "TL";
                 kh.Silindi = false;
                     if (khr.KasaHareketEkle(kh))
                     {
                         Sozlesme s = new Sozlesme();
                         s = Genel.soz;
-                        s.Alınan = Convert.ToDecimal(txtAlınan.Text);
-                        s.Borc = Convert.ToDecimal(txtBorc.Text);
+                        s.Alınan += Convert.ToDecimal(txtSozlesmeOdeme.Text);
+                        s.Borc -= Convert.ToDecimal(txtSozlesmeOdeme.Text);
                         sr.SozlesmeGuncelle(s);
                         MessageBox.Show("Hareket Eklendi.", "Kayıt gerçekleşti.");
                         txtBorc.Text = (Convert.ToDecimal(txtBorc.Text) - Convert.ToDecimal(txtSozlesmeOdeme.Text)).ToString();
@@ -333,6 +356,10 @@ namespace PL.RentACar
                 txtSozlesmeTutar.Text = s.SozlesmeTutari.ToString();
                 txtAlınan.Text = s.Alınan.ToString();
                 txtSozlesmeTarihi.Text = s.SozlesmeTarihi.ToShortDateString();
+                Musteri m = new Musteri();
+                m = mr.MusteriGetirById(s.MusteriId);
+                txtMusteriAdi.Text = m.Adi;
+                txtMusteriSoyadi.Text = m.Soyadi;
             }
         }
 
@@ -384,7 +411,7 @@ namespace PL.RentACar
                 {
                 kh.Tarih = DateTime.Now;
                 kh.GelirGiderId = 1;
-                kh.Tutar = Convert.ToDecimal(txtMaas.Text);
+                kh.Tutar = Convert.ToDecimal(txtToplamOdeme.Text);
                 kh.ParaBirimi = "TL";
                 kh.Silindi = false;
                 if (khr.KasaHareketEkle(kh))

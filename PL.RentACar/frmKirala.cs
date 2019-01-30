@@ -61,6 +61,10 @@ namespace PL.RentACar
                     sd.BitisTarihi = dtpBitis.Value;
                     sd.SozlesmeId = Genel.soz.Id;
                     sd.Tutar = Convert.ToDecimal(txtTutar.Text);
+                    Arac a = new Arac();
+                    a = arepo.AracGetirById(Genel.AracID);
+                    a.Varmi = false;
+                    arepo.AracGuncelle(a);
                     if (!sdrepo.SozlesmeDetayEkle(sd))
                     {
                         MessageBox.Show("Bu Detay Eklenemedi!", "Hatalı Bilgi Girişi!");
@@ -174,9 +178,11 @@ namespace PL.RentACar
             s.SozlesmeTutari = Convert.ToDecimal(txtSozlesmeTutari.Text);
             sozrepo.SozlesmeGuncelle(s);
             btnTamamla.Enabled = false;
+            Genel.cbIslem = "SozlesmeOdeme";
             frmOdemeIslemleri frm = new frmOdemeIslemleri();
             this.Hide();
             FormAc(frm);
+            Genel.cbIslem = "";
         }
         private void FormAc(Form AF)
         {

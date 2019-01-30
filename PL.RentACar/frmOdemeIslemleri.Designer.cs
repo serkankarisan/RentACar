@@ -89,7 +89,7 @@
             this.btnOdemeAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOdemeAl.Image = ((System.Drawing.Image)(resources.GetObject("btnOdemeAl.Image")));
             this.btnOdemeAl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOdemeAl.Location = new System.Drawing.Point(850, 139);
+            this.btnOdemeAl.Location = new System.Drawing.Point(808, 139);
             this.btnOdemeAl.Name = "btnOdemeAl";
             this.btnOdemeAl.Size = new System.Drawing.Size(133, 40);
             this.btnOdemeAl.TabIndex = 131;
@@ -128,10 +128,10 @@
             this.dgvOdeme.BackgroundColor = System.Drawing.Color.White;
             this.dgvOdeme.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvOdeme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOdeme.Location = new System.Drawing.Point(12, 206);
+            this.dgvOdeme.Location = new System.Drawing.Point(24, 206);
             this.dgvOdeme.Name = "dgvOdeme";
             this.dgvOdeme.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOdeme.Size = new System.Drawing.Size(987, 260);
+            this.dgvOdeme.Size = new System.Drawing.Size(942, 260);
             this.dgvOdeme.TabIndex = 127;
             // 
             // panel1
@@ -162,7 +162,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(12, 39);
+            this.label5.Location = new System.Drawing.Point(20, 39);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 20);
             this.label5.TabIndex = 133;
@@ -175,7 +175,7 @@
             this.cbIslemTurleri.Items.AddRange(new object[] {
             "Tahsilat",
             "Ödeme"});
-            this.cbIslemTurleri.Location = new System.Drawing.Point(16, 76);
+            this.cbIslemTurleri.Location = new System.Drawing.Point(24, 76);
             this.cbIslemTurleri.Name = "cbIslemTurleri";
             this.cbIslemTurleri.Size = new System.Drawing.Size(163, 28);
             this.cbIslemTurleri.TabIndex = 132;
@@ -228,7 +228,7 @@
             this.btnOdemeYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOdemeYap.Image = ((System.Drawing.Image)(resources.GetObject("btnOdemeYap.Image")));
             this.btnOdemeYap.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOdemeYap.Location = new System.Drawing.Point(850, 139);
+            this.btnOdemeYap.Location = new System.Drawing.Point(808, 139);
             this.btnOdemeYap.Name = "btnOdemeYap";
             this.btnOdemeYap.Size = new System.Drawing.Size(149, 40);
             this.btnOdemeYap.TabIndex = 138;
@@ -322,7 +322,7 @@
             this.btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSec.Image = ((System.Drawing.Image)(resources.GetObject("btnSec.Image")));
             this.btnSec.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSec.Location = new System.Drawing.Point(16, 123);
+            this.btnSec.Location = new System.Drawing.Point(24, 123);
             this.btnSec.Name = "btnSec";
             this.btnSec.Size = new System.Drawing.Size(167, 40);
             this.btnSec.TabIndex = 176;
@@ -594,7 +594,7 @@
             this.txtSozlesmeTarihi.Location = new System.Drawing.Point(149, 176);
             this.txtSozlesmeTarihi.Name = "txtSozlesmeTarihi";
             this.txtSozlesmeTarihi.ReadOnly = true;
-            this.txtSozlesmeTarihi.Size = new System.Drawing.Size(153, 26);
+            this.txtSozlesmeTarihi.Size = new System.Drawing.Size(96, 26);
             this.txtSozlesmeTarihi.TabIndex = 193;
             this.txtSozlesmeTarihi.Visible = false;
             // 
