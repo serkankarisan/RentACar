@@ -167,12 +167,12 @@ namespace PL.RentACar
 
         private void txtPersonelAdi_TextChanged(object sender, EventArgs e)
         {
-            dgvKullanicilar.DataSource = kper.KullaniciListeleByPeronel(txtPersonelAdi.Text, txtPersonelSoyadi.Text);
+            dgvKullanicilar.DataSource = kper.KullaniciListeleByPersonel(txtPersonelAdi.Text, txtPersonelSoyadi.Text);
         }
 
         private void txtPersonelSoyadi_TextChanged(object sender, EventArgs e)
         {
-            dgvKullanicilar.DataSource = kper.KullaniciListeleByPeronel(txtPersonelAdi.Text, txtPersonelSoyadi.Text);
+            dgvKullanicilar.DataSource = kper.KullaniciListeleByPersonel(txtPersonelAdi.Text, txtPersonelSoyadi.Text);
         }
     }
 }

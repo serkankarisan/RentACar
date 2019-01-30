@@ -13,7 +13,7 @@ namespace BLL.RentACar.Repositories
         List<SozlesmeDetay> SozlesmeDetayGetirBySozlesmeId(int ID);
         List<SozlesmeDetay> SozlesmeDetayListeleByAranan(string Ad, string Soyad, string TCKNo, string EhliyetNo);
         List<SozlesmeDetay> SozlesmeDetayListeleByTarih(DateTime baslangic, DateTime bitis);
-
+        List<SozlesmeDetay> SozlesmeDetaySorgula(int SozlesmeId, string TckNo, string EhliyetNo);
         bool SozlesmeDetayEkle(SozlesmeDetay s);
         bool SozlesmeDetayGuncelle(SozlesmeDetay s);
 

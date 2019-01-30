@@ -108,5 +108,10 @@ namespace BLL.RentACar.Repositories
             }
             return Sonuc;
         }
+
+        public List<Sozlesme> SozlesmeSorgula(int SozlesmeId, string TckNo, string EhliyetNo)
+        {
+            return Genel.ent.Sozlesmeler.Where(k => k.Silindi == false && k.Id.ToString().StartsWith(SozlesmeId.ToString()) && k.Musteri.TcKimlikNo.StartsWith(TckNo) && k.Musteri.EhliyetNo.StartsWith(EhliyetNo)).ToList();
+        }
     }
 }

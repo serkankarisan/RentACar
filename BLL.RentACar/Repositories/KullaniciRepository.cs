@@ -59,7 +59,7 @@ namespace BLL.RentACar.Repositories
             return Genel.ent.Kullanicilar.Where(k => k.Silindi == false).ToList();
         }
 
-        public List<Kullanici> KullaniciListeleByPeronel(string Ad, string Soyad)
+        public List<Kullanici> KullaniciListeleByPersonel(string Ad, string Soyad)
         {
             return Genel.ent.Kullanicilar.Where(k => k.Silindi == false && k.Personel.Adi.StartsWith(Ad) && k.Personel.Soyadi.StartsWith(Soyad)).ToList();
         }
