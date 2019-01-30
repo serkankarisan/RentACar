@@ -112,6 +112,7 @@
             this.rdnNo.TabStop = true;
             this.rdnNo.Text = "Hayır";
             this.rdnNo.UseVisualStyleBackColor = true;
+            this.rdnNo.CheckedChanged += new System.EventHandler(this.rdnNo_CheckedChanged);
             // 
             // rdnYes
             // 
@@ -122,6 +123,7 @@
             this.rdnYes.TabIndex = 157;
             this.rdnYes.Text = "Evet";
             this.rdnYes.UseVisualStyleBackColor = true;
+            this.rdnYes.CheckedChanged += new System.EventHandler(this.rdnYes_CheckedChanged);
             // 
             // label26
             // 
@@ -139,6 +141,7 @@
             this.txtEkstraTutar.ReadOnly = true;
             this.txtEkstraTutar.Size = new System.Drawing.Size(100, 20);
             this.txtEkstraTutar.TabIndex = 154;
+            
             // 
             // dgvSozlesmeDetay
             // 

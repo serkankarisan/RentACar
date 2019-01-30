@@ -41,7 +41,7 @@ namespace PL.RentACar
 
         private void frmTeslimAl_Load(object sender, EventArgs e)
         {
-            rdnYes.Checked = true;
+          
         }
 
         private void dgvSozlesmeDetay_DoubleClick(object sender, EventArgs e)
@@ -60,6 +60,7 @@ namespace PL.RentACar
             txtAracSayisi.Text = dgvSozlesmeDetay.RowCount.ToString();
             txtSozlesmeTutari.Text = sdr.SozlesmeTutarGetirBySozlesmeId(Genel.SozID).ToString();
             SozlesmeDetayId= Convert.ToInt32(dgvSozlesmeDetay.SelectedRows[0].Cells[0].Value);
+            rdnYes.Checked = true;
 
         }
 
@@ -67,9 +68,14 @@ namespace PL.RentACar
         {
             if (txtGunSayisi.Text != "")
             {
-                GunSayisi = Convert.ToInt32(txtGunSayisi.Text);
-                EkstraTutar = (GunSayisi * GunlukFiyat);
-                txtEkstraTutar.Text = EkstraTutar.ToString();
+                if (txtGunlukFiyat.Text != "")
+                {
+                    GunSayisi = Convert.ToInt32(txtGunSayisi.Text);
+                    EkstraTutar = (GunSayisi * GunlukFiyat);
+                    txtEkstraTutar.Text = EkstraTutar.ToString();
+                }
+                else
+                    MessageBox.Show("Sozlesme Detay Seciniz!");
             }
             else if(txtGunSayisi.Text=="")
             {
@@ -134,5 +140,33 @@ namespace PL.RentACar
             }
 
         }
+
+        private void rdnYes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdnYes.Checked == true)
+            {
+                txtGunSayisi.Text = "0";
+                txtGunSayisi.ReadOnly = true;
+            }
+            else if (rdnNo.Checked==true)
+            {
+                txtGunSayisi.ReadOnly = false;
+            }
+        }
+
+        private void rdnNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdnYes.Checked == true)
+            {
+                txtGunSayisi.Text = "0";
+                txtGunSayisi.ReadOnly = true;
+            }
+            else if (rdnNo.Checked == true)
+            {
+                txtGunSayisi.ReadOnly = false;
+            }
+        }
+
+        
     }
 }
