@@ -76,7 +76,6 @@
             this.pnlContent = new System.Windows.Forms.Panel();
             this.pnlKasaMenu = new System.Windows.Forms.Panel();
             this.btnOdeme = new System.Windows.Forms.Button();
-            this.btnMaasOdeme = new System.Windows.Forms.Button();
             this.btnKasaDetay = new System.Windows.Forms.Button();
             this.pnlAracMenu = new System.Windows.Forms.Panel();
             this.btnAracSorgula = new System.Windows.Forms.Button();
@@ -720,7 +719,6 @@
             this.pnlKasaMenu.BackColor = System.Drawing.Color.Azure;
             this.pnlKasaMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlKasaMenu.Controls.Add(this.btnOdeme);
-            this.pnlKasaMenu.Controls.Add(this.btnMaasOdeme);
             this.pnlKasaMenu.Controls.Add(this.btnKasaDetay);
             this.pnlKasaMenu.Location = new System.Drawing.Point(-2, 180);
             this.pnlKasaMenu.Name = "pnlKasaMenu";
@@ -736,7 +734,7 @@
             this.btnOdeme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOdeme.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOdeme.Location = new System.Drawing.Point(0, 64);
+            this.btnOdeme.Location = new System.Drawing.Point(0, 32);
             this.btnOdeme.Name = "btnOdeme";
             this.btnOdeme.Size = new System.Drawing.Size(0, 32);
             this.btnOdeme.TabIndex = 23;
@@ -744,24 +742,6 @@
             this.btnOdeme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOdeme.UseVisualStyleBackColor = false;
             this.btnOdeme.Click += new System.EventHandler(this.btnOdeme_Click);
-            // 
-            // btnMaasOdeme
-            // 
-            this.btnMaasOdeme.BackColor = System.Drawing.Color.Transparent;
-            this.btnMaasOdeme.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMaasOdeme.FlatAppearance.BorderSize = 0;
-            this.btnMaasOdeme.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SandyBrown;
-            this.btnMaasOdeme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaasOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnMaasOdeme.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMaasOdeme.Location = new System.Drawing.Point(0, 32);
-            this.btnMaasOdeme.Name = "btnMaasOdeme";
-            this.btnMaasOdeme.Size = new System.Drawing.Size(0, 32);
-            this.btnMaasOdeme.TabIndex = 22;
-            this.btnMaasOdeme.Text = "Maaş Ödeme";
-            this.btnMaasOdeme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMaasOdeme.UseVisualStyleBackColor = false;
-            this.btnMaasOdeme.Click += new System.EventHandler(this.btnMaasOdeme_Click);
             // 
             // btnKasaDetay
             // 
@@ -1137,7 +1117,6 @@
         private System.Windows.Forms.Button btnMusteriDetay;
         private System.Windows.Forms.Button btnMusteriIslemleri;
         private System.Windows.Forms.Panel pnlKasaMenu;
-        private System.Windows.Forms.Button btnMaasOdeme;
         private System.Windows.Forms.Button btnKasaDetay;
         private System.Windows.Forms.Panel pnlAracMenu;
         private System.Windows.Forms.Button btnAracSorgula;
