@@ -81,6 +81,8 @@ namespace PL.RentACar
                     s.Silindi = false;
                     s.SozlesmeTarihi = DateTime.Now;
                     s.SozlesmeTutari = 0;
+                    s.Alınan = 0;
+                    s.Borc = 0;
                     if (sozrepo.SozlesmeKontrol(s))
                     {
                         MessageBox.Show("Bu Sözleşme Kayıtlı!", "Hatalı Bilgi Girişi!");

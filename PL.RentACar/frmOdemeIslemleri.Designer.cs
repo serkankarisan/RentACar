@@ -60,6 +60,8 @@
             this.txtAdi = new System.Windows.Forms.TextBox();
             this.lblPersonel = new System.Windows.Forms.Label();
             this.btnAracOdemeAl = new System.Windows.Forms.Button();
+            this.lblSozlesmeOdeme = new System.Windows.Forms.Label();
+            this.txtSozlesmeOdeme = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdeme)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -87,7 +89,7 @@
             // lblAlınan
             // 
             this.lblAlınan.AutoSize = true;
-            this.lblAlınan.Location = new System.Drawing.Point(251, 153);
+            this.lblAlınan.Location = new System.Drawing.Point(251, 146);
             this.lblAlınan.Name = "lblAlınan";
             this.lblAlınan.Size = new System.Drawing.Size(94, 20);
             this.lblAlınan.TabIndex = 129;
@@ -96,9 +98,10 @@
             // 
             // txtAlınan
             // 
-            this.txtAlınan.Location = new System.Drawing.Point(351, 153);
+            this.txtAlınan.Location = new System.Drawing.Point(351, 146);
             this.txtAlınan.Name = "txtAlınan";
-            this.txtAlınan.Size = new System.Drawing.Size(96, 26);
+            this.txtAlınan.ReadOnly = true;
+            this.txtAlınan.Size = new System.Drawing.Size(116, 26);
             this.txtAlınan.TabIndex = 128;
             this.txtAlınan.Visible = false;
             this.txtAlınan.TextChanged += new System.EventHandler(this.txtAlınan_TextChanged);
@@ -168,7 +171,7 @@
             // lblborc
             // 
             this.lblborc.AutoSize = true;
-            this.lblborc.Location = new System.Drawing.Point(478, 153);
+            this.lblborc.Location = new System.Drawing.Point(251, 176);
             this.lblborc.Name = "lblborc";
             this.lblborc.Size = new System.Drawing.Size(86, 20);
             this.lblborc.TabIndex = 135;
@@ -177,7 +180,7 @@
             // 
             // txtBorc
             // 
-            this.txtBorc.Location = new System.Drawing.Point(570, 153);
+            this.txtBorc.Location = new System.Drawing.Point(351, 176);
             this.txtBorc.Name = "txtBorc";
             this.txtBorc.ReadOnly = true;
             this.txtBorc.Size = new System.Drawing.Size(116, 26);
@@ -289,7 +292,7 @@
             this.btnMaasOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMaasOdeme.Image = ((System.Drawing.Image)(resources.GetObject("btnMaasOdeme.Image")));
             this.btnMaasOdeme.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMaasOdeme.Location = new System.Drawing.Point(289, 39);
+            this.btnMaasOdeme.Location = new System.Drawing.Point(289, 30);
             this.btnMaasOdeme.Name = "btnMaasOdeme";
             this.btnMaasOdeme.Size = new System.Drawing.Size(149, 40);
             this.btnMaasOdeme.TabIndex = 177;
@@ -441,11 +444,33 @@
             this.btnAracOdemeAl.Visible = false;
             this.btnAracOdemeAl.Click += new System.EventHandler(this.btnAracOdemeAl_Click);
             // 
+            // lblSozlesmeOdeme
+            // 
+            this.lblSozlesmeOdeme.AutoSize = true;
+            this.lblSozlesmeOdeme.Location = new System.Drawing.Point(506, 156);
+            this.lblSozlesmeOdeme.Name = "lblSozlesmeOdeme";
+            this.lblSozlesmeOdeme.Size = new System.Drawing.Size(61, 20);
+            this.lblSozlesmeOdeme.TabIndex = 180;
+            this.lblSozlesmeOdeme.Text = "Ödeme";
+            this.lblSozlesmeOdeme.Visible = false;
+            // 
+            // txtSozlesmeOdeme
+            // 
+            this.txtSozlesmeOdeme.Location = new System.Drawing.Point(573, 156);
+            this.txtSozlesmeOdeme.Name = "txtSozlesmeOdeme";
+            this.txtSozlesmeOdeme.Size = new System.Drawing.Size(116, 26);
+            this.txtSozlesmeOdeme.TabIndex = 179;
+            this.txtSozlesmeOdeme.Visible = false;
+            // 
             // frmOdemeIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 478);
+            this.Controls.Add(this.lblSozlesmeOdeme);
+            this.Controls.Add(this.txtSozlesmeOdeme);
+            this.Controls.Add(this.lblAlınan);
+            this.Controls.Add(this.txtSozlesmeTutar);
             this.Controls.Add(this.btnMaasOdeme);
             this.Controls.Add(this.btnSec);
             this.Controls.Add(this.lblToplam);
@@ -458,24 +483,22 @@
             this.Controls.Add(this.txtSoyadi);
             this.Controls.Add(this.txtAdi);
             this.Controls.Add(this.lblPersonel);
-            this.Controls.Add(this.lblTutar);
             this.Controls.Add(this.btnAracSec);
             this.Controls.Add(this.btnSozlesmeSec);
             this.Controls.Add(this.btnOdemeYap);
-            this.Controls.Add(this.txtSozlesmeTutar);
             this.Controls.Add(this.lblborc);
             this.Controls.Add(this.txtBorc);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbIslemTurleri);
             this.Controls.Add(this.btnOdemeAl);
-            this.Controls.Add(this.lblAlınan);
             this.Controls.Add(this.txtAlınan);
             this.Controls.Add(this.dgvOdeme);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtAracTutar);
             this.Controls.Add(this.lblsozlesme);
             this.Controls.Add(this.txtToplamOdeme);
             this.Controls.Add(this.btnAracOdemeAl);
+            this.Controls.Add(this.txtAracTutar);
+            this.Controls.Add(this.lblTutar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -522,5 +545,7 @@
         private System.Windows.Forms.TextBox txtAdi;
         private System.Windows.Forms.Label lblPersonel;
         private System.Windows.Forms.Button btnAracOdemeAl;
+        private System.Windows.Forms.Label lblSozlesmeOdeme;
+        private System.Windows.Forms.TextBox txtSozlesmeOdeme;
     }
 }

@@ -183,22 +183,26 @@ namespace PL.RentACar
             txtSozlesmeTutar.Visible = false;
             txtAlınan.Visible = false;
             txtBorc.Visible = false;
+            txtSozlesmeOdeme.Visible = false;
             btnSozlesmeSec.Visible = false;
             btnOdemeAl.Visible = false;
             lblAlınan.Visible = false;
             lblborc.Visible = false;
             lblsozlesme.Visible = false;
+            lblSozlesmeOdeme.Visible = false;
         }
         private void SozlesmeGoster()
         {
             txtSozlesmeTutar.Visible = true;
             txtAlınan.Visible = true;
+            txtSozlesmeOdeme.Visible = true;
             txtBorc.Visible = true;
             btnSozlesmeSec.Visible = true;
             btnOdemeAl.Visible = true;
             lblAlınan.Visible = true;
             lblborc.Visible = true;
             lblsozlesme.Visible = true;
+            lblSozlesmeOdeme.Visible = true;
         }
         private void btnOdemeYap_Click(object sender, EventArgs e)
         {
@@ -239,7 +243,7 @@ namespace PL.RentACar
         }
         private void btnOdemeAl_Click(object sender, EventArgs e)
         {
-            if (txtAlınan.Text.Trim() != "" && txtBorc.Text.Trim() != "" && txtSozlesmeTutar.Text.Trim() != "")
+            if (txtAlınan.Text.Trim() != "" && txtBorc.Text.Trim() != "" && txtSozlesmeTutar.Text.Trim() != "" && txtSozlesmeOdeme.Text.Trim()!="")
             {
                 KasaHareket kh = new KasaHareket();
                 kh.AracId = 0;
@@ -257,11 +261,12 @@ namespace PL.RentACar
                     {
                         Sozlesme s = new Sozlesme();
                         s = Genel.soz;
-                        s.SozlesmeTutari = Convert.ToDecimal(txtBorc.Text);
+                        s.Alınan = Convert.ToDecimal(txtAlınan.Text);
+                        s.Borc = Convert.ToDecimal(txtBorc.Text);
                         sr.SozlesmeGuncelle(s);
                         MessageBox.Show("Hareket Eklendi.", "Kayıt gerçekleşti.");
-                        txtBorc.Text = (Convert.ToDecimal(txtSozlesmeTutar.Text) - Convert.ToDecimal(txtAlınan.Text)).ToString();
-                        txtAlınan.Focus();
+                        txtBorc.Text = (Convert.ToDecimal(txtBorc.Text) - Convert.ToDecimal(txtSozlesmeOdeme.Text)).ToString();
+                        txtSozlesmeOdeme.Focus();
                         Temizle();
                         Genel.soz=null;
 
@@ -300,8 +305,9 @@ namespace PL.RentACar
             {
                 Sozlesme s = new Sozlesme();
                 s = Genel.soz;
-                txtBorc.Text = s.SozlesmeTutari.ToString();
+                txtBorc.Text = s.Borc.ToString();
                 txtSozlesmeTutar.Text = s.SozlesmeTutari.ToString();
+                txtAlınan.Text = s.Alınan.ToString();
             }
         }
 
