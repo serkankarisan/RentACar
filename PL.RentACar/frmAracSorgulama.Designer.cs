@@ -44,8 +44,6 @@
             this.mitmSmallIcon = new System.Windows.Forms.ToolStripMenuItem();
             this.mitmList = new System.Windows.Forms.ToolStripMenuItem();
             this.mitmTile = new System.Windows.Forms.ToolStripMenuItem();
-            this.ilLarge = new System.Windows.Forms.ImageList(this.components);
-            this.ilSmall = new System.Windows.Forms.ImageList(this.components);
             this.cbMarkalar = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -82,7 +80,6 @@
             this.lvDetaylar.Location = new System.Drawing.Point(12, 117);
             this.lvDetaylar.Name = "lvDetaylar";
             this.lvDetaylar.Size = new System.Drawing.Size(655, 285);
-            this.lvDetaylar.SmallImageList = this.ilSmall;
             this.lvDetaylar.TabIndex = 10;
             this.lvDetaylar.UseCompatibleStateImageBehavior = false;
             this.lvDetaylar.View = System.Windows.Forms.View.Tile;
@@ -163,22 +160,6 @@
             this.mitmTile.Size = new System.Drawing.Size(129, 22);
             this.mitmTile.Text = "Tile";
             this.mitmTile.Click += new System.EventHandler(this.mitmTile_Click);
-            // 
-            // ilLarge
-            // 
-            this.ilLarge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilLarge.ImageStream")));
-            this.ilLarge.TransparentColor = System.Drawing.Color.Transparent;
-            this.ilLarge.Images.SetKeyName(0, "q7.jpg");
-            this.ilLarge.Images.SetKeyName(1, "a7.jpg");
-            this.ilLarge.Images.SetKeyName(2, "corolla.jpg");
-            // 
-            // ilSmall
-            // 
-            this.ilSmall.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilSmall.ImageStream")));
-            this.ilSmall.TransparentColor = System.Drawing.Color.Transparent;
-            this.ilSmall.Images.SetKeyName(0, "q7.jpg");
-            this.ilSmall.Images.SetKeyName(1, "a7.jpg");
-            this.ilSmall.Images.SetKeyName(2, "corolla.jpg");
             // 
             // cbMarkalar
             // 
@@ -295,7 +276,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ComboBox cbMarkalar;
-        private System.Windows.Forms.ImageList ilSmall;
         private System.Windows.Forms.ContextMenuStrip cmView;
         private System.Windows.Forms.ToolStripMenuItem mitmLargeIcon;
         private System.Windows.Forms.ToolStripMenuItem mitmDetails;
@@ -309,6 +289,5 @@
         private System.Windows.Forms.TextBox txtMarka;
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.ImageList ilLarge;
     }
 }

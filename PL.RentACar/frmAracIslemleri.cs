@@ -22,7 +22,7 @@ namespace PL.RentACar
 
         AracRepository ar = new AracRepository();
         int ID;
-
+        ImageList ListeResim = new ImageList();
         private void tsYeni_Click(object sender, EventArgs e)
         {
             tsKaydet.Enabled = true;
@@ -67,7 +67,6 @@ namespace PL.RentACar
                 }
             }
             else { MessageBox.Show("Gerekli alanlari doldurunuz!"); }
-            Genel.ResimListesi.Images.Add(pbAracResim.Image);
         }
 
         private void Temizle()
@@ -175,11 +174,9 @@ namespace PL.RentACar
             if (open.ShowDialog() == DialogResult.OK)
             {
                 // display image in picture box  
-                pbAracResim.Image = new Bitmap(open.FileName);
+                //pbAracResim.Image = new Bitmap(open.FileName);
                 // image file path  
-                txtResimYolu.Text = open.FileName;
-                Genel.ResimListesi = new ImageList();
-                Genel.ResimListesi.ImageSize = new Size(120, 120);
+                txtResimYolu.Text = open.FileName;                
                 
             }          
             
