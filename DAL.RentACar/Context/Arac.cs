@@ -29,13 +29,23 @@ namespace DAL.RentACar.Context
         [Required]
         public string AracDurumu { get; set; }
         [Required]
-        public string YakıtDurumu { get; set; }
+        public string YakitDurumu { get; set; }
         [DefaultValue(true)]
         public bool Varmi { get; set; }
+        [Required]
         [DefaultValue(false)]
         public bool Silindi { get; set; }
 
         //Relations
         public virtual List<SozlesmeDetay> SozlesmeDetaylar { get; set; }
+
+        public Arac()
+        {
+            Silindi = false;
+        }
+        public override string ToString()
+        {
+            return Marka+" - "+Model;
+        }
     }
 }

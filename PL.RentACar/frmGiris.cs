@@ -29,16 +29,6 @@ namespace PL.RentACar
             this.Close();
         }
 
-        private void txtKullaniciAdi_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSifre_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGiris_Click(object sender, EventArgs e)
         {
             if (g.KullaniciKontrol(txtKullaniciAdi.Text,txtSifre.Text))
@@ -46,11 +36,6 @@ namespace PL.RentACar
                 frmAnaSayfa frm = new frmAnaSayfa();
                 frm.Show();
                 this.Hide();
-
-            }
-            else
-            {
-                MessageBox.Show("Hatalı Şifre veya Kullanıcı Adı!!!", "Giriş Yapılamadı!!!");
             }
         }
 
@@ -72,28 +57,20 @@ namespace PL.RentACar
             }
         }
 
-
-
-        //public void FormAcikmi(Form AcilacakForm)
-        //{
-        //    bool Varmi = false;
-        //    for (int i = 0; i < this.MdiChildren.Length; i++)
-        //    {
-        //        if (AcilacakForm.Name == MdiChildren[i].Name)
-        //        {
-        //            MdiChildren[i].Focus();
-        //            Varmi = true;
-        //        }
-        //    }
-        //    if (Varmi == false)
-        //    {
-        //        AcilacakForm.MdiParent = this;
-        //        AcilacakForm.Show();
-        //    }
-        //    else
-        //    {
-        //        AcilacakForm.Dispose(); //Nesne hafızadan atılır.
-        //    }
-        //}
+        private void pbSifreGizle_Click(object sender, EventArgs e)
+        {
+            if (txtSifre.Text == "Sifre")
+            {
+                txtSifre.Clear();
+            }
+            if (txtSifre.PasswordChar == '*')
+            {
+                txtSifre.PasswordChar = '\0';
+            }
+            else
+            {
+                txtSifre.PasswordChar = '*';
+            }
+        }
     }
 }

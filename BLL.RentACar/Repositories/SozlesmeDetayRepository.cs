@@ -11,42 +11,116 @@ namespace BLL.RentACar.Repositories
     {
         public bool SozlesmeDetayEkle(SozlesmeDetay s)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+
+            Genel.ent.SozlesmeDetaylar.Add(s);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
-        public List<SozlesmeDetay> SozlesmeDetayGetir()
+        public List<SozlesmeDetay> SozlesmeDetayListeleBySozlesmeId(int ID)
         {
-            throw new NotImplementedException();
-        }
+            List<SozlesmeDetay> bulunan = (from sd in Genel.ent.SozlesmeDetaylar
+                            where sd.SozlesmeId == ID
+                            select sd).ToList();
 
-        public List<SozlesmeDetay> SozlesmeDetayGetirById(int ID)
-        {
-            throw new NotImplementedException();
+            return bulunan;
         }
-
-        public List<SozlesmeDetay> SozlesmeDetayGetirByMusteri(string Ad, string Soyad, string TCKNo, string EhliyetNo)
+        public decimal SozlesmeTutarGetirBySozlesmeId(int ID)
         {
-            throw new NotImplementedException();
-        }
+            decimal toplamtutar = (from sd in Genel.ent.SozlesmeDetaylar
+                                           where sd.SozlesmeId == ID
+                                           select sd.Tutar).ToList().Sum();
 
-        public List<SozlesmeDetay> SozlesmeDetayGetirByTarih(DateTime baslangic, DateTime bitis)
-        {
-            throw new NotImplementedException();
+            return toplamtutar;
         }
 
         public bool SozlesmeDetayGuncelle(SozlesmeDetay s)
         {
+            bool Sonuc = false;
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
+        }
+
+        public List<SozlesmeDetay> SozlesmeDetayListele()
+        {
+            return Genel.ent.SozlesmeDetaylar.ToList();
+        }
+
+        public List<SozlesmeDetay> SozlesmeDetayListeleByAranan(string Ad, string Soyad, string TCKNo, string EhliyetNo)
+        {
             throw new NotImplementedException();
+        }
+
+        public List<SozlesmeDetay> SozlesmeDetayListeleByTarih(DateTime baslangic, DateTime bitis)
+        {
+            List<SozlesmeDetay> SozlesmeDetay = (from s in Genel.ent.SozlesmeDetaylar
+                               where s.BaslangicTarihi==baslangic && s.BitisTarihi==bitis
+                               select s).ToList();
+
+            return SozlesmeDetay;
         }
 
         public bool SozlesmeDetaySil(int ID)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            SozlesmeDetay silinen = (from a in Genel.ent.SozlesmeDetaylar
+                            where a.Id == ID
+                            select a).FirstOrDefault();
+            silinen.Silindi = true;
+
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
         public bool SozlesmeDetaySil(SozlesmeDetay s)
         {
+            bool Sonuc = false;
+            Genel.ent.SozlesmeDetaylar.Remove(s);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
+        }
+
+        public List<SozlesmeDetay> SozlesmeDetayGetirBySozlesmeId(int ID)
+        {
             throw new NotImplementedException();
+        }
+
+        public List<SozlesmeDetay> SozlesmeDetaySorgula(int SozlesmeId, string TckNo, string EhliyetNo, DateTime Baslangıc, DateTime Bitis)
+        {
+            return Genel.ent.SozlesmeDetaylar.Where(k => k.Silindi == false && k.SozlesmeId.ToString().StartsWith(SozlesmeId.ToString()) && k.Sozlesme.Musteri.TcKimlikNo.StartsWith(TckNo) && k.Sozlesme.Musteri.EhliyetNo.StartsWith(EhliyetNo) && k.BaslangicTarihi.ToString().StartsWith(Baslangıc.ToString()) && k.BitisTarihi.ToString().StartsWith(Bitis.ToString())).ToList();
         }
     }
 }

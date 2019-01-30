@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMusteriDetay));
-            this.btnCikis = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtEhliyetNo = new System.Windows.Forms.TextBox();
             this.dgvMusteriler = new System.Windows.Forms.DataGridView();
@@ -42,23 +42,24 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpBitis = new System.Windows.Forms.DateTimePicker();
+            this.dtpBaslangic = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnCikis
+            // btnGeri
             // 
-            this.btnCikis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCikis.BackColor = System.Drawing.Color.Transparent;
-            this.btnCikis.FlatAppearance.BorderSize = 0;
-            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
-            this.btnCikis.Location = new System.Drawing.Point(770, 19);
-            this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(25, 25);
-            this.btnCikis.TabIndex = 97;
-            this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnGeri.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGeri.BackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatAppearance.BorderSize = 0;
+            this.btnGeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGeri.Image = ((System.Drawing.Image)(resources.GetObject("btnGeri.Image")));
+            this.btnGeri.Location = new System.Drawing.Point(770, 19);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(25, 25);
+            this.btnGeri.TabIndex = 97;
+            this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // label8
             // 
@@ -75,6 +76,7 @@
             this.txtEhliyetNo.Name = "txtEhliyetNo";
             this.txtEhliyetNo.Size = new System.Drawing.Size(100, 20);
             this.txtEhliyetNo.TabIndex = 95;
+            this.txtEhliyetNo.TextChanged += new System.EventHandler(this.txtEhliyetNo_TextChanged);
             // 
             // dgvMusteriler
             // 
@@ -85,8 +87,10 @@
             this.dgvMusteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMusteriler.Location = new System.Drawing.Point(15, 85);
             this.dgvMusteriler.Name = "dgvMusteriler";
+            this.dgvMusteriler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMusteriler.Size = new System.Drawing.Size(744, 289);
             this.dgvMusteriler.TabIndex = 94;
+            this.dgvMusteriler.DoubleClick += new System.EventHandler(this.dgvMusteriler_DoubleClick);
             // 
             // label6
             // 
@@ -121,6 +125,7 @@
             this.txtTCKNo.Name = "txtTCKNo";
             this.txtTCKNo.Size = new System.Drawing.Size(100, 20);
             this.txtTCKNo.TabIndex = 90;
+            this.txtTCKNo.TextChanged += new System.EventHandler(this.txtTCKNo_TextChanged);
             // 
             // txtSoyad
             // 
@@ -128,6 +133,7 @@
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(100, 20);
             this.txtSoyad.TabIndex = 89;
+            this.txtSoyad.TextChanged += new System.EventHandler(this.txtSoyad_TextChanged);
             // 
             // txtAd
             // 
@@ -135,6 +141,7 @@
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(100, 20);
             this.txtAd.TabIndex = 88;
+            this.txtAd.TextChanged += new System.EventHandler(this.txtAd_TextChanged);
             // 
             // label3
             // 
@@ -162,19 +169,21 @@
             this.label4.TabIndex = 103;
             this.label4.Text = "Tarih aralığı seçin";
             // 
-            // dateTimePicker2
+            // dtpBitis
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(252, 25);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 102;
+            this.dtpBitis.Location = new System.Drawing.Point(252, 25);
+            this.dtpBitis.Name = "dtpBitis";
+            this.dtpBitis.Size = new System.Drawing.Size(200, 20);
+            this.dtpBitis.TabIndex = 102;
+            this.dtpBitis.ValueChanged += new System.EventHandler(this.dtpBitis_ValueChanged);
             // 
-            // dateTimePicker1
+            // dtpBaslangic
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(46, 25);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 101;
+            this.dtpBaslangic.Location = new System.Drawing.Point(46, 25);
+            this.dtpBaslangic.Name = "dtpBaslangic";
+            this.dtpBaslangic.Size = new System.Drawing.Size(200, 20);
+            this.dtpBaslangic.TabIndex = 101;
+            this.dtpBaslangic.ValueChanged += new System.EventHandler(this.dtpBaslangic_ValueChanged);
             // 
             // frmMusteriDetay
             // 
@@ -182,11 +191,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 419);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpBitis);
+            this.Controls.Add(this.dtpBaslangic);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btnCikis);
+            this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtEhliyetNo);
             this.Controls.Add(this.dgvMusteriler);
@@ -198,6 +207,7 @@
             this.Controls.Add(this.txtAd);
             this.Name = "frmMusteriDetay";
             this.Text = "frmMusteriDetay";
+            this.Load += new System.EventHandler(this.frmMusteriDetay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -206,7 +216,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnCikis;
+        private System.Windows.Forms.Button btnGeri;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtEhliyetNo;
         private System.Windows.Forms.DataGridView dgvMusteriler;
@@ -219,7 +229,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpBitis;
+        private System.Windows.Forms.DateTimePicker dtpBaslangic;
     }
 }

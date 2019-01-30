@@ -11,37 +11,124 @@ namespace BLL.RentACar.Repositories
     {
         public bool AracEkle(Arac A)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+
+            Genel.ent.Araclar.Add(A);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
-        public List<Arac> AracGetir()
+        public List<Arac> AracListele()
         {
-            throw new NotImplementedException();
+            return Genel.ent.Araclar.ToList();
+        }
+        public string[] AracListeleByMarka()
+        {
+            string[] araclar = Genel.ent.Araclar.Select(a=>a.Marka).Distinct().ToArray();
+            return araclar;
         }
 
-        public List<Arac> AracGetirById(int ID)
+        public Arac AracGetirById(int ID)
         {
-            throw new NotImplementedException();
+            Arac bulunan = (from a in Genel.ent.Araclar
+                            where a.Id == ID
+                            select a).FirstOrDefault();
+
+            return bulunan;
         }
 
-        public List<Arac> AracGetirByPlaka(string Plaka)
+        public Arac AracGetirByPlaka(string Plaka)
         {
-            throw new NotImplementedException();
+            Arac bulunan = (from a in Genel.ent.Araclar
+                            where a.Plaka == Plaka
+                            select a).FirstOrDefault();
+            return bulunan;
         }
 
         public bool AracGuncelle(Arac A)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
         public bool AracSil(int ID)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            Arac silinen = (from a in Genel.ent.Araclar
+                            where a.Id == ID
+                            select a).FirstOrDefault();
+            Genel.ent.Araclar.Remove(silinen);
+
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
         public bool AracSil(Arac A)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+
+            Genel.ent.Araclar.Remove(A);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
+        }
+
+        public bool AracKontrol(Arac c)
+        {
+            bool Sonuc = false;
+            Arac aranan = (from a in Genel.ent.Araclar
+                           where a.Plaka == c.Plaka
+                           select a).FirstOrDefault();
+            if (aranan != null)
+            {
+                Sonuc = true;
+            }
+            return Sonuc;
+        }
+
+        public bool AracKontrolbyGuncelleme(Arac c)
+        {
+            bool Sonuc = false;
+            Arac aranan = (from a in Genel.ent.Araclar
+                           where a.Plaka == c.Plaka && a.Id!=c.Id
+                           select a).FirstOrDefault();
+            if (aranan != null)
+            {
+                Sonuc = true;
+            }
+            return Sonuc;
         }
     }
 }

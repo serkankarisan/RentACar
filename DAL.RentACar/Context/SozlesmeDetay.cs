@@ -17,8 +17,6 @@ namespace DAL.RentACar.Context
         public int SozlesmeId { get; set; }
         public int AracId { get; set; }
         [Required]
-        public string KiralamaTuru { get; set; }
-        [Required]
         public decimal Tutar { get; set; }
         [Required]
         public DateTime BaslangicTarihi { get; set; }

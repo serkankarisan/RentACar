@@ -65,11 +65,11 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPersoneller = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.toolStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPersoneller)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStripLabel9
@@ -125,6 +125,7 @@
             this.tsbDegistir.Name = "tsbDegistir";
             this.tsbDegistir.Size = new System.Drawing.Size(71, 24);
             this.tsbDegistir.Text = "&Değiştir";
+            this.tsbDegistir.Click += new System.EventHandler(this.tsbDegistir_Click);
             // 
             // toolStripSeparator14
             // 
@@ -139,6 +140,7 @@
             this.tsbSil.Name = "tsbSil";
             this.tsbSil.Size = new System.Drawing.Size(43, 24);
             this.tsbSil.Text = "&Sil";
+            this.tsbSil.Click += new System.EventHandler(this.tsbSil_Click);
             // 
             // toolStripLabel6
             // 
@@ -249,7 +251,7 @@
             // 
             this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAd.Location = new System.Drawing.Point(99, 7);
-            this.txtAd.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(149, 20);
             this.txtAd.TabIndex = 16;
@@ -258,7 +260,7 @@
             // 
             this.txtSoyad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSoyad.Location = new System.Drawing.Point(99, 45);
-            this.txtSoyad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(149, 20);
             this.txtSoyad.TabIndex = 17;
@@ -267,7 +269,7 @@
             // 
             this.txtTelefon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefon.Location = new System.Drawing.Point(99, 83);
-            this.txtTelefon.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(149, 20);
             this.txtTelefon.TabIndex = 18;
@@ -276,7 +278,7 @@
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Location = new System.Drawing.Point(99, 121);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(203, 20);
             this.txtEmail.TabIndex = 19;
@@ -285,7 +287,7 @@
             // 
             this.txtAdres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAdres.Location = new System.Drawing.Point(99, 159);
-            this.txtAdres.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAdres.Multiline = true;
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(203, 101);
@@ -295,7 +297,7 @@
             // 
             this.txtMaas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaas.Location = new System.Drawing.Point(99, 268);
-            this.txtMaas.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaas.Name = "txtMaas";
             this.txtMaas.Size = new System.Drawing.Size(149, 20);
             this.txtMaas.TabIndex = 21;
@@ -389,40 +391,43 @@
             this.toolStripLabel9});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1052, 27);
+            this.toolStrip2.Size = new System.Drawing.Size(1028, 27);
             this.toolStrip2.TabIndex = 38;
             this.toolStrip2.Text = "toolStrip2";
             // 
-            // dataGridView1
+            // dgvPersoneller
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(382, 115);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(652, 409);
-            this.dataGridView1.TabIndex = 35;
+            this.dgvPersoneller.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPersoneller.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvPersoneller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPersoneller.Location = new System.Drawing.Point(382, 115);
+            this.dgvPersoneller.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPersoneller.Name = "dgvPersoneller";
+            this.dgvPersoneller.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPersoneller.Size = new System.Drawing.Size(652, 409);
+            this.dgvPersoneller.TabIndex = 35;
+            this.dgvPersoneller.DoubleClick += new System.EventHandler(this.dgvPersoneller_DoubleClick);
             // 
             // frmPersonelIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1052, 568);
+            this.ClientSize = new System.Drawing.Size(1028, 568);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.toolStrip2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPersoneller);
             this.Name = "frmPersonelIslemleri";
             this.Text = "frmPersonelIslemleri";
+            this.Load += new System.EventHandler(this.frmPersonelIslemleri_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPersoneller)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,6 +471,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPersoneller;
     }
 }

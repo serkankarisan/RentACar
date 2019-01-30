@@ -27,7 +27,7 @@ namespace BLL.RentACar.Repositories
 
         public List<Personel> PersonelListele()
         {
-            return Genel.ent.Personeller.ToList();
+            return Genel.ent.Personeller.Where(p => p.Silindi == false).ToList();
         }
 
         public Personel PersonelGetirById(int ID)
@@ -94,6 +94,11 @@ namespace BLL.RentACar.Repositories
                                     where s.Adi == Ad && s.Soyadi == Soyad
                                     select s).ToList();
             return sorgu;
+        }
+
+        public bool PersonelKontrol(Personel P)
+        {
+            return Convert.ToBoolean(Genel.ent.Personeller.Where(k => k.Adi == P.Adi && k.Soyadi == P.Soyadi).ToList().Count);
         }
     }
 }

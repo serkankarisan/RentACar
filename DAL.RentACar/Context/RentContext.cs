@@ -15,6 +15,7 @@ namespace DAL.RentACar.Context
             //Migration işlemleri için DbContext(RentContext) ile Migration eşleştirilmelidir.
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<RentContext, Configuration>("RentContext"));
         }
+        public virtual DbSet<GelirGider> GelirGider { get; set; }
         public virtual DbSet<Arac> Araclar { get; set; }
         public virtual DbSet<KasaHareket> KasaHareketler { get; set; }
         public virtual DbSet<Musteri> Musteriler { get; set; }

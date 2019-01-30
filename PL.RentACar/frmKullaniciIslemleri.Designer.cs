@@ -54,11 +54,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cbPersonel = new System.Windows.Forms.ComboBox();
+            this.txtSifreTekrar = new System.Windows.Forms.TextBox();
+            this.cbYetki = new System.Windows.Forms.ComboBox();
+            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
+            this.txtSifre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,23 +66,23 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPersonelAdi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtPersonelSoyadi = new System.Windows.Forms.TextBox();
+            this.dgvKullanicilar = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tsYetki
             // 
             this.tsYetki.Name = "tsYetki";
-            this.tsYetki.Size = new System.Drawing.Size(66, 24);
+            this.tsYetki.Size = new System.Drawing.Size(65, 24);
             this.tsYetki.Text = "           Yetki";
             // 
             // tsKullanici
@@ -111,8 +111,9 @@
             this.tsYeni.Image = ((System.Drawing.Image)(resources.GetObject("tsYeni.Image")));
             this.tsYeni.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsYeni.Name = "tsYeni";
-            this.tsYeni.Size = new System.Drawing.Size(54, 24);
+            this.tsYeni.Size = new System.Drawing.Size(53, 24);
             this.tsYeni.Text = "&Yeni";
+            this.tsYeni.Click += new System.EventHandler(this.tsYeni_Click);
             // 
             // toolStripSeparator5
             // 
@@ -127,6 +128,7 @@
             this.tsKaydet.Name = "tsKaydet";
             this.tsKaydet.Size = new System.Drawing.Size(67, 24);
             this.tsKaydet.Text = "&Kaydet";
+            this.tsKaydet.Click += new System.EventHandler(this.tsKaydet_Click);
             // 
             // toolStripSeparator6
             // 
@@ -141,6 +143,7 @@
             this.tsDegistir.Name = "tsDegistir";
             this.tsDegistir.Size = new System.Drawing.Size(71, 24);
             this.tsDegistir.Text = "&Değiştir";
+            this.tsDegistir.Click += new System.EventHandler(this.tsDegistir_Click);
             // 
             // toolStripSeparator7
             // 
@@ -155,6 +158,7 @@
             this.tsSil.Name = "tsSil";
             this.tsSil.Size = new System.Drawing.Size(43, 24);
             this.tsSil.Text = "&Sil";
+            this.tsSil.Click += new System.EventHandler(this.tsSil_Click);
             // 
             // toolStripLabel4
             // 
@@ -238,11 +242,11 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.cbPersonel);
+            this.panel1.Controls.Add(this.txtSifreTekrar);
+            this.panel1.Controls.Add(this.cbYetki);
+            this.panel1.Controls.Add(this.txtKullaniciAdi);
+            this.panel1.Controls.Add(this.txtSifre);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
@@ -271,51 +275,55 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Şifre Tekrar";
             // 
-            // comboBox1
+            // cbPersonel
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(131, 140);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cbPersonel.FormattingEnabled = true;
+            this.cbPersonel.Location = new System.Drawing.Point(131, 140);
+            this.cbPersonel.Margin = new System.Windows.Forms.Padding(4);
+            this.cbPersonel.Name = "cbPersonel";
+            this.cbPersonel.Size = new System.Drawing.Size(160, 21);
+            this.cbPersonel.TabIndex = 0;
+            this.cbPersonel.SelectedIndexChanged += new System.EventHandler(this.cbPersonel_SelectedIndexChanged);
             // 
-            // textBox5
+            // txtSifreTekrar
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(131, 102);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(160, 20);
-            this.textBox5.TabIndex = 14;
+            this.txtSifreTekrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSifreTekrar.Location = new System.Drawing.Point(131, 102);
+            this.txtSifreTekrar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSifreTekrar.Name = "txtSifreTekrar";
+            this.txtSifreTekrar.PasswordChar = '*';
+            this.txtSifreTekrar.Size = new System.Drawing.Size(160, 20);
+            this.txtSifreTekrar.TabIndex = 14;
             // 
-            // comboBox2
+            // cbYetki
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(131, 181);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(160, 21);
-            this.comboBox2.TabIndex = 1;
+            this.cbYetki.FormattingEnabled = true;
+            this.cbYetki.Location = new System.Drawing.Point(131, 181);
+            this.cbYetki.Margin = new System.Windows.Forms.Padding(4);
+            this.cbYetki.Name = "cbYetki";
+            this.cbYetki.Size = new System.Drawing.Size(160, 21);
+            this.cbYetki.TabIndex = 1;
+            this.cbYetki.SelectedIndexChanged += new System.EventHandler(this.cbYetki_SelectedIndexChanged);
             // 
-            // textBox1
+            // txtKullaniciAdi
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(131, 26);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtKullaniciAdi.BackColor = System.Drawing.Color.White;
+            this.txtKullaniciAdi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(131, 26);
+            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(160, 20);
+            this.txtKullaniciAdi.TabIndex = 2;
             // 
-            // textBox2
+            // txtSifre
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(131, 64);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtSifre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSifre.Location = new System.Drawing.Point(131, 64);
+            this.txtSifre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.PasswordChar = '*';
+            this.txtSifre.Size = new System.Drawing.Size(160, 20);
+            this.txtSifre.TabIndex = 3;
             // 
             // label2
             // 
@@ -374,9 +382,9 @@
             this.panel2.BackColor = System.Drawing.Color.Azure;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txtPersonelAdi);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.txtPersonelSoyadi);
             this.panel2.Location = new System.Drawing.Point(11, 395);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(355, 92);
@@ -392,14 +400,15 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Personel Adı";
             // 
-            // textBox3
+            // txtPersonelAdi
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(147, 15);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(176, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtPersonelAdi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPersonelAdi.Location = new System.Drawing.Point(147, 15);
+            this.txtPersonelAdi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPersonelAdi.Name = "txtPersonelAdi";
+            this.txtPersonelAdi.Size = new System.Drawing.Size(176, 20);
+            this.txtPersonelAdi.TabIndex = 10;
+            this.txtPersonelAdi.TextChanged += new System.EventHandler(this.txtPersonelAdi_TextChanged);
             // 
             // label6
             // 
@@ -411,25 +420,28 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Personel Soyadı";
             // 
-            // textBox4
+            // txtPersonelSoyadi
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(147, 52);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(176, 20);
-            this.textBox4.TabIndex = 11;
+            this.txtPersonelSoyadi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPersonelSoyadi.Location = new System.Drawing.Point(147, 52);
+            this.txtPersonelSoyadi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPersonelSoyadi.Name = "txtPersonelSoyadi";
+            this.txtPersonelSoyadi.Size = new System.Drawing.Size(176, 20);
+            this.txtPersonelSoyadi.TabIndex = 11;
+            this.txtPersonelSoyadi.TextChanged += new System.EventHandler(this.txtPersonelSoyadi_TextChanged);
             // 
-            // dataGridView1
+            // dgvKullanicilar
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(388, 78);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(652, 409);
-            this.dataGridView1.TabIndex = 29;
+            this.dgvKullanicilar.BackgroundColor = System.Drawing.Color.White;
+            this.dgvKullanicilar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKullanicilar.Location = new System.Drawing.Point(388, 78);
+            this.dgvKullanicilar.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvKullanicilar.Name = "dgvKullanicilar";
+            this.dgvKullanicilar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvKullanicilar.Size = new System.Drawing.Size(652, 409);
+            this.dgvKullanicilar.TabIndex = 29;
+            this.dgvKullanicilar.DoubleClick += new System.EventHandler(this.dgvKullanicilar_DoubleClick);
             // 
             // toolStrip1
             // 
@@ -457,7 +469,7 @@
             this.tsYetki});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1146, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1028, 27);
             this.toolStrip1.TabIndex = 28;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -465,16 +477,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1146, 557);
+            this.ClientSize = new System.Drawing.Size(1028, 557);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvKullanicilar);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmKullaniciIslemleri";
             this.Text = "frmKullaniciTanimlama";
+            this.Load += new System.EventHandler(this.frmKullaniciIslemleri_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -483,7 +496,7 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -518,11 +531,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox cbPersonel;
+        private System.Windows.Forms.TextBox txtSifreTekrar;
+        private System.Windows.Forms.ComboBox cbYetki;
+        private System.Windows.Forms.TextBox txtKullaniciAdi;
+        private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -530,10 +543,10 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPersonelAdi;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtPersonelSoyadi;
+        private System.Windows.Forms.DataGridView dgvKullanicilar;
         private System.Windows.Forms.ToolStrip toolStrip1;
     }
 }

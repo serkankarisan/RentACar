@@ -11,37 +11,92 @@ namespace BLL.RentACar.Repositories
     {
         public bool KullaniciEkle(Kullanici k)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            Genel.ent.Kullanicilar.Add(k);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
-        public List<Kullanici> KullaniciGetir()
+        public Kullanici KullaniciGetirById(int ID)
         {
-            throw new NotImplementedException();
-        }
+            Kullanici kullanici= (from k in Genel.ent.Kullanicilar
+                               where k.Id == ID
+                               select k).FirstOrDefault();
 
-        public List<Kullanici> KullaniciGetirById(int ID)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Kullanici> KullaniciGetirByPeronel(string Ad, string Soyad)
-        {
-            throw new NotImplementedException();
+            return kullanici;
         }
 
         public bool KullaniciGuncelle(Kullanici k)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
+        }
+
+        public bool KullaniciKontrol(Kullanici yeni)
+        {
+            return Convert.ToBoolean(Genel.ent.Kullanicilar.Where(k => k.UserName == yeni.UserName || k.PersonelId == yeni.PersonelId).ToList().Count);
+        }
+
+        public List<Kullanici> KullaniciListele()
+        {
+            return Genel.ent.Kullanicilar.Where(k => k.Silindi == false).ToList();
+        }
+
+        public List<Kullanici> KullaniciListeleByPersonel(string Ad, string Soyad)
+        {
+            return Genel.ent.Kullanicilar.Where(k => k.Silindi == false && k.Personel.Adi.StartsWith(Ad) && k.Personel.Soyadi.StartsWith(Soyad)).ToList();
         }
 
         public bool KullaniciSil(int ID)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            Kullanici silinen = (from k in Genel.ent.Kullanicilar
+                               where k.Id == ID
+                               select k).FirstOrDefault();
+            silinen.Silindi = true;
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
 
         public bool KullaniciSil(Kullanici k)
         {
-            throw new NotImplementedException();
+            bool Sonuc = false;
+            Genel.ent.Kullanicilar.Remove(k);
+            try
+            {
+                Genel.ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
     }
 }

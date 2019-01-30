@@ -9,9 +9,9 @@ namespace BLL.RentACar.Repositories
 {
     public interface IKasaHareketRepository
     {
-        List<KasaHareket> KasaHareketGetir();
-        List<KasaHareket> KasaHareketGetirById(int ID);
-        List<KasaHareket> KasaHareketGetirByTarih(DateTime baslangic,DateTime bitis);
+        List<KasaHareket> KasaHareketListele();
+        KasaHareket KasaHareketGetirById(int ID);
+        List<KasaHareket> KasaHareketListeleByTarih(DateTime baslangic,DateTime bitis);
 
         bool KasaHareketEkle(KasaHareket kh);
         bool KasaHareketGuncelle(KasaHareket kh);
