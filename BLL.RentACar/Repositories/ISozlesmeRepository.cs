@@ -15,6 +15,7 @@ namespace BLL.RentACar.Repositories
         List<Sozlesme> SozlesmeListeleByMusteriId(int ID);
         List<Sozlesme> SozlesmeListeleByTarih(DateTime baslangic, DateTime bitis);
         List<Sozlesme> SozlesmeSorgula(int SozlesmeId, string TckNo, string EhliyetNo);
+        List<Sozlesme> SozlesmeSorgula(string TckNo, string EhliyetNo);
 
         bool SozlesmeEkle(Sozlesme s);
         bool SozlesmeGuncelle(Sozlesme s);

@@ -32,13 +32,21 @@ namespace PL.RentACar
             {
                 dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula(Convert.ToInt32(txtSozlesmeId.Text), txtTCKNo.Text, txtEhliyetNo.Text);
             }
+            else
+            {
+                dgvSozlesmeler.DataSource = sRep.SozlesmeListele();
+            }
         }
 
         private void txtTCKNo_TextChanged(object sender, EventArgs e)
         {
             if (txtTCKNo.Text.Trim() != "")
             {
-                dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula( txtTCKNo.Text, txtEhliyetNo.Text);
+                dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula(txtTCKNo.Text, txtEhliyetNo.Text);
+            }
+            else
+            {
+                dgvSozlesmeler.DataSource = sRep.SozlesmeListele();
             }
         }
 
@@ -47,6 +55,10 @@ namespace PL.RentACar
             if (txtEhliyetNo.Text.Trim() != "")
             {
                 dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula(txtTCKNo.Text, txtEhliyetNo.Text);
+            }
+            else
+            {
+                dgvSozlesmeler.DataSource = sRep.SozlesmeListele();
             }
         }
 
@@ -57,27 +69,60 @@ namespace PL.RentACar
 
         private void txtSozlesmeId2_TextChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToInt32(txtSozlesmeId2.Text), txtTckNo2.Text, txtEhliyetNo2.Text, dtpBaslangıc.Value,dtpBitis.Value);
+            if (txtSozlesmeId2.Text.Trim() != "")
+            {
+                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToInt32(txtSozlesmeId2.Text), txtTckNo2.Text, txtEhliyetNo2.Text, dtpBaslangıc.Value, dtpBitis.Value);
+            }
+            else
+            {
+                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetayListele();
+            }
         }
 
         private void txtTckNo2_TextChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToInt32(txtSozlesmeId2.Text), txtTckNo2.Text, txtEhliyetNo2.Text, Convert.ToDateTime(dtpBaslangıc), Convert.ToDateTime(dtpBitis));
+            if (txtTckNo2.Text.Trim() != "")
+            {
+                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(txtTckNo2.Text, txtEhliyetNo2.Text, dtpBaslangıc.Value, dtpBitis.Value);
+            }
+            else
+            {
+                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetayListele();
+            }
         }
 
         private void txtEhliyetNo2_TextChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToInt32(txtSozlesmeId2.Text), txtTckNo2.Text, txtEhliyetNo2.Text, Convert.ToDateTime(dtpBaslangıc), Convert.ToDateTime(dtpBitis));
+            if (txtEhliyetNo2.Text.Trim() != "")
+            {
+                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(txtTckNo2.Text, txtEhliyetNo2.Text, dtpBaslangıc.Value, dtpBitis.Value);
+            }
+            else
+            {
+                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetayListele();
+            }
         }
 
         private void dtpBaslangıc_ValueChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToInt32(txtSozlesmeId2.Text), txtTckNo2.Text, txtEhliyetNo2.Text, Convert.ToDateTime(dtpBaslangıc), Convert.ToDateTime(dtpBitis));
+            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToDateTime(dtpBaslangıc), Convert.ToDateTime(dtpBitis));
         }
 
         private void dtpBitis_ValueChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToInt32(txtSozlesmeId2.Text), txtTckNo2.Text, txtEhliyetNo2.Text, Convert.ToDateTime(dtpBaslangıc), Convert.ToDateTime(dtpBitis));
+            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToDateTime(dtpBaslangıc), Convert.ToDateTime(dtpBitis));
+        }
+
+        private void dgvSozlesmeDetay_DoubleClick(object sender, EventArgs e)
+        {
+            Genel.soz = sRep.SozlesmeGetirById(Convert.ToInt32(dgvSozlesmeDetay.SelectedRows[0].Cells[1].Value));
+            this.Close();
+        }
+
+        private void dgvSozlesmeler_DoubleClick(object sender, EventArgs e)
+        {
+            Genel.soz = sRep.SozlesmeGetirById(Convert.ToInt32(dgvSozlesmeler.SelectedRows[0].Cells[0].Value));
+            this.Close();
         }
     }
 }

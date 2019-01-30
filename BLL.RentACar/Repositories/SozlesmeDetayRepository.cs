@@ -118,16 +118,29 @@ namespace BLL.RentACar.Repositories
             throw new NotImplementedException();
         }
 
-        public List<SozlesmeDetay> SozlesmeDetaySorgula(int SozlesmeId, string TckNo, string EhliyetNo, DateTime Baslangıc, DateTime Bitis)
+        public List<SozlesmeDetay> SozlesmeDetaySorgula(int SozlesmeId, string TckNo, string EhliyetNo, DateTime Baslangic, DateTime Bitis)
         {
-            DateTime basla = Convert.ToDateTime(Baslangıc.ToShortDateString());
+            DateTime basla = Convert.ToDateTime(Baslangic.ToShortDateString());
             DateTime bit = Convert.ToDateTime(Bitis.ToShortDateString());
             return Genel.ent.SozlesmeDetaylar.Where(k => k.Silindi == false && k.SozlesmeId.ToString().StartsWith(SozlesmeId.ToString()) && k.Sozlesme.Musteri.TcKimlikNo.StartsWith(TckNo) && k.Sozlesme.Musteri.EhliyetNo.StartsWith(EhliyetNo) && k.BaslangicTarihi == basla  && k.BitisTarihi == bit).ToList();
+        }
+        public List<SozlesmeDetay> SozlesmeDetaySorgula(string TckNo, string EhliyetNo, DateTime Baslangic, DateTime Bitis)
+        {
+            DateTime basla = Convert.ToDateTime(Baslangic.ToShortDateString());
+            DateTime bit = Convert.ToDateTime(Bitis.ToShortDateString());
+            return Genel.ent.SozlesmeDetaylar.Where(k => k.Silindi == false && k.Sozlesme.Musteri.TcKimlikNo.StartsWith(TckNo) && k.Sozlesme.Musteri.EhliyetNo.StartsWith(EhliyetNo) && k.BaslangicTarihi == basla && k.BitisTarihi == bit).ToList();
         }
 
         public List<SozlesmeDetay> SozlesmeDetaySorgula(int SozlesmeId, string TckNo, string EhliyetNo)
         {
             throw new NotImplementedException();
+        }
+
+        public List<SozlesmeDetay> SozlesmeDetaySorgula(DateTime Baslangic, DateTime Bitis)
+        {
+            DateTime basla = Convert.ToDateTime(Baslangic.ToShortDateString());
+            DateTime bit = Convert.ToDateTime(Bitis.ToShortDateString());
+            return Genel.ent.SozlesmeDetaylar.Where(k => k.Silindi == false && k.BaslangicTarihi == basla && k.BitisTarihi == bit).ToList();
         }
     }
 }
