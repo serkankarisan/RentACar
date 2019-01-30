@@ -120,7 +120,14 @@ namespace BLL.RentACar.Repositories
 
         public List<SozlesmeDetay> SozlesmeDetaySorgula(int SozlesmeId, string TckNo, string EhliyetNo, DateTime Baslangıc, DateTime Bitis)
         {
-            return Genel.ent.SozlesmeDetaylar.Where(k => k.Silindi == false && k.SozlesmeId.ToString().StartsWith(SozlesmeId.ToString()) && k.Sozlesme.Musteri.TcKimlikNo.StartsWith(TckNo) && k.Sozlesme.Musteri.EhliyetNo.StartsWith(EhliyetNo) && k.BaslangicTarihi.ToString().StartsWith(Baslangıc.ToString()) && k.BitisTarihi.ToString().StartsWith(Bitis.ToString())).ToList();
+            DateTime basla = Convert.ToDateTime(Baslangıc.ToShortDateString());
+            DateTime bit = Convert.ToDateTime(Bitis.ToShortDateString());
+            return Genel.ent.SozlesmeDetaylar.Where(k => k.Silindi == false && k.SozlesmeId.ToString().StartsWith(SozlesmeId.ToString()) && k.Sozlesme.Musteri.TcKimlikNo.StartsWith(TckNo) && k.Sozlesme.Musteri.EhliyetNo.StartsWith(EhliyetNo) && k.BaslangicTarihi == basla  && k.BitisTarihi == bit).ToList();
+        }
+
+        public List<SozlesmeDetay> SozlesmeDetaySorgula(int SozlesmeId, string TckNo, string EhliyetNo)
+        {
+            throw new NotImplementedException();
         }
     }
 }

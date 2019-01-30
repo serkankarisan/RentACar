@@ -28,17 +28,26 @@ namespace PL.RentACar
 
         private void txtSozlesmeId_TextChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula(Convert.ToInt32(txtSozlesmeId.Text), txtTCKNo.Text, txtEhliyetNo.Text);
+            if (txtSozlesmeId.Text.Trim()!="")
+            {
+                dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula(Convert.ToInt32(txtSozlesmeId.Text), txtTCKNo.Text, txtEhliyetNo.Text);
+            }
         }
 
         private void txtTCKNo_TextChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula(Convert.ToInt32(txtSozlesmeId.Text), txtTCKNo.Text, txtEhliyetNo.Text);
+            if (txtTCKNo.Text.Trim() != "")
+            {
+                dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula( txtTCKNo.Text, txtEhliyetNo.Text);
+            }
         }
 
         private void txtEhliyetNo_TextChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula(Convert.ToInt32(txtSozlesmeId.Text), txtTCKNo.Text, txtEhliyetNo.Text);
+            if (txtEhliyetNo.Text.Trim() != "")
+            {
+                dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula(txtTCKNo.Text, txtEhliyetNo.Text);
+            }
         }
 
         private void btnCikis_Click(object sender, EventArgs e)
@@ -48,7 +57,7 @@ namespace PL.RentACar
 
         private void txtSozlesmeId2_TextChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToInt32(txtSozlesmeId2.Text), txtTckNo2.Text, txtEhliyetNo2.Text, Convert.ToDateTime(dtpBaslangıc), Convert.ToDateTime(dtpBitis));
+            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToInt32(txtSozlesmeId2.Text), txtTckNo2.Text, txtEhliyetNo2.Text, dtpBaslangıc.Value,dtpBitis.Value);
         }
 
         private void txtTckNo2_TextChanged(object sender, EventArgs e)
