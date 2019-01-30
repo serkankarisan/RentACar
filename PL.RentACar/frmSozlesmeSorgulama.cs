@@ -71,7 +71,7 @@ namespace PL.RentACar
         {
             if (txtSozlesmeId2.Text.Trim() != "")
             {
-                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToInt32(txtSozlesmeId2.Text), txtTckNo2.Text, txtEhliyetNo2.Text, dtpBaslangıc.Value, dtpBitis.Value);
+                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToInt32(txtSozlesmeId2.Text), txtTckNo2.Text, txtEhliyetNo2.Text);
             }
             else
             {
@@ -83,7 +83,7 @@ namespace PL.RentACar
         {
             if (txtTckNo2.Text.Trim() != "")
             {
-                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(txtTckNo2.Text, txtEhliyetNo2.Text, dtpBaslangıc.Value, dtpBitis.Value);
+                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(txtTckNo2.Text, txtEhliyetNo2.Text);
             }
             else
             {
@@ -95,7 +95,7 @@ namespace PL.RentACar
         {
             if (txtEhliyetNo2.Text.Trim() != "")
             {
-                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(txtTckNo2.Text, txtEhliyetNo2.Text, dtpBaslangıc.Value, dtpBitis.Value);
+                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(txtTckNo2.Text, txtEhliyetNo2.Text);
             }
             else
             {
@@ -105,12 +105,27 @@ namespace PL.RentACar
 
         private void dtpBaslangıc_ValueChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToDateTime(dtpBaslangıc), Convert.ToDateTime(dtpBitis));
+            if (dtpBaslangıc.CanSelect)
+            {
+                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(dtpBaslangıc.Value, dtpBitis.Value);
+            }
+            else
+            {
+                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetayListele();
+            }
+
         }
 
         private void dtpBitis_ValueChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToDateTime(dtpBaslangıc), Convert.ToDateTime(dtpBitis));
+            if (dtpBaslangıc.CanSelect)
+            {
+                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(dtpBaslangıc.Value, dtpBitis.Value);
+            }
+            else
+            {
+                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetayListele();
+            }
         }
 
         private void dgvSozlesmeDetay_DoubleClick(object sender, EventArgs e)
