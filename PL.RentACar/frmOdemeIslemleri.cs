@@ -364,7 +364,6 @@ namespace PL.RentACar
                     txtAdi.Focus();
                     Temizle();
                     Genel.PersonelID = 0;
-
                 }
                 else { MessageBox.Show("Kayit gerceklesmedi"); }
                 }
@@ -380,35 +379,16 @@ namespace PL.RentACar
             Listele();
         }
         private void Listele()
-        {
+        {            
             GelirGider g = (GelirGider)cbIslemTurleri.SelectedItem;
-            if (g.Tür == "Gelir")
+            if (g.Id != 0)
             {
-                if (g.Aciklama.Contains("Arac Satış") || g.Aciklama.Contains("Araç Satış"))
-                {
-                    dgvOdeme.DataSource = khr.KasaHareketListeleByArac();
-                }
-                else
-                {
-                    dgvOdeme.DataSource = khr.KasaHareketListeleBySozlesme();
-                }
-            }
-            else if (g.Tür == "Gider")
-            {
-                if (g.Aciklama.Contains("Arac") || g.Aciklama.Contains("Araç"))
-                {
-                    dgvOdeme.DataSource = khr.KasaHareketListeleByArac();
-                }
-                else
-                {
-                    dgvOdeme.DataSource = khr.KasaHareketListeleByPersonel();
-                }
+                dgvOdeme.DataSource = khr.KasaHareketListeleBygGelirGiderId(g.Id);
             }
             else
             {
                 dgvOdeme.DataSource = khr.KasaHareketListele();
             }
-
         }
         private void Temizle()
         {

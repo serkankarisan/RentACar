@@ -62,6 +62,15 @@ namespace BLL.RentACar.Repositories
                                             select kh).ToList();
             return listeTarih;
         }
+
+        public List<KasaHareket> KasaHareketListeleBygGelirGiderId(int Id)
+        {
+            List<KasaHareket> liste = (from kh in Genel.ent.KasaHareketler
+                                       where kh.Silindi == false && kh.GelirGiderId ==Id
+                                       select kh).ToList();
+            return liste;
+        }
+        
         public List<KasaHareket> KasaHareketListeleBySozlesme()
         {
             List<KasaHareket> liste = (from kh in Genel.ent.KasaHareketler

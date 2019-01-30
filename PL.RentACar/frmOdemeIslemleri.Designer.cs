@@ -115,7 +115,7 @@
             this.dgvOdeme.Location = new System.Drawing.Point(12, 206);
             this.dgvOdeme.Name = "dgvOdeme";
             this.dgvOdeme.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOdeme.Size = new System.Drawing.Size(493, 260);
+            this.dgvOdeme.Size = new System.Drawing.Size(677, 260);
             this.dgvOdeme.TabIndex = 127;
             // 
             // panel1
