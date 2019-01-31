@@ -296,10 +296,6 @@ namespace PL.RentACar
         }
         private void Enable()
         {
-            cbCinsiyet.Enabled = true;
-            cbEmail.Enabled = true;
-            dtpDogumTarihi.Enabled = true;
-            dtpEhliyetTarihi.Enabled = true;
             foreach (Control t in this.Controls)
             {
                 if (t is TextBox)
@@ -307,13 +303,14 @@ namespace PL.RentACar
                     t.Enabled = true;
                 }
             }
+            cbCinsiyet.Enabled = true;
+            cbEmail.Enabled = true;
+            dtpDogumTarihi.Enabled = true;
+            dtpEhliyetTarihi.Enabled = true;
+            txtTelefon.Enabled = true;
         }
         private void Disable()
         {
-            cbCinsiyet.Enabled = false;
-            cbEmail.Enabled = false;
-            dtpDogumTarihi.Enabled = false;
-            dtpEhliyetTarihi.Enabled = false;
             foreach (Control t in this.Controls)
             {
                 if (t is TextBox)
@@ -321,6 +318,11 @@ namespace PL.RentACar
                     t.Enabled = false;
                 }
             }
+            cbCinsiyet.Enabled = false;
+            cbEmail.Enabled = false;
+            dtpDogumTarihi.Enabled = false;
+            dtpEhliyetTarihi.Enabled = false;
+            txtTelefon.Enabled = false;
         }
     }
 }

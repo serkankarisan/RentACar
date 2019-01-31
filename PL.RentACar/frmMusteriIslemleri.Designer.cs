@@ -58,7 +58,6 @@
             this.txtAd = new System.Windows.Forms.TextBox();
             this.tsMusteriIslemleri = new System.Windows.Forms.ToolStrip();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.cbEmail = new System.Windows.Forms.ComboBox();
             this.txtTelefon = new System.Windows.Forms.MaskedTextBox();
             this.btnCikis = new System.Windows.Forms.Button();
@@ -67,14 +66,13 @@
             this.btnYenile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).BeginInit();
             this.tsMusteriIslemleri.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 289);
+            this.label8.Location = new System.Drawing.Point(12, 382);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 20);
             this.label8.TabIndex = 77;
@@ -82,7 +80,7 @@
             // 
             // dtpDogumTarihi
             // 
-            this.dtpDogumTarihi.Location = new System.Drawing.Point(129, 229);
+            this.dtpDogumTarihi.Location = new System.Drawing.Point(121, 322);
             this.dtpDogumTarihi.Name = "dtpDogumTarihi";
             this.dtpDogumTarihi.Size = new System.Drawing.Size(224, 26);
             this.dtpDogumTarihi.TabIndex = 6;
@@ -101,7 +99,7 @@
             // 
             // dtpEhliyetTarihi
             // 
-            this.dtpEhliyetTarihi.Location = new System.Drawing.Point(129, 318);
+            this.dtpEhliyetTarihi.Location = new System.Drawing.Point(121, 411);
             this.dtpEhliyetTarihi.Name = "dtpEhliyetTarihi";
             this.dtpEhliyetTarihi.Size = new System.Drawing.Size(224, 26);
             this.dtpEhliyetTarihi.TabIndex = 9;
@@ -114,7 +112,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 258);
+            this.label10.Location = new System.Drawing.Point(12, 351);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 20);
             this.label10.TabIndex = 80;
@@ -126,7 +124,7 @@
             this.cbCinsiyet.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
-            this.cbCinsiyet.Location = new System.Drawing.Point(129, 258);
+            this.cbCinsiyet.Location = new System.Drawing.Point(121, 351);
             this.cbCinsiyet.Name = "cbCinsiyet";
             this.cbCinsiyet.Size = new System.Drawing.Size(121, 28);
             this.cbCinsiyet.TabIndex = 7;
@@ -134,7 +132,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(20, 229);
+            this.label9.Location = new System.Drawing.Point(12, 322);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(103, 20);
             this.label9.TabIndex = 78;
@@ -142,7 +140,7 @@
             // 
             // txtEhliyetNo
             // 
-            this.txtEhliyetNo.Location = new System.Drawing.Point(129, 289);
+            this.txtEhliyetNo.Location = new System.Drawing.Point(121, 382);
             this.txtEhliyetNo.MaxLength = 6;
             this.txtEhliyetNo.Name = "txtEhliyetNo";
             this.txtEhliyetNo.Size = new System.Drawing.Size(150, 26);
@@ -151,7 +149,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 318);
+            this.label7.Location = new System.Drawing.Point(12, 411);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 20);
             this.label7.TabIndex = 75;
@@ -176,7 +174,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 200);
+            this.label6.Location = new System.Drawing.Point(12, 293);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 20);
             this.label6.TabIndex = 73;
@@ -220,7 +218,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 122);
+            this.label5.Location = new System.Drawing.Point(12, 215);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 20);
             this.label5.TabIndex = 72;
@@ -244,7 +242,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 91);
+            this.label4.Location = new System.Drawing.Point(12, 184);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 20);
             this.label4.TabIndex = 71;
@@ -253,7 +251,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 62);
+            this.label3.Location = new System.Drawing.Point(12, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 20);
             this.label3.TabIndex = 70;
@@ -262,7 +260,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 33);
+            this.label2.Location = new System.Drawing.Point(12, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 69;
@@ -271,7 +269,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 4);
+            this.label1.Location = new System.Drawing.Point(12, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 20);
             this.label1.TabIndex = 68;
@@ -279,7 +277,7 @@
             // 
             // txtTCKNo
             // 
-            this.txtTCKNo.Location = new System.Drawing.Point(129, 200);
+            this.txtTCKNo.Location = new System.Drawing.Point(121, 293);
             this.txtTCKNo.MaxLength = 11;
             this.txtTCKNo.Name = "txtTCKNo";
             this.txtTCKNo.Size = new System.Drawing.Size(150, 26);
@@ -287,7 +285,7 @@
             // 
             // txtAdres
             // 
-            this.txtAdres.Location = new System.Drawing.Point(129, 122);
+            this.txtAdres.Location = new System.Drawing.Point(121, 215);
             this.txtAdres.Multiline = true;
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(224, 72);
@@ -295,14 +293,14 @@
             // 
             // txtSoyad
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(129, 33);
+            this.txtSoyad.Location = new System.Drawing.Point(121, 126);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(150, 26);
             this.txtSoyad.TabIndex = 1;
             // 
             // txtAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(129, 4);
+            this.txtAd.Location = new System.Drawing.Point(121, 97);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(150, 26);
             this.txtAd.TabIndex = 0;
@@ -327,42 +325,11 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(129, 91);
+            this.txtEmail.Location = new System.Drawing.Point(121, 184);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 28);
             this.txtEmail.TabIndex = 3;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.cbEmail);
-            this.panel1.Controls.Add(this.txtTelefon);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Controls.Add(this.dtpDogumTarihi);
-            this.panel1.Controls.Add(this.txtAd);
-            this.panel1.Controls.Add(this.dtpEhliyetTarihi);
-            this.panel1.Controls.Add(this.txtSoyad);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.cbCinsiyet);
-            this.panel1.Controls.Add(this.txtAdres);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.txtTCKNo);
-            this.panel1.Controls.Add(this.txtEhliyetNo);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(12, 100);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(365, 373);
-            this.panel1.TabIndex = 83;
             // 
             // cbEmail
             // 
@@ -371,14 +338,14 @@
             "@gmail.com",
             "@hotmail.com",
             "@outlook.com"});
-            this.cbEmail.Location = new System.Drawing.Point(228, 91);
+            this.cbEmail.Location = new System.Drawing.Point(220, 184);
             this.cbEmail.Name = "cbEmail";
             this.cbEmail.Size = new System.Drawing.Size(125, 28);
             this.cbEmail.TabIndex = 81;
             // 
             // txtTelefon
             // 
-            this.txtTelefon.Location = new System.Drawing.Point(129, 62);
+            this.txtTelefon.Location = new System.Drawing.Point(121, 155);
             this.txtTelefon.Mask = "(999) 000-0000";
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(150, 26);
@@ -442,13 +409,33 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(920, 485);
+            this.Controls.Add(this.cbEmail);
             this.Controls.Add(this.btnYenile);
+            this.Controls.Add(this.txtTelefon);
             this.Controls.Add(this.label11);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnCikis);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvMusteriler);
+            this.Controls.Add(this.dtpDogumTarihi);
+            this.Controls.Add(this.txtAd);
+            this.Controls.Add(this.dtpEhliyetTarihi);
             this.Controls.Add(this.tsMusteriIslemleri);
+            this.Controls.Add(this.txtSoyad);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cbCinsiyet);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtAdres);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtTCKNo);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtEhliyetNo);
+            this.Controls.Add(this.dgvMusteriler);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -459,8 +446,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).EndInit();
             this.tsMusteriIslemleri.ResumeLayout(false);
             this.tsMusteriIslemleri.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -498,7 +483,6 @@
         private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.ToolStrip tsMusteriIslemleri;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MaskedTextBox txtTelefon;

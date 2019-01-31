@@ -67,6 +67,7 @@ namespace PL.RentACar
 
         private void tsbYeni_Click(object sender, EventArgs e)
         {
+            Enable();
             Supurge();
             tsKaydet.Enabled = true;
             txtAd.Focus();
@@ -83,6 +84,7 @@ namespace PL.RentACar
 
         private void dgvPersoneller_DoubleClick(object sender, EventArgs e)
         {
+            Enable();
             ID = Convert.ToInt32(dgvPersoneller.SelectedRows[0].Cells[0].Value);
             txtAd.Text = dgvPersoneller.SelectedRows[0].Cells[1].Value.ToString();
             txtSoyad.Text = dgvPersoneller.SelectedRows[0].Cells[2].Value.ToString();
@@ -154,6 +156,7 @@ namespace PL.RentACar
 
         private void frmPersonelIslemleri_Load(object sender, EventArgs e)
         {
+            Disable();
             dgvPersoneller.DataSource = per.PersonelListele();
             tsKaydet.Enabled = false;
         }
@@ -161,6 +164,27 @@ namespace PL.RentACar
         private void btnCikis_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Enable()
+        {
+            foreach (Control t in this.Controls)
+            {
+                if (t is TextBox)
+                {
+                    t.Enabled = true;
+                }
+            }
+        }
+        private void Disable()
+        {
+            foreach (Control t in this.Controls)
+            {
+                if (t is TextBox)
+                {
+                    t.Enabled = false;
+                }
+            }
         }
     }
 }
