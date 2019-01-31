@@ -41,6 +41,44 @@ namespace PL.RentACar
                 txtMaas.Text = p.Maas.ToString();
             }
         }
+        AracRepository arepo = new AracRepository();
+        private void btnAracSec_Click(object sender, EventArgs e)
+        {
+            frmAracSorgulama frm = new frmAracSorgulama();
+            frm.WindowState = FormWindowState.Normal;
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.ShowDialog();
+            if (Genel.AracID!=0)
+            {
+                Arac a = new Arac();
+                a = arepo.AracGetirById(Genel.AracID);
+                txtMarka.Text = a.Marka;
+                txtModel.Text = a.Model;
+                txtPlaka.Text = a.Plaka;
+                txtAracDurumu.Text = a.AracDurumu;
+            }
+        }
+
+        private void btnSozlesmeSec_Click(object sender, EventArgs e)
+        {
+            frmSozlesmeSorgulama frm = new frmSozlesmeSorgulama();
+            frm.WindowState = FormWindowState.Normal;
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.ShowDialog();
+            if (Genel.soz != null)
+            {
+                Sozlesme s = new Sozlesme();
+                s = Genel.soz;
+                txtBorc.Text = s.Borc.ToString();
+                txtSozlesmeTutar.Text = s.SozlesmeTutari.ToString();
+                txtAlınan.Text = s.Alınan.ToString();
+                txtSozlesmeTarihi.Text = s.SozlesmeTarihi.ToShortDateString();
+                Musteri m = new Musteri();
+                m = mr.MusteriGetirById(s.MusteriId);
+                txtMusteriAdi.Text = m.Adi;
+                txtMusteriSoyadi.Text = m.Soyadi;
+            }
+        }
         private void txtMaas_TextChanged(object sender, EventArgs e)
         {
             if (txtMaas.Text !="")
@@ -155,6 +193,203 @@ namespace PL.RentACar
 
         }
 
+       
+        private void btnOdemeYap_Click(object sender, EventArgs e)
+        {
+            if (txtAracTutar.Text.Trim() != "")
+            {
+                KasaHareket kh = new KasaHareket();
+                kh.AracId = Genel.AracID;
+            if (kh.AracId!=0)
+            {
+                kh.SozlesmeId = 0;
+                kh.PersonelId = 0;
+                kh.Tarih = DateTime.Now;
+                GelirGider g=(GelirGider)cbIslemTurleri.SelectedItem;
+                kh.GelirGiderId = g.Id;
+                kh.Tutar = Convert.ToDecimal(txtAracTutar.Text);
+                kh.ParaBirimi = "TL";
+                kh.Silindi = false;
+                if (khr.KasaHareketEkle(kh))
+                {
+                    MessageBox.Show("Ödeme Yapıldı.", "Kayıt gerçekleşti.");
+                    txtAdi.Focus();
+                    Temizle();
+                    Genel.PersonelID = 0;
+
+                }
+                else { MessageBox.Show("Kayit gerceklesmedi"); }
+            }
+            else
+            {
+                MessageBox.Show("Araç Seçin!");
+            }
+        }
+            else
+            {
+                MessageBox.Show("Gerekli alanlari doldurunuz!");
+            }
+            Listele();
+        }
+        private void btnOdemeAl_Click(object sender, EventArgs e)
+        {
+            if (txtAlınan.Text.Trim() != "" && txtBorc.Text.Trim() != "" && txtSozlesmeTutar.Text.Trim() != "" && txtSozlesmeOdeme.Text.Trim()!="")
+            {
+                KasaHareket kh = new KasaHareket();
+                kh.AracId = 0;
+                kh.SozlesmeId = Genel.soz.Id;
+                if (kh.SozlesmeId!=0)
+                {
+                kh.PersonelId = 0;
+                kh.Tarih = DateTime.Now;
+                kh.GelirGiderId = 2;
+                kh.Tutar = Convert.ToDecimal(txtSozlesmeOdeme.Text);
+                kh.ParaBirimi = "TL";
+                kh.Silindi = false;
+                    if (khr.KasaHareketEkle(kh))
+                    {
+                        Sozlesme s = new Sozlesme();
+                        s = Genel.soz;
+                        s.Alınan += Convert.ToDecimal(txtSozlesmeOdeme.Text);
+                        s.Borc = s.SozlesmeTutari-Convert.ToDecimal(txtSozlesmeOdeme.Text);
+                        sr.SozlesmeGuncelle(s);
+                        MessageBox.Show("Hareket Eklendi.", "Kayıt gerçekleşti.");
+                        txtBorc.Text = (Convert.ToDecimal(txtBorc.Text) - Convert.ToDecimal(txtSozlesmeOdeme.Text)).ToString();
+                        txtSozlesmeOdeme.Focus();
+                        Temizle();
+                        Genel.soz=null;
+
+                    }
+                    else { MessageBox.Show("Kayit gerceklesmedi"); }
+            }
+            else
+            {
+                MessageBox.Show("Sözleşme Seçin!");
+            }
+        }
+            else
+            {
+                MessageBox.Show("Gerekli alanlari doldurunuz!");
+            }
+            Listele();
+        }
+
+
+        private void btnAracOdemeAl_Click(object sender, EventArgs e)
+        {
+            if (txtAracTutar.Text.Trim() != "")
+            {
+                KasaHareket kh = new KasaHareket();
+                kh.AracId = Genel.AracID;
+                if (kh.AracId != 0)
+                {
+                    kh.SozlesmeId = 0;
+                    kh.PersonelId = 0;
+                    kh.Tarih = DateTime.Now;
+                    kh.GelirGiderId = 3;
+                    kh.Tutar = Convert.ToDecimal(txtAracTutar.Text);
+                    kh.ParaBirimi = "TL";
+                    kh.Silindi = false;
+                    if (khr.KasaHareketEkle(kh))
+                    {
+                        MessageBox.Show("Hareket Eklendi.", "Kayıt gerçekleşti.");
+                        Temizle();
+                        txtAracTutar.Focus();
+                        Genel.AracID = 0;
+
+                    }
+                    else { MessageBox.Show("Kayit gerceklesmedi"); }
+                }
+                else
+                {
+                    MessageBox.Show("Araç Seçin!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Gerekli alanlari doldurunuz!");
+            }
+            Listele();
+        }
+        private void btnMaasOdeme_Click(object sender, EventArgs e)
+        {
+            if (txtAdi.Text.Trim() != "" && txtSoyadi.Text.Trim() != "" && (txtMaas.Text.Trim() != "" || txtPrim.Text.Trim() != ""))
+            {
+                KasaHareket kh = new KasaHareket();
+                kh.AracId = 0;
+                kh.SozlesmeId = 0;
+                kh.PersonelId = Genel.PersonelID;
+                if (kh.PersonelId!=0)
+                {
+                kh.Tarih = DateTime.Now;
+                kh.GelirGiderId = 1;
+                kh.Tutar = Convert.ToDecimal(txtToplamOdeme.Text);
+                kh.ParaBirimi = "TL";
+                kh.Silindi = false;
+                if (khr.KasaHareketEkle(kh))
+                {
+                    MessageBox.Show("Maaş Ödendi.", "Kayıt gerçekleşti.");
+                    txtAdi.Focus();
+                    Temizle();
+                    Genel.PersonelID = 0;
+                }
+                else { MessageBox.Show("Kayit gerceklesmedi"); }
+                }
+                else
+                {
+                    MessageBox.Show("Personel Seçin!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Gerekli alanlari doldurunuz!");
+            }
+            Listele();
+        }
+        private void Listele()
+        {            
+            GelirGider g = (GelirGider)cbIslemTurleri.SelectedItem;
+            if (g.Id != 0)
+            {
+                dgvOdeme.DataSource = khr.KasaHareketListeleBygGelirGiderId(g.Id);
+            }
+            else
+            {
+                dgvOdeme.DataSource = khr.KasaHareketListele();
+            }
+        }
+        private void txtAlınan_TextChanged(object sender, EventArgs e)
+        {
+            if (txtAlınan.Text.Trim()!="" && txtSozlesmeTutar.Text.Trim()!="")
+            {
+                decimal stutar = Convert.ToDecimal(txtSozlesmeTutar.Text);
+                decimal alinan = Convert.ToDecimal(txtAlınan.Text);
+                txtBorc.Text = (stutar - alinan).ToString();
+            }
+        }
+        private void Temizle()
+        {
+            foreach (Control t in this.Controls)
+            {
+                if (t is TextBox)
+                {
+                    t.Text = "";
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
         private void PersonelGizle()
         {
             lblPersonel.Visible = false;
@@ -254,226 +489,6 @@ namespace PL.RentACar
             lblborc.Visible = true;
             lblsozlesme.Visible = true;
             lblSozlesmeOdeme.Visible = true;
-        }
-        private void btnOdemeYap_Click(object sender, EventArgs e)
-        {
-            if (txtAracTutar.Text.Trim() != "")
-            {
-                KasaHareket kh = new KasaHareket();
-                kh.AracId = Genel.AracID;
-            if (kh.AracId!=0)
-            {
-                kh.SozlesmeId = 0;
-                kh.PersonelId = 0;
-                kh.Tarih = DateTime.Now;
-                kh.GelirGiderId = 5;
-                kh.Tutar = Convert.ToDecimal(txtAracTutar.Text);
-                kh.ParaBirimi = "TL";
-                kh.Silindi = false;
-                if (khr.KasaHareketEkle(kh))
-                {
-                    MessageBox.Show("Ödeme Yapıldı.", "Kayıt gerçekleşti.");
-                    txtAdi.Focus();
-                    Temizle();
-                    Genel.PersonelID = 0;
-
-                }
-                else { MessageBox.Show("Kayit gerceklesmedi"); }
-            }
-            else
-            {
-                MessageBox.Show("Araç Seçin!");
-            }
-        }
-            else
-            {
-                MessageBox.Show("Gerekli alanlari doldurunuz!");
-            }
-            Listele();
-        }
-        private void btnOdemeAl_Click(object sender, EventArgs e)
-        {
-            if (txtAlınan.Text.Trim() != "" && txtBorc.Text.Trim() != "" && txtSozlesmeTutar.Text.Trim() != "" && txtSozlesmeOdeme.Text.Trim()!="")
-            {
-                KasaHareket kh = new KasaHareket();
-                kh.AracId = 0;
-                kh.SozlesmeId = Genel.soz.Id;
-                if (kh.SozlesmeId!=0)
-                {
-                kh.PersonelId = 0;
-                kh.Tarih = DateTime.Now;
-                kh.GelirGiderId = 2;
-                kh.Tutar = Convert.ToDecimal(txtSozlesmeOdeme.Text);
-                kh.ParaBirimi = "TL";
-                kh.Silindi = false;
-                    if (khr.KasaHareketEkle(kh))
-                    {
-                        Sozlesme s = new Sozlesme();
-                        s = Genel.soz;
-                        s.Alınan += Convert.ToDecimal(txtSozlesmeOdeme.Text);
-                        s.Borc -= Convert.ToDecimal(txtSozlesmeOdeme.Text);
-                        sr.SozlesmeGuncelle(s);
-                        MessageBox.Show("Hareket Eklendi.", "Kayıt gerçekleşti.");
-                        txtBorc.Text = (Convert.ToDecimal(txtBorc.Text) - Convert.ToDecimal(txtSozlesmeOdeme.Text)).ToString();
-                        txtSozlesmeOdeme.Focus();
-                        Temizle();
-                        Genel.soz=null;
-
-                    }
-                    else { MessageBox.Show("Kayit gerceklesmedi"); }
-            }
-            else
-            {
-                MessageBox.Show("Sözleşme Seçin!");
-            }
-        }
-            else
-            {
-                MessageBox.Show("Gerekli alanlari doldurunuz!");
-            }
-            Listele();
-        }
-        AracRepository arepo = new AracRepository();
-        private void btnAracSec_Click(object sender, EventArgs e)
-        {
-            frmAracSorgulama frm = new frmAracSorgulama();
-            frm.WindowState = FormWindowState.Normal;
-            frm.StartPosition = FormStartPosition.CenterParent;
-            frm.ShowDialog();
-            if (Genel.AracID!=0)
-            {
-                Arac a = new Arac();
-                a = arepo.AracGetirById(Genel.AracID);
-                txtMarka.Text = a.Marka;
-                txtModel.Text = a.Model;
-                txtPlaka.Text = a.Plaka;
-                txtAracDurumu.Text = a.AracDurumu;
-            }
-        }
-
-        private void btnSozlesmeSec_Click(object sender, EventArgs e)
-        {
-            frmSozlesmeSorgulama frm = new frmSozlesmeSorgulama();
-            frm.WindowState = FormWindowState.Normal;
-            frm.StartPosition = FormStartPosition.CenterParent;
-            frm.ShowDialog();
-            if (Genel.soz != null)
-            {
-                Sozlesme s = new Sozlesme();
-                s = Genel.soz;
-                txtBorc.Text = s.Borc.ToString();
-                txtSozlesmeTutar.Text = s.SozlesmeTutari.ToString();
-                txtAlınan.Text = s.Alınan.ToString();
-                txtSozlesmeTarihi.Text = s.SozlesmeTarihi.ToShortDateString();
-                Musteri m = new Musteri();
-                m = mr.MusteriGetirById(s.MusteriId);
-                txtMusteriAdi.Text = m.Adi;
-                txtMusteriSoyadi.Text = m.Soyadi;
-            }
-        }
-
-        private void btnAracOdemeAl_Click(object sender, EventArgs e)
-        {
-            if (txtAracTutar.Text.Trim() != "")
-            {
-                KasaHareket kh = new KasaHareket();
-                kh.AracId = Genel.AracID;
-                if (kh.AracId != 0)
-                {
-                    kh.SozlesmeId = 0;
-                    kh.PersonelId = 0;
-                    kh.Tarih = DateTime.Now;
-                    kh.GelirGiderId = 6;
-                    kh.Tutar = Convert.ToDecimal(txtAracTutar.Text);
-                    kh.ParaBirimi = "TL";
-                    kh.Silindi = false;
-                    if (khr.KasaHareketEkle(kh))
-                    {
-                        MessageBox.Show("Hareket Eklendi.", "Kayıt gerçekleşti.");
-                        Temizle();
-                        txtAracTutar.Focus();
-                        Genel.AracID = 0;
-
-                    }
-                    else { MessageBox.Show("Kayit gerceklesmedi"); }
-                }
-                else
-                {
-                    MessageBox.Show("Araç Seçin!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Gerekli alanlari doldurunuz!");
-            }
-            Listele();
-        }
-        private void btnMaasOdeme_Click(object sender, EventArgs e)
-        {
-            if (txtAdi.Text.Trim() != "" && txtSoyadi.Text.Trim() != "" && (txtMaas.Text.Trim() != "" || txtPrim.Text.Trim() != ""))
-            {
-                KasaHareket kh = new KasaHareket();
-                kh.AracId = 0;
-                kh.SozlesmeId = 0;
-                kh.PersonelId = Genel.PersonelID;
-                if (kh.PersonelId!=0)
-                {
-                kh.Tarih = DateTime.Now;
-                kh.GelirGiderId = 1;
-                kh.Tutar = Convert.ToDecimal(txtToplamOdeme.Text);
-                kh.ParaBirimi = "TL";
-                kh.Silindi = false;
-                if (khr.KasaHareketEkle(kh))
-                {
-                    MessageBox.Show("Maaş Ödendi.", "Kayıt gerçekleşti.");
-                    txtAdi.Focus();
-                    Temizle();
-                    Genel.PersonelID = 0;
-                }
-                else { MessageBox.Show("Kayit gerceklesmedi"); }
-                }
-                else
-                {
-                    MessageBox.Show("Personel Seçin!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Gerekli alanlari doldurunuz!");
-            }
-            Listele();
-        }
-        private void Listele()
-        {            
-            GelirGider g = (GelirGider)cbIslemTurleri.SelectedItem;
-            if (g.Id != 0)
-            {
-                dgvOdeme.DataSource = khr.KasaHareketListeleBygGelirGiderId(g.Id);
-            }
-            else
-            {
-                dgvOdeme.DataSource = khr.KasaHareketListele();
-            }
-        }
-        private void Temizle()
-        {
-            foreach (Control t in this.Controls)
-            {
-                if (t is TextBox)
-                {
-                    t.Text = "";
-                }
-            }
-        }
-
-        private void txtAlınan_TextChanged(object sender, EventArgs e)
-        {
-            if (txtAlınan.Text.Trim()!="" && txtSozlesmeTutar.Text.Trim()!="")
-            {
-                decimal stutar = Convert.ToDecimal(txtSozlesmeTutar.Text);
-                decimal alinan = Convert.ToDecimal(txtAlınan.Text);
-                txtBorc.Text = (stutar - alinan).ToString();
-            }
         }
     }
 }

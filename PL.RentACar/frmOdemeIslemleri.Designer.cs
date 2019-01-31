@@ -89,7 +89,7 @@
             this.btnOdemeAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOdemeAl.Image = ((System.Drawing.Image)(resources.GetObject("btnOdemeAl.Image")));
             this.btnOdemeAl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOdemeAl.Location = new System.Drawing.Point(808, 139);
+            this.btnOdemeAl.Location = new System.Drawing.Point(833, 139);
             this.btnOdemeAl.Name = "btnOdemeAl";
             this.btnOdemeAl.Size = new System.Drawing.Size(133, 40);
             this.btnOdemeAl.TabIndex = 131;
@@ -627,7 +627,6 @@
             this.Controls.Add(this.txtPrim);
             this.Controls.Add(this.txtMaas);
             this.Controls.Add(this.lblPersonel);
-            this.Controls.Add(this.btnOdemeYap);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbIslemTurleri);
             this.Controls.Add(this.btnOdemeAl);
@@ -660,6 +659,7 @@
             this.Controls.Add(this.txtAdi);
             this.Controls.Add(this.btnSozlesmeSec);
             this.Controls.Add(this.btnAracSec);
+            this.Controls.Add(this.btnOdemeYap);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
