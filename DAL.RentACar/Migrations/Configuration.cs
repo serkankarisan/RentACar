@@ -34,6 +34,15 @@ namespace DAL.RentACar.Migrations
                 new GelirGider { Id = 5, Aciklama = "Araç Muayene", Tür = "Gider", Silindi = false },
                 new GelirGider { Id = 6, Aciklama = "Araç Diðer", Tür = "Gider", Silindi = false }
                 );
+            context.Kullanicilar.AddOrUpdate(
+               new Kullanici { Id = 1, UserName = "rent", Password = "123",RoleId=1,PersonelId=1, Silindi = false }
+               );
+            context.Personeller.AddOrUpdate(
+            new Personel { Id = 1,Adi = "Ali",Soyadi="Uçar",Telefon="2123114567",Maas=3000,Adres="Beþiktaþ -Ýstanbul",Email="Ali@gmail.com", Silindi = false }
+               );
+            context.Yetkiler.AddOrUpdate(
+            new Yetki { Id = 1, RoleName = "Yönetici"}, new Yetki { Id = 2, RoleName = "Personel" }
+               );
         }
     }
 }
