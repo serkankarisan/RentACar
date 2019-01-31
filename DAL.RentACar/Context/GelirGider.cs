@@ -26,5 +26,10 @@ namespace DAL.RentACar.Context
         {
             return Aciklama;
         }
+
+        public GelirGider()
+        {
+            Silindi = false;
+        }
     }
 }

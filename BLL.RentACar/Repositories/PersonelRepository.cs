@@ -41,6 +41,8 @@ namespace BLL.RentACar.Repositories
         public bool PersonelGuncelle(Personel P)
         {
             bool Sonuc = false;
+            Personel degisen = PersonelGetirById(P.Id);
+            degisen = P;
             try
             {
                 Genel.ent.SaveChanges();

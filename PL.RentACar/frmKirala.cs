@@ -25,15 +25,18 @@ namespace PL.RentACar
         {
             frmAracSorgulama frm = new frmAracSorgulama();
             frm.ShowDialog();
-            Arac a = arepo.AracGetirById(Genel.AracID);
-            txtMarka.Text = a.Marka;
-            txtModel.Text = a.Model;
-            txtTip.Text = a.Tip;
-            txtRenk.Text = a.Renk;
-            txtPlaka.Text = a.Plaka;
-            txtYakıtDurumu.Text = a.YakitDurumu;
-            txtAracDurumu.Text = a.AracDurumu;
-            txtGunlukFiyat.Text = a.GünlükFiyat.ToString();
+            if (Genel.AracID!=0)
+            {
+                Arac a = arepo.AracGetirById(Genel.AracID);
+                txtMarka.Text = a.Marka;
+                txtModel.Text = a.Model;
+                txtTip.Text = a.Tip;
+                txtRenk.Text = a.Renk;
+                txtPlaka.Text = a.Plaka;
+                txtYakıtDurumu.Text = a.YakitDurumu;
+                txtAracDurumu.Text = a.AracDurumu;
+                txtGunlukFiyat.Text = a.GünlükFiyat.ToString();
+            }
         }
 
         private void btnCikis_Click(object sender, EventArgs e)
@@ -51,8 +54,10 @@ namespace PL.RentACar
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            btnTamamla.Enabled = true;
-            SozlesmeDetay sd = new SozlesmeDetay();
+            if (txtTutar.Text.Trim()!="0")
+            {
+                btnTamamla.Enabled = true;
+                SozlesmeDetay sd = new SozlesmeDetay();
                 if (Genel.AracID != 0)
                 {
                     sd.AracId = Genel.AracID;
@@ -61,20 +66,29 @@ namespace PL.RentACar
                     sd.BitisTarihi = dtpBitis.Value;
                     sd.SozlesmeId = Genel.soz.Id;
                     sd.Tutar = Convert.ToDecimal(txtTutar.Text);
+                    Arac a = new Arac();
+                    a = arepo.AracGetirById(Genel.AracID);
+                    a.Varmi = false;
+                    arepo.AracGuncelle(a);
                     if (!sdrepo.SozlesmeDetayEkle(sd))
                     {
                         MessageBox.Show("Bu Detay Eklenemedi!", "Hatalı Bilgi Girişi!");
                     }
                     else
                     {
-                            MessageBox.Show("Araç Listeye Eklendi.", "Kayıt Gerçekleşti.");
-                            Temizle();
+                        MessageBox.Show("Araç Listeye Eklendi.", "Kayıt Gerçekleşti.");
+                        Temizle();
                     }
                 }
                 else
                 {
                     MessageBox.Show("Bir Araç Seçmelisiniz!", "Eksik Bilgi Girişi!");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Başlangıç ve Bitiş Tarihlerini Kontroledin!", "Tarih Hatalı!");
+            }
             ListeGoster();
         }
         decimal tutar;
@@ -169,14 +183,17 @@ namespace PL.RentACar
         private void btnTamamla_Click(object sender, EventArgs e)
         {
             Sozlesme s = new Sozlesme();
-            s.Id = Genel.soz.Id;
+            s = sozrepo.SozlesmeGetirById(Genel.soz.Id);
             s.AracSayisi = Convert.ToInt32(txtAracSayisi.Text);
             s.SozlesmeTutari = Convert.ToDecimal(txtSozlesmeTutari.Text);
+            s.Borc = Convert.ToDecimal(txtSozlesmeTutari.Text);
             sozrepo.SozlesmeGuncelle(s);
             btnTamamla.Enabled = false;
+            Genel.cbIslem = "SozlesmeOdeme";
             frmOdemeIslemleri frm = new frmOdemeIslemleri();
             this.Hide();
             FormAc(frm);
+            Genel.cbIslem = "";
         }
         private void FormAc(Form AF)
         {
@@ -185,5 +202,7 @@ namespace PL.RentACar
             AF.Dock = DockStyle.Fill;
             AF.Show();
         }
+
+       
     }
 }

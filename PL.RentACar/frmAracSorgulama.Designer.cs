@@ -61,15 +61,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 77);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.Size = new System.Drawing.Size(53, 20);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Marka :";
+            this.label2.Text = "Marka";
             // 
             // lvDetaylar
             // 
+            this.lvDetaylar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvDetaylar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader6,
             this.columnHeader1,
@@ -80,9 +83,9 @@
             this.lvDetaylar.ContextMenuStrip = this.cmView;
             this.lvDetaylar.FullRowSelect = true;
             this.lvDetaylar.LargeImageList = this.ilLarge;
-            this.lvDetaylar.Location = new System.Drawing.Point(12, 117);
+            this.lvDetaylar.Location = new System.Drawing.Point(16, 117);
             this.lvDetaylar.Name = "lvDetaylar";
-            this.lvDetaylar.Size = new System.Drawing.Size(655, 285);
+            this.lvDetaylar.Size = new System.Drawing.Size(653, 284);
             this.lvDetaylar.SmallImageList = this.ilSmall;
             this.lvDetaylar.TabIndex = 10;
             this.lvDetaylar.UseCompatibleStateImageBehavior = false;
@@ -187,53 +190,55 @@
             // 
             this.cbMarkalar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMarkalar.DropDownWidth = 110;
+            this.cbMarkalar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbMarkalar.FormattingEnabled = true;
-            this.cbMarkalar.Location = new System.Drawing.Point(222, 78);
+            this.cbMarkalar.Location = new System.Drawing.Point(194, 84);
             this.cbMarkalar.Name = "cbMarkalar";
-            this.cbMarkalar.Size = new System.Drawing.Size(19, 21);
+            this.cbMarkalar.Size = new System.Drawing.Size(19, 26);
             this.cbMarkalar.TabIndex = 9;
             this.cbMarkalar.SelectedIndexChanged += new System.EventHandler(this.cbMarkalar_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(248, 77);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(259, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 20);
+            this.label1.Size = new System.Drawing.Size(48, 20);
             this.label1.TabIndex = 88;
-            this.label1.Text = "Plaka :";
+            this.label1.Text = "Plaka";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(462, 77);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(477, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 20);
+            this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 89;
-            this.label3.Text = "Model :";
+            this.label3.Text = "Model";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(313, 78);
+            this.textBox1.Location = new System.Drawing.Point(313, 85);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 20);
+            this.textBox1.Size = new System.Drawing.Size(134, 26);
             this.textBox1.TabIndex = 90;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(535, 78);
+            this.textBox2.Location = new System.Drawing.Point(535, 85);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(134, 20);
+            this.textBox2.Size = new System.Drawing.Size(134, 26);
             this.textBox2.TabIndex = 91;
             // 
             // txtMarka
             // 
-            this.txtMarka.Location = new System.Drawing.Point(82, 78);
+            this.txtMarka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtMarka.Location = new System.Drawing.Point(71, 84);
             this.txtMarka.Name = "txtMarka";
             this.txtMarka.ReadOnly = true;
-            this.txtMarka.Size = new System.Drawing.Size(142, 20);
+            this.txtMarka.Size = new System.Drawing.Size(124, 26);
             this.txtMarka.TabIndex = 92;
             // 
             // btnCikis
@@ -246,7 +251,7 @@
             this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
             this.btnCikis.Location = new System.Drawing.Point(669, 1);
             this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(24, 22);
+            this.btnCikis.Size = new System.Drawing.Size(25, 24);
             this.btnCikis.TabIndex = 88;
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
@@ -274,8 +279,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lvDetaylar);
             this.Controls.Add(this.cbMarkalar);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAracSorgulama";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmAracSorgulama_Load);
             this.cmView.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

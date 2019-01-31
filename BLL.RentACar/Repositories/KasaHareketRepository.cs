@@ -38,6 +38,8 @@ namespace BLL.RentACar.Repositories
         public bool KasaHareketGuncelle(KasaHareket kh)
         {
             bool Sonuc = false;
+            KasaHareket degisen = KasaHareketGetirById(kh.Id);
+            degisen = kh;
             try
             {
                 Genel.ent.SaveChanges(); //Arakatmana göre veritabanı güncellenir.
@@ -67,28 +69,6 @@ namespace BLL.RentACar.Repositories
         {
             List<KasaHareket> liste = (from kh in Genel.ent.KasaHareketler
                                        where kh.Silindi == false && kh.GelirGiderId ==Id
-                                       select kh).ToList();
-            return liste;
-        }
-        
-        public List<KasaHareket> KasaHareketListeleBySozlesme()
-        {
-            List<KasaHareket> liste = (from kh in Genel.ent.KasaHareketler
-                                            where kh.Silindi == false && kh.SozlesmeId!=0 && kh.AracId==0 && kh.PersonelId==0 
-                                            select kh).ToList();
-            return liste;
-        }
-        public List<KasaHareket> KasaHareketListeleByArac()
-        {
-            List<KasaHareket> liste = (from kh in Genel.ent.KasaHareketler
-                                       where kh.Silindi == false && kh.AracId != 0 && kh.SozlesmeId == 0 && kh.PersonelId == 0
-                                       select kh).ToList();
-            return liste;
-        }
-        public List<KasaHareket> KasaHareketListeleByPersonel()
-        {
-            List<KasaHareket> liste = (from kh in Genel.ent.KasaHareketler
-                                       where kh.Silindi == false && kh.PersonelId != 0 && kh.SozlesmeId == 0 && kh.AracId == 0
                                        select kh).ToList();
             return liste;
         }

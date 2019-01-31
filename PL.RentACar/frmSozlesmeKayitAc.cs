@@ -30,19 +30,22 @@ namespace PL.RentACar
             frmMusteriSorgulama frm = new frmMusteriSorgulama();
             frm.ShowDialog();
             msec = true;
-            Musteri m = musrepo.MusteriGetirById(Genel.MusteriID);
-            txtMusteriAdi.Text = m.Adi;
-            txtMusteriSoyadi.Text = m.Soyadi;
-            txtMusteriTelefon.Text = m.Telefon;
-            txtMusteriEmail.Text = m.Email;
-            txtMusteriAdres.Text = m.Adres;
-            txtMusteriTCKNo.Text = m.TcKimlikNo;
-            cbMusteriCinsiyet.Text = m.Cinsiyet;
-            txtMusteriEhliyetNo.Text = m.EhliyetNo;
-            ListeGoster();
-            if (msec && psec)
+            if (Genel.MusteriID!=0)
             {
-                btnKayitAc.Enabled = true;
+                Musteri m = musrepo.MusteriGetirById(Genel.MusteriID);
+                txtMusteriAdi.Text = m.Adi;
+                txtMusteriSoyadi.Text = m.Soyadi;
+                txtMusteriTelefon.Text = m.Telefon;
+                txtMusteriEmail.Text = m.Email;
+                txtMusteriAdres.Text = m.Adres;
+                txtMusteriTCKNo.Text = m.TcKimlikNo;
+                cbMusteriCinsiyet.Text = m.Cinsiyet;
+                txtMusteriEhliyetNo.Text = m.EhliyetNo;
+                ListeGoster();
+                if (msec && psec)
+                {
+                    btnKayitAc.Enabled = true;
+                }
             }
         }
 
@@ -51,13 +54,16 @@ namespace PL.RentACar
             frmPersonelSorgulama frm = new frmPersonelSorgulama();
             frm.ShowDialog();
             psec = true;
-            Personel p = perrepo.PersonelGetirById(Genel.PersonelID);
-            txtPersonelAdi.Text = p.Adi;
-            txtPersonelSoyadi.Text = p.Soyadi;
-            ListeGoster();
-            if (msec && psec)
+            if (Genel.PersonelID!=0)
             {
-                btnKayitAc.Enabled = true;
+                Personel p = perrepo.PersonelGetirById(Genel.PersonelID);
+                txtPersonelAdi.Text = p.Adi;
+                txtPersonelSoyadi.Text = p.Soyadi;
+                ListeGoster();
+                if (msec && psec)
+                {
+                    btnKayitAc.Enabled = true;
+                }
             }
         }
 
@@ -133,15 +139,17 @@ namespace PL.RentACar
             dgvSozlesmeler.Columns[1].Visible = false;
             dgvSozlesmeler.Columns[2].Visible = false;
             dgvSozlesmeler.Columns[3].Width = 150;
-            dgvSozlesmeler.Columns[3].HeaderText = "Sözleşme Tarihi";
             dgvSozlesmeler.Columns[4].Width = 80;
-            dgvSozlesmeler.Columns[4].HeaderText = "Tutar";
-            dgvSozlesmeler.Columns[5].Width = 75;
-            dgvSozlesmeler.Columns[5].HeaderText = "Araç Sayısı";
-            dgvSozlesmeler.Columns[6].Visible = false;
-            dgvSozlesmeler.Columns[7].Visible = false;
-            dgvSozlesmeler.Columns[8].Width = 160;
-            dgvSozlesmeler.Columns[8].HeaderText = "Müşteri"; ;
+            dgvSozlesmeler.Columns[5].Width = 125;
+            dgvSozlesmeler.Columns[5].HeaderText = "Sözleşme Tarihi";
+            dgvSozlesmeler.Columns[6].Width = 75;
+            dgvSozlesmeler.Columns[6].HeaderText = "Tutar";
+            dgvSozlesmeler.Columns[7].Width = 75;
+            dgvSozlesmeler.Columns[7].HeaderText = "Araç Sayısı";
+            dgvSozlesmeler.Columns[8].Visible = false;
+            dgvSozlesmeler.Columns[9].Visible = false;
+            dgvSozlesmeler.Columns[10].Width= 160;
+            dgvSozlesmeler.Columns[10].HeaderText = "Müşteri"; ;
         }
 
         private void frmSozlesmeKayitAc_Load(object sender, EventArgs e)

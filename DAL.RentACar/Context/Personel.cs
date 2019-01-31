@@ -36,5 +36,10 @@ namespace DAL.RentACar.Context
         {
             return Adi+" "+Soyadi;
         }
+        public Personel()
+        {
+            Silindi = false;
+            Maas = 0;
+        }
     }
 }

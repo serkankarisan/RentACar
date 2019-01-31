@@ -22,12 +22,22 @@ namespace DAL.RentACar.Context
         public int PersonelId { get; set; }
         public DateTime Tarih { get; set; }
         public int GelirGiderId { get; set; }
-        public string Tutar { get; set; }
+        public decimal Tutar { get; set; }
         public string ParaBirimi { get; set; }
         [DefaultValue(false)]
         public bool Silindi { get; set; }
         //Relations
         [ForeignKey("GelirGiderId")]
         public virtual GelirGider GelirGider { get; set; }
+
+        public KasaHareket()
+        {
+            SozlesmeId = 0;
+            AracId = 0;
+            PersonelId = 0;
+            Tutar = 0;
+            ParaBirimi = "TL";
+            Silindi = false;
+        }
     }
 }

@@ -62,13 +62,26 @@
             this.btnAracOdemeAl = new System.Windows.Forms.Button();
             this.lblSozlesmeOdeme = new System.Windows.Forms.Label();
             this.txtSozlesmeOdeme = new System.Windows.Forms.TextBox();
+            this.lblMusteriSoyadi = new System.Windows.Forms.Label();
+            this.lblMusteriAdi = new System.Windows.Forms.Label();
+            this.txtMusteriSoyadi = new System.Windows.Forms.TextBox();
+            this.txtMusteriAdi = new System.Windows.Forms.TextBox();
+            this.lblPlaka = new System.Windows.Forms.Label();
+            this.lblmarka = new System.Windows.Forms.Label();
+            this.txtPlaka = new System.Windows.Forms.TextBox();
+            this.txtMarka = new System.Windows.Forms.TextBox();
+            this.lblAracDurumu = new System.Windows.Forms.Label();
+            this.lblModel = new System.Windows.Forms.Label();
+            this.txtAracDurumu = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.txtSozlesmeTarihi = new System.Windows.Forms.TextBox();
+            this.lblSozlesmeTarihi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdeme)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnOdemeAl
             // 
-            this.btnOdemeAl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOdemeAl.BackColor = System.Drawing.Color.Transparent;
             this.btnOdemeAl.FlatAppearance.BorderSize = 0;
             this.btnOdemeAl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -76,7 +89,7 @@
             this.btnOdemeAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOdemeAl.Image = ((System.Drawing.Image)(resources.GetObject("btnOdemeAl.Image")));
             this.btnOdemeAl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOdemeAl.Location = new System.Drawing.Point(527, 38);
+            this.btnOdemeAl.Location = new System.Drawing.Point(833, 139);
             this.btnOdemeAl.Name = "btnOdemeAl";
             this.btnOdemeAl.Size = new System.Drawing.Size(133, 40);
             this.btnOdemeAl.TabIndex = 131;
@@ -89,7 +102,7 @@
             // lblAlınan
             // 
             this.lblAlınan.AutoSize = true;
-            this.lblAlınan.Location = new System.Drawing.Point(251, 146);
+            this.lblAlınan.Location = new System.Drawing.Point(347, 146);
             this.lblAlınan.Name = "lblAlınan";
             this.lblAlınan.Size = new System.Drawing.Size(94, 20);
             this.lblAlınan.TabIndex = 129;
@@ -98,7 +111,7 @@
             // 
             // txtAlınan
             // 
-            this.txtAlınan.Location = new System.Drawing.Point(351, 146);
+            this.txtAlınan.Location = new System.Drawing.Point(447, 146);
             this.txtAlınan.Name = "txtAlınan";
             this.txtAlınan.ReadOnly = true;
             this.txtAlınan.Size = new System.Drawing.Size(116, 26);
@@ -115,10 +128,10 @@
             this.dgvOdeme.BackgroundColor = System.Drawing.Color.White;
             this.dgvOdeme.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvOdeme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOdeme.Location = new System.Drawing.Point(12, 206);
+            this.dgvOdeme.Location = new System.Drawing.Point(24, 206);
             this.dgvOdeme.Name = "dgvOdeme";
             this.dgvOdeme.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOdeme.Size = new System.Drawing.Size(677, 260);
+            this.dgvOdeme.Size = new System.Drawing.Size(942, 260);
             this.dgvOdeme.TabIndex = 127;
             // 
             // panel1
@@ -128,7 +141,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(701, 24);
+            this.panel1.Size = new System.Drawing.Size(1011, 24);
             this.panel1.TabIndex = 130;
             // 
             // btnCikis
@@ -138,7 +151,7 @@
             this.btnCikis.FlatAppearance.BorderSize = 0;
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
-            this.btnCikis.Location = new System.Drawing.Point(676, 1);
+            this.btnCikis.Location = new System.Drawing.Point(986, 1);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(24, 22);
             this.btnCikis.TabIndex = 88;
@@ -149,7 +162,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(12, 39);
+            this.label5.Location = new System.Drawing.Point(20, 39);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 20);
             this.label5.TabIndex = 133;
@@ -162,7 +175,7 @@
             this.cbIslemTurleri.Items.AddRange(new object[] {
             "Tahsilat",
             "Ödeme"});
-            this.cbIslemTurleri.Location = new System.Drawing.Point(16, 76);
+            this.cbIslemTurleri.Location = new System.Drawing.Point(24, 76);
             this.cbIslemTurleri.Name = "cbIslemTurleri";
             this.cbIslemTurleri.Size = new System.Drawing.Size(163, 28);
             this.cbIslemTurleri.TabIndex = 132;
@@ -171,7 +184,7 @@
             // lblborc
             // 
             this.lblborc.AutoSize = true;
-            this.lblborc.Location = new System.Drawing.Point(251, 176);
+            this.lblborc.Location = new System.Drawing.Point(347, 176);
             this.lblborc.Name = "lblborc";
             this.lblborc.Size = new System.Drawing.Size(86, 20);
             this.lblborc.TabIndex = 135;
@@ -180,7 +193,7 @@
             // 
             // txtBorc
             // 
-            this.txtBorc.Location = new System.Drawing.Point(351, 176);
+            this.txtBorc.Location = new System.Drawing.Point(447, 176);
             this.txtBorc.Name = "txtBorc";
             this.txtBorc.ReadOnly = true;
             this.txtBorc.Size = new System.Drawing.Size(116, 26);
@@ -190,7 +203,7 @@
             // lblsozlesme
             // 
             this.lblsozlesme.AutoSize = true;
-            this.lblsozlesme.Location = new System.Drawing.Point(8, 156);
+            this.lblsozlesme.Location = new System.Drawing.Point(20, 146);
             this.lblsozlesme.Name = "lblsozlesme";
             this.lblsozlesme.Size = new System.Drawing.Size(123, 20);
             this.lblsozlesme.TabIndex = 137;
@@ -199,7 +212,7 @@
             // 
             // txtSozlesmeTutar
             // 
-            this.txtSozlesmeTutar.Location = new System.Drawing.Point(137, 156);
+            this.txtSozlesmeTutar.Location = new System.Drawing.Point(149, 146);
             this.txtSozlesmeTutar.Name = "txtSozlesmeTutar";
             this.txtSozlesmeTutar.ReadOnly = true;
             this.txtSozlesmeTutar.Size = new System.Drawing.Size(96, 26);
@@ -208,7 +221,6 @@
             // 
             // btnOdemeYap
             // 
-            this.btnOdemeYap.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOdemeYap.BackColor = System.Drawing.Color.Transparent;
             this.btnOdemeYap.FlatAppearance.BorderSize = 0;
             this.btnOdemeYap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -216,9 +228,9 @@
             this.btnOdemeYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOdemeYap.Image = ((System.Drawing.Image)(resources.GetObject("btnOdemeYap.Image")));
             this.btnOdemeYap.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOdemeYap.Location = new System.Drawing.Point(527, 38);
+            this.btnOdemeYap.Location = new System.Drawing.Point(808, 139);
             this.btnOdemeYap.Name = "btnOdemeYap";
-            this.btnOdemeYap.Size = new System.Drawing.Size(149, 40);
+            this.btnOdemeYap.Size = new System.Drawing.Size(158, 40);
             this.btnOdemeYap.TabIndex = 138;
             this.btnOdemeYap.Text = "Ödeme Yap";
             this.btnOdemeYap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -235,7 +247,7 @@
             this.btnSozlesmeSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSozlesmeSec.Image = ((System.Drawing.Image)(resources.GetObject("btnSozlesmeSec.Image")));
             this.btnSozlesmeSec.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSozlesmeSec.Location = new System.Drawing.Point(16, 110);
+            this.btnSozlesmeSec.Location = new System.Drawing.Point(222, 76);
             this.btnSozlesmeSec.Name = "btnSozlesmeSec";
             this.btnSozlesmeSec.Size = new System.Drawing.Size(167, 40);
             this.btnSozlesmeSec.TabIndex = 139;
@@ -254,7 +266,7 @@
             this.btnAracSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAracSec.Image = ((System.Drawing.Image)(resources.GetObject("btnAracSec.Image")));
             this.btnAracSec.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAracSec.Location = new System.Drawing.Point(16, 110);
+            this.btnAracSec.Location = new System.Drawing.Point(222, 76);
             this.btnAracSec.Name = "btnAracSec";
             this.btnAracSec.Size = new System.Drawing.Size(134, 40);
             this.btnAracSec.TabIndex = 140;
@@ -267,7 +279,7 @@
             // lblTutar
             // 
             this.lblTutar.AutoSize = true;
-            this.lblTutar.Location = new System.Drawing.Point(12, 156);
+            this.lblTutar.Location = new System.Drawing.Point(630, 143);
             this.lblTutar.Name = "lblTutar";
             this.lblTutar.Size = new System.Drawing.Size(46, 20);
             this.lblTutar.TabIndex = 142;
@@ -276,7 +288,7 @@
             // 
             // txtAracTutar
             // 
-            this.txtAracTutar.Location = new System.Drawing.Point(64, 156);
+            this.txtAracTutar.Location = new System.Drawing.Point(682, 143);
             this.txtAracTutar.Name = "txtAracTutar";
             this.txtAracTutar.Size = new System.Drawing.Size(96, 26);
             this.txtAracTutar.TabIndex = 141;
@@ -284,7 +296,6 @@
             // 
             // btnMaasOdeme
             // 
-            this.btnMaasOdeme.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnMaasOdeme.BackColor = System.Drawing.Color.Transparent;
             this.btnMaasOdeme.FlatAppearance.BorderSize = 0;
             this.btnMaasOdeme.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -292,9 +303,9 @@
             this.btnMaasOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMaasOdeme.Image = ((System.Drawing.Image)(resources.GetObject("btnMaasOdeme.Image")));
             this.btnMaasOdeme.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMaasOdeme.Location = new System.Drawing.Point(289, 30);
+            this.btnMaasOdeme.Location = new System.Drawing.Point(527, 136);
             this.btnMaasOdeme.Name = "btnMaasOdeme";
-            this.btnMaasOdeme.Size = new System.Drawing.Size(149, 40);
+            this.btnMaasOdeme.Size = new System.Drawing.Size(158, 40);
             this.btnMaasOdeme.TabIndex = 177;
             this.btnMaasOdeme.Text = "Ödeme Yap";
             this.btnMaasOdeme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -311,7 +322,7 @@
             this.btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSec.Image = ((System.Drawing.Image)(resources.GetObject("btnSec.Image")));
             this.btnSec.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSec.Location = new System.Drawing.Point(16, 110);
+            this.btnSec.Location = new System.Drawing.Point(24, 123);
             this.btnSec.Name = "btnSec";
             this.btnSec.Size = new System.Drawing.Size(167, 40);
             this.btnSec.TabIndex = 176;
@@ -403,6 +414,7 @@
             this.txtSoyadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSoyadi.Location = new System.Drawing.Point(289, 101);
             this.txtSoyadi.Name = "txtSoyadi";
+            this.txtSoyadi.ReadOnly = true;
             this.txtSoyadi.Size = new System.Drawing.Size(158, 26);
             this.txtSoyadi.TabIndex = 167;
             // 
@@ -411,6 +423,7 @@
             this.txtAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAdi.Location = new System.Drawing.Point(289, 72);
             this.txtAdi.Name = "txtAdi";
+            this.txtAdi.ReadOnly = true;
             this.txtAdi.Size = new System.Drawing.Size(158, 26);
             this.txtAdi.TabIndex = 166;
             // 
@@ -434,7 +447,7 @@
             this.btnAracOdemeAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAracOdemeAl.Image = ((System.Drawing.Image)(resources.GetObject("btnAracOdemeAl.Image")));
             this.btnAracOdemeAl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAracOdemeAl.Location = new System.Drawing.Point(527, 38);
+            this.btnAracOdemeAl.Location = new System.Drawing.Point(682, 38);
             this.btnAracOdemeAl.Name = "btnAracOdemeAl";
             this.btnAracOdemeAl.Size = new System.Drawing.Size(133, 40);
             this.btnAracOdemeAl.TabIndex = 178;
@@ -447,7 +460,7 @@
             // lblSozlesmeOdeme
             // 
             this.lblSozlesmeOdeme.AutoSize = true;
-            this.lblSozlesmeOdeme.Location = new System.Drawing.Point(506, 156);
+            this.lblSozlesmeOdeme.Location = new System.Drawing.Point(607, 142);
             this.lblSozlesmeOdeme.Name = "lblSozlesmeOdeme";
             this.lblSozlesmeOdeme.Size = new System.Drawing.Size(61, 20);
             this.lblSozlesmeOdeme.TabIndex = 180;
@@ -456,53 +469,202 @@
             // 
             // txtSozlesmeOdeme
             // 
-            this.txtSozlesmeOdeme.Location = new System.Drawing.Point(573, 156);
+            this.txtSozlesmeOdeme.Location = new System.Drawing.Point(674, 142);
             this.txtSozlesmeOdeme.Name = "txtSozlesmeOdeme";
             this.txtSozlesmeOdeme.Size = new System.Drawing.Size(116, 26);
             this.txtSozlesmeOdeme.TabIndex = 179;
             this.txtSozlesmeOdeme.Visible = false;
             // 
+            // lblMusteriSoyadi
+            // 
+            this.lblMusteriSoyadi.AutoSize = true;
+            this.lblMusteriSoyadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMusteriSoyadi.Location = new System.Drawing.Point(689, 81);
+            this.lblMusteriSoyadi.Name = "lblMusteriSoyadi";
+            this.lblMusteriSoyadi.Size = new System.Drawing.Size(113, 20);
+            this.lblMusteriSoyadi.TabIndex = 184;
+            this.lblMusteriSoyadi.Text = "Müşteri Soyadı";
+            // 
+            // lblMusteriAdi
+            // 
+            this.lblMusteriAdi.AutoSize = true;
+            this.lblMusteriAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMusteriAdi.Location = new System.Drawing.Point(416, 81);
+            this.lblMusteriAdi.Name = "lblMusteriAdi";
+            this.lblMusteriAdi.Size = new System.Drawing.Size(88, 20);
+            this.lblMusteriAdi.TabIndex = 183;
+            this.lblMusteriAdi.Text = "Müşteri Adı";
+            // 
+            // txtMusteriSoyadi
+            // 
+            this.txtMusteriSoyadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtMusteriSoyadi.Location = new System.Drawing.Point(808, 81);
+            this.txtMusteriSoyadi.Name = "txtMusteriSoyadi";
+            this.txtMusteriSoyadi.ReadOnly = true;
+            this.txtMusteriSoyadi.Size = new System.Drawing.Size(158, 26);
+            this.txtMusteriSoyadi.TabIndex = 182;
+            // 
+            // txtMusteriAdi
+            // 
+            this.txtMusteriAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtMusteriAdi.Location = new System.Drawing.Point(510, 81);
+            this.txtMusteriAdi.Name = "txtMusteriAdi";
+            this.txtMusteriAdi.ReadOnly = true;
+            this.txtMusteriAdi.Size = new System.Drawing.Size(158, 26);
+            this.txtMusteriAdi.TabIndex = 181;
+            // 
+            // lblPlaka
+            // 
+            this.lblPlaka.AutoSize = true;
+            this.lblPlaka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPlaka.Location = new System.Drawing.Point(293, 139);
+            this.lblPlaka.Name = "lblPlaka";
+            this.lblPlaka.Size = new System.Drawing.Size(48, 20);
+            this.lblPlaka.TabIndex = 188;
+            this.lblPlaka.Text = "Plaka";
+            // 
+            // lblmarka
+            // 
+            this.lblmarka.AutoSize = true;
+            this.lblmarka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblmarka.Location = new System.Drawing.Point(20, 139);
+            this.lblmarka.Name = "lblmarka";
+            this.lblmarka.Size = new System.Drawing.Size(53, 20);
+            this.lblmarka.TabIndex = 187;
+            this.lblmarka.Text = "Marka";
+            // 
+            // txtPlaka
+            // 
+            this.txtPlaka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPlaka.Location = new System.Drawing.Point(412, 139);
+            this.txtPlaka.Name = "txtPlaka";
+            this.txtPlaka.ReadOnly = true;
+            this.txtPlaka.Size = new System.Drawing.Size(158, 26);
+            this.txtPlaka.TabIndex = 186;
+            // 
+            // txtMarka
+            // 
+            this.txtMarka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtMarka.Location = new System.Drawing.Point(114, 139);
+            this.txtMarka.Name = "txtMarka";
+            this.txtMarka.ReadOnly = true;
+            this.txtMarka.Size = new System.Drawing.Size(158, 26);
+            this.txtMarka.TabIndex = 185;
+            // 
+            // lblAracDurumu
+            // 
+            this.lblAracDurumu.AutoSize = true;
+            this.lblAracDurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAracDurumu.Location = new System.Drawing.Point(293, 171);
+            this.lblAracDurumu.Name = "lblAracDurumu";
+            this.lblAracDurumu.Size = new System.Drawing.Size(103, 20);
+            this.lblAracDurumu.TabIndex = 192;
+            this.lblAracDurumu.Text = "Arac Durumu";
+            // 
+            // lblModel
+            // 
+            this.lblModel.AutoSize = true;
+            this.lblModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblModel.Location = new System.Drawing.Point(20, 171);
+            this.lblModel.Name = "lblModel";
+            this.lblModel.Size = new System.Drawing.Size(52, 20);
+            this.lblModel.TabIndex = 191;
+            this.lblModel.Text = "Model";
+            // 
+            // txtAracDurumu
+            // 
+            this.txtAracDurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAracDurumu.Location = new System.Drawing.Point(412, 171);
+            this.txtAracDurumu.Name = "txtAracDurumu";
+            this.txtAracDurumu.ReadOnly = true;
+            this.txtAracDurumu.Size = new System.Drawing.Size(158, 26);
+            this.txtAracDurumu.TabIndex = 190;
+            // 
+            // txtModel
+            // 
+            this.txtModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtModel.Location = new System.Drawing.Point(114, 171);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.ReadOnly = true;
+            this.txtModel.Size = new System.Drawing.Size(158, 26);
+            this.txtModel.TabIndex = 189;
+            // 
+            // txtSozlesmeTarihi
+            // 
+            this.txtSozlesmeTarihi.Location = new System.Drawing.Point(149, 176);
+            this.txtSozlesmeTarihi.Name = "txtSozlesmeTarihi";
+            this.txtSozlesmeTarihi.ReadOnly = true;
+            this.txtSozlesmeTarihi.Size = new System.Drawing.Size(96, 26);
+            this.txtSozlesmeTarihi.TabIndex = 193;
+            this.txtSozlesmeTarihi.Visible = false;
+            // 
+            // lblSozlesmeTarihi
+            // 
+            this.lblSozlesmeTarihi.AutoSize = true;
+            this.lblSozlesmeTarihi.Location = new System.Drawing.Point(20, 176);
+            this.lblSozlesmeTarihi.Name = "lblSozlesmeTarihi";
+            this.lblSozlesmeTarihi.Size = new System.Drawing.Size(121, 20);
+            this.lblSozlesmeTarihi.TabIndex = 194;
+            this.lblSozlesmeTarihi.Text = "Sözleşme Tarihi";
+            this.lblSozlesmeTarihi.Visible = false;
+            // 
             // frmOdemeIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 478);
-            this.Controls.Add(this.lblSozlesmeOdeme);
-            this.Controls.Add(this.txtSozlesmeOdeme);
-            this.Controls.Add(this.lblAlınan);
-            this.Controls.Add(this.txtSozlesmeTutar);
-            this.Controls.Add(this.btnMaasOdeme);
-            this.Controls.Add(this.btnSec);
-            this.Controls.Add(this.lblToplam);
+            this.BackColor = System.Drawing.Color.Azure;
+            this.ClientSize = new System.Drawing.Size(1011, 478);
+            this.Controls.Add(this.txtSozlesmeTarihi);
+            this.Controls.Add(this.lblSozlesmeTarihi);
+            this.Controls.Add(this.txtAracTutar);
+            this.Controls.Add(this.lblTutar);
+            this.Controls.Add(this.lblMusteriSoyadi);
+            this.Controls.Add(this.lblMusteriAdi);
+            this.Controls.Add(this.txtMusteriSoyadi);
+            this.Controls.Add(this.txtMusteriAdi);
             this.Controls.Add(this.lblPrim);
             this.Controls.Add(this.lblMaas);
             this.Controls.Add(this.txtPrim);
             this.Controls.Add(this.txtMaas);
+            this.Controls.Add(this.lblPersonel);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbIslemTurleri);
+            this.Controls.Add(this.btnOdemeAl);
+            this.Controls.Add(this.dgvOdeme);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnAracOdemeAl);
+            this.Controls.Add(this.lblAlınan);
+            this.Controls.Add(this.txtSozlesmeTutar);
+            this.Controls.Add(this.lblborc);
+            this.Controls.Add(this.txtBorc);
+            this.Controls.Add(this.lblsozlesme);
+            this.Controls.Add(this.lblSozlesmeOdeme);
+            this.Controls.Add(this.txtSozlesmeOdeme);
+            this.Controls.Add(this.btnSec);
+            this.Controls.Add(this.lblModel);
+            this.Controls.Add(this.txtModel);
+            this.Controls.Add(this.lblmarka);
+            this.Controls.Add(this.txtMarka);
+            this.Controls.Add(this.lblAracDurumu);
+            this.Controls.Add(this.txtAracDurumu);
+            this.Controls.Add(this.lblPlaka);
+            this.Controls.Add(this.txtPlaka);
+            this.Controls.Add(this.lblToplam);
+            this.Controls.Add(this.txtToplamOdeme);
+            this.Controls.Add(this.btnMaasOdeme);
+            this.Controls.Add(this.txtAlınan);
             this.Controls.Add(this.lblSoyadi);
             this.Controls.Add(this.lblAdi);
             this.Controls.Add(this.txtSoyadi);
             this.Controls.Add(this.txtAdi);
-            this.Controls.Add(this.lblPersonel);
-            this.Controls.Add(this.btnAracSec);
             this.Controls.Add(this.btnSozlesmeSec);
+            this.Controls.Add(this.btnAracSec);
             this.Controls.Add(this.btnOdemeYap);
-            this.Controls.Add(this.lblborc);
-            this.Controls.Add(this.txtBorc);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.cbIslemTurleri);
-            this.Controls.Add(this.btnOdemeAl);
-            this.Controls.Add(this.txtAlınan);
-            this.Controls.Add(this.dgvOdeme);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblsozlesme);
-            this.Controls.Add(this.txtToplamOdeme);
-            this.Controls.Add(this.btnAracOdemeAl);
-            this.Controls.Add(this.txtAracTutar);
-            this.Controls.Add(this.lblTutar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmOdemeIslemleri";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmOdemeIslemleri";
             this.Load += new System.EventHandler(this.frmOdemeIslemleri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdeme)).EndInit();
@@ -547,5 +709,19 @@
         private System.Windows.Forms.Button btnAracOdemeAl;
         private System.Windows.Forms.Label lblSozlesmeOdeme;
         private System.Windows.Forms.TextBox txtSozlesmeOdeme;
+        private System.Windows.Forms.Label lblMusteriSoyadi;
+        private System.Windows.Forms.Label lblMusteriAdi;
+        private System.Windows.Forms.TextBox txtMusteriSoyadi;
+        private System.Windows.Forms.TextBox txtMusteriAdi;
+        private System.Windows.Forms.Label lblPlaka;
+        private System.Windows.Forms.Label lblmarka;
+        private System.Windows.Forms.TextBox txtPlaka;
+        private System.Windows.Forms.TextBox txtMarka;
+        private System.Windows.Forms.Label lblAracDurumu;
+        private System.Windows.Forms.Label lblModel;
+        private System.Windows.Forms.TextBox txtAracDurumu;
+        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.TextBox txtSozlesmeTarihi;
+        private System.Windows.Forms.Label lblSozlesmeTarihi;
     }
 }

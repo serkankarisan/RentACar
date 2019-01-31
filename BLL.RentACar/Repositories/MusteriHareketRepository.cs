@@ -37,6 +37,8 @@ namespace BLL.RentACar.Repositories
         public bool MusteriHareketGuncelle(MusteriHareket mh)
         {
             bool Sonuc = false;
+            MusteriHareket degisen = MusteriHareketGetirById(mh.Id);
+            degisen = mh;
             try
             {
                 Genel.ent.SaveChanges();
