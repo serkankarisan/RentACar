@@ -58,8 +58,10 @@
             this.tsSil = new System.Windows.Forms.ToolStripButton();
             this.btnResimEkle = new System.Windows.Forms.Button();
             this.txtResimYolu = new System.Windows.Forms.TextBox();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAraclar)).BeginInit();
             this.tsMusteriIslemleri.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -343,12 +345,21 @@
             this.txtResimYolu.Size = new System.Drawing.Size(120, 26);
             this.txtResimYolu.TabIndex = 89;
             // 
+            // pbFoto
+            // 
+            this.pbFoto.Location = new System.Drawing.Point(149, 354);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(120, 49);
+            this.pbFoto.TabIndex = 90;
+            this.pbFoto.TabStop = false;
+            // 
             // frmAracIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.txtResimYolu);
             this.Controls.Add(this.btnResimEkle);
             this.Controls.Add(this.btnCikis);
@@ -378,6 +389,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAraclar)).EndInit();
             this.tsMusteriIslemleri.ResumeLayout(false);
             this.tsMusteriIslemleri.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,5 +425,6 @@
         private System.Windows.Forms.ToolStripButton tsSil;
         private System.Windows.Forms.Button btnResimEkle;
         private System.Windows.Forms.TextBox txtResimYolu;
+        private System.Windows.Forms.PictureBox pbFoto;
     }
 }

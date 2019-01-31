@@ -97,15 +97,15 @@ namespace PL.RentACar
         }
         private void ShowListView(List<Arac> listem)
         {
-                        
+            string projeadres = Application.StartupPath;
             il.ImageSize = new Size(120, 120);
             il2.ImageSize = new Size(16, 16);
             lvDetaylar.LargeImageList = il;
             lvDetaylar.SmallImageList = il2;
             for (int i = 0; i < listem.Count; i++)
             {                
-                il.Images.Add(Image.FromFile(listem[i].ResimYolu));
-                il2.Images.Add(Image.FromFile(listem[i].ResimYolu));
+                il.Images.Add(Image.FromFile(projeadres+listem[i].ResimYolu));
+                il2.Images.Add(Image.FromFile(projeadres+listem[i].ResimYolu));
                 lvDetaylar.Items.Add(listem[i].Model, ResimIndisiGetir(listem[i].Id));
                 lvDetaylar.Items[i].SubItems.Add(listem[i].Tip);
                 lvDetaylar.Items[i].SubItems.Add(listem[i].Renk);

@@ -77,12 +77,11 @@
             this.columnHeader5});
             this.lvDetaylar.ContextMenuStrip = this.cmView;
             this.lvDetaylar.FullRowSelect = true;
-            this.lvDetaylar.Location = new System.Drawing.Point(12, 117);
+            this.lvDetaylar.Location = new System.Drawing.Point(12, 105);
             this.lvDetaylar.Name = "lvDetaylar";
             this.lvDetaylar.Size = new System.Drawing.Size(655, 285);
             this.lvDetaylar.TabIndex = 10;
             this.lvDetaylar.UseCompatibleStateImageBehavior = false;
-            this.lvDetaylar.View = System.Windows.Forms.View.Tile;
             this.lvDetaylar.DoubleClick += new System.EventHandler(this.lvDetaylar_DoubleClick);
             // 
             // columnHeader6
