@@ -54,8 +54,10 @@ namespace PL.RentACar
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            btnTamamla.Enabled = true;
-            SozlesmeDetay sd = new SozlesmeDetay();
+            if (txtTutar.Text.Trim()!="0")
+            {
+                btnTamamla.Enabled = true;
+                SozlesmeDetay sd = new SozlesmeDetay();
                 if (Genel.AracID != 0)
                 {
                     sd.AracId = Genel.AracID;
@@ -74,14 +76,19 @@ namespace PL.RentACar
                     }
                     else
                     {
-                            MessageBox.Show("Araç Listeye Eklendi.", "Kayıt Gerçekleşti.");
-                            Temizle();
+                        MessageBox.Show("Araç Listeye Eklendi.", "Kayıt Gerçekleşti.");
+                        Temizle();
                     }
                 }
                 else
                 {
                     MessageBox.Show("Bir Araç Seçmelisiniz!", "Eksik Bilgi Girişi!");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Başlangıç ve Bitiş Tarihlerini Kontroledin!", "Tarih Hatalı!");
+            }
             ListeGoster();
         }
         decimal tutar;
@@ -176,9 +183,10 @@ namespace PL.RentACar
         private void btnTamamla_Click(object sender, EventArgs e)
         {
             Sozlesme s = new Sozlesme();
-            s.Id = Genel.soz.Id;
+            s = sozrepo.SozlesmeGetirById(Genel.soz.Id);
             s.AracSayisi = Convert.ToInt32(txtAracSayisi.Text);
             s.SozlesmeTutari = Convert.ToDecimal(txtSozlesmeTutari.Text);
+            s.Borc = Convert.ToDecimal(txtSozlesmeTutari.Text);
             sozrepo.SozlesmeGuncelle(s);
             btnTamamla.Enabled = false;
             Genel.cbIslem = "SozlesmeOdeme";

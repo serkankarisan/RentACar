@@ -30,9 +30,9 @@ namespace PL.RentACar
         private void btnSec_Click(object sender, EventArgs e)
         {
             frmPersonelSorgulama frm = new frmPersonelSorgulama();
-            frm.ShowDialog();
             frm.WindowState = FormWindowState.Normal;
             frm.StartPosition = FormStartPosition.CenterParent;
+            frm.ShowDialog();
             if (Genel.PersonelID!=0)
             {
                 p = pr.PersonelGetirById(Genel.PersonelID);
@@ -133,7 +133,7 @@ namespace PL.RentACar
                 if (Genel.soz != null)
                 {
                     Sozlesme s = new Sozlesme();
-                    s = Genel.soz;
+                    s = sr.SozlesmeGetirById(Genel.soz.Id);
                     txtBorc.Text = s.Borc.ToString();
                     txtSozlesmeTutar.Text = s.SozlesmeTutari.ToString();
                     txtAlınan.Text = s.Alınan.ToString();
@@ -333,21 +333,30 @@ namespace PL.RentACar
             }
             Listele();
         }
-
+        AracRepository arepo = new AracRepository();
         private void btnAracSec_Click(object sender, EventArgs e)
         {
             frmAracSorgulama frm = new frmAracSorgulama();
             frm.WindowState = FormWindowState.Normal;
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.ShowDialog();
+            if (Genel.AracID!=0)
+            {
+                Arac a = new Arac();
+                a = arepo.AracGetirById(Genel.AracID);
+                txtMarka.Text = a.Marka;
+                txtModel.Text = a.Model;
+                txtPlaka.Text = a.Plaka;
+                txtAracDurumu.Text = a.AracDurumu;
+            }
         }
 
         private void btnSozlesmeSec_Click(object sender, EventArgs e)
         {
             frmSozlesmeSorgulama frm = new frmSozlesmeSorgulama();
-            frm.ShowDialog();
             frm.WindowState = FormWindowState.Normal;
             frm.StartPosition = FormStartPosition.CenterParent;
+            frm.ShowDialog();
             if (Genel.soz != null)
             {
                 Sozlesme s = new Sozlesme();

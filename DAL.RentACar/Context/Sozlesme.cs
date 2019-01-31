@@ -40,11 +40,6 @@ namespace DAL.RentACar.Context
         public Sozlesme()
         {
             Silindi = false;
-            AracSayisi = 0;
-            SozlesmeTutari = 0;
-            SozlesmeTarihi = DateTime.Now;
-            Alınan = 0;
-            Borc = 0;
         }
 
     }
