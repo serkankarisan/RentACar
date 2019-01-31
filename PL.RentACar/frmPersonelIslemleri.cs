@@ -30,13 +30,13 @@ namespace PL.RentACar
                     Personel yeni = new Personel();
                     yeni.Adi = txtAd.Text;
                     yeni.Soyadi = txtSoyad.Text;
+                    yeni.Telefon = txtTelefon.Text;
                     if (per.PersonelKontrol(yeni))
                     {
                         MessageBox.Show("Bu Personel kayıtlı!", "Aynı Personel zaten var!");
                     }
                     else
                     {
-                        yeni.Telefon = txtTelefon.Text;
                         yeni.Email = txtEmail.Text;
                         yeni.Adres = txtAdres.Text;
                         yeni.Maas = Convert.ToDecimal(txtMaas.Text);
@@ -104,20 +104,21 @@ namespace PL.RentACar
             {
                 if (decimal.TryParse(txtMaas.Text, out result))
                 {
-                    Personel degisen = per.PersonelGetirById(ID);
-                    degisen.Adi = txtAd.Text;
-                    degisen.Soyadi = txtSoyad.Text;
-                    //if (per.PersonelKontrol(degisen))
-                    //{
-                    //    MessageBox.Show("Bu Personel kayıtlı!", "Aynı Personel zaten var!");
-                    //}
-                    //else
-                    //{
-                    degisen.Telefon = txtTelefon.Text;
-                    degisen.Email = txtEmail.Text;
-                    degisen.Adres = txtAdres.Text;
-                    degisen.Maas = Convert.ToDecimal(txtMaas.Text);
-                    if (per.PersonelGuncelle(degisen))
+                    Personel p = new Personel();
+                    p = per.PersonelGetirById(ID);
+                    p.Adi = txtAd.Text;
+                    p.Telefon = txtTelefon.Text;
+                    p.Soyadi = txtSoyad.Text;
+                    if (per.PersonelKontrolByDegistir(p))
+                    {
+                        MessageBox.Show("Bu Personel kayıtlı!", "Aynı Personel zaten var!");
+                    }
+                    else
+                    {
+                    p.Email = txtEmail.Text;
+                    p.Adres = txtAdres.Text;
+                    p.Maas = Convert.ToDecimal(txtMaas.Text);
+                    if (per.PersonelGuncelle(p))
                     {
                         MessageBox.Show("Personel bilgileri değiştirildi.", "Değişiklik gerçekleşti.");
                         dgvPersoneller.DataSource = per.PersonelListele();
@@ -125,7 +126,7 @@ namespace PL.RentACar
                         Supurge();
                     }
                 }
-                //}
+                }
                 else
                 {
                     MessageBox.Show("Maas Sayı girilmelidir!", "Maas Hatası!");
