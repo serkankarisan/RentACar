@@ -93,6 +93,7 @@ namespace PL.RentACar
         {
             Disable();
             dgvAraclar.DataSource = ar.AracListele();
+            dgvAraclar.Columns[10].Visible = false;
         }
 
         private void dgvAraclar_DoubleClick(object sender, EventArgs e)
@@ -120,7 +121,7 @@ namespace PL.RentACar
                 a = ar.AracGetirById(ID);
                 a.Plaka = txtPlaka.Text;
                 a.AracDurumu = txtAracDurumu.Text;
-                a.GünlükFiyat = Convert.ToInt32(txtGunlukFiyat.Text);
+                a.GünlükFiyat = Convert.ToDecimal(txtGunlukFiyat.Text);
                 a.Marka = txtMarka.Text;
                 a.Model = txtModel.Text;
                 a.Renk = txtRenk.Text;

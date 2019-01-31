@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PL.RentACar.Properties {
+namespace DAL.RentACar.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,8 +26,7 @@ namespace PL.RentACar.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TURGAY-PC\\MSSQLSERVER2017;Initial Catalog=RentACar;User ID=sa;Passwor" +
-            "d=12345w")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TURGAY-PC\\MSSQLSERVER2017;Initial Catalog=RentACar;User ID=sa")]
         public string RentACarConnectionString {
             get {
                 return ((string)(this["RentACarConnectionString"]));

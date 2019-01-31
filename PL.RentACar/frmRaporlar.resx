@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="AraclarBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>187, 17</value>
+  </metadata>
+  <metadata name="RentACarDataSetArac.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnCikis.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -136,4 +142,88 @@
         VSWilMIohBD6DQxEgfZQnQfOAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="PersonellerBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>663, 17</value>
+  </metadata>
+  <metadata name="RentACarDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>518, 17</value>
+  </metadata>
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAsxJREFUOE+tkmtIU2EYx9/UMEXEyCjFBMkI7EOfIrLCAqPbrEzNNKEiMgjMTSm8
+        QCdXambDtIva8lKBUSIVhJQ768ypYbvo1nK2zZ25q7Pd3KZmZtGz7S0U7Ft/+POe9+H8/u/zvOeg/64E
+        tpCx/Y4oA28Dys9fub9xqDC2nJ+MK8sr/qogS2pwe0Ynvdoj3GEWLq840zHSNmKdtvXRLuNG4h8hCdf6
+        T5Eq+9SOerEnvqJfPaB1WRhcWUnuE0V1n9bljSoVmI61ysSk2mGJLadSMRZQxNnGJLnZY0m5JzYjJu8H
+        YvG88RVCBW2f0UiMbuea8l471IzgL3lPFbqeUZsxPOvWeoxDQGbl2tZBk7iWr1MjFqn3hzB532IIoSmq
+        TLDwJzSoiKfplFl11aTuNTpQEIrxgMLPN8XUvNfxb1O6McQkDdjTAP6C0LngYlLXIbHQ1Tz6ZVwmJwxj
+        SxXN7IqRm7zui51KJcCT4J844CuHGle9VdpMiQXdS0/+K4IIOtoi5/TTTsfqMmoSwHkMz4CVcRV9UqnR
+        M5b2SFaAiUVKIUIy2z89FIw57JGllNZ3IngBB7jBc75xNsDFSo1u6/EWWSUmA4o4x93pmp2f2Fz1QQjQ
+        Z19ASDF/rkM64eBQeins4WJhHCb5fd8DqUph9lhD8xoSMO4TEXTisbxZoHHooYPeYBZv4tmQ1d4g1FPt
+        H82DN0laC1/CBB3MiAxu5+67khoMLhLcQUabnDOgmzI8H7bab/BoEp0mVkXkNEfX9Y6L2kRmGtqf3dMg
+        voKJZURQIfD31V3qUnWHXe6JRQwiHMEniyyhEq+/o7t21YvY+M1FuvAqCWZ8A/MNQZsaWM2wt8OzDez0
+        m8WzQt3hr7FINawS8At0krsuEMIoikaH2ZtQGnsLSudsRdn1ySi3ORXlNu2F9SDKaTzkd/b9ZJReuw2l
+        VSWilMIohBD6DQxEgfZQnQfOAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="MusteriHareketlerBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>354, 56</value>
+  </metadata>
+  <metadata name="RentACarDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>202, 56</value>
+  </metadata>
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAsxJREFUOE+tkmtIU2EYx9/UMEXEyCjFBMkI7EOfIrLCAqPbrEzNNKEiMgjMTSm8
+        QCdXambDtIva8lKBUSIVhJQ768ypYbvo1nK2zZ25q7Pd3KZmZtGz7S0U7Ft/+POe9+H8/u/zvOeg/64E
+        tpCx/Y4oA28Dys9fub9xqDC2nJ+MK8sr/qogS2pwe0Ynvdoj3GEWLq840zHSNmKdtvXRLuNG4h8hCdf6
+        T5Eq+9SOerEnvqJfPaB1WRhcWUnuE0V1n9bljSoVmI61ysSk2mGJLadSMRZQxNnGJLnZY0m5JzYjJu8H
+        YvG88RVCBW2f0UiMbuea8l471IzgL3lPFbqeUZsxPOvWeoxDQGbl2tZBk7iWr1MjFqn3hzB532IIoSmq
+        TLDwJzSoiKfplFl11aTuNTpQEIrxgMLPN8XUvNfxb1O6McQkDdjTAP6C0LngYlLXIbHQ1Tz6ZVwmJwxj
+        SxXN7IqRm7zui51KJcCT4J844CuHGle9VdpMiQXdS0/+K4IIOtoi5/TTTsfqMmoSwHkMz4CVcRV9UqnR
+        M5b2SFaAiUVKIUIy2z89FIw57JGllNZ3IngBB7jBc75xNsDFSo1u6/EWWSUmA4o4x93pmp2f2Fz1QQjQ
+        Z19ASDF/rkM64eBQeins4WJhHCb5fd8DqUph9lhD8xoSMO4TEXTisbxZoHHooYPeYBZv4tmQ1d4g1FPt
+        H82DN0laC1/CBB3MiAxu5+67khoMLhLcQUabnDOgmzI8H7bab/BoEp0mVkXkNEfX9Y6L2kRmGtqf3dMg
+        voKJZURQIfD31V3qUnWHXe6JRQwiHMEniyyhEq+/o7t21YvY+M1FuvAqCWZ8A/MNQZsaWM2wt8OzDez0
+        m8WzQt3hr7FINawS8At0krsuEMIoikaH2ZtQGnsLSudsRdn1ySi3ORXlNu2F9SDKaTzkd/b9ZJReuw2l
+        VSWilMIohBD6DQxEgfZQnQfOAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="KasaHareketlerBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>169, 95</value>
+  </metadata>
+  <metadata name="RentACarDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAsxJREFUOE+tkmtIU2EYx9/UMEXEyCjFBMkI7EOfIrLCAqPbrEzNNKEiMgjMTSm8
+        QCdXambDtIva8lKBUSIVhJQ768ypYbvo1nK2zZ25q7Pd3KZmZtGz7S0U7Ft/+POe9+H8/u/zvOeg/64E
+        tpCx/Y4oA28Dys9fub9xqDC2nJ+MK8sr/qogS2pwe0Ynvdoj3GEWLq840zHSNmKdtvXRLuNG4h8hCdf6
+        T5Eq+9SOerEnvqJfPaB1WRhcWUnuE0V1n9bljSoVmI61ysSk2mGJLadSMRZQxNnGJLnZY0m5JzYjJu8H
+        YvG88RVCBW2f0UiMbuea8l471IzgL3lPFbqeUZsxPOvWeoxDQGbl2tZBk7iWr1MjFqn3hzB532IIoSmq
+        TLDwJzSoiKfplFl11aTuNTpQEIrxgMLPN8XUvNfxb1O6McQkDdjTAP6C0LngYlLXIbHQ1Tz6ZVwmJwxj
+        SxXN7IqRm7zui51KJcCT4J844CuHGle9VdpMiQXdS0/+K4IIOtoi5/TTTsfqMmoSwHkMz4CVcRV9UqnR
+        M5b2SFaAiUVKIUIy2z89FIw57JGllNZ3IngBB7jBc75xNsDFSo1u6/EWWSUmA4o4x93pmp2f2Fz1QQjQ
+        Z19ASDF/rkM64eBQeins4WJhHCb5fd8DqUph9lhD8xoSMO4TEXTisbxZoHHooYPeYBZv4tmQ1d4g1FPt
+        H82DN0laC1/CBB3MiAxu5+67khoMLhLcQUabnDOgmzI8H7bab/BoEp0mVkXkNEfX9Y6L2kRmGtqf3dMg
+        voKJZURQIfD31V3qUnWHXe6JRQwiHMEniyyhEq+/o7t21YvY+M1FuvAqCWZ8A/MNQZsaWM2wt8OzDez0
+        m8WzQt3hr7FINawS8At0krsuEMIoikaH2ZtQGnsLSudsRdn1ySi3ORXlNu2F9SDKaTzkd/b9ZJReuw2l
+        VSWilMIohBD6DQxEgfZQnQfOAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="AraclarTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>355, 17</value>
+  </metadata>
+  <metadata name="PersonellerTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="MusteriHareketlerTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>582, 56</value>
+  </metadata>
+  <metadata name="KasaHareketlerTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>381, 95</value>
+  </metadata>
 </root>

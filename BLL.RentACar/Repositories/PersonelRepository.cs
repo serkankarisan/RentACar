@@ -93,7 +93,7 @@ namespace BLL.RentACar.Repositories
         public List<Personel> PersonelSorgula(string Ad, string Soyad)
         {
             List<Personel> sorgu = (from s in Genel.ent.Personeller
-                                    where s.Adi == Ad && s.Soyadi == Soyad
+                                    where s.Adi.StartsWith(Ad) && s.Soyadi.StartsWith(Soyad)
                                     select s).ToList();
             return sorgu;
         }

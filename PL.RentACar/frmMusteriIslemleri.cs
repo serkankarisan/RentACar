@@ -177,6 +177,7 @@ namespace PL.RentACar
                             if (!string.IsNullOrEmpty(txtEmail.Text))
                             {
                                 Musteri degisen = new Musteri();
+                                degisen = musrepo.MusteriGetirById(ID);
                                 degisen.Adi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
                                 degisen.Soyadi = txtSoyad.Text.Substring(0, 1).ToUpper() + txtSoyad.Text.Substring(1).ToLower();
                                 degisen.Email = txtEmail.Text + cbEmail.Text;

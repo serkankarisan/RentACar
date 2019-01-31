@@ -25,6 +25,8 @@ namespace PL.RentACar
         {
             dgvMusteriler.DataSource = mr.MusteriListele();
             dgvMusteriler.Columns[0].Visible = false;
+            
+
         }
 
         private void txtAd_TextChanged(object sender, EventArgs e)
