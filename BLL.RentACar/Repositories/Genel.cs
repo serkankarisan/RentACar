@@ -16,7 +16,6 @@ namespace BLL.RentACar.Repositories
         public static string UserName;
         public static string Yetki;
         #endregion
-
         public static int MusteriID;
         public static int PersonelID;
         public static int AracID;

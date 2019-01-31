@@ -25,6 +25,7 @@ namespace PL.RentACar
 
         private void tsYeni_Click(object sender, EventArgs e)
         {
+            Enable();
             tsKaydet.Enabled = true;
             tsDegistir.Enabled = false;
             tsSil.Enabled = false;
@@ -90,11 +91,13 @@ namespace PL.RentACar
 
         private void frmAracIslemleri_Load(object sender, EventArgs e)
         {
+            Disable();
             dgvAraclar.DataSource = ar.AracListele();
         }
 
         private void dgvAraclar_DoubleClick(object sender, EventArgs e)
         {
+            Enable();
             ID = Convert.ToInt32(dgvAraclar.SelectedRows[0].Cells[0].Value);
             txtMarka.Text = dgvAraclar.SelectedRows[0].Cells[1].Value.ToString();
             txtModel.Text= dgvAraclar.SelectedRows[0].Cells[2].Value.ToString();
@@ -164,7 +167,26 @@ namespace PL.RentACar
                 }
             }
         }
-
+        private void Enable()
+        {
+            foreach (Control t in this.Controls)
+            {
+                if (t is TextBox)
+                {
+                    t.Enabled = true;
+                }
+            }
+        }
+        private void Disable()
+        {
+            foreach (Control t in this.Controls)
+            {
+                if (t is TextBox)
+                {
+                    t.Enabled = false;
+                }
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             //OpenFileDialog dosya = new OpenFileDialog();

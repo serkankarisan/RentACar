@@ -26,6 +26,7 @@ namespace PL.RentACar
         int ID;
         private void tsYeni_Click(object sender, EventArgs e)
         {
+            Enable();
             Supurge();
             tsKaydet.Enabled = true;
             txtKullaniciAdi.Focus();
@@ -78,7 +79,8 @@ namespace PL.RentACar
 
         private void frmKullaniciIslemleri_Load(object sender, EventArgs e)
         {
-            tsKaydet.Enabled = true;
+            Disable();
+            tsKaydet.Enabled = false;
             dgvKullanicilar.DataSource = kper.KullaniciListele();
             cbPersonel.DataSource = per.PersonelListele();
             cbPersonel.SelectedIndex = 0;
@@ -89,6 +91,7 @@ namespace PL.RentACar
 
         private void dgvKullanicilar_DoubleClick(object sender, EventArgs e)
         {
+            Enable();
             ID = Convert.ToInt32(dgvKullanicilar.SelectedRows[0].Cells[0].Value);
             txtKullaniciAdi.Text = dgvKullanicilar.SelectedRows[0].Cells[3].Value.ToString();
             txtSifre.Text = dgvKullanicilar.SelectedRows[0].Cells[4].Value.ToString();
@@ -178,6 +181,30 @@ namespace PL.RentACar
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void Enable()
+        {
+            cbPersonel.Enabled = true;
+            cbYetki.Enabled = true;
+            foreach (Control t in this.Controls)
+            {
+                if (t is TextBox)
+                {
+                    t.Enabled = true;
+                }
+            }
+        }
+        private void Disable()
+        {
+            cbPersonel.Enabled = false;
+            cbYetki.Enabled = false;
+            foreach (Control t in this.Controls)
+            {
+                if (t is TextBox)
+                {
+                    t.Enabled = false;
+                }
+            }
         }
     }
 }

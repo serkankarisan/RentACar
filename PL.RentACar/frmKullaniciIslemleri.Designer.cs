@@ -65,7 +65,7 @@
             this.tsYeni.Image = ((System.Drawing.Image)(resources.GetObject("tsYeni.Image")));
             this.tsYeni.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsYeni.Name = "tsYeni";
-            this.tsYeni.Size = new System.Drawing.Size(53, 24);
+            this.tsYeni.Size = new System.Drawing.Size(54, 24);
             this.tsYeni.Text = "&Yeni";
             this.tsYeni.Click += new System.EventHandler(this.tsYeni_Click);
             // 
@@ -125,7 +125,7 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox7.Location = new System.Drawing.Point(36, 44);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(261, 16);
             this.textBox7.TabIndex = 1;
@@ -237,7 +237,7 @@
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox6.Location = new System.Drawing.Point(36, 244);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(261, 16);
             this.textBox6.TabIndex = 0;
@@ -285,6 +285,8 @@
             // 
             // dgvKullanicilar
             // 
+            this.dgvKullanicilar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvKullanicilar.BackgroundColor = System.Drawing.Color.White;
             this.dgvKullanicilar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -311,7 +313,7 @@
             this.tsSil});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
             this.toolStrip1.Size = new System.Drawing.Size(712, 27);
             this.toolStrip1.TabIndex = 28;
             this.toolStrip1.Text = "toolStrip1";
@@ -357,7 +359,7 @@
             this.Controls.Add(this.dgvKullanicilar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmKullaniciIslemleri";
             this.Text = "frmKullaniciTanimlama";
             this.Load += new System.EventHandler(this.frmKullaniciIslemleri_Load);

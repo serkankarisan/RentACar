@@ -27,6 +27,7 @@ namespace PL.RentACar
 
         private void tsYeni_Click(object sender, EventArgs e)
         {
+            Enable();
             tsKaydet.Enabled = true;
             tsDegistir.Enabled = false;
             tsSil.Enabled = false;
@@ -135,6 +136,7 @@ namespace PL.RentACar
         }
         private void frmMusteriIslemleri_Load(object sender, EventArgs e)
         {
+            Disable();
             cbEmail.SelectedIndex = 0;
             cbCinsiyet.SelectedIndex = 0;
             ListeGoster();
@@ -252,6 +254,7 @@ namespace PL.RentACar
 
         private void dgvMusteriler_DoubleClick(object sender, EventArgs e)
         {
+            Enable();
             ID = Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value);
             txtAd.Text = dgvMusteriler.SelectedRows[0].Cells[1].Value.ToString();
             txtSoyad.Text = dgvMusteriler.SelectedRows[0].Cells[2].Value.ToString();
@@ -288,6 +291,34 @@ namespace PL.RentACar
                     tsDegistir.Enabled = false;
                     tsSil.Enabled = false;
                     Temizle();
+                }
+            }
+        }
+        private void Enable()
+        {
+            cbCinsiyet.Enabled = true;
+            cbEmail.Enabled = true;
+            dtpDogumTarihi.Enabled = true;
+            dtpEhliyetTarihi.Enabled = true;
+            foreach (Control t in this.Controls)
+            {
+                if (t is TextBox)
+                {
+                    t.Enabled = true;
+                }
+            }
+        }
+        private void Disable()
+        {
+            cbCinsiyet.Enabled = false;
+            cbEmail.Enabled = false;
+            dtpDogumTarihi.Enabled = false;
+            dtpEhliyetTarihi.Enabled = false;
+            foreach (Control t in this.Controls)
+            {
+                if (t is TextBox)
+                {
+                    t.Enabled = false;
                 }
             }
         }

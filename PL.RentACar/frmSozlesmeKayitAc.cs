@@ -154,6 +154,18 @@ namespace PL.RentACar
 
         private void frmSozlesmeKayitAc_Load(object sender, EventArgs e)
         {
+            if (Genel.PersonelID != 0)
+            {
+                psec = true;
+                Personel p = perrepo.PersonelGetirById(Genel.PersonelID);
+                txtPersonelAdi.Text = p.Adi;
+                txtPersonelSoyadi.Text = p.Soyadi;
+                ListeGoster();
+                if (msec && psec)
+                {
+                    btnKayitAc.Enabled = true;
+                }
+            }
             dtpSozlesmeTarihi.Value = bugun;
             ListeGoster();
         }

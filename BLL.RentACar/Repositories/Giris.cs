@@ -32,6 +32,7 @@ namespace BLL.RentACar.Repositories
                     {
                         Genel.UserName = kullanici.Personel.Adi + "  " + kullanici.Personel.Soyadi;
                         Genel.Yetki = kullanici.Yetki.RoleName;
+                        Genel.PersonelID = kullanici.PersonelId;
                         Sonuc = true;
                     }
                 }
