@@ -213,7 +213,6 @@
             this.txtMarka.ReadOnly = true;
             this.txtMarka.Size = new System.Drawing.Size(142, 20);
             this.txtMarka.TabIndex = 92;
-            this.txtMarka.TextChanged += new System.EventHandler(this.txtMarka_TextChanged);
             // 
             // btnCikis
             // 

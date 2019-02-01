@@ -22,7 +22,7 @@ namespace PL.RentACar
         int x;
         ImageList il = new ImageList();
         ImageList il2 = new ImageList();
-
+        string projeAdres = Application.StartupPath;
         private void mitmLargeIcon_Click(object sender, EventArgs e)
         {
             lvDetaylar.View = View.LargeIcon;
@@ -82,8 +82,8 @@ namespace PL.RentACar
                 {
                     if (cbMarkalar.SelectedItem.ToString() == liste[i].Marka)
                     {
-                        il.Images.Add(Image.FromFile(liste[i].ResimYolu));
-                        il2.Images.Add(Image.FromFile(liste[i].ResimYolu));
+                        il.Images.Add(Image.FromFile(projeAdres + liste[i].ResimYolu));
+                        il2.Images.Add(Image.FromFile(projeAdres + liste[i].ResimYolu));
                         lvDetaylar.Items.Add(liste[i].Model, ResimIndisiGetir(liste[i].Id));
                         lvDetaylar.Items[j].SubItems.Add(liste[i].Tip);
                         lvDetaylar.Items[j].SubItems.Add(liste[i].Renk);
@@ -97,15 +97,15 @@ namespace PL.RentACar
         }
         private void ShowListView(List<Arac> listem)
         {
-            string projeadres = Application.StartupPath;
+            
             il.ImageSize = new Size(120, 120);
             il2.ImageSize = new Size(16, 16);
             lvDetaylar.LargeImageList = il;
             lvDetaylar.SmallImageList = il2;
             for (int i = 0; i < listem.Count; i++)
             {                
-                il.Images.Add(Image.FromFile(projeadres+listem[i].ResimYolu));
-                il2.Images.Add(Image.FromFile(projeadres+listem[i].ResimYolu));
+                il.Images.Add(Image.FromFile(projeAdres + listem[i].ResimYolu));
+                il2.Images.Add(Image.FromFile(projeAdres + listem[i].ResimYolu));
                 lvDetaylar.Items.Add(listem[i].Model, ResimIndisiGetir(listem[i].Id));
                 lvDetaylar.Items[i].SubItems.Add(listem[i].Tip);
                 lvDetaylar.Items[i].SubItems.Add(listem[i].Renk);
@@ -133,10 +133,7 @@ namespace PL.RentACar
             this.Close();
         }
 
-        private void txtMarka_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void txtPlaka_TextChanged(object sender, EventArgs e)
         {
