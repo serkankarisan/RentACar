@@ -30,21 +30,29 @@ namespace PL.RentACar
             frmMusteriSorgulama frm = new frmMusteriSorgulama();
             frm.ShowDialog();
             msec = true;
-            if (Genel.MusteriID!=0)
+            if (Genel.MusteriID != 0)
             {
                 Musteri m = musrepo.MusteriGetirById(Genel.MusteriID);
-                txtMusteriAdi.Text = m.Adi;
-                txtMusteriSoyadi.Text = m.Soyadi;
-                txtMusteriTelefon.Text = m.Telefon;
-                txtMusteriEmail.Text = m.Email;
-                txtMusteriAdres.Text = m.Adres;
-                txtMusteriTCKNo.Text = m.TcKimlikNo;
-                cbMusteriCinsiyet.Text = m.Cinsiyet;
-                txtMusteriEhliyetNo.Text = m.EhliyetNo;
-                ListeGoster();
-                if (msec && psec)
+                MusteriHareketRepository mhrep = new MusteriHareketRepository();
+                if (mhrep.MusteriHareketToplamPuan(Genel.MusteriID)>=30)
                 {
-                    btnKayitAc.Enabled = true;
+                    txtMusteriAdi.Text = m.Adi;
+                    txtMusteriSoyadi.Text = m.Soyadi;
+                    txtMusteriTelefon.Text = m.Telefon;
+                    txtMusteriEmail.Text = m.Email;
+                    txtMusteriAdres.Text = m.Adres;
+                    txtMusteriTCKNo.Text = m.TcKimlikNo;
+                    cbMusteriCinsiyet.Text = m.Cinsiyet;
+                    txtMusteriEhliyetNo.Text = m.EhliyetNo;
+                    ListeGoster();
+                    if (msec && psec)
+                    {
+                        btnKayitAc.Enabled = true;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("müşteripuanı düşük.");
                 }
             }
         }

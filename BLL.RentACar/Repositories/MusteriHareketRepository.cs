@@ -65,7 +65,10 @@ namespace BLL.RentACar.Repositories
         {
             return Genel.ent.MusteriHareketler.Where(mh => mh.Silindi == false && mh.Tarih>=baslangic && mh.Tarih<=bitis).ToList();
         }
-
+        public int MusteriHareketToplamPuan(int MusteriId)
+        {
+            return Genel.ent.MusteriHareketler.Where(mh => mh.Silindi == false && mh.MusteriId == MusteriId).Select(mh=>mh.MusteriPuanı).Sum();
+        }
         public bool MusteriHareketSil(int ID)
         {
             bool Sonuc = false;

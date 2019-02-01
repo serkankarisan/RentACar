@@ -113,6 +113,7 @@
             // 
             // dtpBaslangic
             // 
+            this.dtpBaslangic.Enabled = false;
             this.dtpBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtpBaslangic.Location = new System.Drawing.Point(148, 407);
             this.dtpBaslangic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
