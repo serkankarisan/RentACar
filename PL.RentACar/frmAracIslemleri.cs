@@ -59,7 +59,7 @@ namespace PL.RentACar
                                                 a.Plaka = txtPlaka.Text.ToUpper();
                                                 if (ar.AracKontrol(a))
                                                 {
-                                                    MessageBox.Show("Girdiginiz plaka no'lu arac sistemde kayitli!", "Aynı arac zaten var!");
+                                                    MessageBox.Show("Girdiginiz Plaka Kayıtlı!", "Aynı Arac Zaten Var!");
                                                 }
                                                 else
                                                 {
@@ -73,7 +73,14 @@ namespace PL.RentACar
                                                     a.Renk = txtRenk.Text.Substring(0, 1).ToUpper() + txtRenk.Text.Substring(1).ToLower();
                                                     a.Silindi = false;
                                                     a.Tip = txtTip.Text.Substring(0, 1).ToUpper() + txtTip.Text.Substring(1).ToLower();
-                                                    a.YakitDurumu = txtYakitDurumu.Text.Substring(0, 1).ToUpper() + txtYakitDurumu.Text.Substring(1).ToLower();
+                                                    if (txtYakitDurumu.Text.Substring(0,1)!="%")
+                                                    {
+                                                        a.YakitDurumu = "%" + txtYakitDurumu.Text.Substring(0, 1).ToUpper() + txtYakitDurumu.Text.Substring(1).ToLower();
+                                                    }
+                                                    else
+                                                    {
+                                                        a.YakitDurumu = txtYakitDurumu.Text.Substring(0, 1).ToUpper() + txtYakitDurumu.Text.Substring(1).ToLower();
+                                                    }
                                                     a.Varmi = true;
                                                     a.ResimYolu = txtResimYolu.Text.Substring(0, 1).ToUpper() + txtResimYolu.Text.Substring(1).ToLower();
                                                     if (ar.AracEkle(a))
@@ -230,8 +237,15 @@ namespace PL.RentACar
                                                     a.Model = txtModel.Text.Substring(0, 1).ToUpper() + txtModel.Text.Substring(1).ToLower(); 
                                                     a.Renk = txtRenk.Text.Substring(0, 1).ToUpper() + txtRenk.Text.Substring(1).ToLower(); 
                                                     a.Silindi = false;
-                                                    a.Tip = txtTip.Text.Substring(0, 1).ToUpper() + txtTip.Text.Substring(1).ToLower(); 
-                                                    a.YakitDurumu = txtYakitDurumu.Text.Substring(0, 1).ToUpper() + txtYakitDurumu.Text.Substring(1).ToLower(); 
+                                                    a.Tip = txtTip.Text.Substring(0, 1).ToUpper() + txtTip.Text.Substring(1).ToLower();
+                                                    if (txtYakitDurumu.Text.Substring(0, 1) != "%")
+                                                    {
+                                                        a.YakitDurumu = "%" + txtYakitDurumu.Text.Substring(0, 1).ToUpper() + txtYakitDurumu.Text.Substring(1).ToLower();
+                                                    }
+                                                    else
+                                                    {
+                                                        a.YakitDurumu = txtYakitDurumu.Text.Substring(0, 1).ToUpper() + txtYakitDurumu.Text.Substring(1).ToLower();
+                                                    }
                                                     a.Varmi = true;
                                                     a.ResimYolu = txtResimYolu.Text.Substring(0, 1).ToUpper() + txtResimYolu.Text.Substring(1).ToLower(); 
                                                     if (ar.AracGuncelle(a))
