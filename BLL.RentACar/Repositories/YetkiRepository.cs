@@ -8,7 +8,7 @@ using DAL.RentACar.Context;
 namespace BLL.RentACar.Repositories
 {
     public class YetkiRepository : IYetkiRepository
-    {
+    { 
         public bool YetkiEkle(Yetki y)
         {
             bool Sonuc = false;
