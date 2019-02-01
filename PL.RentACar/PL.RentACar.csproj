@@ -337,7 +337,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Images\Araclar\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL.RentACar\BLL.RentACar.csproj">
       <Project>{b044344a-2fdb-43c3-908b-35f81641b99d}</Project>

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,7 @@ namespace PL.RentACar
 
         AracRepository ar = new AracRepository();
         int ID;
+        ImageList ListeResim = new ImageList();
 
         private void tsYeni_Click(object sender, EventArgs e)
         {
@@ -56,7 +58,7 @@ namespace PL.RentACar
                     a.Tip = txtTip.Text;
                     a.YakitDurumu = txtYakitDurumu.Text;
                     a.Varmi = true;
-                   
+                    a.ResimYolu = txtResimYolu.Text;
 
                     if (ar.AracEkle(a))
                     {
@@ -188,15 +190,66 @@ namespace PL.RentACar
                 }
             }
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void btnResimEkle_Click(object sender, EventArgs e)
         {
-            //OpenFileDialog dosya = new OpenFileDialog();
-            //dosya.Filter = "Resim Dosyası |*.jpg;*.nef;*.png| Video|*.avi| Tüm Dosyalar |*.*";
-            //dosya.Title = "www.yazilimkodlama.com";
-            //dosya.ShowDialog();
-            //string DosyaYolu = dosya.FileName;
-            //pbArac.ImageLocation = DosyaYolu;
 
+
+            //OpenFileDialog dosya1 = new OpenFileDialog();
+            //dosya1.ShowDialog();
+            //string dosyayolu = dosya1.FileName;
+            //pbFoto.ImageLocation = dosyayolu;
+            //MessageBox.Show(dosyayolu);
+
+            //SaveFileDialog dosya = new SaveFileDialog();  //yeni bir kaydetme diyaloğu oluşturuyoruz.
+
+            //dosya.Filter = "jpeg dosyası(*.jpg)|*.jpg|Bitmap(*.bmp)|*.bmp";//.bmp veya .jpg olarak kayıt imkanı sağlıyoruz.
+
+            //dosya.Title = "Kayıt";//diğaloğumuzun başlığını belirliyoruz.  
+            //                      //File.Copy(dosyayolu, hedef);
+            //string projeadres = Application.StartupPath;
+            //string adres = projeadres + @"\\Araclar\\";
+            //File.Move(dosyayolu, adres + ""  + ".jpg");
+            //string hedef = Path.Combine(adres + "" + ".jpg");
+            //txtResimYolu.Text = hedef;
+
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                string kopyalanacakDosyaIsmi = open.SafeFileName.ToString();
+                string kopyalanacakDosya = open.FileName.ToString();
+                string projeadres = Application.StartupPath;
+                string adres = projeadres + @"\\Araclar";
+                Kopyala(kopyalanacakDosya, adres, kopyalanacakDosyaIsmi);
+                txtResimYolu.Text = @"\\Araclar" + "\\" + kopyalanacakDosyaIsmi;
+                // image file path  
+            }
+            else
+            {
+                MessageBox.Show("Dosya Seçmediniz...", "Uyarı..!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private void Kopyala(string kopyalanacakDosya,string dosyanınKopyanacagiKlasor,string kopyalanacakDosyaIsmi)
+        {
+            if (dosyanınKopyanacagiKlasor != "" && kopyalanacakDosya != "")
+            {
+                if (File.Exists(dosyanınKopyanacagiKlasor + "\\" + kopyalanacakDosyaIsmi))
+                {
+                    MessageBox.Show("Belirtilen klasörde " + kopyalanacakDosyaIsmi + " isimli dosya zaten mevcut...", "Uyarı..!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    File.Copy(kopyalanacakDosya, dosyanınKopyanacagiKlasor + "\\" + kopyalanacakDosyaIsmi);
+                    MessageBox.Show("Dosya Kopyalama İşlemi Başarılı", "Dosya Kopyalandı...");
+                }
+            }
+            else if (kopyalanacakDosya == "")
+            {
+                MessageBox.Show("Dosya Seçiniz...", "Uyarı..!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
+    
 }

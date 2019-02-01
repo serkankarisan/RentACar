@@ -44,12 +44,10 @@
             this.mitmSmallIcon = new System.Windows.Forms.ToolStripMenuItem();
             this.mitmList = new System.Windows.Forms.ToolStripMenuItem();
             this.mitmTile = new System.Windows.Forms.ToolStripMenuItem();
-            this.ilLarge = new System.Windows.Forms.ImageList(this.components);
-            this.ilSmall = new System.Windows.Forms.ImageList(this.components);
             this.cbMarkalar = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPlaka = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtMarka = new System.Windows.Forms.TextBox();
             this.btnCikis = new System.Windows.Forms.Button();
@@ -82,14 +80,11 @@
             this.columnHeader5});
             this.lvDetaylar.ContextMenuStrip = this.cmView;
             this.lvDetaylar.FullRowSelect = true;
-            this.lvDetaylar.LargeImageList = this.ilLarge;
-            this.lvDetaylar.Location = new System.Drawing.Point(16, 117);
+            this.lvDetaylar.Location = new System.Drawing.Point(12, 105);
             this.lvDetaylar.Name = "lvDetaylar";
-            this.lvDetaylar.Size = new System.Drawing.Size(653, 284);
-            this.lvDetaylar.SmallImageList = this.ilSmall;
+            this.lvDetaylar.Size = new System.Drawing.Size(655, 285);
             this.lvDetaylar.TabIndex = 10;
             this.lvDetaylar.UseCompatibleStateImageBehavior = false;
-            this.lvDetaylar.View = System.Windows.Forms.View.Tile;
             this.lvDetaylar.DoubleClick += new System.EventHandler(this.lvDetaylar_DoubleClick);
             // 
             // columnHeader6
@@ -168,24 +163,6 @@
             this.mitmTile.Text = "Tile";
             this.mitmTile.Click += new System.EventHandler(this.mitmTile_Click);
             // 
-            // ilLarge
-            // 
-            this.ilLarge.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilLarge.ImageStream")));
-            this.ilLarge.TransparentColor = System.Drawing.Color.Transparent;
-            this.ilLarge.Images.SetKeyName(0, "q7.jpg");
-            this.ilLarge.Images.SetKeyName(1, "a7.jpg");
-            this.ilLarge.Images.SetKeyName(2, "corolla.jpg");
-            this.ilLarge.Images.SetKeyName(3, "a3hatchback.jpg");
-            // 
-            // ilSmall
-            // 
-            this.ilSmall.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilSmall.ImageStream")));
-            this.ilSmall.TransparentColor = System.Drawing.Color.Transparent;
-            this.ilSmall.Images.SetKeyName(0, "q7.jpg");
-            this.ilSmall.Images.SetKeyName(1, "a7.jpg");
-            this.ilSmall.Images.SetKeyName(2, "corolla.jpg");
-            this.ilSmall.Images.SetKeyName(3, "a3hatchback.jpg");
-            // 
             // cbMarkalar
             // 
             this.cbMarkalar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -218,12 +195,13 @@
             this.label3.TabIndex = 89;
             this.label3.Text = "Model";
             // 
-            // textBox1
+            // txtPlaka
             // 
-            this.textBox1.Location = new System.Drawing.Point(313, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 26);
-            this.textBox1.TabIndex = 90;
+            this.txtPlaka.Location = new System.Drawing.Point(313, 78);
+            this.txtPlaka.Name = "txtPlaka";
+            this.txtPlaka.Size = new System.Drawing.Size(134, 20);
+            this.txtPlaka.TabIndex = 90;
+            this.txtPlaka.TextChanged += new System.EventHandler(this.txtPlaka_TextChanged);
             // 
             // textBox2
             // 
@@ -273,7 +251,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.txtMarka);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPlaka);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -303,8 +281,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ComboBox cbMarkalar;
-        private System.Windows.Forms.ImageList ilLarge;
-        private System.Windows.Forms.ImageList ilSmall;
         private System.Windows.Forms.ContextMenuStrip cmView;
         private System.Windows.Forms.ToolStripMenuItem mitmLargeIcon;
         private System.Windows.Forms.ToolStripMenuItem mitmDetails;
@@ -313,7 +289,7 @@
         private System.Windows.Forms.ToolStripMenuItem mitmTile;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPlaka;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox txtMarka;
         private System.Windows.Forms.Button btnCikis;

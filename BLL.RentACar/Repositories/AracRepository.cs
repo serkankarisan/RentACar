@@ -28,7 +28,12 @@ namespace BLL.RentACar.Repositories
 
         public List<Arac> AracListele()
         {
-            return Genel.ent.Araclar.Where(a => a.Silindi == false && a.Varmi == true).ToList();
+            return Genel.ent.Araclar.Where(a => a.Silindi == false).ToList();
+        }
+        public List<Arac> AracSorgulaByPlaka(string Plaka)
+        {
+            //return Genel.ent.Araclar.Where(a => a.Silindi == false && a.Plaka.Substring(0, Plaka.Length) == Plaka.Substring(0, Plaka.Length)).ToList();
+            return Genel.ent.Araclar.Where(a => a.Silindi == false && a.Plaka.StartsWith(Plaka.ToUpper())).ToList();
         }
         public string[] AracListeleByMarka()
         {
@@ -56,8 +61,6 @@ namespace BLL.RentACar.Repositories
         public bool AracGuncelle(Arac A)
         {
             bool Sonuc = false;
-            Arac degisen = AracGetirById(A.Id);
-            degisen = A;
             try
             {
                 Genel.ent.SaveChanges();
@@ -76,8 +79,8 @@ namespace BLL.RentACar.Repositories
             Arac silinen = (from a in Genel.ent.Araclar
                             where a.Id == ID
                             select a).FirstOrDefault();
-            //Genel.ent.Araclar.Remove(silinen);
-            silinen.Silindi = true;
+            Genel.ent.Araclar.Remove(silinen);
+
             try
             {
                 Genel.ent.SaveChanges();

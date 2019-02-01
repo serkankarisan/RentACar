@@ -56,8 +56,12 @@
             this.tsDegistir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.tsSil = new System.Windows.Forms.ToolStripButton();
+            this.btnResimEkle = new System.Windows.Forms.Button();
+            this.txtResimYolu = new System.Windows.Forms.TextBox();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAraclar)).BeginInit();
             this.tsMusteriIslemleri.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -343,12 +347,42 @@
             this.tsSil.Text = "&Sil";
             this.tsSil.Click += new System.EventHandler(this.tsSil_Click);
             // 
+            // btnResimEkle
+            // 
+            this.btnResimEkle.Location = new System.Drawing.Point(40, 322);
+            this.btnResimEkle.Name = "btnResimEkle";
+            this.btnResimEkle.Size = new System.Drawing.Size(98, 26);
+            this.btnResimEkle.TabIndex = 88;
+            this.btnResimEkle.Text = "Resim Ekle";
+            this.btnResimEkle.UseVisualStyleBackColor = true;
+            this.btnResimEkle.Click += new System.EventHandler(this.btnResimEkle_Click);
+            // 
+            // txtResimYolu
+            // 
+            this.txtResimYolu.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtResimYolu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtResimYolu.Location = new System.Drawing.Point(149, 322);
+            this.txtResimYolu.Name = "txtResimYolu";
+            this.txtResimYolu.Size = new System.Drawing.Size(120, 26);
+            this.txtResimYolu.TabIndex = 89;
+            // 
+            // pbFoto
+            // 
+            this.pbFoto.Location = new System.Drawing.Point(149, 354);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(120, 49);
+            this.pbFoto.TabIndex = 90;
+            this.pbFoto.TabStop = false;
+            // 
             // frmAracIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(849, 335);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbFoto);
+            this.Controls.Add(this.txtResimYolu);
+            this.Controls.Add(this.btnResimEkle);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.tsMusteriIslemleri);
             this.Controls.Add(this.label5);
@@ -378,6 +412,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAraclar)).EndInit();
             this.tsMusteriIslemleri.ResumeLayout(false);
             this.tsMusteriIslemleri.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,5 +446,8 @@
         private System.Windows.Forms.ToolStripButton tsDegistir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripButton tsSil;
+        private System.Windows.Forms.Button btnResimEkle;
+        private System.Windows.Forms.TextBox txtResimYolu;
+        private System.Windows.Forms.PictureBox pbFoto;
     }
 }

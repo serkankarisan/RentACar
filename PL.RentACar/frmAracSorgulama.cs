@@ -17,9 +17,12 @@ namespace PL.RentACar
         public frmAracSorgulama()
         {
             InitializeComponent();
-        }
+        }        
         AracRepository ARep = new AracRepository();
         int x;
+        ImageList il = new ImageList();
+        ImageList il2 = new ImageList();
+        string projeAdres = Application.StartupPath;
         private void mitmLargeIcon_Click(object sender, EventArgs e)
         {
             lvDetaylar.View = View.LargeIcon;
@@ -51,6 +54,8 @@ namespace PL.RentACar
 
         private void frmAracSorgulama_Load(object sender, EventArgs e)
         {
+            il.ImageSize = new Size(120, 120);
+            il2.ImageSize = new Size(16, 16);
             txtMarka.Text = "Marka Seçiniz.";
             cbMarkalar.Items.Clear();
             cbMarkalar.DisplayMember = "Marka";
@@ -62,9 +67,14 @@ namespace PL.RentACar
 
         private void cbMarkalar_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             if (x > 0)
             {
-                lvDetaylar.Items.Clear();
+                lvDetaylar.Items.Clear();                
+                
+                lvDetaylar.LargeImageList = il;
+                lvDetaylar.SmallImageList = il2;
+                
                 txtMarka.Text = cbMarkalar.SelectedItem.ToString();
                 List<Arac> liste = ARep.AracListele();
                 int j = 0;
@@ -72,7 +82,9 @@ namespace PL.RentACar
                 {
                     if (cbMarkalar.SelectedItem.ToString() == liste[i].Marka)
                     {
-                        lvDetaylar.Items.Add(liste[i].Model, i);
+                        il.Images.Add(Image.FromFile(projeAdres + liste[i].ResimYolu));
+                        il2.Images.Add(Image.FromFile(projeAdres + liste[i].ResimYolu));
+                        lvDetaylar.Items.Add(liste[i].Model, ResimIndisiGetir(liste[i].Id));
                         lvDetaylar.Items[j].SubItems.Add(liste[i].Tip);
                         lvDetaylar.Items[j].SubItems.Add(liste[i].Renk);
                         lvDetaylar.Items[j].SubItems.Add(liste[i].Plaka);
@@ -85,16 +97,22 @@ namespace PL.RentACar
         }
         private void ShowListView(List<Arac> listem)
         {
+            
+            il.ImageSize = new Size(120, 120);
+            il2.ImageSize = new Size(16, 16);
+            lvDetaylar.LargeImageList = il;
+            lvDetaylar.SmallImageList = il2;
             for (int i = 0; i < listem.Count; i++)
-            {
-                lvDetaylar.Items.Add(listem[i].Model, i);
+            {                
+                il.Images.Add(Image.FromFile(projeAdres + listem[i].ResimYolu));
+                il2.Images.Add(Image.FromFile(projeAdres + listem[i].ResimYolu));
+                lvDetaylar.Items.Add(listem[i].Model, ResimIndisiGetir(listem[i].Id));
                 lvDetaylar.Items[i].SubItems.Add(listem[i].Tip);
                 lvDetaylar.Items[i].SubItems.Add(listem[i].Renk);
                 lvDetaylar.Items[i].SubItems.Add(listem[i].Plaka);
                 lvDetaylar.Items[i].SubItems.Add(listem[i].AracDurumu);
                 lvDetaylar.Items[i].SubItems.Add(listem[i].GünlükFiyat.ToString());
-            }
-            
+            }            
         }
 
         private void lvDetaylar_DoubleClick(object sender, EventArgs e)
@@ -104,8 +122,7 @@ namespace PL.RentACar
             {
                 if (lvDetaylar.SelectedItems[0].SubItems[3].Text == liste[i].Plaka)
                 {
-                    Genel.AracID = liste[i].Id;
-                    
+                    Genel.AracID = liste[i].Id;                    
                 }               
             }
             this.Close();
@@ -114,6 +131,43 @@ namespace PL.RentACar
         private void btnCikis_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        
+
+        private void txtPlaka_TextChanged(object sender, EventArgs e)
+        {
+            txtMarka.Text = "Marka Seç.";
+            lvDetaylar.Items.Clear();
+            List<Arac> liste = ARep.AracSorgulaByPlaka(txtPlaka.Text);
+            int j = 0;
+            for (int i = 0; i < liste.Count; i++)
+            {
+                lvDetaylar.Items.Add(liste[i].Model, ResimIndisiGetir(liste[i].Id));
+                lvDetaylar.Items[j].SubItems.Add(liste[i].Tip);
+                lvDetaylar.Items[j].SubItems.Add(liste[i].Renk);
+                lvDetaylar.Items[j].SubItems.Add(liste[i].Plaka);
+                lvDetaylar.Items[j].SubItems.Add(liste[i].AracDurumu);
+                lvDetaylar.Items[j].SubItems.Add(liste[i].GünlükFiyat.ToString());
+                j++;
+            }
+            
+        }
+        private int ResimIndisiGetir(int ID)
+        {
+            int indis = 0;
+            List<Arac> liste = ARep.AracListele();
+            int[] diziID = new int[liste.Count];
+            for (int i = 0; i < liste.Count; i++)
+            {
+                diziID[i] = liste[i].Id;               
+            }
+            for (int j = 0; j < liste.Count; j++)
+            {
+                if (ID == liste[j].Id)
+                    indis = Array.IndexOf(diziID, liste[j].Id);
+            }
+            return indis;
         }
     }
 }
