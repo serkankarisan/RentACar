@@ -123,29 +123,26 @@ namespace BLL.RentACar.Repositories
             return Sonuc;
         }
 
-        public List<SozlesmeDetay> SozlesmeDetaySorgula(int SozlesmeId, string TckNo, string EhliyetNo, DateTime Baslangic, DateTime Bitis)
-        {
-            DateTime basla = Convert.ToDateTime(Baslangic.ToShortDateString());
-            DateTime bit = Convert.ToDateTime(Bitis.ToShortDateString());
-            return Genel.ent.SozlesmeDetaylar.Where(k => k.Silindi == false && k.SozlesmeId.ToString().StartsWith(SozlesmeId.ToString()) && k.Sozlesme.Musteri.TcKimlikNo.StartsWith(TckNo) && k.Sozlesme.Musteri.EhliyetNo.StartsWith(EhliyetNo) && k.BaslangicTarihi == basla  && k.BitisTarihi == bit).ToList();
-        }
-        public List<SozlesmeDetay> SozlesmeDetaySorgula(string TckNo, string EhliyetNo, DateTime Baslangic, DateTime Bitis)
-        {
-            DateTime basla = Convert.ToDateTime(Baslangic.ToShortDateString());
-            DateTime bit = Convert.ToDateTime(Bitis.ToShortDateString());
-            return Genel.ent.SozlesmeDetaylar.Where(k => k.Silindi == false && k.Sozlesme.Musteri.TcKimlikNo.StartsWith(TckNo) && k.Sozlesme.Musteri.EhliyetNo.StartsWith(EhliyetNo) && k.BaslangicTarihi == basla && k.BitisTarihi == bit).ToList();
-        }
-
         public List<SozlesmeDetay> SozlesmeDetaySorgula(int SozlesmeId, string TckNo, string EhliyetNo)
         {
-            throw new NotImplementedException();
+            return Genel.ent.SozlesmeDetaylar.Where(k => k.Silindi == false && k.SozlesmeId.ToString().StartsWith(SozlesmeId.ToString()) && k.Sozlesme.Musteri.TcKimlikNo.StartsWith(TckNo) && k.Sozlesme.Musteri.EhliyetNo.StartsWith(EhliyetNo)).ToList();
+        }
+        public List<SozlesmeDetay> SozlesmeDetaySorgula(string TckNo, string EhliyetNo)
+        {
+            return Genel.ent.SozlesmeDetaylar.Where(k => k.Silindi == false && k.Sozlesme.Musteri.TcKimlikNo.StartsWith(TckNo) && k.Sozlesme.Musteri.EhliyetNo.StartsWith(EhliyetNo)).ToList();
         }
 
-        public List<SozlesmeDetay> SozlesmeDetaySorgula(DateTime Baslangic, DateTime Bitis)
+        public List<SozlesmeDetay> SozlesmeDetaySorgula(DateTime B)
         {
-            DateTime basla = Convert.ToDateTime(Baslangic.ToShortDateString());
-            DateTime bit = Convert.ToDateTime(Bitis.ToShortDateString());
-            return Genel.ent.SozlesmeDetaylar.Where(k => k.Silindi == false && k.BaslangicTarihi == basla && k.BitisTarihi == bit).ToList();
+            DateTime basla = Convert.ToDateTime(B.ToShortDateString());
+            //DateTime bit = Convert.ToDateTime(Bitis.ToShortDateString());
+            return Genel.ent.SozlesmeDetaylar.Where(k => k.Silindi == false && k.BaslangicTarihi == basla).ToList();
+        }
+        public List<SozlesmeDetay> SozlesmeDetaySorgulab(DateTime B)
+        {
+            DateTime bit = Convert.ToDateTime(B.ToShortDateString());
+            //DateTime bit = Convert.ToDateTime(Bitis.ToShortDateString());
+            return Genel.ent.SozlesmeDetaylar.Where(k => k.Silindi == false && k.BitisTarihi == bit).ToList();
         }
     }
 }

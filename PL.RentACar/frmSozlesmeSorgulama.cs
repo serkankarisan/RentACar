@@ -19,7 +19,7 @@ namespace PL.RentACar
         }
         SozlesmeRepository sRep = new SozlesmeRepository();
         SozlesmeDetayRepository sdRep = new SozlesmeDetayRepository();
-
+        int a;
         private void frmSozlesmeSorgulama_Load(object sender, EventArgs e)
         {
             dgvSozlesmeler.DataSource = sRep.SozlesmeListele();
@@ -28,37 +28,61 @@ namespace PL.RentACar
 
         private void txtSozlesmeId_TextChanged(object sender, EventArgs e)
         {
-            if (txtSozlesmeId.Text.Trim()!="")
+            if (int.TryParse(txtSozlesmeId.Text, out a) || txtSozlesmeId.Text == "")
             {
-                dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula(Convert.ToInt32(txtSozlesmeId.Text), txtTCKNo.Text, txtEhliyetNo.Text);
+                if (txtSozlesmeId.Text.Trim() != "")
+                {
+                    dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula(Convert.ToInt32(txtSozlesmeId.Text), txtTCKNo.Text, txtEhliyetNo.Text);
+                }
+                else
+                {
+                    dgvSozlesmeler.DataSource = sRep.SozlesmeListele();
+                }
             }
             else
             {
-                dgvSozlesmeler.DataSource = sRep.SozlesmeListele();
+                MessageBox.Show("Sayı girilmelidir!", "Yanlış giriş!");
+                txtSozlesmeId.Clear();
             }
         }
 
         private void txtTCKNo_TextChanged(object sender, EventArgs e)
         {
-            if (txtTCKNo.Text.Trim() != "")
+            if (int.TryParse(txtTCKNo.Text, out a) || txtTCKNo.Text == "")
             {
-                dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula(txtTCKNo.Text, txtEhliyetNo.Text);
+                if (txtTCKNo.Text.Trim() != "")
+                {
+                    dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula(txtTCKNo.Text, txtEhliyetNo.Text);
+                }
+                else
+                {
+                    dgvSozlesmeler.DataSource = sRep.SozlesmeListele();
+                }
             }
             else
             {
-                dgvSozlesmeler.DataSource = sRep.SozlesmeListele();
+                MessageBox.Show("Sayı girilmelidir!", "Yanlış giriş!");
+                txtTCKNo.Clear();
             }
         }
 
         private void txtEhliyetNo_TextChanged(object sender, EventArgs e)
         {
-            if (txtEhliyetNo.Text.Trim() != "")
+            if (int.TryParse(txtEhliyetNo.Text, out a) || txtEhliyetNo.Text == "")
             {
-                dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula(txtTCKNo.Text, txtEhliyetNo.Text);
+                if (txtEhliyetNo.Text.Trim() != "")
+                {
+                    dgvSozlesmeler.DataSource = sRep.SozlesmeSorgula(txtTCKNo.Text, txtEhliyetNo.Text);
+                }
+                else
+                {
+                    dgvSozlesmeler.DataSource = sRep.SozlesmeListele();
+                }
             }
             else
             {
-                dgvSozlesmeler.DataSource = sRep.SozlesmeListele();
+                MessageBox.Show("Sayı girilmelidir!", "Yanlış giriş!");
+                txtEhliyetNo.Clear();
             }
         }
 
@@ -69,61 +93,83 @@ namespace PL.RentACar
 
         private void txtSozlesmeId2_TextChanged(object sender, EventArgs e)
         {
-            if (txtSozlesmeId2.Text.Trim() != "")
+            if (int.TryParse(txtSozlesmeId2.Text, out a) || txtSozlesmeId2.Text == "")
             {
-                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToInt32(txtSozlesmeId2.Text), txtTckNo2.Text, txtEhliyetNo2.Text, dtpBaslangıc.Value, dtpBitis.Value);
+                if (txtSozlesmeId2.Text.Trim() != "")
+                {
+                    dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(Convert.ToInt32(txtSozlesmeId2.Text), txtTckNo2.Text, txtEhliyetNo2.Text);
+                }
+                else
+                {
+                    dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetayListele();
+                }
             }
             else
             {
-                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetayListele();
+                MessageBox.Show("Sayı girilmelidir!", "Yanlış giriş!");
+                txtSozlesmeId2.Clear();
             }
         }
 
         private void txtTckNo2_TextChanged(object sender, EventArgs e)
         {
-            if (txtTckNo2.Text.Trim() != "")
+            if (int.TryParse(txtTckNo2.Text, out a) || txtTckNo2.Text == "")
             {
-                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(txtTckNo2.Text, txtEhliyetNo2.Text, dtpBaslangıc.Value, dtpBitis.Value);
+                if (txtTckNo2.Text.Trim() != "")
+                {
+                    dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(txtTckNo2.Text, txtEhliyetNo2.Text);
+                }
+                else
+                {
+                    dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetayListele();
+                }
             }
             else
             {
-                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetayListele();
+                MessageBox.Show("Sayı girilmelidir!", "Yanlış giriş!");
+                txtTckNo2.Clear();
             }
         }
 
         private void txtEhliyetNo2_TextChanged(object sender, EventArgs e)
         {
-            if (txtEhliyetNo2.Text.Trim() != "")
+            if (int.TryParse(txtEhliyetNo2.Text, out a) || txtEhliyetNo2.Text == "")
             {
-                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(txtTckNo2.Text, txtEhliyetNo2.Text, dtpBaslangıc.Value, dtpBitis.Value);
+                if (txtEhliyetNo2.Text.Trim() != "")
+                {
+                    dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(txtTckNo2.Text, txtEhliyetNo2.Text);
+                }
+                else
+                {
+                    dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetayListele();
+                }
             }
             else
             {
-                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetayListele();
+                MessageBox.Show("Sayı girilmelidir!", "Yanlış giriş!");
+                txtEhliyetNo2.Clear();
             }
         }
 
         private void dtpBaslangıc_ValueChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(dtpBaslangıc.Value, dtpBitis.Value);
+            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(dtpBaslangıc.Value);
         }
 
         private void dtpBitis_ValueChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(dtpBaslangıc.Value, dtpBitis.Value);
+            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgulab(dtpBitis.Value);
         }
 
         private void dgvSozlesmeDetay_DoubleClick(object sender, EventArgs e)
         {
             Genel.soz = sRep.SozlesmeGetirById(Convert.ToInt32(dgvSozlesmeDetay.SelectedRows[0].Cells[1].Value));
-            Genel.SozID =Convert.ToInt32(dgvSozlesmeDetay.SelectedRows[0].Cells[1].Value);
             this.Close();
         }
 
         private void dgvSozlesmeler_DoubleClick(object sender, EventArgs e)
         {
             Genel.soz = sRep.SozlesmeGetirById(Convert.ToInt32(dgvSozlesmeler.SelectedRows[0].Cells[0].Value));
-            Genel.SozID = Convert.ToInt32(dgvSozlesmeler.SelectedRows[0].Cells[0].Value);
             this.Close();
         }
     }
