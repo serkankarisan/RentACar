@@ -34,7 +34,7 @@ namespace PL.RentACar
             txtAd.Focus();
             Temizle();
         }
-
+        MusteriHareketRepository mhr = new MusteriHareketRepository();
         private void tsKaydet_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtAd.Text))
@@ -91,6 +91,15 @@ namespace PL.RentACar
                                         if (musrepo.MusteriEkle(yeni))
                                         {
                                             MessageBox.Show("Yeni müşteri eklendi.", "Kayıt gerçekleşti.");
+                                            MusteriHareket mh = new MusteriHareket();
+                                            mh.MusteriId = yeni.Id;
+                                            mh.MusteriGetirisi = 0;
+                                            mh.MusteriGetiriTuru = "Kayıt Açılışı";
+                                            mh.MusteriPuanı = 100;
+                                            mh.ParaBirimi = "TL";
+                                            mh.Silindi = false;
+                                            mh.Tarih = DateTime.Now;
+                                            mhr.MusteriHareketEkle(mh);
                                             ListeGoster();
                                             Temizle();
                                             tsKaydet.Enabled = false;

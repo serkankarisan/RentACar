@@ -67,7 +67,10 @@ namespace BLL.RentACar.Repositories
         }
         public int MusteriHareketToplamPuan(int MusteriId)
         {
-            return Genel.ent.MusteriHareketler.Where(mh => mh.Silindi == false && mh.MusteriId == MusteriId).Select(mh=>mh.MusteriPuanı).Sum();
+            int toplam = (from mh in Genel.ent.MusteriHareketler
+             where mh.Silindi == false && mh.MusteriId == MusteriId
+             select mh.MusteriPuanı).Sum();
+            return toplam;
         }
         public bool MusteriHareketSil(int ID)
         {

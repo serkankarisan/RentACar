@@ -34,7 +34,31 @@ namespace PL.RentACar
             {
                 Musteri m = musrepo.MusteriGetirById(Genel.MusteriID);
                 MusteriHareketRepository mhrep = new MusteriHareketRepository();
-                if (mhrep.MusteriHareketToplamPuan(Genel.MusteriID)>=30)
+                if (mhrep.MusteriHareketToplamPuan(Genel.MusteriID)<30 )
+                {
+                    if ((MessageBox.Show("Müşteri Puanı Alt Sınırda Sözleşmeye Devam Edilsin Mi?", "Sözleşme Yapılsınmı", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+                    {
+                        txtMusteriAdi.Text = m.Adi;
+                        txtMusteriSoyadi.Text = m.Soyadi;
+                        txtMusteriTelefon.Text = m.Telefon;
+                        txtMusteriEmail.Text = m.Email;
+                        txtMusteriAdres.Text = m.Adres;
+                        txtMusteriTCKNo.Text = m.TcKimlikNo;
+                        cbMusteriCinsiyet.Text = m.Cinsiyet;
+                        txtMusteriEhliyetNo.Text = m.EhliyetNo;
+                        ListeGoster();
+                        if (msec && psec)
+                        {
+                            btnKayitAc.Enabled = true;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sözleşme İptal Edildi!","Puan Düşük");
+                        this.Close();
+                    }
+                }
+                else
                 {
                     txtMusteriAdi.Text = m.Adi;
                     txtMusteriSoyadi.Text = m.Soyadi;
@@ -50,11 +74,8 @@ namespace PL.RentACar
                         btnKayitAc.Enabled = true;
                     }
                 }
-                else
-                {
-                    MessageBox.Show("müşteripuanı düşük.");
-                }
             }
+            Genel.MusteriID = 0;
         }
 
         private void btnPersonelSec_Click(object sender, EventArgs e)
