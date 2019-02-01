@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DAL.RentACar.Context
-{
+{ 
     [Table("Yetkiler")]
     public class Yetki
     {
