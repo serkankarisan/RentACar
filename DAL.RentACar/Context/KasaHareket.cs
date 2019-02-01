@@ -32,10 +32,6 @@ namespace DAL.RentACar.Context
 
         public KasaHareket()
         {
-            SozlesmeId = 0;
-            AracId = 0;
-            PersonelId = 0;
-            Tutar = 0;
             ParaBirimi = "TL";
             Silindi = false;
         }

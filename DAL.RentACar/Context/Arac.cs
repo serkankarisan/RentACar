@@ -44,10 +44,6 @@ namespace DAL.RentACar.Context
         public Arac()
         {
             Silindi = false;
-            Varmi = true;
-            YakitDurumu = "%100";
-            AracDurumu = "Hasarsız";
-            GünlükFiyat = 0;
         }
         public override string ToString()
         {

@@ -34,46 +34,122 @@ namespace PL.RentACar
             txtMarka.Focus();
             Temizle();
         }
-
+        decimal gunlukfiyat,dg;
         private void tsKaydet_Click(object sender, EventArgs e)
         {
-            if (txtAracDurumu.Text.Trim()!="" && txtGunlukFiyat.Text.Trim()!="" && txtMarka.Text.Trim()!="" && txtModel.Text.Trim()!="" && txtPlaka.Text.Trim()!="" &&txtRenk.Text.Trim()!="" && txtTip.Text.Trim()!="" && txtYakitDurumu.Text.Trim()!="")
+            if (txtAracDurumu.Text.Trim() != "")
             {
-                
-                Arac a = new Arac();
-
-                a.Plaka = txtPlaka.Text;
-                if (ar.AracKontrol(a))
+                if (txtGunlukFiyat.Text.Trim() != "")
                 {
-                    MessageBox.Show("Girdiginiz plaka no'lu arac sistemde kayitli!", "Aynı arac zaten var!");
-                }
-                else
-                {
-                    a.AracDurumu = txtAracDurumu.Text;
-                    a.GünlükFiyat = Convert.ToInt32(txtGunlukFiyat.Text);
-                    a.Marka = txtMarka.Text;
-                    a.Model = txtModel.Text;
-                    a.Renk = txtRenk.Text;
-                    a.Silindi = false;
-                    a.Tip = txtTip.Text;
-                    a.YakitDurumu = txtYakitDurumu.Text;
-                    a.Varmi = true;
-                    a.ResimYolu = txtResimYolu.Text;
-
-                    if (ar.AracEkle(a))
+                    if (txtMarka.Text.Trim() != "")
                     {
-                        MessageBox.Show("Yeni arac eklendi.", "Kayıt gerçekleşti.");
-                        dgvAraclar.DataSource = ar.AracListele();
-                        tsKaydet.Enabled = false;
-                        Temizle();
+                        if (txtModel.Text.Trim() != "")
+                        {
+                            if (txtPlaka.Text.Trim() != "")
+                            {
+                                if (txtRenk.Text.Trim() != "")
+                                {
+                                    if (txtTip.Text.Trim() != "")
+                                    {
+                                        if (txtYakitDurumu.Text.Trim() != "")
+                                        {
+                                            if (txtResimYolu.Text.Trim() != "")
+                                            {
+                                                Arac a = new Arac();
+                                                a.Plaka = txtPlaka.Text.ToUpper();
+                                                if (ar.AracKontrol(a))
+                                                {
+                                                    MessageBox.Show("Girdiginiz plaka no'lu arac sistemde kayitli!", "Aynı arac zaten var!");
+                                                }
+                                                else
+                                                {
+                                                    a.AracDurumu = txtAracDurumu.Text.Substring(0, 1).ToUpper() + txtAracDurumu.Text.Substring(1).ToLower();
+                                                    if (decimal.TryParse(txtGunlukFiyat.Text, out dg))
+                                                    {
+                                                        a.GünlükFiyat = Convert.ToDecimal(txtGunlukFiyat.Text);
+                                                    }
+                                                    a.Marka = txtMarka.Text.Substring(0, 1).ToUpper() + txtMarka.Text.Substring(1).ToLower();
+                                                    a.Model = txtModel.Text.Substring(0, 1).ToUpper() + txtModel.Text.Substring(1).ToLower();
+                                                    a.Renk = txtRenk.Text.Substring(0, 1).ToUpper() + txtRenk.Text.Substring(1).ToLower();
+                                                    a.Silindi = false;
+                                                    a.Tip = txtTip.Text.Substring(0, 1).ToUpper() + txtTip.Text.Substring(1).ToLower();
+                                                    a.YakitDurumu = txtYakitDurumu.Text.Substring(0, 1).ToUpper() + txtYakitDurumu.Text.Substring(1).ToLower();
+                                                    a.Varmi = true;
+                                                    a.ResimYolu = txtResimYolu.Text.Substring(0, 1).ToUpper() + txtResimYolu.Text.Substring(1).ToLower();
+                                                    if (ar.AracEkle(a))
+                                                    {
+                                                        MessageBox.Show("Yeni arac eklendi.", "Kayıt gerçekleşti.");
+                                                        Listele();
+                                                        tsKaydet.Enabled = false;
+                                                        Temizle();
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Resim Seçiniz.", "Eksik Bilgi!");
+                                            }
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Yakıt Bilgisi Giriniz!", "Eksik Bilgi!");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Tip Giriniz!", "Eksik Bilgi!");
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Renk Giriniz!", "Eksik Bilgi!");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Plaka Giriniz!", "Eksik Bilgi!");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Model Giriniz!", "Eksik Bilgi!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Marka Giriniz!", "Eksik Bilgi!");
                     }
                 }
             }
-            else { MessageBox.Show("Gerekli alanlari doldurunuz!"); }
+            else
+            {
+                MessageBox.Show("Araç Durumu Giriniz!", "Eksik Bilgi!");
+            }
+        }
+        private void Listele()
+        {
+            dgvAraclar.DataSource = ar.AracListele();
+            dgvAraclar.Columns[0].Visible = false;
+            dgvAraclar.Columns[1].Width = 100;
+            dgvAraclar.Columns[2].Width = 100;
+            dgvAraclar.Columns[3].Width = 110;
+            dgvAraclar.Columns[3].HeaderText = "Günlük Fiyat";
+            dgvAraclar.Columns[4].Width = 100;
+            dgvAraclar.Columns[5].Width = 100;
+            dgvAraclar.Columns[6].Width = 110;
+            dgvAraclar.Columns[7].Width = 100;
+            dgvAraclar.Columns[7].HeaderText = "Durum";
+            dgvAraclar.Columns[8].Width = 75;
+            dgvAraclar.Columns[8].HeaderText="Depo";
+            dgvAraclar.Columns[9].Visible = false;
+            dgvAraclar.Columns[10].Visible = false;
+            dgvAraclar.Columns[11].Visible = false;
         }
 
         private void Temizle()
         {
+            pbFoto.Image = null;
+            txtResimYolu.Clear();
             txtAracDurumu.Clear();
             txtGunlukFiyat.Clear();
             txtMarka.Clear();
@@ -94,8 +170,7 @@ namespace PL.RentACar
         private void frmAracIslemleri_Load(object sender, EventArgs e)
         {
             Disable();
-            dgvAraclar.DataSource = ar.AracListele();
-            dgvAraclar.Columns[10].Visible = false;
+            Listele();
         }
 
         private void dgvAraclar_DoubleClick(object sender, EventArgs e)
@@ -104,52 +179,115 @@ namespace PL.RentACar
             ID = Convert.ToInt32(dgvAraclar.SelectedRows[0].Cells[0].Value);
             txtMarka.Text = dgvAraclar.SelectedRows[0].Cells[1].Value.ToString();
             txtModel.Text= dgvAraclar.SelectedRows[0].Cells[2].Value.ToString();
-           txtGunlukFiyat.Text= dgvAraclar.SelectedRows[0].Cells[3].Value.ToString();
+            txtGunlukFiyat.Text= dgvAraclar.SelectedRows[0].Cells[3].Value.ToString();
             txtTip.Text= dgvAraclar.SelectedRows[0].Cells[4].Value.ToString();
             txtRenk.Text= dgvAraclar.SelectedRows[0].Cells[5].Value.ToString();
             txtPlaka.Text= dgvAraclar.SelectedRows[0].Cells[6].Value.ToString();
             txtAracDurumu.Text= dgvAraclar.SelectedRows[0].Cells[7].Value.ToString();
             txtYakitDurumu.Text= dgvAraclar.SelectedRows[0].Cells[8].Value.ToString();
+            txtResimYolu.Text = dgvAraclar.SelectedRows[0].Cells[10].Value.ToString();
+            pbFoto.Image = Image.FromFile(Application.StartupPath + "" + txtResimYolu.Text);
             tsSil.Enabled = true;
             tsDegistir.Enabled = true;
         }
 
+
         private void tsDegistir_Click(object sender, EventArgs e)
         {
-            if (txtAracDurumu.Text.Trim() != "" && txtGunlukFiyat.Text.Trim() != "" && txtMarka.Text.Trim() != "" && txtModel.Text.Trim() != "" && txtPlaka.Text.Trim() != "" && txtRenk.Text.Trim() != "" && txtTip.Text.Trim() != "" && txtYakitDurumu.Text.Trim() != "")
+            if (txtAracDurumu.Text.Trim() != "")
             {
-                
-                Arac a = new Arac();
-                a = ar.AracGetirById(ID);
-                a.Plaka = txtPlaka.Text;
-                a.AracDurumu = txtAracDurumu.Text;
-                a.GünlükFiyat = Convert.ToDecimal(txtGunlukFiyat.Text);
-                a.Marka = txtMarka.Text;
-                a.Model = txtModel.Text;
-                a.Renk = txtRenk.Text;
-                a.Silindi = false;
-                a.Tip = txtTip.Text;
-                a.YakitDurumu = txtYakitDurumu.Text;
-                a.Varmi = true;
-                if (ar.AracKontrolbyGuncelleme(a))
+                if (txtGunlukFiyat.Text.Trim() != "")
                 {
-                    MessageBox.Show("Bu arac plakasi sistemde kayıtlı!", "Aynı arac zaten var!");
-                }
-                else
-                {
-                    if (ar.AracGuncelle(a))
+                    if (txtMarka.Text.Trim() != "")
                     {
-                        MessageBox.Show("Arac bilgileri değiştirildi.", "Guncelleme gerçekleşti.");
-                        dgvAraclar.DataSource = ar.AracListele();
-                        tsDegistir.Enabled = false;
-                        tsSil.Enabled=false;
-                        Temizle();
+                        if (txtModel.Text.Trim() != "")
+                        {
+                            if (txtPlaka.Text.Trim() != "")
+                            {
+                                if (txtRenk.Text.Trim() != "")
+                                {
+                                    if (txtTip.Text.Trim() != "")
+                                    {
+                                        if (txtYakitDurumu.Text.Trim() != "")
+                                        {
+                                            if (txtResimYolu.Text.Trim() != "")
+                                            {
+                                                Arac a = new Arac();
+                                                a.Id = ID;
+                                                a.Plaka = txtPlaka.Text.ToUpper();
+                                                if (ar.AracKontrolbyGuncelleme(a))
+                                                {
+                                                    MessageBox.Show("Girdiginiz Plaka Kayıtlı!", "Aynı Arac Zaten Var!");
+                                                }
+                                                else
+                                                {
+                                                    a.AracDurumu = txtAracDurumu.Text.Substring(0, 1).ToUpper() + txtAracDurumu.Text.Substring(1).ToLower();
+                                                    if (decimal.TryParse(txtGunlukFiyat.Text, out gunlukfiyat))
+                                                    {
+                                                        a.GünlükFiyat = Convert.ToDecimal(txtGunlukFiyat.Text);
+                                                    }
+                                                    a.Marka = txtMarka.Text.Substring(0, 1).ToUpper() + txtMarka.Text.Substring(1).ToLower();
+                                                    a.Model = txtModel.Text.Substring(0, 1).ToUpper() + txtModel.Text.Substring(1).ToLower(); 
+                                                    a.Renk = txtRenk.Text.Substring(0, 1).ToUpper() + txtRenk.Text.Substring(1).ToLower(); 
+                                                    a.Silindi = false;
+                                                    a.Tip = txtTip.Text.Substring(0, 1).ToUpper() + txtTip.Text.Substring(1).ToLower(); 
+                                                    a.YakitDurumu = txtYakitDurumu.Text.Substring(0, 1).ToUpper() + txtYakitDurumu.Text.Substring(1).ToLower(); 
+                                                    a.Varmi = true;
+                                                    a.ResimYolu = txtResimYolu.Text.Substring(0, 1).ToUpper() + txtResimYolu.Text.Substring(1).ToLower(); 
+                                                    if (ar.AracGuncelle(a))
+                                                    {
+                                                        MessageBox.Show("Arac Bilgileri Değiştirildi.", "Guncelleme Gerçekleşti.");
+                                                        Listele();
+                                                        tsDegistir.Enabled = false;
+                                                        tsSil.Enabled = false;
+                                                        Temizle();
+                                                        Disable();
+                                                    }
+                                                    else
+                                                    {
+                                                        MessageBox.Show("Arac Bilgileri Değiştirilemedi.", "Hata!");
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Resim Seçiniz.", "Eksik Bilgi!");
+                                            }
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Yakıt Bilgisi Giriniz!", "Eksik Bilgi!");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Tip Giriniz!", "Eksik Bilgi!");
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Renk Giriniz!", "Eksik Bilgi!");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Plaka Giriniz!", "Eksik Bilgi!");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Model Giriniz!", "Eksik Bilgi!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Marka Giriniz!", "Eksik Bilgi!");
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Gerekli alanlari doldurunuz!");
+                MessageBox.Show("Araç Durumu Giriniz!", "Eksik Bilgi!");
             }
             txtMarka.Focus();
         }
@@ -163,15 +301,17 @@ namespace PL.RentACar
                 if (ar.AracSil(ID))
                 {
                     MessageBox.Show("Arac bilgileri silindi.", "Silme gerçekleşti.");
-                    dgvAraclar.DataSource = ar.AracListele();
+                    Listele();
                     tsDegistir.Enabled = false;
                     tsSil.Enabled = false;
                     Temizle();
+                    Disable();
                 }
             }
         }
         private void Enable()
         {
+            btnResimEkle.Enabled = true;
             foreach (Control t in this.Controls)
             {
                 if (t is TextBox)
@@ -182,6 +322,7 @@ namespace PL.RentACar
         }
         private void Disable()
         {
+            btnResimEkle.Enabled = false;
             foreach (Control t in this.Controls)
             {
                 if (t is TextBox)
@@ -192,30 +333,10 @@ namespace PL.RentACar
         }
         private void btnResimEkle_Click(object sender, EventArgs e)
         {
-
-
-            //OpenFileDialog dosya1 = new OpenFileDialog();
-            //dosya1.ShowDialog();
-            //string dosyayolu = dosya1.FileName;
-            //pbFoto.ImageLocation = dosyayolu;
-            //MessageBox.Show(dosyayolu);
-
-            //SaveFileDialog dosya = new SaveFileDialog();  //yeni bir kaydetme diyaloğu oluşturuyoruz.
-
-            //dosya.Filter = "jpeg dosyası(*.jpg)|*.jpg|Bitmap(*.bmp)|*.bmp";//.bmp veya .jpg olarak kayıt imkanı sağlıyoruz.
-
-            //dosya.Title = "Kayıt";//diğaloğumuzun başlığını belirliyoruz.  
-            //                      //File.Copy(dosyayolu, hedef);
-            //string projeadres = Application.StartupPath;
-            //string adres = projeadres + @"\\Araclar\\";
-            //File.Move(dosyayolu, adres + ""  + ".jpg");
-            //string hedef = Path.Combine(adres + "" + ".jpg");
-            //txtResimYolu.Text = hedef;
-
             // open file dialog   
             OpenFileDialog open = new OpenFileDialog();
             // image filters  
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
             if (open.ShowDialog() == DialogResult.OK)
             {
                 string kopyalanacakDosyaIsmi = open.SafeFileName.ToString();
@@ -223,12 +344,19 @@ namespace PL.RentACar
                 string projeadres = Application.StartupPath;
                 string adres = projeadres + @"\\Araclar";
                 Kopyala(kopyalanacakDosya, adres, kopyalanacakDosyaIsmi);
-                txtResimYolu.Text = @"\\Araclar" + "\\" + kopyalanacakDosyaIsmi;
+                if (kopyalanacakDosyaIsmi.Trim()!="")
+                {
+                    txtResimYolu.Text = @"\\Araclar" + "\\" + kopyalanacakDosyaIsmi;
+                }
                 // image file path  
             }
             else
             {
                 MessageBox.Show("Dosya Seçmediniz...", "Uyarı..!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (txtResimYolu.Text.Trim()!="")
+            {
+                pbFoto.Image = Image.FromFile(Application.StartupPath + "" + txtResimYolu.Text);
             }
         }
         private void Kopyala(string kopyalanacakDosya,string dosyanınKopyanacagiKlasor,string kopyalanacakDosyaIsmi)

@@ -61,6 +61,18 @@ namespace BLL.RentACar.Repositories
         public bool AracGuncelle(Arac A)
         {
             bool Sonuc = false;
+            Arac bulunan = AracGetirById(A.Id);
+            bulunan.Marka = A.Marka;
+            bulunan.Model = A.Model;
+            bulunan.Plaka = A.Plaka;
+            bulunan.Tip = A.Tip;
+            bulunan.Renk = A.Renk;
+            bulunan.ResimYolu = A.ResimYolu;
+            bulunan.Silindi = A.Silindi;
+            bulunan.Varmi = A.Varmi;
+            bulunan.YakitDurumu = A.YakitDurumu;
+            bulunan.AracDurumu = A.AracDurumu;
+            bulunan.GünlükFiyat = A.GünlükFiyat;
             try
             {
                 Genel.ent.SaveChanges();

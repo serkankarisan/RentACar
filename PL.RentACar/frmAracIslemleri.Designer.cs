@@ -46,8 +46,10 @@
             this.txtModel = new System.Windows.Forms.TextBox();
             this.txtMarka = new System.Windows.Forms.TextBox();
             this.dgvAraclar = new System.Windows.Forms.DataGridView();
+            this.btnResimEkle = new System.Windows.Forms.Button();
+            this.txtResimYolu = new System.Windows.Forms.TextBox();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.btnCikis = new System.Windows.Forms.Button();
-            this.tsMusteriIslemleri = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsYeni = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -56,19 +58,17 @@
             this.tsDegistir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.tsSil = new System.Windows.Forms.ToolStripButton();
-            this.btnResimEkle = new System.Windows.Forms.Button();
-            this.txtResimYolu = new System.Windows.Forms.TextBox();
-            this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.tsMusteriIslemleri = new System.Windows.Forms.ToolStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAraclar)).BeginInit();
-            this.tsMusteriIslemleri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
+            this.tsMusteriIslemleri.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(26, 277);
+            this.label5.Location = new System.Drawing.Point(62, 277);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 20);
@@ -79,7 +79,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(26, 245);
+            this.label6.Location = new System.Drawing.Point(62, 245);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 20);
@@ -90,7 +90,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(26, 213);
+            this.label7.Location = new System.Drawing.Point(62, 213);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 20);
@@ -101,7 +101,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(26, 181);
+            this.label8.Location = new System.Drawing.Point(62, 181);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 20);
@@ -112,7 +112,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(26, 149);
+            this.label3.Location = new System.Drawing.Point(62, 149);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 20);
@@ -123,7 +123,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(26, 117);
+            this.label4.Location = new System.Drawing.Point(62, 117);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 20);
@@ -134,7 +134,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(26, 85);
+            this.label2.Location = new System.Drawing.Point(62, 85);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
@@ -145,7 +145,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(26, 53);
+            this.label1.Location = new System.Drawing.Point(62, 53);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 20);
@@ -154,97 +154,124 @@
             // 
             // txtYakitDurumu
             // 
-            this.txtYakitDurumu.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtYakitDurumu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtYakitDurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtYakitDurumu.Location = new System.Drawing.Point(140, 277);
+            this.txtYakitDurumu.Location = new System.Drawing.Point(176, 277);
             this.txtYakitDurumu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtYakitDurumu.Name = "txtYakitDurumu";
-            this.txtYakitDurumu.Size = new System.Drawing.Size(178, 26);
+            this.txtYakitDurumu.Size = new System.Drawing.Size(149, 26);
             this.txtYakitDurumu.TabIndex = 32;
             // 
             // txtAracDurumu
             // 
-            this.txtAracDurumu.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtAracDurumu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtAracDurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAracDurumu.Location = new System.Drawing.Point(140, 245);
+            this.txtAracDurumu.Location = new System.Drawing.Point(176, 245);
             this.txtAracDurumu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAracDurumu.Name = "txtAracDurumu";
-            this.txtAracDurumu.Size = new System.Drawing.Size(178, 26);
+            this.txtAracDurumu.Size = new System.Drawing.Size(149, 26);
             this.txtAracDurumu.TabIndex = 31;
             // 
             // txtPlaka
             // 
-            this.txtPlaka.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtPlaka.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtPlaka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtPlaka.Location = new System.Drawing.Point(140, 213);
+            this.txtPlaka.Location = new System.Drawing.Point(176, 213);
             this.txtPlaka.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPlaka.Name = "txtPlaka";
-            this.txtPlaka.Size = new System.Drawing.Size(178, 26);
+            this.txtPlaka.Size = new System.Drawing.Size(149, 26);
             this.txtPlaka.TabIndex = 30;
             // 
             // txtRenk
             // 
-            this.txtRenk.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtRenk.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtRenk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtRenk.Location = new System.Drawing.Point(140, 181);
+            this.txtRenk.Location = new System.Drawing.Point(176, 181);
             this.txtRenk.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRenk.Name = "txtRenk";
-            this.txtRenk.Size = new System.Drawing.Size(178, 26);
+            this.txtRenk.Size = new System.Drawing.Size(149, 26);
             this.txtRenk.TabIndex = 29;
             // 
             // txtTip
             // 
-            this.txtTip.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtTip.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtTip.Location = new System.Drawing.Point(140, 149);
+            this.txtTip.Location = new System.Drawing.Point(176, 149);
             this.txtTip.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTip.Name = "txtTip";
-            this.txtTip.Size = new System.Drawing.Size(178, 26);
+            this.txtTip.Size = new System.Drawing.Size(149, 26);
             this.txtTip.TabIndex = 28;
             // 
             // txtGunlukFiyat
             // 
-            this.txtGunlukFiyat.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtGunlukFiyat.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtGunlukFiyat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtGunlukFiyat.Location = new System.Drawing.Point(140, 117);
+            this.txtGunlukFiyat.Location = new System.Drawing.Point(176, 117);
             this.txtGunlukFiyat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGunlukFiyat.Name = "txtGunlukFiyat";
-            this.txtGunlukFiyat.Size = new System.Drawing.Size(178, 26);
+            this.txtGunlukFiyat.Size = new System.Drawing.Size(149, 26);
             this.txtGunlukFiyat.TabIndex = 27;
             // 
             // txtModel
             // 
-            this.txtModel.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtModel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtModel.Location = new System.Drawing.Point(140, 85);
+            this.txtModel.Location = new System.Drawing.Point(176, 85);
             this.txtModel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(178, 26);
+            this.txtModel.Size = new System.Drawing.Size(149, 26);
             this.txtModel.TabIndex = 26;
             // 
             // txtMarka
             // 
-            this.txtMarka.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtMarka.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtMarka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMarka.Location = new System.Drawing.Point(140, 53);
+            this.txtMarka.Location = new System.Drawing.Point(176, 53);
             this.txtMarka.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMarka.Name = "txtMarka";
-            this.txtMarka.Size = new System.Drawing.Size(178, 26);
+            this.txtMarka.Size = new System.Drawing.Size(149, 26);
             this.txtMarka.TabIndex = 25;
             // 
             // dgvAraclar
             // 
-            this.dgvAraclar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAraclar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAraclar.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvAraclar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAraclar.Location = new System.Drawing.Point(342, 53);
+            this.dgvAraclar.Location = new System.Drawing.Point(352, 53);
             this.dgvAraclar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvAraclar.Name = "dgvAraclar";
             this.dgvAraclar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAraclar.Size = new System.Drawing.Size(470, 250);
+            this.dgvAraclar.Size = new System.Drawing.Size(843, 350);
             this.dgvAraclar.TabIndex = 24;
             this.dgvAraclar.DoubleClick += new System.EventHandler(this.dgvAraclar_DoubleClick);
+            // 
+            // btnResimEkle
+            // 
+            this.btnResimEkle.Location = new System.Drawing.Point(66, 322);
+            this.btnResimEkle.Name = "btnResimEkle";
+            this.btnResimEkle.Size = new System.Drawing.Size(98, 33);
+            this.btnResimEkle.TabIndex = 88;
+            this.btnResimEkle.Text = "Resim Ekle";
+            this.btnResimEkle.UseVisualStyleBackColor = true;
+            this.btnResimEkle.Click += new System.EventHandler(this.btnResimEkle_Click);
+            // 
+            // txtResimYolu
+            // 
+            this.txtResimYolu.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.txtResimYolu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtResimYolu.Location = new System.Drawing.Point(185, 322);
+            this.txtResimYolu.Name = "txtResimYolu";
+            this.txtResimYolu.Size = new System.Drawing.Size(120, 26);
+            this.txtResimYolu.TabIndex = 89;
+            // 
+            // pbFoto
+            // 
+            this.pbFoto.Location = new System.Drawing.Point(185, 322);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(120, 81);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFoto.TabIndex = 90;
+            this.pbFoto.TabStop = false;
             // 
             // btnCikis
             // 
@@ -253,32 +280,12 @@
             this.btnCikis.FlatAppearance.BorderSize = 0;
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
-            this.btnCikis.Location = new System.Drawing.Point(824, 0);
-            this.btnCikis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCikis.Location = new System.Drawing.Point(1210, 0);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(25, 24);
-            this.btnCikis.TabIndex = 86;
+            this.btnCikis.TabIndex = 91;
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
-            // 
-            // tsMusteriIslemleri
-            // 
-            this.tsMusteriIslemleri.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.tsMusteriIslemleri.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator4,
-            this.tsYeni,
-            this.toolStripSeparator5,
-            this.tsKaydet,
-            this.toolStripSeparator6,
-            this.tsDegistir,
-            this.toolStripSeparator7,
-            this.tsSil});
-            this.tsMusteriIslemleri.Location = new System.Drawing.Point(0, 0);
-            this.tsMusteriIslemleri.Name = "tsMusteriIslemleri";
-            this.tsMusteriIslemleri.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.tsMusteriIslemleri.Size = new System.Drawing.Size(849, 25);
-            this.tsMusteriIslemleri.TabIndex = 85;
-            this.tsMusteriIslemleri.Text = "toolStrip1";
             // 
             // toolStripSeparator4
             // 
@@ -347,43 +354,35 @@
             this.tsSil.Text = "&Sil";
             this.tsSil.Click += new System.EventHandler(this.tsSil_Click);
             // 
-            // btnResimEkle
+            // tsMusteriIslemleri
             // 
-            this.btnResimEkle.Location = new System.Drawing.Point(40, 322);
-            this.btnResimEkle.Name = "btnResimEkle";
-            this.btnResimEkle.Size = new System.Drawing.Size(98, 26);
-            this.btnResimEkle.TabIndex = 88;
-            this.btnResimEkle.Text = "Resim Ekle";
-            this.btnResimEkle.UseVisualStyleBackColor = true;
-            this.btnResimEkle.Click += new System.EventHandler(this.btnResimEkle_Click);
-            // 
-            // txtResimYolu
-            // 
-            this.txtResimYolu.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.txtResimYolu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtResimYolu.Location = new System.Drawing.Point(149, 322);
-            this.txtResimYolu.Name = "txtResimYolu";
-            this.txtResimYolu.Size = new System.Drawing.Size(120, 26);
-            this.txtResimYolu.TabIndex = 89;
-            // 
-            // pbFoto
-            // 
-            this.pbFoto.Location = new System.Drawing.Point(149, 354);
-            this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(120, 49);
-            this.pbFoto.TabIndex = 90;
-            this.pbFoto.TabStop = false;
+            this.tsMusteriIslemleri.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.tsMusteriIslemleri.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator4,
+            this.tsYeni,
+            this.toolStripSeparator5,
+            this.tsKaydet,
+            this.toolStripSeparator6,
+            this.tsDegistir,
+            this.toolStripSeparator7,
+            this.tsSil});
+            this.tsMusteriIslemleri.Location = new System.Drawing.Point(0, 0);
+            this.tsMusteriIslemleri.Name = "tsMusteriIslemleri";
+            this.tsMusteriIslemleri.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.tsMusteriIslemleri.Size = new System.Drawing.Size(1235, 25);
+            this.tsMusteriIslemleri.TabIndex = 85;
+            this.tsMusteriIslemleri.Text = "toolStrip1";
             // 
             // frmAracIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1235, 422);
+            this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.txtResimYolu);
             this.Controls.Add(this.btnResimEkle);
-            this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.tsMusteriIslemleri);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -410,9 +409,9 @@
             this.Text = "frmAracIslemleri";
             this.Load += new System.EventHandler(this.frmAracIslemleri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAraclar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.tsMusteriIslemleri.ResumeLayout(false);
             this.tsMusteriIslemleri.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,8 +435,10 @@
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtMarka;
         private System.Windows.Forms.DataGridView dgvAraclar;
+        private System.Windows.Forms.Button btnResimEkle;
+        private System.Windows.Forms.TextBox txtResimYolu;
+        private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.Button btnCikis;
-        private System.Windows.Forms.ToolStrip tsMusteriIslemleri;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton tsYeni;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
@@ -446,8 +447,6 @@
         private System.Windows.Forms.ToolStripButton tsDegistir;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripButton tsSil;
-        private System.Windows.Forms.Button btnResimEkle;
-        private System.Windows.Forms.TextBox txtResimYolu;
-        private System.Windows.Forms.PictureBox pbFoto;
+        private System.Windows.Forms.ToolStrip tsMusteriIslemleri;
     }
 }
