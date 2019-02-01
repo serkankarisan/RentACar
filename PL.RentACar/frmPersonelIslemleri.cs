@@ -23,44 +23,69 @@ namespace PL.RentACar
         decimal result;
         private void tsbKaydet_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtAd.Text) && (!string.IsNullOrEmpty(txtSoyad.Text)) && (!string.IsNullOrEmpty(txtTelefon.Text)) && (!string.IsNullOrEmpty(txtEmail.Text)) && (!string.IsNullOrEmpty(txtAdres.Text)) && (!string.IsNullOrEmpty(txtMaas.Text)))
+            if (!string.IsNullOrEmpty(txtAd.Text))
             {
-                if (decimal.TryParse(txtMaas.Text, out result))
+                if (!string.IsNullOrEmpty(txtSoyad.Text))
                 {
-                    Personel yeni = new Personel();
-                    yeni.Adi = txtAd.Text;
-                    yeni.Soyadi = txtSoyad.Text;
-                    if (per.PersonelKontrol(yeni))
+                    if (!string.IsNullOrEmpty(txtTelefon.Text))
                     {
-                        MessageBox.Show("Bu Personel kayıtlı!", "Aynı Personel zaten var!");
+                        if (!string.IsNullOrEmpty(txtEmail.Text))
+                        {
+                            if (!string.IsNullOrEmpty(txtAdres.Text))
+                            {
+                                if (!string.IsNullOrEmpty(txtMaas.Text))
+                                {
+                                    if (decimal.TryParse(txtMaas.Text, out result))
+                                    {
+                                        Personel yeni = new Personel();
+                                        yeni.Adi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
+                                        yeni.Soyadi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
+                                        if (per.PersonelKontrol(yeni))
+                                        {
+                                            MessageBox.Show("Bu Personel kayıtlı!", "Aynı Personel zaten var!");
+                                        }
+                                        else
+                                        {
+                                            yeni.Telefon = txtTelefon.Text;
+                                            yeni.Email = txtEmail.Text + cbEmail.Text;
+                                            yeni.Adres = txtAdres.Text;
+                                            yeni.Maas = Convert.ToDecimal(txtMaas.Text);
+                                            if (per.PersonelEkle(yeni))
+                                            {
+                                                MessageBox.Show("Yeni Personel eklendi.", "Kayıt gerçekleşti.");
+                                                dgvPersoneller.DataSource = per.PersonelListele();
+                                                tsKaydet.Enabled = false;
+                                                Supurge();
+                                                tsYeni.Enabled = true;
+                                                tsKaydet.Enabled = false;
+                                                tsDegistir.Enabled = false;
+                                                tsSil.Enabled = false;
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Maas Sayı girilmelidir!", "Maas Hatası!");
+                                    }
+                                }
+                                else
+                                    MessageBox.Show("Maas Girmelisiniz.", "Bu Alan Boş Geçilemez");
+                            }
+                            else
+                                MessageBox.Show("Adres Girmelisiniz.", "Bu Alan Boş Geçilemez.");
+                        }
+                        else
+                            MessageBox.Show("Email Girmelisiniz.", "Bu Alan Boş Geçilemez.");
                     }
                     else
-                    {
-                        yeni.Telefon = txtTelefon.Text;
-                        yeni.Email = txtEmail.Text;
-                        yeni.Adres = txtAdres.Text;
-                        yeni.Maas = Convert.ToDecimal(txtMaas.Text);
-                        if (per.PersonelEkle(yeni))
-                        {
-                            MessageBox.Show("Yeni Personel eklendi.", "Kayıt gerçekleşti.");
-                            dgvPersoneller.DataSource = per.PersonelListele();
-                            tsKaydet.Enabled = false;
-                            Supurge();
-                            tsYeni.Enabled = true;
-                            tsKaydet.Enabled = false;
-                            tsDegistir.Enabled = false;
-                            tsSil.Enabled = false;
-                        }
-                    }
+                        MessageBox.Show("Telefon Girmelisiniz.", "Bu Alan Boş Geçilemez.");
                 }
                 else
-                {
-                    MessageBox.Show("Maas Sayı girilmelidir!", "Maas Hatası!");
-                }
+                    MessageBox.Show("Soyad Girmelisiniz.", "Bu Alan Boş Geçilemez.");
             }
             else
             {
-                MessageBox.Show("Girelecek bilgiler boş bırakılamaz.", "Hata");
+                MessageBox.Show("Ad Girmelisiniz.", "Bu Alan Boş Geçilemez.");
             }
             txtAd.Focus();
         }
@@ -87,7 +112,15 @@ namespace PL.RentACar
             txtAd.Text = dgvPersoneller.SelectedRows[0].Cells[1].Value.ToString();
             txtSoyad.Text = dgvPersoneller.SelectedRows[0].Cells[2].Value.ToString();
             txtTelefon.Text = dgvPersoneller.SelectedRows[0].Cells[3].Value.ToString();
-            txtEmail.Text = dgvPersoneller.SelectedRows[0].Cells[4].Value.ToString();
+            string[] email = dgvPersoneller.SelectedRows[0].Cells[4].Value.ToString().Split('@');
+            txtEmail.Text = email[0];
+            foreach (string item in cbEmail.Items)
+            {
+                if (item == "@" + email[1])
+                {
+                    cbEmail.SelectedItem = item;
+                }
+            }
             txtAdres.Text = dgvPersoneller.SelectedRows[0].Cells[5].Value.ToString();
             txtMaas.Text = dgvPersoneller.SelectedRows[0].Cells[6].Value.ToString();
             tsDegistir.Enabled = true;
@@ -98,42 +131,60 @@ namespace PL.RentACar
 
         private void tsbDegistir_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtAd.Text) && (!string.IsNullOrEmpty(txtSoyad.Text)) && (!string.IsNullOrEmpty(txtTelefon.Text)) && (!string.IsNullOrEmpty(txtEmail.Text)) && (!string.IsNullOrEmpty(txtAdres.Text)) && (!string.IsNullOrEmpty(txtMaas.Text)))
+            if (!string.IsNullOrEmpty(txtAd.Text))
             {
-                if (decimal.TryParse(txtMaas.Text, out result))
+                if (!string.IsNullOrEmpty(txtSoyad.Text))
                 {
-                    Personel degisen = per.PersonelGetirById(ID);
-                    degisen.Adi = txtAd.Text;
-                    degisen.Soyadi = txtSoyad.Text;
-                    //if (per.PersonelKontrol(degisen))
-                    //{
-                    //    MessageBox.Show("Bu Personel kayıtlı!", "Aynı Personel zaten var!");
-                    //}
-                    //else
-                    //{
-                    degisen.Telefon = txtTelefon.Text;
-                    degisen.Email = txtEmail.Text;
-                    degisen.Adres = txtAdres.Text;
-                    degisen.Maas = Convert.ToDecimal(txtMaas.Text);
-                    if (per.PersonelGuncelle(degisen))
+                    if (!string.IsNullOrEmpty(txtTelefon.Text))
                     {
-                        MessageBox.Show("Personel bilgileri değiştirildi.", "Değişiklik gerçekleşti.");
-                        dgvPersoneller.DataSource = per.PersonelListele();
-                        tsKaydet.Enabled = false;
-                        Supurge();
+                        if (!string.IsNullOrEmpty(txtEmail.Text))
+                        {
+                            if (!string.IsNullOrEmpty(txtAdres.Text))
+                            {
+                                if (!string.IsNullOrEmpty(txtMaas.Text))
+                                {
+                                    if (decimal.TryParse(txtMaas.Text, out result))
+                                    {
+                                        Personel degisen = per.PersonelGetirById(ID);
+                                        degisen.Adi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
+                                        degisen.Soyadi = txtSoyad.Text.Substring(0, 1).ToUpper() + txtSoyad.Text.Substring(1).ToLower();
+                                        degisen.Telefon = txtTelefon.Text;
+                                        degisen.Email = txtEmail.Text + cbEmail.Text;
+                                        degisen.Adres = txtAdres.Text;
+                                        degisen.Maas = Convert.ToDecimal(txtMaas.Text);
+                                        if (per.PersonelGuncelle(degisen))
+                                        {
+                                            MessageBox.Show("Personel bilgileri değiştirildi.", "Değişiklik gerçekleşti.");
+                                            dgvPersoneller.DataSource = per.PersonelListele();
+                                            tsKaydet.Enabled = false;
+                                            Supurge();
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Maas Sayı girilmelidir!", "Maas Hatası!");
+                                        }
+                                    }
+                                    else
+                                        MessageBox.Show("Maas Girmelisiniz.", "Bu Alan Boş Geçilemez");
+                                }
+                                else
+                                    MessageBox.Show("Adres Girmelisiniz.", "Bu Alan Boş Geçilemez.");
+                            }
+                            else
+                                MessageBox.Show("Email Girmelisiniz.", "Bu Alan Boş Geçilemez.");
+                        }
+                        else
+                            MessageBox.Show("Telefon Girmelisiniz.", "Bu Alan Boş Geçilemez.");
                     }
+                    else
+                        MessageBox.Show("Soyad Girmelisiniz.", "Bu Alan Boş Geçilemez.");
                 }
-                //}
                 else
                 {
-                    MessageBox.Show("Maas Sayı girilmelidir!", "Maas Hatası!");
+                    MessageBox.Show("Ad Girmelisiniz.", "Bu Alan Boş Geçilemez.");
                 }
+                txtAd.Focus();
             }
-            else
-            {
-                MessageBox.Show("Girelecek bilgiler boş bırakılamaz.", "Hata");
-            }
-            txtAd.Focus();
         }
 
         private void tsbSil_Click(object sender, EventArgs e)
@@ -164,3 +215,4 @@ namespace PL.RentACar
         }
     }
 }
+
