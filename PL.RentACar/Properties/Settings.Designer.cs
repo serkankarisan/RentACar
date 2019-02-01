@@ -33,5 +33,15 @@ namespace PL.RentACar.Properties {
                 return ((string)(this["RentACarConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WISSEN\\MSSQL2017;Initial Catalog=RentACar;User ID=sa;Password=12345w")]
+        public string RentACarConnectionString1 {
+            get {
+                return ((string)(this["RentACarConnectionString1"]));
+            }
+        }
     }
 }

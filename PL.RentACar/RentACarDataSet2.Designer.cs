@@ -1007,7 +1007,7 @@ SELECT Id, SozlesmeId, AracId, PersonelId, Tarih, GelirGiderId, Tutar, ParaBirim
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PL.RentACar.Properties.Settings.Default.RentACarConnectionString;
+            this._connection.ConnectionString = global::PL.RentACar.Properties.Settings.Default.RentACarConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
