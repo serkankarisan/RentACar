@@ -40,13 +40,13 @@ namespace PL.RentACar
                                         Personel yeni = new Personel();
                                         yeni.Adi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
                                         yeni.Soyadi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
+                                        yeni.Telefon = txtTelefon.Text;
                                         if (per.PersonelKontrol(yeni))
                                         {
                                             MessageBox.Show("Bu Personel kayıtlı!", "Aynı Personel zaten var!");
                                         }
                                         else
                                         {
-                                            yeni.Telefon = txtTelefon.Text;
                                             yeni.Email = txtEmail.Text + cbEmail.Text;
                                             yeni.Adres = txtAdres.Text;
                                             yeni.Maas = Convert.ToDecimal(txtMaas.Text);
@@ -145,10 +145,15 @@ namespace PL.RentACar
                                 {
                                     if (decimal.TryParse(txtMaas.Text, out result))
                                     {
-                                        Personel degisen = per.PersonelGetirById(ID);
+                                        Personel degisen = new Personel();
+                                        degisen = per.PersonelGetirById(ID);
                                         degisen.Adi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
                                         degisen.Soyadi = txtSoyad.Text.Substring(0, 1).ToUpper() + txtSoyad.Text.Substring(1).ToLower();
                                         degisen.Telefon = txtTelefon.Text;
+                                        if (per.PersonelKontrolByDegistir(degisen))
+                                        {
+                                            MessageBox.Show("Çakışan Bilgiler Var.", "Değişim Hatası.");
+                                        }
                                         degisen.Email = txtEmail.Text + cbEmail.Text;
                                         degisen.Adres = txtAdres.Text;
                                         degisen.Maas = Convert.ToDecimal(txtMaas.Text);
