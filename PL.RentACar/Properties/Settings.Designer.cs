@@ -26,7 +26,7 @@ namespace PL.RentACar.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TURGAY-PC\\MSSQLSERVER2017;Initial Catalog=RentACar;User ID=sa;Passwor" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BURAKASUS\\MSSQLSERVER2017;Initial Catalog=RentACar;User ID=sa;Passwor" +
             "d=12345w")]
         public string RentACarConnectionString {
             get {
