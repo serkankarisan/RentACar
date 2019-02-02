@@ -54,7 +54,7 @@ namespace PL.RentACar
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            if (txtTutar.Text.Trim()!= Convert.ToDecimal(0).ToString())
+            if (Convert.ToDecimal(txtTutar.Text.Trim()) != Convert.ToDecimal(0))
             {
                 btnTamamla.Enabled = true;
                 SozlesmeDetay sd = new SozlesmeDetay();
@@ -141,7 +141,8 @@ namespace PL.RentACar
         private void dtpBitis_ValueChanged(object sender, EventArgs e)
         {
             t = Convert.ToInt32((dtpBitis.Value - dtpBaslangic.Value).TotalDays);
-            if (Genel.AracID!=0) {
+            if (Genel.AracID!=0)
+            {
                 if (t >= 0)
                 {
                     txtGunSayisi.Text = t.ToString();
@@ -168,7 +169,6 @@ namespace PL.RentACar
         private void Temizle()
         {
             Genel.MusteriID = 0;
-            Genel.PersonelID = 0;
             txtMarka.Clear();
             txtModel.Clear();
             txtPlaka.Clear();
@@ -194,11 +194,11 @@ namespace PL.RentACar
             dgvSozlesmeDetaylar.Columns[3].Width = 80;
             dgvSozlesmeDetaylar.Columns[4].Width = 125;
             dgvSozlesmeDetaylar.Columns[5].Width = 125;
-            dgvSozlesmeDetaylar.Columns[6].Visible = false;
             dgvSozlesmeDetaylar.Columns[6].Width = 125;
-            dgvSozlesmeDetaylar.Columns[7].Visible = false;
             dgvSozlesmeDetaylar.Columns[7].Width = 125;
-            dgvSozlesmeDetaylar.Columns[8].Width = 125;
+            dgvSozlesmeDetaylar.Columns[8].Visible = false;
+            dgvSozlesmeDetaylar.Columns[9].Visible = false;
+            dgvSozlesmeDetaylar.Columns[10].Visible = false;
             txtAracSayisi.Text = dgvSozlesmeDetaylar.RowCount.ToString();
             txtSozlesmeTutari.Text = sdrepo.SozlesmeTutarGetirBySozlesmeId(Genel.soz.Id).ToString();
 

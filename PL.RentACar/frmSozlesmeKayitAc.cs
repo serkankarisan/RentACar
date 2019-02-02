@@ -148,7 +148,6 @@ namespace PL.RentACar
         private void Temizle()
         {
             Genel.MusteriID = 0;
-            Genel.PersonelID = 0;
             txtMusteriAdi.Clear();
             txtMusteriSoyadi.Clear();
             txtMusteriTelefon.Clear();
@@ -165,18 +164,19 @@ namespace PL.RentACar
             dgvSozlesmeler.Columns[0].Visible = false;
             dgvSozlesmeler.Columns[1].Visible = false;
             dgvSozlesmeler.Columns[2].Visible = false;
-            dgvSozlesmeler.Columns[3].Width = 150;
-            dgvSozlesmeler.Columns[4].Width = 80;
-            dgvSozlesmeler.Columns[5].Width = 125;
-            dgvSozlesmeler.Columns[5].HeaderText = "Sözleşme Tarihi";
-            dgvSozlesmeler.Columns[6].Width = 75;
-            dgvSozlesmeler.Columns[6].HeaderText = "Tutar";
+            dgvSozlesmeler.Columns[3].Width = 125;
+            dgvSozlesmeler.Columns[3].HeaderText = "Sözleşme Tarihi";
+            dgvSozlesmeler.Columns[4].Width = 125;
+            dgvSozlesmeler.Columns[4].HeaderText = "Sözleşme Tutarı";
+            dgvSozlesmeler.Columns[5].Width = 100;
+            dgvSozlesmeler.Columns[5].HeaderText = "Toplam Alacak";
+            dgvSozlesmeler.Columns[6].Width = 100;
+            dgvSozlesmeler.Columns[6].HeaderText = "Toplam Borç";
             dgvSozlesmeler.Columns[7].Width = 75;
             dgvSozlesmeler.Columns[7].HeaderText = "Araç Sayısı";
             dgvSozlesmeler.Columns[8].Visible = false;
             dgvSozlesmeler.Columns[9].Visible = false;
-            dgvSozlesmeler.Columns[10].Width= 160;
-            dgvSozlesmeler.Columns[10].HeaderText = "Müşteri"; ;
+            dgvSozlesmeler.Columns[10].Visible = false;
         }
 
         private void frmSozlesmeKayitAc_Load(object sender, EventArgs e)

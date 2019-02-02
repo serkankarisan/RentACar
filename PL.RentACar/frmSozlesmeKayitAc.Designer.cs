@@ -94,7 +94,7 @@
             this.btnKayitAc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKayitAc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKayitAc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnKayitAc.Location = new System.Drawing.Point(723, 81);
+            this.btnKayitAc.Location = new System.Drawing.Point(843, 85);
             this.btnKayitAc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnKayitAc.Name = "btnKayitAc";
             this.btnKayitAc.Size = new System.Drawing.Size(196, 49);
@@ -349,7 +349,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(932, 25);
+            this.panel4.Size = new System.Drawing.Size(1078, 25);
             this.panel4.TabIndex = 155;
             // 
             // btnCikis
@@ -360,7 +360,7 @@
             this.btnCikis.FlatAppearance.BorderSize = 0;
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
-            this.btnCikis.Location = new System.Drawing.Point(907, 1);
+            this.btnCikis.Location = new System.Drawing.Point(1053, 1);
             this.btnCikis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(25, 24);
@@ -408,8 +408,6 @@
             // 
             // dgvSozlesmeler
             // 
-            this.dgvSozlesmeler.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSozlesmeler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvSozlesmeler.BackgroundColor = System.Drawing.Color.White;
             this.dgvSozlesmeler.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -418,7 +416,7 @@
             this.dgvSozlesmeler.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvSozlesmeler.Name = "dgvSozlesmeler";
             this.dgvSozlesmeler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSozlesmeler.Size = new System.Drawing.Size(450, 379);
+            this.dgvSozlesmeler.Size = new System.Drawing.Size(570, 380);
             this.dgvSozlesmeler.TabIndex = 156;
             // 
             // frmSozlesmeKayitAc
@@ -427,7 +425,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(932, 536);
+            this.ClientSize = new System.Drawing.Size(1078, 536);
             this.Controls.Add(this.dgvSozlesmeler);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.btnKayitAc);
