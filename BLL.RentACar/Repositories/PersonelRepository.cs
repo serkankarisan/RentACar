@@ -42,7 +42,13 @@ namespace BLL.RentACar.Repositories
         {
             bool Sonuc = false;
             Personel degisen = PersonelGetirById(P.Id);
-            degisen = P;
+            degisen.Adi = P.Adi;
+            degisen.Soyadi = P.Soyadi;
+            degisen.Telefon = P.Telefon;
+            degisen.Email = P.Email;
+            degisen.Adres = P.Adres;
+            degisen.Maas = P.Maas;
+            degisen.Silindi = P.Silindi;
             try
             {
                 Genel.ent.SaveChanges();
@@ -100,11 +106,11 @@ namespace BLL.RentACar.Repositories
 
         public bool PersonelKontrol(Personel P)
         {
-            return Convert.ToBoolean(Genel.ent.Personeller.Where(k => k.Adi == P.Adi && k.Soyadi == P.Soyadi && k.Telefon==P.Telefon).ToList().Count);
+            return Convert.ToBoolean(Genel.ent.Personeller.Where(k => k.Adi == P.Adi && k.Soyadi == P.Soyadi && k.Telefon==P.Telefon && k.Email == P.Email).ToList().Count);
         }
         public bool PersonelKontrolByDegistir(Personel P)
         {
-            return Convert.ToBoolean(Genel.ent.Personeller.Where(k => k.Telefon == P.Telefon && k.Id!=P.Id).ToList().Count);
+            return Convert.ToBoolean(Genel.ent.Personeller.Where(k => (k.Telefon == P.Telefon || k.Email == P.Email) && k.Id!=P.Id).ToList().Count);
         }
     }
 }
