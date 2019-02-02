@@ -52,5 +52,16 @@ namespace BLL.RentACar.Repositories
         {
             throw new NotImplementedException();
         }
+
+        //public bool KullaniciYetkiKontrol(Kullanici k)
+        //{
+        //    bool Sonuc = false;
+
+        //    Kullanici kullanici = Genel.ent.Kullanicilar.Where(kul => kul.UserName == KullaniciAdi && k.Password == Sifre).FirstOrDefault();
+
+
+
+        //    return Sonuc;
+        //}
     }
 }

@@ -156,6 +156,7 @@ namespace PL.RentACar
 
         private void frmOdemeIslemleri_Load(object sender, EventArgs e)
         {
+            
             GelirGider i = new GelirGider();
             i.Aciklama = "Tüm İşlemler";
             i.Id = 0;
@@ -190,6 +191,7 @@ namespace PL.RentACar
                 SozlesmeGizle();
                 dgvOdeme.DataSource = khr.KasaHareketListele();
             }
+            dgvOdeme.Columns[8].Visible = false;
 
         }
 

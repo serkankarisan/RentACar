@@ -70,6 +70,14 @@ namespace BLL.RentACar.Repositories
         {
             return Convert.ToBoolean(Genel.ent.Musteriler.Where(m => m.Email == mail).ToList().Count);
         }
+        public bool MusteriTelKontrol(string tel)
+        {
+            return Convert.ToBoolean(Genel.ent.Musteriler.Where(m => m.Telefon == tel ).ToList().Count);
+        }
+        public bool MusteriTelKontrolbyGuncelleme(string tel,int ID)
+        {
+            return Convert.ToBoolean(Genel.ent.Musteriler.Where(m => m.Telefon == tel && m.Id!=ID).ToList().Count);
+        }
 
         public List<Musteri> MusteriListele()
         {

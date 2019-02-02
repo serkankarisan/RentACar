@@ -27,6 +27,14 @@ namespace PL.RentACar
             lblKullanici.Text = Genel.UserName;
             lblYetki.Text = Genel.Yetki;
             lblTarih.Text = DateTime.Now.Date.ToLongDateString();
+            if (Genel.Yetki=="Personel")
+            {
+                pbArac.Enabled = false;
+                pbPersonel.Enabled = false;
+                btnAracMenu.Enabled = false;
+                btnPersonelMenu.Enabled = false;
+            }
+          
         }
         private void FormAc(Form AF)
         {
