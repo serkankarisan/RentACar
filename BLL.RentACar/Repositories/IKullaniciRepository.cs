@@ -10,6 +10,7 @@ namespace BLL.RentACar.Repositories
     public interface IKullaniciRepository
     {
         bool KullaniciKontrol(Kullanici yeni);
+        bool KullaniciKontrolByDegistir(Kullanici yeni);
         List<Kullanici> KullaniciListele();
         Kullanici KullaniciGetirById(int ID);
         List<Kullanici> KullaniciListeleByPersonel(string Ad,string Soyad);

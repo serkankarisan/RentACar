@@ -60,6 +60,11 @@ namespace BLL.RentACar.Repositories
             return Convert.ToBoolean(Genel.ent.Kullanicilar.Where(k => k.UserName == yeni.UserName || k.PersonelId == yeni.PersonelId).ToList().Count);
         }
 
+        public bool KullaniciKontrolByDegistir(Kullanici yeni)
+        {
+            return Convert.ToBoolean(Genel.ent.Kullanicilar.Where(k => k.UserName == yeni.UserName && k.Id != yeni.Id).ToList().Count);
+        }
+
         public List<Kullanici> KullaniciListele()
         {
             return Genel.ent.Kullanicilar.Where(k => k.Silindi == false).ToList();

@@ -64,7 +64,10 @@ namespace PL.RentACar
                                     MessageBox.Show("Yeni Kullanici eklendi.", "Kayıt gerçekleşti.");
                                     dgvKullanicilar.DataSource = kper.KullaniciListele();
                                     dgvColumns();
+                                    Disable();
                                     tsKaydet.Enabled = false;
+                                    tsDegistir.Enabled = false;
+                                    tsSil.Enabled = false;
                                     Supurge();
                                 }
                             }
@@ -126,20 +129,27 @@ namespace PL.RentACar
                             Kullanici degisen = new Kullanici();
                             degisen.Id = ID;
                             degisen.UserName = txtKullaniciAdi.Text;
-                            degisen.Password = txtSifre.Text;
-                            degisen.PersonelId = PersonelID;
-                            degisen.RoleId = YetkiID;
-
-                            if (kper.KullaniciGuncelle(degisen))
+                            if (kper.KullaniciKontrolByDegistir(degisen))
                             {
-                                MessageBox.Show("Kullanici Değiştirildi.", "Değişiklik gerçekleşti.");
-                                dgvKullanicilar.DataSource = kper.KullaniciListele();
-                                dgvColumns();
-                                tsYeni.Enabled = true;
-                                tsKaydet.Enabled = false;
-                                tsDegistir.Enabled = false;
-                                tsSil.Enabled = false;
-                                Supurge();
+                                MessageBox.Show("Çakışan Bilgiler Var!", "Hata!");
+                            }
+                            else
+                            {
+                                degisen.Password = txtSifre.Text;
+                                degisen.PersonelId = PersonelID;
+                                degisen.RoleId = YetkiID;
+
+                                if (kper.KullaniciGuncelle(degisen))
+                                {
+                                    MessageBox.Show("Kullanici Değiştirildi.", "Değişiklik gerçekleşti.");
+                                    dgvKullanicilar.DataSource = kper.KullaniciListele();
+                                    dgvColumns();
+                                    Disable();
+                                    tsKaydet.Enabled = false;
+                                    tsDegistir.Enabled = false;
+                                    tsSil.Enabled = false;
+                                    Supurge();
+                                }
                             }
                         }
                         else
@@ -170,6 +180,8 @@ namespace PL.RentACar
                     dgvColumns();
                     tsDegistir.Enabled = false;
                     tsSil.Enabled = false;
+                    tsKaydet.Enabled = false;
+                    Disable();
                     Supurge();
                 }
             }
