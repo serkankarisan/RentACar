@@ -76,24 +76,31 @@ namespace PL.RentACar
                                         return;
                                     }
                                     yeni.Telefon = txtTelefon.Text;
-                                    yeni.Adres = txtAdres.Text.Substring(0, 1).ToUpper() + txtAdres.Text.Substring(1).ToLower();
-                                    yeni.TcKimlikNo = txtTCKNo.Text;
-                                    yeni.EhliyetNo = txtEhliyetNo.Text;
-                                    yeni.DogumTarihi = Convert.ToDateTime(dtpDogumTarihi.Text);
-                                    yeni.Cinsiyet = cbCinsiyet.Text.Substring(0, 1).ToUpper() + cbCinsiyet.Text.Substring(1).ToLower();
-                                    yeni.EhliyetTarihi = Convert.ToDateTime(dtpEhliyetTarihi.Text);
-                                    if (musrepo.MusteriKontrol(yeni))
+                                    if (musrepo.MusteriTelKontrol(yeni.Telefon))
                                     {
-                                        MessageBox.Show("Bu Müşteri Kayıtlı! veya TC Kimlik No Hatalı!", "Hatalı Bilgi Girişi!");
+                                        MessageBox.Show("Kayitli Telefon Numarasi!", "Hatalı Bilgi Girişi!");
                                     }
                                     else
                                     {
-                                        if (musrepo.MusteriEkle(yeni))
+                                        yeni.Adres = txtAdres.Text.Substring(0, 1).ToUpper() + txtAdres.Text.Substring(1).ToLower();
+                                        yeni.TcKimlikNo = txtTCKNo.Text;
+                                        yeni.EhliyetNo = txtEhliyetNo.Text;
+                                        yeni.DogumTarihi = Convert.ToDateTime(dtpDogumTarihi.Text);
+                                        yeni.Cinsiyet = cbCinsiyet.Text.Substring(0, 1).ToUpper() + cbCinsiyet.Text.Substring(1).ToLower();
+                                        yeni.EhliyetTarihi = Convert.ToDateTime(dtpEhliyetTarihi.Text);
+                                        if (musrepo.MusteriKontrol(yeni))
                                         {
-                                            MessageBox.Show("Yeni müşteri eklendi.", "Kayıt gerçekleşti.");
-                                            ListeGoster();
-                                            Temizle();
-                                            tsKaydet.Enabled = false;
+                                            MessageBox.Show("Bu Müşteri Kayıtlı! veya TC Kimlik No Hatalı!", "Hatalı Bilgi Girişi!");
+                                        }
+                                        else
+                                        {
+                                            if (musrepo.MusteriEkle(yeni))
+                                            {
+                                                MessageBox.Show("Yeni müşteri eklendi.", "Kayıt gerçekleşti.");
+                                                ListeGoster();
+                                                Temizle();
+                                                tsKaydet.Enabled = false;
+                                            }
                                         }
                                     }
                                 }
@@ -203,30 +210,37 @@ namespace PL.RentACar
                                         return;
                                     }
                                 degisen.Telefon = txtTelefon.Text;
-                                degisen.Adres = txtAdres.Text.Substring(0, 1).ToUpper() + txtAdres.Text.Substring(1).ToLower();
-                                degisen.TcKimlikNo = txtTCKNo.Text;
-                                degisen.EhliyetNo = txtEhliyetNo.Text;
-                                degisen.DogumTarihi = Convert.ToDateTime(dtpDogumTarihi.Text);
-                                degisen.Cinsiyet = cbCinsiyet.Text.Substring(0, 1).ToUpper() + cbCinsiyet.Text.Substring(1).ToLower();
-                                degisen.EhliyetTarihi = Convert.ToDateTime(dtpEhliyetTarihi.Text);
-                                degisen.Id = ID;
-                                if (musrepo.MusteriKontrolFromDegistir(degisen))
+                                if (musrepo.MusteriTelKontrolbyGuncelleme(degisen.Telefon,ID))
                                 {
-                                    MessageBox.Show("TC Kimlik No Hatalı!", "Hatalı Bilgi Girişi!");
-                                    ListeGoster();
-                                    txtTCKNo.Focus();
-                                                                    }
+                                    MessageBox.Show("Kayitli Telefon Numarasi!", "Hatalı Bilgi Girişi!");
+                                }
                                 else
                                 {
-                                    if (musrepo.MusteriGuncelle(degisen))
+                                    degisen.Adres = txtAdres.Text.Substring(0, 1).ToUpper() + txtAdres.Text.Substring(1).ToLower();
+                                    degisen.TcKimlikNo = txtTCKNo.Text;
+                                    degisen.EhliyetNo = txtEhliyetNo.Text;
+                                    degisen.DogumTarihi = Convert.ToDateTime(dtpDogumTarihi.Text);
+                                    degisen.Cinsiyet = cbCinsiyet.Text.Substring(0, 1).ToUpper() + cbCinsiyet.Text.Substring(1).ToLower();
+                                    degisen.EhliyetTarihi = Convert.ToDateTime(dtpEhliyetTarihi.Text);
+                                    degisen.Id = ID;
+                                    if (musrepo.MusteriKontrolFromDegistir(degisen))
                                     {
-                                        MessageBox.Show("Müşteri Bilgileri Değiştirildi.", "Kayıt gerçekleşti.");
+                                        MessageBox.Show("TC Kimlik No Hatalı!", "Hatalı Bilgi Girişi!");
                                         ListeGoster();
-                                        Temizle();
-                                        tsKaydet.Enabled = false;
-                                        tsDegistir.Enabled = false;
-                                        tsSil.Enabled = false;
-                                        Temizle();
+                                        txtTCKNo.Focus();
+                                    }
+                                    else
+                                    {
+                                        if (musrepo.MusteriGuncelle(degisen))
+                                        {
+                                            MessageBox.Show("Müşteri Bilgileri Değiştirildi.", "Kayıt gerçekleşti.");
+                                            ListeGoster();
+                                            Temizle();
+                                            tsKaydet.Enabled = false;
+                                            tsDegistir.Enabled = false;
+                                            tsSil.Enabled = false;
+                                            Temizle();
+                                        }
                                     }
                                 }
                             }

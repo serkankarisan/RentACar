@@ -35,7 +35,8 @@ namespace PL.RentACar
             {
                 frmAnaSayfa frm = new frmAnaSayfa();
                 frm.Show();
-                this.Hide();
+                this.Hide();              
+                
             }
         }
 
@@ -72,5 +73,7 @@ namespace PL.RentACar
                 txtSifre.PasswordChar = '*';
             }
         }
+
+       
     }
 }
