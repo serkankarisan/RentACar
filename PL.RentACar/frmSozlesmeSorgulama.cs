@@ -19,7 +19,6 @@ namespace PL.RentACar
         }
         SozlesmeRepository sRep = new SozlesmeRepository();
         SozlesmeDetayRepository sdRep = new SozlesmeDetayRepository();
-        int a;
         private void frmSozlesmeSorgulama_Load(object sender, EventArgs e)
         {
             dgvSozlesmeler.DataSource = sRep.SozlesmeListele();

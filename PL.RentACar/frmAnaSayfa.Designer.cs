@@ -66,6 +66,7 @@
             this.btnMenuKapat = new System.Windows.Forms.Button();
             this.btnMenuAc = new System.Windows.Forms.Button();
             this.pnlUst = new System.Windows.Forms.Panel();
+            this.btnKullanici = new System.Windows.Forms.Button();
             this.lblSaat = new System.Windows.Forms.Label();
             this.lblTarih = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -609,6 +610,7 @@
             // 
             this.pnlUst.BackColor = System.Drawing.Color.MediumTurquoise;
             this.pnlUst.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlUst.Controls.Add(this.btnKullanici);
             this.pnlUst.Controls.Add(this.lblSaat);
             this.pnlUst.Controls.Add(this.lblTarih);
             this.pnlUst.Controls.Add(this.label19);
@@ -621,6 +623,25 @@
             this.pnlUst.Name = "pnlUst";
             this.pnlUst.Size = new System.Drawing.Size(920, 38);
             this.pnlUst.TabIndex = 3;
+            // 
+            // btnKullanici
+            // 
+            this.btnKullanici.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKullanici.BackColor = System.Drawing.Color.Transparent;
+            this.btnKullanici.FlatAppearance.BorderSize = 0;
+            this.btnKullanici.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SandyBrown;
+            this.btnKullanici.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKullanici.Image = ((System.Drawing.Image)(resources.GetObject("btnKullanici.Image")));
+            this.btnKullanici.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnKullanici.Location = new System.Drawing.Point(381, 1);
+            this.btnKullanici.Name = "btnKullanici";
+            this.btnKullanici.Size = new System.Drawing.Size(188, 32);
+            this.btnKullanici.TabIndex = 24;
+            this.btnKullanici.Text = "Kullanıcı Değiştir";
+            this.btnKullanici.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKullanici.UseVisualStyleBackColor = false;
+            this.btnKullanici.Click += new System.EventHandler(this.btnKullanici_Click);
             // 
             // lblSaat
             // 
@@ -676,16 +697,17 @@
             this.lblYetki.AutoSize = true;
             this.lblYetki.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblYetki.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblYetki.Location = new System.Drawing.Point(465, 7);
+            this.lblYetki.Location = new System.Drawing.Point(273, 6);
             this.lblYetki.Name = "lblYetki";
             this.lblYetki.Size = new System.Drawing.Size(55, 22);
             this.lblYetki.TabIndex = 3;
             this.lblYetki.Text = "Yetki";
+            this.lblYetki.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(5, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -697,7 +719,7 @@
             this.lblKullanici.AutoSize = true;
             this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblKullanici.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblKullanici.Location = new System.Drawing.Point(35, 7);
+            this.lblKullanici.Location = new System.Drawing.Point(36, 8);
             this.lblKullanici.Name = "lblKullanici";
             this.lblKullanici.Size = new System.Drawing.Size(121, 22);
             this.lblKullanici.TabIndex = 0;
@@ -1136,5 +1158,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.Button btnOdeme;
+        private System.Windows.Forms.Button btnKullanici;
     }
 }

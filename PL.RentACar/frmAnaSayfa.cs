@@ -29,10 +29,15 @@ namespace PL.RentACar
             lblTarih.Text = DateTime.Now.Date.ToLongDateString();
             if (Genel.Yetki=="Personel")
             {
-                pbArac.Enabled = false;
-                pbPersonel.Enabled = false;
-                btnAracMenu.Enabled = false;
-                btnPersonelMenu.Enabled = false;
+                pbPersonel.Visible = false;
+                btnPersonelMenu.Visible = false;
+                label5.Visible = false;
+            }
+            else
+            {
+                pbPersonel.Visible = true;
+                btnPersonelMenu.Visible = true;
+                label5.Visible = true;
             }
           
         }
@@ -278,6 +283,13 @@ namespace PL.RentACar
         private void pnlContent_Click(object sender, EventArgs e)
         {
             PanelGizle();
+        }
+
+        private void btnKullanici_Click(object sender, EventArgs e)
+        {
+            frmGiris frm = new frmGiris();
+            frm.Show();
+            this.Close();
         }
     }
 }
