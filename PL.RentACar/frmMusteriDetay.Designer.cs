@@ -40,7 +40,7 @@
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPuan = new System.Windows.Forms.TextBox();
             this.dtpBitis = new System.Windows.Forms.DateTimePicker();
             this.dtpBaslangic = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,6 +48,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnCikis = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -173,14 +174,14 @@
             this.label3.TabIndex = 99;
             this.label3.Text = "Güncel Puan";
             // 
-            // textBox1
+            // txtPuan
             // 
-            this.textBox1.Location = new System.Drawing.Point(121, 303);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(148, 26);
-            this.textBox1.TabIndex = 98;
+            this.txtPuan.Location = new System.Drawing.Point(121, 303);
+            this.txtPuan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPuan.Name = "txtPuan";
+            this.txtPuan.ReadOnly = true;
+            this.txtPuan.Size = new System.Drawing.Size(148, 26);
+            this.txtPuan.TabIndex = 98;
             // 
             // dtpBitis
             // 
@@ -247,12 +248,24 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.btnCikis);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(882, 24);
             this.panel1.TabIndex = 166;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(3, 2);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(144, 20);
+            this.label9.TabIndex = 89;
+            this.label9.Text = "Müşteri Detayları";
             // 
             // frmMusteriDetay
             // 
@@ -267,7 +280,7 @@
             this.Controls.Add(this.dtpBitis);
             this.Controls.Add(this.dtpBaslangic);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPuan);
             this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtEhliyetNo);
@@ -286,6 +299,7 @@
             this.Load += new System.EventHandler(this.frmMusteriDetay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,7 +318,7 @@
         private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPuan;
         private System.Windows.Forms.DateTimePicker dtpBitis;
         private System.Windows.Forms.DateTimePicker dtpBaslangic;
         private System.Windows.Forms.Label label4;
@@ -312,5 +326,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label9;
     }
 }

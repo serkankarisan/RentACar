@@ -165,7 +165,6 @@ namespace PL.RentACar
         {
             Yetki y = (Yetki)cbYetki.SelectedItem;
             YetkiID = y.Id;
-
         }
 
         private void txtPersonelAdi_TextChanged(object sender, EventArgs e)

@@ -33,7 +33,7 @@ namespace PL.RentACar
             {
                 Musteri m = musrepo.MusteriGetirById(Genel.MusteriID);
                 MusteriHareketRepository mhrep = new MusteriHareketRepository();
-                if (mhrep.MusteriHareketToplamPuan(Genel.MusteriID)<30 )
+                if (mhrep.MusteriHareketPuanGetir(Genel.MusteriID)<30 )
                 {
                     if ((MessageBox.Show("Müşteri Puanı Alt Sınırda Sözleşmeye Devam Edilsin Mi?", "Sözleşme Yapılsınmı", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
                     {
