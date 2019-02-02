@@ -38,7 +38,11 @@ namespace BLL.RentACar.Repositories
         {
             bool Sonuc = false;
             Kullanici degisen = KullaniciGetirById(k.Id);
-            degisen = k;
+            degisen.PersonelId = k.PersonelId;
+            degisen.RoleId = k.RoleId;
+            degisen.UserName = k.UserName;
+            degisen.Password = k.Password;
+            degisen.Silindi = k.Silindi;
             try
             {
                 Genel.ent.SaveChanges();
@@ -54,6 +58,11 @@ namespace BLL.RentACar.Repositories
         public bool KullaniciKontrol(Kullanici yeni)
         {
             return Convert.ToBoolean(Genel.ent.Kullanicilar.Where(k => k.UserName == yeni.UserName || k.PersonelId == yeni.PersonelId).ToList().Count);
+        }
+
+        public bool KullaniciKontrolByDegistir(Kullanici yeni)
+        {
+            return Convert.ToBoolean(Genel.ent.Kullanicilar.Where(k => k.UserName == yeni.UserName && k.Id != yeni.Id).ToList().Count);
         }
 
         public List<Kullanici> KullaniciListele()

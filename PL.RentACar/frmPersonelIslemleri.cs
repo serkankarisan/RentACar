@@ -41,19 +41,21 @@ namespace PL.RentACar
                                         yeni.Adi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
                                         yeni.Soyadi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
                                         yeni.Telefon = txtTelefon.Text;
+                                        yeni.Email = txtEmail.Text + cbEmail.Text;
                                         if (per.PersonelKontrol(yeni))
                                         {
-                                            MessageBox.Show("Bu Personel kayıtlı!", "Aynı Personel zaten var!");
+                                            MessageBox.Show("Önceden Kayıt Edilmiş Telefon veya E-Mail Girişi!", "Hata!");
                                         }
                                         else
                                         {
-                                            yeni.Email = txtEmail.Text + cbEmail.Text;
                                             yeni.Adres = txtAdres.Text;
                                             yeni.Maas = Convert.ToDecimal(txtMaas.Text);
                                             if (per.PersonelEkle(yeni))
                                             {
                                                 MessageBox.Show("Yeni Personel eklendi.", "Kayıt gerçekleşti.");
                                                 dgvPersoneller.DataSource = per.PersonelListele();
+                                                dgvColumns();
+                                                Disable();
                                                 tsKaydet.Enabled = false;
                                                 Supurge();
                                                 tsYeni.Enabled = true;
@@ -86,8 +88,8 @@ namespace PL.RentACar
             else
             {
                 MessageBox.Show("Ad Girmelisiniz.", "Bu Alan Boş Geçilemez.");
+                txtAd.Focus();
             }
-            txtAd.Focus();
         }
 
         private void tsbYeni_Click(object sender, EventArgs e)
@@ -148,48 +150,55 @@ namespace PL.RentACar
                                     if (decimal.TryParse(txtMaas.Text, out result))
                                     {
                                         Personel degisen = new Personel();
-                                        degisen = per.PersonelGetirById(ID);
+                                        degisen.Id = ID;
                                         degisen.Adi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
                                         degisen.Soyadi = txtSoyad.Text.Substring(0, 1).ToUpper() + txtSoyad.Text.Substring(1).ToLower();
                                         degisen.Telefon = txtTelefon.Text;
+                                        degisen.Email = txtEmail.Text + cbEmail.Text;
                                         if (per.PersonelKontrolByDegistir(degisen))
                                         {
-                                            MessageBox.Show("Çakışan Bilgiler Var.", "Değişim Hatası.");
-                                        }
-                                        degisen.Email = txtEmail.Text + cbEmail.Text;
-                                        degisen.Adres = txtAdres.Text;
-                                        degisen.Maas = Convert.ToDecimal(txtMaas.Text);
-                                        if (per.PersonelGuncelle(degisen))
-                                        {
-                                            MessageBox.Show("Personel bilgileri değiştirildi.", "Değişiklik gerçekleşti.");
-                                            dgvPersoneller.DataSource = per.PersonelListele();
-                                            tsKaydet.Enabled = false;
-                                            Supurge();
+                                            MessageBox.Show("Önceden Kayıt Edilmiş Telefon veya E-Mail Girişi!", "Değişim Hatası.");
                                         }
                                         else
                                         {
-                                            MessageBox.Show("Maas Sayı girilmelidir!", "Maas Hatası!");
+                                            degisen.Adres = txtAdres.Text;
+                                            degisen.Maas = Convert.ToDecimal(txtMaas.Text);
+                                            if (per.PersonelGuncelle(degisen))
+                                            {
+                                                MessageBox.Show("Personel bilgileri değiştirildi.", "Değişiklik gerçekleşti.");
+                                                dgvPersoneller.DataSource = per.PersonelListele();
+                                                dgvColumns();
+                                                Disable();
+                                                tsKaydet.Enabled = false;
+                                                tsSil.Enabled = false;
+                                                tsDegistir.Enabled = false;
+                                                Supurge();
+                                            }
                                         }
                                     }
                                     else
-                                        MessageBox.Show("Maas Girmelisiniz.", "Bu Alan Boş Geçilemez");
+                                    {
+                                        MessageBox.Show("Maas Sayı girilmelidir!", "Maas Hatası!");
+                                    }
                                 }
                                 else
-                                    MessageBox.Show("Adres Girmelisiniz.", "Bu Alan Boş Geçilemez.");
+                                    MessageBox.Show("Maas Girmelisiniz.", "Bu Alan Boş Geçilemez");
                             }
                             else
-                                MessageBox.Show("Email Girmelisiniz.", "Bu Alan Boş Geçilemez.");
+                                MessageBox.Show("Adres Girmelisiniz.", "Bu Alan Boş Geçilemez.");
                         }
                         else
-                            MessageBox.Show("Telefon Girmelisiniz.", "Bu Alan Boş Geçilemez.");
+                            MessageBox.Show("Email Girmelisiniz.", "Bu Alan Boş Geçilemez.");
                     }
                     else
-                        MessageBox.Show("Soyad Girmelisiniz.", "Bu Alan Boş Geçilemez.");
+                        MessageBox.Show("Telefon Girmelisiniz.", "Bu Alan Boş Geçilemez.");
                 }
                 else
-                {
-                    MessageBox.Show("Ad Girmelisiniz.", "Bu Alan Boş Geçilemez.");
-                }
+                    MessageBox.Show("Soyad Girmelisiniz.", "Bu Alan Boş Geçilemez.");
+            }
+            else
+            {
+                MessageBox.Show("Ad Girmelisiniz.", "Bu Alan Boş Geçilemez.");
                 txtAd.Focus();
             }
         }
@@ -203,9 +212,11 @@ namespace PL.RentACar
                 {
                     MessageBox.Show("Personel bilgileri silindi.", "Silme gerçekleşti.");
                     dgvPersoneller.DataSource = per.PersonelListele();
+                    dgvColumns();
                     tsDegistir.Enabled = false;
                     tsSil.Enabled = false;
                     Supurge();
+                    Disable();
                 }
             }
         }
@@ -214,7 +225,9 @@ namespace PL.RentACar
         {
             Disable();
             dgvPersoneller.DataSource = per.PersonelListele();
+            dgvColumns();
             tsKaydet.Enabled = false;
+            cbEmail.SelectedIndex = 0;
         }
 
         private void btnCikis_Click(object sender, EventArgs e)
@@ -241,6 +254,17 @@ namespace PL.RentACar
                     t.Enabled = false;
                 }
             }
+        }
+        private void dgvColumns()
+        {
+            dgvPersoneller.Columns[0].Visible = false;
+            dgvPersoneller.Columns[1].Width = 100;
+            dgvPersoneller.Columns[2].Width = 100;
+            dgvPersoneller.Columns[3].Width = 125;
+            dgvPersoneller.Columns[4].Width = 175;
+            dgvPersoneller.Columns[5].Width = 175;
+            dgvPersoneller.Columns[6].Width = 125;
+            dgvPersoneller.Columns[7].Visible = false;
         }
     }
 }
