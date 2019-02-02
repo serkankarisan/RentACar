@@ -106,7 +106,7 @@ namespace BLL.RentACar.Repositories
 
         public bool PersonelKontrol(Personel P)
         {
-            return Convert.ToBoolean(Genel.ent.Personeller.Where(k => k.Adi == P.Adi && k.Soyadi == P.Soyadi && k.Telefon==P.Telefon && k.Email == P.Email).ToList().Count);
+            return Convert.ToBoolean(Genel.ent.Personeller.Where(k => k.Telefon==P.Telefon || k.Email == P.Email).ToList().Count);
         }
         public bool PersonelKontrolByDegistir(Personel P)
         {

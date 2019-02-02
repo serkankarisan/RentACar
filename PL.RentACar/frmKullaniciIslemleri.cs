@@ -40,41 +40,49 @@ namespace PL.RentACar
 
         private void tsKaydet_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtKullaniciAdi.Text) && (!string.IsNullOrEmpty(txtSifre.Text)) && (!string.IsNullOrEmpty(txtSifreTekrar.Text)))
+            if (!string.IsNullOrEmpty(txtKullaniciAdi.Text))
             {
-                if (txtSifre.Text == txtSifreTekrar.Text)
+                if (!string.IsNullOrEmpty(txtSifre.Text))
                 {
-                    Kullanici yeni = new Kullanici();
-                    yeni.UserName = txtKullaniciAdi.Text;
-                    yeni.PersonelId = PersonelID;
-                    if (kper.KullaniciKontrol(yeni))
+                    if (!string.IsNullOrEmpty(txtSifreTekrar.Text))
                     {
-                        MessageBox.Show("Bu Kullanıcı kayıtlı!", "Aynı Kullanıcı zaten var!");
+                        if (txtSifre.Text == txtSifreTekrar.Text)
+                        {
+                            Kullanici yeni = new Kullanici();
+                            yeni.UserName = txtKullaniciAdi.Text;
+                            yeni.PersonelId = PersonelID;
+                            if (kper.KullaniciKontrol(yeni))
+                            {
+                                MessageBox.Show("Bu Kullanıcı kayıtlı!", "Aynı Kullanıcı zaten var!");
+                            }
+                            else
+                            {
+                                yeni.Password = txtSifre.Text;
+                                yeni.RoleId = YetkiID;
+                                if (kper.KullaniciEkle(yeni))
+                                {
+                                    MessageBox.Show("Yeni Kullanici eklendi.", "Kayıt gerçekleşti.");
+                                    dgvKullanicilar.DataSource = kper.KullaniciListele();
+                                    dgvColumns();
+                                    tsKaydet.Enabled = false;
+                                    Supurge();
+                                }
+                            }
+                        }
+                        else
+                            MessageBox.Show("Hatalı şifre girişi!", "Şifre Eşleşme Hatası!");
                     }
                     else
-                    {
-                        yeni.Password = txtSifre.Text;
-                        yeni.RoleId = YetkiID;
-                        if (kper.KullaniciEkle(yeni))
-                        {
-                            MessageBox.Show("Yeni Kullanici eklendi.", "Kayıt gerçekleşti.");
-                            dgvKullanicilar.DataSource = kper.KullaniciListele();
-                            tsKaydet.Enabled = false;
-                            Supurge();
-
-                        }
-                    }
+                        MessageBox.Show("Tekrar Şifre Girilmelidir!", "Hata!");
                 }
                 else
-                {
-                    MessageBox.Show("Hatalı şifre girişi!", "Şifre Eşleşme Hatası!");
-                }
+                    MessageBox.Show("Şifre Girilmelidir!", "Hata");
             }
             else
             {
-                MessageBox.Show("Girelecek bilgiler boş bırakılamaz.", "Hata");
+                MessageBox.Show("Kullanıcı Adı Girilmelidir!", "Hata!");
+                txtKullaniciAdi.Focus();
             }
-            txtKullaniciAdi.Focus();
         }
 
         private void frmKullaniciIslemleri_Load(object sender, EventArgs e)
@@ -82,6 +90,7 @@ namespace PL.RentACar
             Disable();
             tsKaydet.Enabled = false;
             dgvKullanicilar.DataSource = kper.KullaniciListele();
+            dgvColumns();
             cbPersonel.DataSource = per.PersonelListele();
             cbPersonel.SelectedIndex = 0;
             cbYetki.DataSource = yper.YetkiListele();
@@ -106,37 +115,47 @@ namespace PL.RentACar
 
         private void tsDegistir_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtKullaniciAdi.Text) && (!string.IsNullOrEmpty(txtSifre.Text)) && (!string.IsNullOrEmpty(txtSifreTekrar.Text)))
+            if (!string.IsNullOrEmpty(txtKullaniciAdi.Text))
             {
-                if (txtSifre.Text == txtSifreTekrar.Text)
+                if (!string.IsNullOrEmpty(txtSifre.Text))
                 {
-                    Kullanici degisen = kper.KullaniciGetirById(ID);
-                    degisen.UserName = txtKullaniciAdi.Text;
-                    degisen.Password = txtSifre.Text;
-                    degisen.PersonelId = PersonelID;
-                    degisen.RoleId = YetkiID;
-
-                    if (kper.KullaniciGuncelle(degisen))
+                    if (!string.IsNullOrEmpty(txtSifreTekrar.Text))
                     {
-                        MessageBox.Show("Kullanici Değiştirildi.", "Değişiklik gerçekleşti.");
-                        dgvKullanicilar.DataSource = kper.KullaniciListele();
-                        tsYeni.Enabled = true;
-                        tsKaydet.Enabled = false;
-                        tsDegistir.Enabled = false;
-                        tsSil.Enabled = false;
-                        Supurge();
+                        if (txtSifre.Text == txtSifreTekrar.Text)
+                        {
+                            Kullanici degisen = new Kullanici();
+                            degisen.Id = ID;
+                            degisen.UserName = txtKullaniciAdi.Text;
+                            degisen.Password = txtSifre.Text;
+                            degisen.PersonelId = PersonelID;
+                            degisen.RoleId = YetkiID;
+
+                            if (kper.KullaniciGuncelle(degisen))
+                            {
+                                MessageBox.Show("Kullanici Değiştirildi.", "Değişiklik gerçekleşti.");
+                                dgvKullanicilar.DataSource = kper.KullaniciListele();
+                                dgvColumns();
+                                tsYeni.Enabled = true;
+                                tsKaydet.Enabled = false;
+                                tsDegistir.Enabled = false;
+                                tsSil.Enabled = false;
+                                Supurge();
+                            }
+                        }
+                        else
+                            MessageBox.Show("Hatalı şifre girişi!", "Şifre Eşleşme Hatası!");
                     }
+                    else
+                        MessageBox.Show("Tekrar Şifre Girilmelidir!", "Hata!");
                 }
                 else
-                {
-                    MessageBox.Show("Hatalı şifre girişi!", "Şifre Eşleşme Hatası!");
-                }
+                    MessageBox.Show("Şifre Girilmelidir!", "Hata");
             }
             else
             {
-                MessageBox.Show("Girelecek bilgiler boş bırakılamaz.", "Hata");
+                MessageBox.Show("Kullanıcı Adı Girilmelidir!", "Hata!");
+                txtKullaniciAdi.Focus();
             }
-            txtKullaniciAdi.Focus();
         }
 
         private void tsSil_Click(object sender, EventArgs e)
@@ -148,6 +167,7 @@ namespace PL.RentACar
                 {
                     MessageBox.Show("Personel bilgileri silindi.", "Silme gerçekleşti.");
                     dgvKullanicilar.DataSource = kper.KullaniciListele();
+                    dgvColumns();
                     tsDegistir.Enabled = false;
                     tsSil.Enabled = false;
                     Supurge();
@@ -205,6 +225,13 @@ namespace PL.RentACar
                     t.Enabled = false;
                 }
             }
+        }
+        private void dgvColumns()
+        {
+            dgvKullanicilar.Columns[0].Visible = false;
+            dgvKullanicilar.Columns[1].Visible = false;
+            dgvKullanicilar.Columns[2].Visible = false;
+            dgvKullanicilar.Columns[5].Visible = false;
         }
     }
 }
