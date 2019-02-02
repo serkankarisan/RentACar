@@ -37,9 +37,19 @@ namespace BLL.RentACar.Repositories
         public bool MusteriGuncelle(Musteri M)
         {
             //arakatman sorununu çözmek için değiştirmeyi burada yaptım.
-            Musteri degisen = MusteriGetirById(M.Id);
-            degisen = M;
             bool Sonuc = false;
+            Musteri bulunan = MusteriGetirById(M.Id);
+            bulunan.Adi = M.Adi;
+            bulunan.Soyadi = M.Soyadi;
+            bulunan.Telefon = M.Telefon;
+            bulunan.Email = M.Email;
+            bulunan.EhliyetNo = M.EhliyetNo;
+            bulunan.EhliyetTarihi = M.EhliyetTarihi;
+            bulunan.Adres = M.Adres;
+            bulunan.Cinsiyet = M.Cinsiyet;
+            bulunan.DogumTarihi = M.DogumTarihi;
+            bulunan.Silindi = M.Silindi;
+            bulunan.TcKimlikNo = M.TcKimlikNo;
             try
             {
                 Genel.ent.SaveChanges();

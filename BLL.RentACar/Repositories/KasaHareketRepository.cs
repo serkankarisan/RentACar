@@ -60,9 +60,19 @@ namespace BLL.RentACar.Repositories
         public List<KasaHareket> KasaHareketListeleByTarih(DateTime baslangic, DateTime bitis)
         {
             List<KasaHareket> listeTarih = (from kh in Genel.ent.KasaHareketler
-                                            where kh.Tarih >= baslangic && kh.Tarih <= bitis
+                                            where kh.Tarih >= baslangic && kh.Tarih<=bitis
                                             select kh).ToList();
             return listeTarih;
+        }
+        public decimal KasaHareketToplamTutarByTarih(DateTime baslangic, DateTime bitis)
+        {
+            decimal ToplamGiren = (from kh in Genel.ent.KasaHareketler
+                              where (kh.Tarih >= baslangic && kh.Tarih <= bitis ) && kh.GelirGider.Tür == "Gelir"
+                                    select kh.Tutar).Sum();
+            decimal ToplamCikan = (from kh in Genel.ent.KasaHareketler
+                                    where (kh.Tarih >= baslangic && kh.Tarih <= bitis) && kh.GelirGider.Tür=="Gider"
+                                    select kh.Tutar).Sum();
+            return (ToplamGiren - ToplamCikan);
         }
 
         public List<KasaHareket> KasaHareketListeleBygGelirGiderId(int Id)

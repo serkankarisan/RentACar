@@ -49,12 +49,12 @@ namespace PL.RentACar
             dgvSozlesmeDetaylar.DataSource = sdrepo.SozlesmeDetayListeleBySozlesmeId(Genel.soz.Id);
             t = (dtpBitis.Value - dtpBaslangic.Value).TotalDays;
             txtGunSayisi.Text = Convert.ToInt32(t).ToString();
-            txtTutar.Text = "0";
+            txtTutar.Text = Convert.ToDecimal(0).ToString();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            if (txtTutar.Text.Trim()!="0")
+            if (txtTutar.Text.Trim()!= Convert.ToDecimal(0).ToString())
             {
                 btnTamamla.Enabled = true;
                 SozlesmeDetay sd = new SozlesmeDetay();
@@ -66,9 +66,21 @@ namespace PL.RentACar
                     sd.BitisTarihi = dtpBitis.Value;
                     sd.SozlesmeId = Genel.soz.Id;
                     sd.Tutar = Convert.ToDecimal(txtTutar.Text);
+
+                    Arac eski=arepo.AracGetirById(Genel.AracID);
                     Arac a = new Arac();
-                    a = arepo.AracGetirById(Genel.AracID);
+                    a.Id = Genel.AracID;
+                    a.Plaka = eski.Plaka;
+                    a.AracDurumu = eski.AracDurumu;
+                    a.Marka = eski.Marka;
+                    a.Model = eski.Model;
+                    a.Renk = eski.Renk;
+                    a.Silindi = eski.Silindi;
+                    a.Tip = eski.Tip;
+                    a.YakitDurumu = eski.YakitDurumu;
                     a.Varmi = false;
+                    a.ResimYolu = eski.ResimYolu;
+                    a.GünlükFiyat = eski.GünlükFiyat;
                     arepo.AracGuncelle(a);
                     if (!sdrepo.SozlesmeDetayEkle(sd))
                     {
@@ -78,6 +90,7 @@ namespace PL.RentACar
                     {
                         MessageBox.Show("Araç Listeye Eklendi.", "Kayıt Gerçekleşti.");
                         Temizle();
+                        Genel.AracID = 0;
                     }
                 }
                 else
@@ -153,10 +166,10 @@ namespace PL.RentACar
             txtTutar.Clear();
             txtYakıtDurumu.Clear();
             txtGunSayisi.Clear();
-            txtGunlukFiyat.Text = "0";
+            txtGunlukFiyat.Text = Convert.ToDecimal(0).ToString();
             txtAracDurumu.Clear();
             txtYakıtDurumu.Clear();
-            txtGunSayisi.Text = "0";
+            txtGunSayisi.Text = Convert.ToDecimal(0).ToString();
             dtpBaslangic.Value = DateTime.Now;
             dtpBitis.Value = DateTime.Now;
 

@@ -56,7 +56,7 @@ namespace PL.RentACar
         {
             il.ImageSize = new Size(120, 120);
             il2.ImageSize = new Size(16, 16);
-            txtMarka.Text = "Marka Seçiniz.";
+            txtMarka.Text = "Markalar";
             cbMarkalar.Items.Clear();
             cbMarkalar.DisplayMember = "Marka";
             cbMarkalar.ValueMember = "Id";
@@ -136,8 +136,8 @@ namespace PL.RentACar
         
 
         private void txtPlaka_TextChanged(object sender, EventArgs e)
-        {
-            txtMarka.Text = "Marka Seç.";
+        {//burada markaya göre plaka sorgulama olabilir. 
+            txtMarka.Text = "Markalar";
             lvDetaylar.Items.Clear();
             List<Arac> liste = ARep.AracSorgulaByPlaka(txtPlaka.Text);
             int j = 0;

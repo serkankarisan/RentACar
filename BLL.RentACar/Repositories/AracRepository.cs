@@ -28,7 +28,7 @@ namespace BLL.RentACar.Repositories
 
         public List<Arac> AracListele()
         {
-            return Genel.ent.Araclar.Where(a => a.Silindi == false).ToList();
+            return Genel.ent.Araclar.Where(a => a.Silindi == false && a.Varmi==true).ToList();
         }
         public List<Arac> AracSorgulaByPlaka(string Plaka)
         {

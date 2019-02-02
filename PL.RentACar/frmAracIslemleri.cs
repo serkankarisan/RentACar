@@ -37,6 +37,7 @@ namespace PL.RentACar
         decimal gunlukfiyat,dg;
         private void tsKaydet_Click(object sender, EventArgs e)
         {
+            //if sıralaması ayarlanacak.
             if (txtAracDurumu.Text.Trim() != "")
             {
                 if (txtGunlukFiyat.Text.Trim() != "")
@@ -126,6 +127,10 @@ namespace PL.RentACar
                     {
                         MessageBox.Show("Marka Giriniz!", "Eksik Bilgi!");
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Günlük Fiyat Giriniz!", "Eksik Bilgi!");
                 }
             }
             else
@@ -325,6 +330,7 @@ namespace PL.RentACar
         }
         private void Enable()
         {
+            cbAracdurumu.Enabled = true;
             btnResimEkle.Enabled = true;
             foreach (Control t in this.Controls)
             {
@@ -336,6 +342,7 @@ namespace PL.RentACar
         }
         private void Disable()
         {
+            cbAracdurumu.Enabled = false;
             btnResimEkle.Enabled = false;
             foreach (Control t in this.Controls)
             {
@@ -373,6 +380,12 @@ namespace PL.RentACar
                 pbFoto.Image = Image.FromFile(Application.StartupPath + "" + txtResimYolu.Text);
             }
         }
+
+        private void cbAracdurumu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtAracDurumu.Text = cbAracdurumu.Text;
+        }
+
         private void Kopyala(string kopyalanacakDosya,string dosyanınKopyanacagiKlasor,string kopyalanacakDosyaIsmi)
         {
             if (dosyanınKopyanacagiKlasor != "" && kopyalanacakDosya != "")

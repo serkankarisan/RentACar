@@ -54,34 +54,39 @@ namespace PL.RentACar
                                 yeni.Email = txtEmail.Text + cbEmail.Text;
                                 if (!musrepo.MusteriEmailKontrol(yeni.Email))
                                 {
-                                    try
+                                    if (long.TryParse(txtEhliyetNo.Text, out long eno))
                                     {
-                                        Convert.ToInt32(txtEhliyetNo.Text);
-
+                                        yeni.EhliyetNo = txtEhliyetNo.Text;
                                     }
-                                    catch (FormatException)
+                                    else
                                     {
                                         MessageBox.Show("Geçerli Bir EhliyetNo Girin!");
                                         return;
                                     }
-
-                                    try
+                                    if (long.TryParse(txtTCKNo.Text,out long tc) && txtTCKNo.Text.Trim().Length==11)
                                     {
-                                        Convert.ToInt64(txtTCKNo.Text);
-
+                                        yeni.TcKimlikNo = txtTCKNo.Text;
                                     }
-                                    catch (FormatException)
+                                    else
                                     {
                                         MessageBox.Show("Geçerli Bir TC Kimlik No Girin!");
                                         return;
                                     }
-                                    yeni.Telefon = txtTelefon.Text;
+
+                                    if (txtTelefon.Text.Trim().Length == 14)
+                                    {
+                                        yeni.Telefon = txtTelefon.Text;
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Telefon Numarasını Kontrol Edin!");
+                                        return;
+                                    }
+
                                     yeni.Adres = txtAdres.Text.Substring(0, 1).ToUpper() + txtAdres.Text.Substring(1).ToLower();
-                                    yeni.TcKimlikNo = txtTCKNo.Text;
-                                    yeni.EhliyetNo = txtEhliyetNo.Text;
-                                    yeni.DogumTarihi = Convert.ToDateTime(dtpDogumTarihi.Text);
+                                    yeni.DogumTarihi = Convert.ToDateTime(dtpDogumTarihi.Value.ToShortDateString());
                                     yeni.Cinsiyet = cbCinsiyet.Text.Substring(0, 1).ToUpper() + cbCinsiyet.Text.Substring(1).ToLower();
-                                    yeni.EhliyetTarihi = Convert.ToDateTime(dtpEhliyetTarihi.Text);
+                                    yeni.EhliyetTarihi = Convert.ToDateTime(dtpEhliyetTarihi.Value.ToShortDateString());
                                     if (musrepo.MusteriKontrol(yeni))
                                     {
                                         MessageBox.Show("Bu Müşteri Kayıtlı! veya TC Kimlik No Hatalı!", "Hatalı Bilgi Girişi!");
@@ -186,38 +191,42 @@ namespace PL.RentACar
                             if (!string.IsNullOrEmpty(txtEmail.Text))
                             {
                                 Musteri degisen = new Musteri();
-                                degisen = musrepo.MusteriGetirById(ID);
                                 degisen.Adi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
                                 degisen.Soyadi = txtSoyad.Text.Substring(0, 1).ToUpper() + txtSoyad.Text.Substring(1).ToLower();
                                 degisen.Email = txtEmail.Text + cbEmail.Text;
-                                    try
-                                    {
-                                        Convert.ToInt32(txtEhliyetNo.Text);
+                                if (long.TryParse(txtEhliyetNo.Text, out long eno))
+                                {
+                                    degisen.EhliyetNo = txtEhliyetNo.Text;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Geçerli Bir EhliyetNo Girin!");
+                                    return;
+                                }
+                                if (long.TryParse(txtTCKNo.Text, out long tc) && txtTCKNo.Text.Trim().Length == 11)
+                                {
+                                    degisen.TcKimlikNo = txtTCKNo.Text;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Geçerli Bir TC Kimlik No Girin!");
+                                    return;
+                                }
 
-                                    }
-                                    catch (FormatException)
-                                    {
-                                        MessageBox.Show("Geçerli Bir EhliyetNo Girin!");
-                                        return;
-                                    }
-
-                                    try
-                                    {
-                                        Convert.ToInt64(txtTCKNo.Text);
-
-                                    }
-                                    catch (FormatException)
-                                    {
-                                        MessageBox.Show("Geçerli Bir TC Kimlik No Girin!");
-                                        return;
-                                    }
-                                degisen.Telefon = txtTelefon.Text;
+                                if (txtTelefon.Text.Trim().Length == 14)
+                                {
+                                    degisen.Telefon = txtTelefon.Text;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Telefon Numarasını Kontrol Edin!");
+                                    return;
+                                }
                                 degisen.Adres = txtAdres.Text.Substring(0, 1).ToUpper() + txtAdres.Text.Substring(1).ToLower();
                                 degisen.TcKimlikNo = txtTCKNo.Text;
-                                degisen.EhliyetNo = txtEhliyetNo.Text;
-                                degisen.DogumTarihi = Convert.ToDateTime(dtpDogumTarihi.Text);
+                                degisen.DogumTarihi = Convert.ToDateTime(dtpDogumTarihi.Value.ToShortDateString());
                                 degisen.Cinsiyet = cbCinsiyet.Text.Substring(0, 1).ToUpper() + cbCinsiyet.Text.Substring(1).ToLower();
-                                degisen.EhliyetTarihi = Convert.ToDateTime(dtpEhliyetTarihi.Text);
+                                degisen.EhliyetTarihi = Convert.ToDateTime(dtpEhliyetTarihi.Value.ToShortDateString());
                                 degisen.Id = ID;
                                 if (musrepo.MusteriKontrolFromDegistir(degisen))
                                 {
@@ -236,6 +245,7 @@ namespace PL.RentACar
                                         tsDegistir.Enabled = false;
                                         tsSil.Enabled = false;
                                         Temizle();
+                                        Disable();
                                     }
                                 }
                             }

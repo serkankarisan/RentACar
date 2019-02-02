@@ -26,7 +26,6 @@ namespace PL.RentACar
         bool psec = false;
         private void btnMusteriSec_Click(object sender, EventArgs e)
         {
-
             frmMusteriSorgulama frm = new frmMusteriSorgulama();
             frm.ShowDialog();
             msec = true;
@@ -75,7 +74,6 @@ namespace PL.RentACar
                     }
                 }
             }
-            Genel.MusteriID = 0;
         }
 
         private void btnPersonelSec_Click(object sender, EventArgs e)

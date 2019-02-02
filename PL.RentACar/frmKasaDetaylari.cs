@@ -1,4 +1,5 @@
 ﻿using BLL.RentACar.Repositories;
+using DAL.RentACar.Context;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,13 +20,16 @@ namespace PL.RentACar
         }
         KasaHareketRepository KHRep = new KasaHareketRepository();
         private void frmKasaDetaylari_Load(object sender, EventArgs e)
-        {           
-            KHRep.KasaHareketListeleByTarih(dtpBaslangic.Value, dtpBitis.Value);
+        {
+            dtpBaslangic.Value = DateTime.Now;
+            dtpBitis.Value = DateTime.Now;
         }
 
         private void dtpBaslangic_ValueChanged(object sender, EventArgs e)
         {
-            if(Convert.ToDateTime(dtpBaslangic.Value.ToShortDateString()) > Convert.ToDateTime(dtpBitis.Value.ToShortDateString()))
+            DateTime basla = Convert.ToDateTime(dtpBaslangic.Value.ToShortDateString());
+            DateTime bit = Convert.ToDateTime(dtpBitis.Value.ToShortDateString());
+            if ( basla>bit )
             {
                 dtpBitis.Value = DateTime.Now;
                 dtpBaslangic.Value = DateTime.Now;
@@ -34,28 +38,53 @@ namespace PL.RentACar
             }
             else
             {
-                dgvMusteriler.DataSource= KHRep.KasaHareketListeleByTarih(dtpBaslangic.Value, dtpBaslangic.Value);
+                //txtToplamBakiye.Text = KHRep.KasaHareketToplamTutarByTarih(basla, dtpBitis.Value).ToString();
+                dgvKasaDetay.DataSource= KHRep.KasaHareketListeleByTarih(basla, dtpBitis.Value);
+                txtToplamBakiye.Text = Hesapla().ToString();
             }
         }
-
+        
         private void dtpBitis_ValueChanged(object sender, EventArgs e)
         {
-            if (Convert.ToDateTime(dtpBaslangic.Value.ToShortDateString()) > Convert.ToDateTime(dtpBitis.Value.ToShortDateString()))
+            DateTime basla = Convert.ToDateTime(dtpBaslangic.Value.ToShortDateString());
+            DateTime bit = Convert.ToDateTime(dtpBitis.Value.ToShortDateString());
+            if (basla > bit)
             {
                 dtpBaslangic.Value = DateTime.Now;
                 dtpBitis.Value = DateTime.Now;
                 MessageBox.Show("Başlangıç tarihi, bitiş tarihinden sonra olamaz!", "Tekrar tarih seçiniz!");              
-                
             }
             else
             {
-                dgvMusteriler.DataSource = KHRep.KasaHareketListeleByTarih(dtpBaslangic.Value, dtpBaslangic.Value);
+                //txtToplamBakiye.Text = KHRep.KasaHareketToplamTutarByTarih(basla, dtpBitis.Value).ToString();
+                dgvKasaDetay.DataSource = KHRep.KasaHareketListeleByTarih(basla, dtpBitis.Value);
+                txtToplamBakiye.Text = Hesapla().ToString();
             }
         }
 
         private void btnCikis_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private decimal Hesapla()
+        {
+            decimal Toplam = 0;
+            decimal ToplamGiren = 0;
+            decimal ToplamCikan = 0;
+            DateTime basla = Convert.ToDateTime(dtpBaslangic.Value.ToShortDateString());
+            foreach (KasaHareket item in KHRep.KasaHareketListeleByTarih(basla, dtpBitis.Value))
+            {
+                if (item.GelirGider.Tür == "Gelir")
+                {
+                    ToplamGiren += item.Tutar;
+                }
+                else if (item.GelirGider.Tür == "Gider")
+                {
+                    ToplamCikan += item.Tutar;
+                }
+                Toplam = (ToplamGiren - ToplamCikan) ;
+            }
+            return Toplam;
         }
     }
 }

@@ -61,6 +61,7 @@
             this.tsMusteriIslemleri = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.cbAracdurumu = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAraclar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.tsMusteriIslemleri.SuspendLayout();
@@ -171,7 +172,8 @@
             this.txtAracDurumu.Location = new System.Drawing.Point(176, 245);
             this.txtAracDurumu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAracDurumu.Name = "txtAracDurumu";
-            this.txtAracDurumu.Size = new System.Drawing.Size(149, 26);
+            this.txtAracDurumu.ReadOnly = true;
+            this.txtAracDurumu.Size = new System.Drawing.Size(130, 26);
             this.txtAracDurumu.TabIndex = 31;
             // 
             // txtPlaka
@@ -397,12 +399,29 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // cbAracdurumu
+            // 
+            this.cbAracdurumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAracdurumu.DropDownWidth = 130;
+            this.cbAracdurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbAracdurumu.FormattingEnabled = true;
+            this.cbAracdurumu.Items.AddRange(new object[] {
+            "Hasar Yok",
+            "Az Hasarlı",
+            "Ağır Hasarlı"});
+            this.cbAracdurumu.Location = new System.Drawing.Point(307, 245);
+            this.cbAracdurumu.Name = "cbAracdurumu";
+            this.cbAracdurumu.Size = new System.Drawing.Size(19, 26);
+            this.cbAracdurumu.TabIndex = 92;
+            this.cbAracdurumu.SelectedIndexChanged += new System.EventHandler(this.cbAracdurumu_SelectedIndexChanged);
+            // 
             // frmAracIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1235, 422);
+            this.Controls.Add(this.cbAracdurumu);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.txtResimYolu);
@@ -474,5 +493,6 @@
         private System.Windows.Forms.ToolStrip tsMusteriIslemleri;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ComboBox cbAracdurumu;
     }
 }
