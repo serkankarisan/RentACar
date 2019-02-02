@@ -86,6 +86,8 @@ namespace PL.RentACar
             cbPersonel.SelectedIndex = 0;
             cbYetki.DataSource = yper.YetkiListele();
             cbYetki.SelectedIndex = 0;
+            dgvKullanicilar.Columns[0].Visible = false;
+            dgvKullanicilar.Columns[5].Visible = false;
 
         }
 

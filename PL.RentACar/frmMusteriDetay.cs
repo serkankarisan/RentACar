@@ -25,7 +25,8 @@ namespace PL.RentACar
         {
             dgvMusteriler.DataSource = mr.MusteriListele();
             dgvMusteriler.Columns[0].Visible = false;
-            
+            dgvMusteriler.Columns[11].Visible = false;
+
 
         }
 

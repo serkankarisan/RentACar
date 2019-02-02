@@ -22,6 +22,8 @@ namespace PL.RentACar
         private void frmPersonelSorgulama_Load(object sender, EventArgs e)
         {
             dgvPersonel.DataSource = pr.PersonelListele();
+            dgvPersonel.Columns[0].Visible = false;
+            dgvPersonel.Columns[7].Visible = false;
         }
 
         private void dgvPersonel_DoubleClick(object sender, EventArgs e)

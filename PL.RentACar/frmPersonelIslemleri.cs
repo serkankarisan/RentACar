@@ -215,6 +215,8 @@ namespace PL.RentACar
             Disable();
             dgvPersoneller.DataSource = per.PersonelListele();
             tsKaydet.Enabled = false;
+            dgvPersoneller.Columns[0].Visible = false;
+            dgvPersoneller.Columns[7].Visible = false;
         }
 
         private void btnCikis_Click(object sender, EventArgs e)
