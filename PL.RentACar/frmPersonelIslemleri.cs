@@ -54,6 +54,7 @@ namespace PL.RentACar
                                             {
                                                 MessageBox.Show("Yeni Personel eklendi.", "Kayıt gerçekleşti.");
                                                 dgvPersoneller.DataSource = per.PersonelListele();
+                                                dgvColumns();
                                                 tsKaydet.Enabled = false;
                                                 Supurge();
                                                 tsYeni.Enabled = true;
@@ -163,6 +164,7 @@ namespace PL.RentACar
                                         {
                                             MessageBox.Show("Personel bilgileri değiştirildi.", "Değişiklik gerçekleşti.");
                                             dgvPersoneller.DataSource = per.PersonelListele();
+                                            dgvColumns();
                                             tsKaydet.Enabled = false;
                                             Supurge();
                                         }
@@ -203,6 +205,7 @@ namespace PL.RentACar
                 {
                     MessageBox.Show("Personel bilgileri silindi.", "Silme gerçekleşti.");
                     dgvPersoneller.DataSource = per.PersonelListele();
+                    dgvColumns();
                     tsDegistir.Enabled = false;
                     tsSil.Enabled = false;
                     Supurge();
@@ -214,6 +217,7 @@ namespace PL.RentACar
         {
             Disable();
             dgvPersoneller.DataSource = per.PersonelListele();
+            dgvColumns();
             tsKaydet.Enabled = false;
         }
 
@@ -241,6 +245,17 @@ namespace PL.RentACar
                     t.Enabled = false;
                 }
             }
+        }
+        private void dgvColumns()
+        {
+            dgvPersoneller.Columns[0].Visible = false;
+            dgvPersoneller.Columns[1].Width = 100;
+            dgvPersoneller.Columns[2].Width = 100;
+            dgvPersoneller.Columns[3].Width = 125;
+            dgvPersoneller.Columns[4].Width = 175;
+            dgvPersoneller.Columns[5].Width = 175;
+            dgvPersoneller.Columns[6].Width = 125;
+            dgvPersoneller.Columns[7].Visible = false;
         }
     }
 }
