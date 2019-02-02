@@ -141,17 +141,28 @@ namespace PL.RentACar
         private void dtpBitis_ValueChanged(object sender, EventArgs e)
         {
             t = Convert.ToInt32((dtpBitis.Value - dtpBaslangic.Value).TotalDays);
-            if (t>=0)
-            {
-                txtGunSayisi.Text = t.ToString();
-                tutar = Convert.ToDecimal(txtGunSayisi.Text) * Convert.ToDecimal(txtGunlukFiyat.Text);
-                txtTutar.Text = tutar.ToString();
+            if (Genel.AracID!=0) {
+                if (t >= 0)
+                {
+                    txtGunSayisi.Text = t.ToString();
+                    tutar = Convert.ToDecimal(txtGunSayisi.Text) * Convert.ToDecimal(txtGunlukFiyat.Text);
+                    txtTutar.Text = tutar.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("İleri Bir Tarih Seçin!", "Tarih Hatalı!");
+                    dtpBitis.Value = dtpBaslangic.Value;
+                    return;
+                }
             }
             else
             {
-                MessageBox.Show("İleri Bir Tarih Seçin!","Tarih Hatalı!");
-                dtpBitis.Value = dtpBaslangic.Value;
-                return;
+                if (dtpBitis.Value != dtpBaslangic.Value)
+                {
+                    MessageBox.Show("Araç Seçin!", "Eksik Bilgi!");
+                    dtpBitis.Value = dtpBaslangic.Value;
+                    return;
+                }
             }
         }
         private void Temizle()

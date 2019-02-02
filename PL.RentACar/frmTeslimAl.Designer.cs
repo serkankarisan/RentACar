@@ -85,6 +85,7 @@
             this.txtGunSayisi.Location = new System.Drawing.Point(117, 391);
             this.txtGunSayisi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGunSayisi.Name = "txtGunSayisi";
+            this.txtGunSayisi.ReadOnly = true;
             this.txtGunSayisi.Size = new System.Drawing.Size(148, 26);
             this.txtGunSayisi.TabIndex = 160;
             this.txtGunSayisi.TextChanged += new System.EventHandler(this.txtGunSayisi_TextChanged);
@@ -421,14 +422,15 @@
             this.cbAracDurumu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbAracDurumu.FormattingEnabled = true;
             this.cbAracDurumu.Items.AddRange(new object[] {
-            "Agir Hasarli",
-            "Hafif Hasarli",
-            "Hasar Yok"});
+            "Hasar yok",
+            "Az hasarlı",
+            "Ağır hasarlı"});
             this.cbAracDurumu.Location = new System.Drawing.Point(380, 264);
             this.cbAracDurumu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbAracDurumu.Name = "cbAracDurumu";
             this.cbAracDurumu.Size = new System.Drawing.Size(180, 28);
             this.cbAracDurumu.TabIndex = 166;
+            this.cbAracDurumu.SelectedIndexChanged += new System.EventHandler(this.cbAracDurumu_SelectedIndexChanged);
             // 
             // cbYakitDurumu
             // 
@@ -444,6 +446,7 @@
             this.cbYakitDurumu.Name = "cbYakitDurumu";
             this.cbYakitDurumu.Size = new System.Drawing.Size(180, 28);
             this.cbYakitDurumu.TabIndex = 167;
+            this.cbYakitDurumu.SelectedIndexChanged += new System.EventHandler(this.cbYakitDurumu_SelectedIndexChanged);
             // 
             // btnCikis
             // 

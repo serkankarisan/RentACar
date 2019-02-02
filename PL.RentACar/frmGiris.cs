@@ -59,18 +59,27 @@ namespace PL.RentACar
 
         private void pbSifreGizle_Click(object sender, EventArgs e)
         {
-            if (txtSifre.Text == "Sifre")
+            if (txtSifre.Text != "Sifre")
             {
-                txtSifre.Clear();
+                if (txtSifre.PasswordChar == '*')
+                {
+                    txtSifre.PasswordChar = '\0';
+                }
+                else
+                {
+                    txtSifre.PasswordChar = '*';
+                }
             }
-            if (txtSifre.PasswordChar == '*')
-            {
-                txtSifre.PasswordChar = '\0';
-            }
-            else
-            {
-                txtSifre.PasswordChar = '*';
-            }
+        }
+
+        private void txtKullaniciAdi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Char.IsWhiteSpace(e.KeyChar);
+        }
+
+        private void txtSifre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Char.IsWhiteSpace(e.KeyChar);
         }
     }
 }

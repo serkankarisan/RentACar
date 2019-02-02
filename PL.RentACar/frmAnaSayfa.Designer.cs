@@ -182,7 +182,7 @@
             this.btnRaporMenu.Location = new System.Drawing.Point(32, 255);
             this.btnRaporMenu.Name = "btnRaporMenu";
             this.btnRaporMenu.Size = new System.Drawing.Size(4, 32);
-            this.btnRaporMenu.TabIndex = 35;
+            this.btnRaporMenu.TabIndex = 5;
             this.btnRaporMenu.Text = "Raporlar";
             this.btnRaporMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRaporMenu.UseVisualStyleBackColor = false;
@@ -212,7 +212,7 @@
             this.btnKasaMenu.Location = new System.Drawing.Point(32, 216);
             this.btnKasaMenu.Name = "btnKasaMenu";
             this.btnKasaMenu.Size = new System.Drawing.Size(4, 32);
-            this.btnKasaMenu.TabIndex = 33;
+            this.btnKasaMenu.TabIndex = 4;
             this.btnKasaMenu.Text = "Kasa";
             this.btnKasaMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKasaMenu.UseVisualStyleBackColor = false;
@@ -242,7 +242,7 @@
             this.btnPersonelMenu.Location = new System.Drawing.Point(32, 177);
             this.btnPersonelMenu.Name = "btnPersonelMenu";
             this.btnPersonelMenu.Size = new System.Drawing.Size(4, 32);
-            this.btnPersonelMenu.TabIndex = 31;
+            this.btnPersonelMenu.TabIndex = 3;
             this.btnPersonelMenu.Text = "Personel";
             this.btnPersonelMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPersonelMenu.UseVisualStyleBackColor = false;
@@ -272,7 +272,7 @@
             this.btnAracMenu.Location = new System.Drawing.Point(32, 138);
             this.btnAracMenu.Name = "btnAracMenu";
             this.btnAracMenu.Size = new System.Drawing.Size(4, 32);
-            this.btnAracMenu.TabIndex = 29;
+            this.btnAracMenu.TabIndex = 2;
             this.btnAracMenu.Text = "Araç";
             this.btnAracMenu.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnAracMenu.UseVisualStyleBackColor = false;
@@ -302,7 +302,7 @@
             this.btnMusteriMenu.Location = new System.Drawing.Point(32, 99);
             this.btnMusteriMenu.Name = "btnMusteriMenu";
             this.btnMusteriMenu.Size = new System.Drawing.Size(4, 32);
-            this.btnMusteriMenu.TabIndex = 27;
+            this.btnMusteriMenu.TabIndex = 1;
             this.btnMusteriMenu.Text = "Müşteri";
             this.btnMusteriMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMusteriMenu.UseVisualStyleBackColor = false;
@@ -332,7 +332,7 @@
             this.btnSozlesmeMenu.Location = new System.Drawing.Point(32, 60);
             this.btnSozlesmeMenu.Name = "btnSozlesmeMenu";
             this.btnSozlesmeMenu.Size = new System.Drawing.Size(4, 32);
-            this.btnSozlesmeMenu.TabIndex = 20;
+            this.btnSozlesmeMenu.TabIndex = 0;
             this.btnSozlesmeMenu.Text = "Sözleşme";
             this.btnSozlesmeMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSozlesmeMenu.UseVisualStyleBackColor = false;
@@ -369,7 +369,7 @@
             this.pnlMenuSimge.Location = new System.Drawing.Point(0, 38);
             this.pnlMenuSimge.Name = "pnlMenuSimge";
             this.pnlMenuSimge.Size = new System.Drawing.Size(32, 363);
-            this.pnlMenuSimge.TabIndex = 1;
+            this.pnlMenuSimge.TabIndex = 0;
             // 
             // pbCikis
             // 
@@ -573,6 +573,7 @@
             // 
             this.btnMenuKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMenuKapat.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnMenuKapat.FlatAppearance.BorderSize = 0;
             this.btnMenuKapat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnMenuKapat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -581,7 +582,8 @@
             this.btnMenuKapat.Location = new System.Drawing.Point(-1, 0);
             this.btnMenuKapat.Name = "btnMenuKapat";
             this.btnMenuKapat.Size = new System.Drawing.Size(32, 32);
-            this.btnMenuKapat.TabIndex = 17;
+            this.btnMenuKapat.TabIndex = 1;
+            this.btnMenuKapat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuKapat.UseVisualStyleBackColor = false;
             this.btnMenuKapat.Visible = false;
             this.btnMenuKapat.Click += new System.EventHandler(this.btnMenuKapat_Click);
@@ -593,11 +595,13 @@
             this.btnMenuAc.FlatAppearance.BorderSize = 0;
             this.btnMenuAc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnMenuAc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuAc.ForeColor = System.Drawing.Color.MediumTurquoise;
             this.btnMenuAc.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuAc.Image")));
             this.btnMenuAc.Location = new System.Drawing.Point(0, 0);
             this.btnMenuAc.Name = "btnMenuAc";
             this.btnMenuAc.Size = new System.Drawing.Size(32, 32);
-            this.btnMenuAc.TabIndex = 16;
+            this.btnMenuAc.TabIndex = 0;
+            this.btnMenuAc.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnMenuAc.UseVisualStyleBackColor = false;
             this.btnMenuAc.Click += new System.EventHandler(this.btnMenuAc_Click);
             // 
@@ -1026,6 +1030,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CancelButton = this.btnMenuKapat;
             this.ClientSize = new System.Drawing.Size(960, 435);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.pnlUst);
@@ -1037,7 +1042,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAnaSayfa";
             this.Text = "AnaSayfa";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAnaSayfa_Load);
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();

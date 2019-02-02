@@ -21,7 +21,9 @@ namespace PL.RentACar
 
         frmSozlesmeSorgulama frm = new frmSozlesmeSorgulama();
         SozlesmeDetayRepository sdr = new SozlesmeDetayRepository();
+        SozlesmeRepository srepo = new SozlesmeRepository();
         int AracID;
+        int MusteriID;
         AracRepository ar = new AracRepository();
         Arac a = new Arac();
         decimal EkstraTutar = 0;
@@ -32,6 +34,7 @@ namespace PL.RentACar
         int SozlesmeDetayId;
         KasaHareket kh = new KasaHareket();
         KasaHareketRepository khr = new KasaHareketRepository();
+        int YakitFarki=0;
         private void btnSec_Click(object sender, EventArgs e)
         {
             frm.ShowDialog();
@@ -44,11 +47,16 @@ namespace PL.RentACar
 
         private void frmTeslimAl_Load(object sender, EventArgs e)
         {
-          
+            cbAracDurumu.Enabled = false;
+            cbYakitDurumu.Enabled = false;
         }
 
         private void dgvSozlesmeDetay_DoubleClick(object sender, EventArgs e)
         {
+            Sozlesme s = srepo.SozlesmeGetirById(Genel.SozID);
+            MusteriID = s.MusteriId;
+            cbAracDurumu.Enabled = true;
+            cbYakitDurumu.Enabled = true;
             AracID = Convert.ToInt32(dgvSozlesmeDetay.SelectedRows[0].Cells[2].Value);
             a = ar.AracGetirById(AracID);
             txtMarka.Text = a.Marka;
@@ -64,7 +72,6 @@ namespace PL.RentACar
             txtSozlesmeTutari.Text = sdr.SozlesmeTutarGetirBySozlesmeId(Genel.SozID).ToString();
             SozlesmeDetayId= Convert.ToInt32(dgvSozlesmeDetay.SelectedRows[0].Cells[0].Value);
             rdnYes.Checked = true;
-
         }
 
         private void txtGunSayisi_TextChanged(object sender, EventArgs e)
@@ -93,64 +100,145 @@ namespace PL.RentACar
             if (txtGunSayisi.Text.Trim() != "" && cbAracDurumu.Text.Trim() != "" && cbYakitDurumu.Text.Trim() != "")
             {
                 mh.Tarih = DateTime.Now;
-                mh.MusteriId = Genel.MusteriId;
+                mh.MusteriId = MusteriID;
                 mh.ParaBirimi = "TL";
-                mh.MusteriGetirisi = Convert.ToDecimal(txtEkstraTutar.Text);
-                mh.MusteriGetiriTuru = "Ekstra Kiralama";
-                mh.Silindi = false;
-                if (txtAracDurumu.Text.Trim() == cbAracDurumu.Text.Trim() && txtYakitDurumu.Text.Trim() == cbYakitDurumu.Text.Trim())
+                if (txtEkstraTutar.Enabled)
                 {
-                    mh.MusteriPuanı = 10;
+                    if (Convert.ToDecimal(txtEkstraTutar.Text.Trim()) != Convert.ToDecimal(0))
+                    {
+                        mh.MusteriGetirisi = Convert.ToDecimal(txtEkstraTutar.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ekstra Tutar Almalısınız!"); return;
+                    }
                 }
-                else if (txtAracDurumu.Text == "Hasar Yok" && cbAracDurumu.Text == "Hasar Yok" && txtYakitDurumu.Text == "%100" && cbYakitDurumu.Text == "75")
+                else
                 {
-                    mh.MusteriPuanı = 8;
-                }
-                else if (txtAracDurumu.Text == "Hasar Yok" && cbAracDurumu.Text == "Hasar Yok" && txtYakitDurumu.Text == "%100" && cbYakitDurumu.Text == "50")
-                {
-                    mh.MusteriPuanı = 7;
-                }
-                else if (txtAracDurumu.Text == "Hasar Yok" && cbAracDurumu.Text == "Hasar Yok" && txtYakitDurumu.Text == "%100" && cbYakitDurumu.Text == "25")
-                {
-                    mh.MusteriPuanı = 6;
-                }
-                else if (txtAracDurumu.Text == "Hasar Yok" && cbAracDurumu.Text == "Hasar Yok" && txtYakitDurumu.Text == "%75" && cbYakitDurumu.Text == "50")
-                {
-                    mh.MusteriPuanı = 8;
-                }
-                else if (txtAracDurumu.Text == "Hasar Yok" && cbAracDurumu.Text == "Hasar Yok" && txtYakitDurumu.Text == "%75" && cbYakitDurumu.Text == "25")
-                {
-                    mh.MusteriPuanı = 7;
-                }
-                else if (txtAracDurumu.Text == "Hasar Yok" && cbAracDurumu.Text == "Hasar Yok" && txtYakitDurumu.Text == "%50" && cbYakitDurumu.Text == "25")
-                {
-                    mh.MusteriPuanı = 8;
-                }
-                else if (txtAracDurumu.Text.Trim() != cbAracDurumu.Text.Trim())
-                {
-                    mh.MusteriPuanı = 5;
+                    mh.MusteriGetirisi = Convert.ToDecimal(txtEkstraTutar.Text);
                 }
 
-                mhr.MusteriHareketEkle(mh);
-                sdr.SozlesmeDetaySil(SozlesmeDetayId);
-                dgvSozlesmeDetay.DataSource = sdr.SozlesmeDetayListeleBySozlesmeId(Genel.SozID);             
-                MessageBox.Show("Arac Teslim Alindi");
-                Arac a = new Arac();
-                a = ar.AracGetirById(AracID);
-                a.Varmi = true;
-                a.Silindi = true;
-                ar.AracGuncelle(a);
-                if (txtGunSayisi.Text.Trim() != "0")
+                mh.MusteriGetiriTuru = "Ekstra Kiralama";
+                mh.Silindi = false;
+                    if (txtAracDurumu.Text.Trim()=="Hasar yok")
+                    {
+                        if (mh.MusteriPuanı!=100)
+                        {
+                            mh.MusteriPuanı += 3;
+                        }
+                    }
+                    else if (txtAracDurumu.Text.Trim() == "Az hasarlı")
+                    {
+                        mh.MusteriPuanı -= 5;
+                    }
+                    else if (txtAracDurumu.Text.Trim() == "Ağır hasarlı")
+                    {
+                        mh.MusteriPuanı -= 10;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Araç Durumu Seçin!","Boş Geçilemez!");
+                    }
+                    if (YakitFarki>0)
+                    {
+                        mh.MusteriPuanı -= (YakitFarki/10);
+                    }
+                    else if(YakitFarki < 0)
+                    {
+                        if (mh.MusteriPuanı < 100)
+                        {
+                            mh.MusteriPuanı += (YakitFarki / 20);
+                        }
+                    }
+                if (mhr.MusteriHareketEkle(mh))
                 {
-                    kh.AracId = 0;
-                    kh.PersonelId = 0;
-                    kh.SozlesmeId = Genel.SozID;
-                    kh.GelirGiderId = 2;
-                    kh.Tarih = DateTime.Now;
-                    kh.Tutar = Convert.ToDecimal(txtEkstraTutar.Text);
-                    kh.ParaBirimi = "TL";
-                    kh.Silindi = false;
-                    khr.KasaHareketEkle(kh);
+                    sdr.SozlesmeDetaySil(SozlesmeDetayId);
+                    dgvSozlesmeDetay.DataSource = sdr.SozlesmeDetayListeleBySozlesmeId(Genel.SozID);
+                    Arac eski = ar.AracGetirById(AracID);
+                    Arac a = new Arac();
+                    a.Id = AracID;
+                    a.Marka = eski.Marka;
+                    a.Model = eski.Model;
+                    a.Tip = eski.Tip;
+                    a.AracDurumu = cbAracDurumu.Text;
+                    a.YakitDurumu = cbYakitDurumu.Text;
+                    a.GünlükFiyat = eski.GünlükFiyat;
+                    a.Plaka = eski.Plaka;
+                    a.Renk = eski.Renk;
+                    a.ResimYolu = eski.ResimYolu;
+                    a.Varmi = true;
+                    a.Silindi = eski.Silindi;
+                    if (ar.AracGuncelle(a))
+                    {
+                        if (txtGunSayisi.ReadOnly)
+                        {
+                                kh.AracId = 0;
+                                kh.PersonelId = 0;
+                                kh.SozlesmeId = Genel.SozID;
+                                kh.GelirGiderId = 2;
+                                kh.Tarih = DateTime.Now;
+                                if (txtEkstraTutar.Enabled)
+                                {
+                                    if (Convert.ToDecimal(txtEkstraTutar.Text.Trim()) != Convert.ToDecimal(0))
+                                    {
+                                        kh.Tutar = Convert.ToDecimal(txtEkstraTutar.Text);
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Ekstra Tutar Almalısınız!"); return;
+                                    }
+                                }
+                                else
+                                {
+                                    kh.Tutar = Convert.ToDecimal(txtEkstraTutar.Text);
+                                }
+                                kh.ParaBirimi = "TL";
+                                kh.Silindi = false;
+                                if (khr.KasaHareketEkle(kh))
+                                {
+                                    txtEkstraTutar.Enabled = false;
+                                    txtEkstraTutar.ReadOnly = true;
+                                    cbAracDurumu.Enabled = false;
+                                    cbYakitDurumu.Enabled = false;
+                                    MessageBox.Show("Arac Teslim Alındı.", "İşlem Başarılı.");
+                                }
+                            
+                        }
+                        else
+                        {
+                            kh.AracId = 0;
+                            kh.PersonelId = 0;
+                            kh.SozlesmeId = Genel.SozID;
+                            kh.GelirGiderId = 2;
+                            kh.Tarih = DateTime.Now;
+                            if (txtEkstraTutar.Enabled)
+                            {
+                                if (Convert.ToDecimal(txtEkstraTutar.Text.Trim()) != Convert.ToDecimal(0))
+                                {
+                                    kh.Tutar = Convert.ToDecimal(txtEkstraTutar.Text);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Ekstra Tutar Almalısınız!"); return;
+                                }
+                            }
+                            else
+                            {
+                                kh.Tutar = Convert.ToDecimal(txtEkstraTutar.Text);
+                            }
+                            kh.ParaBirimi = "TL";
+                            kh.Silindi = false;
+                            if (khr.KasaHareketEkle(kh))
+                            {
+                                txtEkstraTutar.Enabled = false;
+                                txtEkstraTutar.ReadOnly = true;
+                                cbAracDurumu.Enabled = false;
+                                cbYakitDurumu.Enabled = false;
+                                MessageBox.Show("Arac Teslim Alındı.", "İşlem Başarılı.");
+                            }
+                        }
+                    }
                 }
             }
             else
@@ -164,7 +252,7 @@ namespace PL.RentACar
         {
             if (rdnYes.Checked == true)
             {
-                txtGunSayisi.Text = "0";
+                txtGunSayisi.Text = Convert.ToInt32(0).ToString();
                 txtGunSayisi.ReadOnly = true;
             }
             else if (rdnNo.Checked==true)
@@ -177,7 +265,7 @@ namespace PL.RentACar
         {
             if (rdnYes.Checked == true)
             {
-                txtGunSayisi.Text = "0";
+                txtGunSayisi.Text = Convert.ToInt32(0).ToString();
                 txtGunSayisi.ReadOnly = true;
             }
             else if (rdnNo.Checked == true)
@@ -189,6 +277,48 @@ namespace PL.RentACar
         private void btnCikis_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbAracDurumu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (txtAracDurumu.Text.Trim().ToLower() != cbAracDurumu.Text.Trim().ToLower())
+            {
+                txtEkstraTutar.Enabled = true;
+                txtEkstraTutar.ReadOnly = false;
+            }
+            else if (txtAracDurumu.Text.Trim().ToLower() == cbAracDurumu.Text.Trim().ToLower() && !txtEkstraTutar.Enabled)
+            {
+                txtEkstraTutar.Enabled = false;
+                txtEkstraTutar.ReadOnly = true;
+            }
+            else if (txtYakitDurumu.Text.Trim().ToLower() == cbYakitDurumu.Text.Trim().ToLower() && txtAracDurumu.Text.Trim().ToLower() == cbAracDurumu.Text.Trim().ToLower())
+            {
+                txtEkstraTutar.Enabled = false;
+                txtEkstraTutar.ReadOnly = true;
+            }
+                    }
+
+        private void cbYakitDurumu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (txtYakitDurumu.Text.Trim().ToLower() != cbYakitDurumu.Text.Trim().ToLower())
+            {
+                txtEkstraTutar.Enabled = true;
+                txtEkstraTutar.ReadOnly = false;
+                int VerildigiYakit = Convert.ToInt32(txtYakitDurumu.Text.Substring(1));
+                int AlindigiYakit = Convert.ToInt32(cbYakitDurumu.Text.Substring(1));
+                int YakitFarki = VerildigiYakit - AlindigiYakit;
+            }
+            else if (txtYakitDurumu.Text.Trim().ToLower() == cbYakitDurumu.Text.Trim().ToLower() && txtAracDurumu.Text.Trim().ToLower() == cbAracDurumu.Text.Trim().ToLower())
+            {
+                txtEkstraTutar.Enabled = false;
+                txtEkstraTutar.ReadOnly = true;
+            }
+            else if (txtYakitDurumu.Text.Trim().ToLower() == cbYakitDurumu.Text.Trim().ToLower() && !txtEkstraTutar.Enabled)
+            {
+                txtEkstraTutar.Enabled = false;
+                txtEkstraTutar.ReadOnly = true;
+            }
+
         }
     }
 }

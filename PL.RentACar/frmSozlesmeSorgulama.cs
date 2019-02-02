@@ -164,12 +164,14 @@ namespace PL.RentACar
         private void dgvSozlesmeDetay_DoubleClick(object sender, EventArgs e)
         {
             Genel.soz = sRep.SozlesmeGetirById(Convert.ToInt32(dgvSozlesmeDetay.SelectedRows[0].Cells[1].Value));
+            Genel.SozID = Convert.ToInt32(dgvSozlesmeDetay.SelectedRows[0].Cells[1].Value);
             this.Close();
         }
 
         private void dgvSozlesmeler_DoubleClick(object sender, EventArgs e)
         {
             Genel.soz = sRep.SozlesmeGetirById(Convert.ToInt32(dgvSozlesmeler.SelectedRows[0].Cells[0].Value));
+            Genel.SozID = Convert.ToInt32(dgvSozlesmeler.SelectedRows[0].Cells[0].Value);
             this.Close();
         }
     }

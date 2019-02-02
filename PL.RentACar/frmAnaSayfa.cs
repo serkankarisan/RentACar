@@ -20,6 +20,9 @@ namespace PL.RentACar
 
         private void frmAnaSayfa_Load(object sender, EventArgs e)
         {
+            Screen ekran = Screen.FromPoint(this.Location);
+            this.Size = ekran.WorkingArea.Size;
+            this.Location = Point.Empty;
             timer1.Start();
             lblKullanici.Text = Genel.UserName;
             lblYetki.Text = Genel.Yetki;
@@ -43,6 +46,7 @@ namespace PL.RentACar
 
         private void btnMenuAc_Click(object sender, EventArgs e)
         {
+            PanelGizle();
             pnlMenu.Width = 175;
             btnMenuAc.Visible = false;
             lblMenu.Visible = true;
@@ -52,6 +56,7 @@ namespace PL.RentACar
 
         private void btnMenuKapat_Click(object sender, EventArgs e)
         {
+            PanelGizle();
             pnlMenu.Width = 35;
             pbHome.Visible = false;
             btnMenuKapat.Visible = false;
@@ -266,7 +271,5 @@ namespace PL.RentACar
         {
             PanelGizle();
         }
-
-        
     }
 }
