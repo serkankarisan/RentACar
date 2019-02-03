@@ -34,6 +34,7 @@
             this.txtAlınan = new System.Windows.Forms.TextBox();
             this.dgvOdeme = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnCikis = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cbIslemTurleri = new System.Windows.Forms.ComboBox();
@@ -76,7 +77,6 @@
             this.txtModel = new System.Windows.Forms.TextBox();
             this.txtSozlesmeTarihi = new System.Windows.Forms.TextBox();
             this.lblSozlesmeTarihi = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdeme)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -130,10 +130,10 @@
             this.dgvOdeme.BackgroundColor = System.Drawing.Color.White;
             this.dgvOdeme.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvOdeme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOdeme.Location = new System.Drawing.Point(310, 74);
+            this.dgvOdeme.Location = new System.Drawing.Point(308, 74);
             this.dgvOdeme.Name = "dgvOdeme";
             this.dgvOdeme.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOdeme.Size = new System.Drawing.Size(495, 381);
+            this.dgvOdeme.Size = new System.Drawing.Size(500, 381);
             this.dgvOdeme.TabIndex = 127;
             // 
             // panel1
@@ -146,6 +146,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(828, 24);
             this.panel1.TabIndex = 130;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(2, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 20);
+            this.label1.TabIndex = 90;
+            this.label1.Text = "Ödeme İşlemleri";
             // 
             // btnCikis
             // 
@@ -650,17 +661,6 @@
             this.lblSozlesmeTarihi.TabIndex = 194;
             this.lblSozlesmeTarihi.Text = "Sözleşme Tarihi";
             this.lblSozlesmeTarihi.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(2, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 20);
-            this.label1.TabIndex = 90;
-            this.label1.Text = "Ödeme İşlemleri";
             // 
             // frmOdemeIslemleri
             // 

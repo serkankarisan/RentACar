@@ -55,9 +55,9 @@
             this.txtPersonelSoyadi = new System.Windows.Forms.TextBox();
             this.dgvKullanicilar = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.button1 = new System.Windows.Forms.Button();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -123,6 +123,7 @@
             // 
             // textBox7
             // 
+            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox7.BackColor = System.Drawing.Color.Azure;
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -135,6 +136,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(36, 74);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -145,6 +147,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(36, 142);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -155,6 +158,7 @@
             // 
             // cbPersonel
             // 
+            this.cbPersonel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbPersonel.FormattingEnabled = true;
             this.cbPersonel.Location = new System.Drawing.Point(167, 173);
             this.cbPersonel.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
@@ -165,6 +169,7 @@
             // 
             // txtSifreTekrar
             // 
+            this.txtSifreTekrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSifreTekrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSifreTekrar.Location = new System.Drawing.Point(167, 141);
             this.txtSifreTekrar.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
@@ -175,6 +180,7 @@
             // 
             // cbYetki
             // 
+            this.cbYetki.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbYetki.FormattingEnabled = true;
             this.cbYetki.Location = new System.Drawing.Point(167, 207);
             this.cbYetki.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
@@ -185,7 +191,8 @@
             // 
             // txtKullaniciAdi
             // 
-            this.txtKullaniciAdi.BackColor = System.Drawing.Color.White;
+            this.txtKullaniciAdi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtKullaniciAdi.BackColor = System.Drawing.SystemColors.Window;
             this.txtKullaniciAdi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtKullaniciAdi.Location = new System.Drawing.Point(167, 77);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
@@ -195,6 +202,7 @@
             // 
             // txtSifre
             // 
+            this.txtSifre.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSifre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSifre.Location = new System.Drawing.Point(167, 109);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
@@ -205,6 +213,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(36, 108);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -215,6 +224,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(36, 176);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -225,6 +235,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(36, 210);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -235,6 +246,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox6.BackColor = System.Drawing.Color.Azure;
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -247,6 +259,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(36, 274);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -257,6 +270,7 @@
             // 
             // txtPersonelAdi
             // 
+            this.txtPersonelAdi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPersonelAdi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPersonelAdi.Location = new System.Drawing.Point(167, 276);
             this.txtPersonelAdi.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
@@ -267,6 +281,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(36, 308);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -277,6 +292,7 @@
             // 
             // txtPersonelSoyadi
             // 
+            this.txtPersonelSoyadi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPersonelSoyadi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPersonelSoyadi.Location = new System.Drawing.Point(167, 308);
             this.txtPersonelSoyadi.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
@@ -287,8 +303,7 @@
             // 
             // dgvKullanicilar
             // 
-            this.dgvKullanicilar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvKullanicilar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvKullanicilar.BackgroundColor = System.Drawing.Color.White;
             this.dgvKullanicilar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -296,7 +311,7 @@
             this.dgvKullanicilar.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.dgvKullanicilar.Name = "dgvKullanicilar";
             this.dgvKullanicilar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKullanicilar.Size = new System.Drawing.Size(356, 290);
+            this.dgvKullanicilar.Size = new System.Drawing.Size(518, 290);
             this.dgvKullanicilar.TabIndex = 29;
             this.dgvKullanicilar.DoubleClick += new System.EventHandler(this.dgvKullanicilar_DoubleClick);
             // 
@@ -318,23 +333,9 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.Size = new System.Drawing.Size(712, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(864, 27);
             this.toolStrip1.TabIndex = 28;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(687, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 24);
-            this.button1.TabIndex = 85;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // toolStripLabel1
             // 
@@ -349,12 +350,26 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(839, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 24);
+            this.button1.TabIndex = 85;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmKullaniciIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(712, 347);
+            this.ClientSize = new System.Drawing.Size(864, 347);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);

@@ -98,9 +98,6 @@ namespace PL.RentACar
             cbPersonel.SelectedIndex = 0;
             cbYetki.DataSource = yper.YetkiListele();
             cbYetki.SelectedIndex = 0;
-            dgvKullanicilar.Columns[0].Visible = false;
-            dgvKullanicilar.Columns[5].Visible = false;
-
         }
 
         private void dgvKullanicilar_DoubleClick(object sender, EventArgs e)
@@ -244,7 +241,14 @@ namespace PL.RentACar
             dgvKullanicilar.Columns[0].Visible = false;
             dgvKullanicilar.Columns[1].Visible = false;
             dgvKullanicilar.Columns[2].Visible = false;
+            dgvKullanicilar.Columns[3].Width = 125;
+            dgvKullanicilar.Columns[3].HeaderText = "Kullanıcı Adı";
+            dgvKullanicilar.Columns[4].Width = 100;
+            dgvKullanicilar.Columns[4].HeaderText = "Şifre";
             dgvKullanicilar.Columns[5].Visible = false;
+            dgvKullanicilar.Columns[6].Width = 140;
+            dgvKullanicilar.Columns[7].Width=100;
+
         }
     }
 }

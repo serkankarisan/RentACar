@@ -40,6 +40,7 @@ namespace PL.RentACar
             {
                 //txtToplamBakiye.Text = KHRep.KasaHareketToplamTutarByTarih(basla, dtpBitis.Value).ToString();
                 dgvKasaDetay.DataSource= KHRep.KasaHareketListeleByTarih(basla, dtpBitis.Value);
+                duzenle();
                 txtToplamBakiye.Text = Hesapla().ToString();
             }
         }
@@ -58,10 +59,27 @@ namespace PL.RentACar
             {
                 //txtToplamBakiye.Text = KHRep.KasaHareketToplamTutarByTarih(basla, dtpBitis.Value).ToString();
                 dgvKasaDetay.DataSource = KHRep.KasaHareketListeleByTarih(basla, dtpBitis.Value);
+                duzenle();
                 txtToplamBakiye.Text = Hesapla().ToString();
             }
         }
-
+        private void duzenle()
+        {
+            dgvKasaDetay.Columns[0].Visible = false;
+            dgvKasaDetay.Columns[1].Visible = false;
+            dgvKasaDetay.Columns[2].Visible = false;
+            dgvKasaDetay.Columns[3].Visible = false;
+            dgvKasaDetay.Columns[4].HeaderText = "İşlem Tarihi";
+            dgvKasaDetay.Columns[4].Width = 125;
+            dgvKasaDetay.Columns[5].Visible = false;
+            dgvKasaDetay.Columns[6].Width = 125;
+            dgvKasaDetay.Columns[6].HeaderText = "İşlem Tutarı";
+            dgvKasaDetay.Columns[7].Width = 75;
+            dgvKasaDetay.Columns[7].HeaderText = "Para Birimi";
+            dgvKasaDetay.Columns[8].Visible = false;
+            dgvKasaDetay.Columns[9].Width = 125;
+            dgvKasaDetay.Columns[9].HeaderText = "İşlem Türü";
+        }
         private void btnCikis_Click(object sender, EventArgs e)
         {
             this.Close();
