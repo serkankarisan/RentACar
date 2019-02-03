@@ -46,7 +46,8 @@ namespace PL.RentACar
 
         private void frmKirala_Load(object sender, EventArgs e)
         {
-            dgvSozlesmeDetaylar.DataSource = sdrepo.SozlesmeDetayListeleBySozlesmeId(Genel.soz.Id);
+            ListeGoster();
+            //dgvSozlesmeDetaylar.DataSource = sdrepo.SozlesmeDetayListeleBySozlesmeId(Genel.soz.Id);
             t = (dtpBitis.Value - dtpBaslangic.Value).TotalDays;
             txtGunSayisi.Text = Convert.ToInt32(t).ToString();
             txtTutar.Text = Convert.ToDecimal(0).ToString();
@@ -192,13 +193,15 @@ namespace PL.RentACar
             dgvSozlesmeDetaylar.Columns[1].Visible = false;
             dgvSozlesmeDetaylar.Columns[2].Visible = false;
             dgvSozlesmeDetaylar.Columns[3].Width = 80;
+            dgvSozlesmeDetaylar.Columns[3].HeaderText = "Araç Tutarı";
             dgvSozlesmeDetaylar.Columns[4].Width = 125;
+            dgvSozlesmeDetaylar.Columns[4].HeaderText = "Başlangıç Tarihi";
             dgvSozlesmeDetaylar.Columns[5].Width = 125;
-            dgvSozlesmeDetaylar.Columns[6].Width = 125;
-            dgvSozlesmeDetaylar.Columns[7].Width = 125;
-            dgvSozlesmeDetaylar.Columns[8].Visible = false;
-            dgvSozlesmeDetaylar.Columns[9].Visible = false;
-            dgvSozlesmeDetaylar.Columns[10].Visible = false;
+            dgvSozlesmeDetaylar.Columns[5].HeaderText = "Bitiş Tarihi";
+            dgvSozlesmeDetaylar.Columns[6].Visible = false;
+            dgvSozlesmeDetaylar.Columns[7].Visible = false;
+            dgvSozlesmeDetaylar.Columns[8].Width = 175;
+            dgvSozlesmeDetaylar.Columns[8].HeaderText = "Marka - Model";
             txtAracSayisi.Text = dgvSozlesmeDetaylar.RowCount.ToString();
             txtSozlesmeTutari.Text = sdrepo.SozlesmeTutarGetirBySozlesmeId(Genel.soz.Id).ToString();
 

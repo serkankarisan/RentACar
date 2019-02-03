@@ -359,6 +359,19 @@ namespace PL.RentACar
             {
                 dgvOdeme.DataSource = khr.KasaHareketListele();
             }
+            dgvOdeme.Columns[0].Visible = false;
+            dgvOdeme.Columns[1].Visible = false;
+            dgvOdeme.Columns[2].Visible = false;
+            dgvOdeme.Columns[3].Visible = false;
+            dgvOdeme.Columns[4].HeaderText = "İşlem Tarihi";
+            dgvOdeme.Columns[4].Width = 125;
+            dgvOdeme.Columns[5].Visible = false;
+            dgvOdeme.Columns[6].Width = 125;
+            dgvOdeme.Columns[6].HeaderText = "İşlem Tutarı";
+            dgvOdeme.Columns[7].Width = 75;
+            dgvOdeme.Columns[7].HeaderText = "Para Birimi";
+            dgvOdeme.Columns[9].Width = 125;
+            dgvOdeme.Columns[9].HeaderText = "İşlem Türü";
         }
         private void txtAlınan_TextChanged(object sender, EventArgs e)
         {
@@ -379,6 +392,16 @@ namespace PL.RentACar
                 }
             }
         }
+
+
+
+
+
+
+
+
+
+
 
 
 

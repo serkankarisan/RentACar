@@ -59,6 +59,7 @@
             this.btnPersonelSec = new System.Windows.Forms.Button();
             this.btnMusteriSec = new System.Windows.Forms.Button();
             this.dgvSozlesmeler = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeler)).BeginInit();
             this.SuspendLayout();
@@ -344,6 +345,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.btnCikis);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
@@ -419,6 +421,17 @@
             this.dgvSozlesmeler.Size = new System.Drawing.Size(570, 380);
             this.dgvSozlesmeler.TabIndex = 156;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(3, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(186, 20);
+            this.label4.TabIndex = 90;
+            this.label4.Text = "Sözleşme Kaydı Açılışı";
+            // 
             // frmSozlesmeKayitAc
             // 
             this.AcceptButton = this.btnKayitAc;
@@ -463,6 +476,7 @@
             this.Text = "frmSozlesmeKayitAc";
             this.Load += new System.EventHandler(this.frmSozlesmeKayitAc_Load);
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeler)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -501,5 +515,6 @@
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dgvSozlesmeler;
+        private System.Windows.Forms.Label label4;
     }
 }

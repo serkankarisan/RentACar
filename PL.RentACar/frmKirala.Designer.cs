@@ -65,6 +65,7 @@
             this.btnTamamla = new System.Windows.Forms.Button();
             this.dgvSozlesmeDetaylar = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeDetaylar)).BeginInit();
             this.SuspendLayout();
@@ -386,7 +387,7 @@
             this.btnCikis.FlatAppearance.BorderSize = 0;
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
-            this.btnCikis.Location = new System.Drawing.Point(864, 1);
+            this.btnCikis.Location = new System.Drawing.Point(1064, 1);
             this.btnCikis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(25, 24);
@@ -397,12 +398,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.btnCikis);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(889, 25);
+            this.panel1.Size = new System.Drawing.Size(1089, 25);
             this.panel1.TabIndex = 159;
             // 
             // btnAracSec
@@ -465,9 +467,8 @@
             // 
             // dgvSozlesmeDetaylar
             // 
-            this.dgvSozlesmeDetaylar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSozlesmeDetaylar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvSozlesmeDetaylar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvSozlesmeDetaylar.BackgroundColor = System.Drawing.Color.White;
             this.dgvSozlesmeDetaylar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -476,7 +477,7 @@
             this.dgvSozlesmeDetaylar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvSozlesmeDetaylar.Name = "dgvSozlesmeDetaylar";
             this.dgvSozlesmeDetaylar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSozlesmeDetaylar.Size = new System.Drawing.Size(377, 200);
+            this.dgvSozlesmeDetaylar.Size = new System.Drawing.Size(550, 200);
             this.dgvSozlesmeDetaylar.TabIndex = 163;
             // 
             // label2
@@ -490,12 +491,23 @@
             this.label2.TabIndex = 164;
             this.label2.Text = "Sözleşme Detayları";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(3, 3);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(156, 20);
+            this.label11.TabIndex = 90;
+            this.label11.Text = "Araç Seçim Ekranı";
+            // 
             // frmKirala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(889, 517);
+            this.ClientSize = new System.Drawing.Size(1089, 517);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvSozlesmeDetaylar);
             this.Controls.Add(this.btnTamamla);
@@ -539,6 +551,7 @@
             this.Text = "frmKirala";
             this.Load += new System.EventHandler(this.frmKirala_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeDetaylar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -582,5 +595,6 @@
         private System.Windows.Forms.Button btnTamamla;
         private System.Windows.Forms.DataGridView dgvSozlesmeDetaylar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label11;
     }
 }
