@@ -32,12 +32,20 @@ namespace PL.RentACar
                 pbPersonel.Visible = false;
                 btnPersonelMenu.Visible = false;
                 label5.Visible = false;
+                btnAracIslemleri.Visible = false;
+                btnKasaDetay.Visible = false;
+                pnlAracMenu.Height = 50;
+                pnlKasaMenu.Height = 50;
             }
             else
             {
                 pbPersonel.Visible = true;
                 btnPersonelMenu.Visible = true;
                 label5.Visible = true;
+                btnAracIslemleri.Visible = true;
+                btnKasaDetay.Visible = true;
+                pnlAracMenu.Height = 75;
+                pnlKasaMenu.Height = 75;
             }
           
         }
