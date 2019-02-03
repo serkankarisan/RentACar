@@ -212,49 +212,22 @@ namespace PL.RentACar
                                 kh.ParaBirimi = "TL";
                                 kh.Silindi = false;
                                 if (khr.KasaHareketEkle(kh))
+                            {
+                                if (srepo.SozlesmeSil(srepo.SozlesmeGetirById(Genel.SozID)))
                                 {
                                     txtEkstraTutar.Enabled = false;
                                     txtEkstraTutar.ReadOnly = true;
                                     cbAracDurumu.Enabled = false;
                                     cbYakitDurumu.Enabled = false;
                                     MessageBox.Show("Arac Teslim Alındı.", "İşlem Başarılı.");
-                                Temizle();
+                                    Temizle();
+                                }
                             }
                             
                         }
                         else
                         {
-                            kh.AracId = 0;
-                            kh.PersonelId = 0;
-                            kh.SozlesmeId = Genel.SozID;
-                            kh.GelirGiderId = 2;
-                            kh.Tarih = DateTime.Now;
-                            if (!txtEkstraTutar.ReadOnly)
-                            {
-                                if (Convert.ToDecimal(txtEkstraTutar.Text.Trim()) != Convert.ToDecimal(0))
-                                {
-                                    kh.Tutar = Convert.ToDecimal(txtEkstraTutar.Text);
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Ekstra Tutar Almalısınız!"); return;
-                                }
-                            }
-                            else
-                            {
-                                kh.Tutar = Convert.ToDecimal(txtEkstraTutar.Text);
-                            }
-                            kh.ParaBirimi = "TL";
-                            kh.Silindi = false;
-                            if (khr.KasaHareketEkle(kh))
-                            {
-                                txtEkstraTutar.Enabled = false;
-                                txtEkstraTutar.ReadOnly = true;
-                                cbAracDurumu.Enabled = false;
-                                cbYakitDurumu.Enabled = false;
-                                MessageBox.Show("Arac Teslim Alındı.", "İşlem Başarılı.");
-                                Temizle();
-                            }
+                            MessageBox.Show("Ekstra Tutar Almalısınız!"); return;
                         }
                     }
                 }
@@ -263,7 +236,8 @@ namespace PL.RentACar
             {
                 MessageBox.Show("Bos alanlari doldurunuz!!!");
             }
-
+            Genel.soz = null;
+            Genel.SozID = 0;
         }
 
         private void rdnYes_CheckedChanged(object sender, EventArgs e)

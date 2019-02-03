@@ -40,7 +40,7 @@ namespace PL.RentACar
             //if sıralaması ayarlanacak.
             if (txtAracDurumu.Text.Trim() != "")
             {
-                if (txtGunlukFiyat.Text.Trim() != "")
+                if (txtGunlukFiyat.Text.Trim() != "" )
                 {
                     if (txtMarka.Text.Trim() != "")
                     {
@@ -68,6 +68,11 @@ namespace PL.RentACar
                                                     if (decimal.TryParse(txtGunlukFiyat.Text, out dg))
                                                     {
                                                         a.GünlükFiyat = Convert.ToDecimal(txtGunlukFiyat.Text);
+                                                    }
+                                                    else
+                                                    {
+                                                        MessageBox.Show("Geçerli Bir Günlük Fiyat Giriniz!", "Eksik Bilgi!");
+                                                        return;
                                                     }
                                                     a.Marka = txtMarka.Text.Substring(0, 1).ToUpper() + txtMarka.Text.Substring(1).ToLower();
                                                     a.Model = txtModel.Text.Substring(0, 1).ToUpper() + txtModel.Text.Substring(1).ToLower();
@@ -238,6 +243,11 @@ namespace PL.RentACar
                                                     {
                                                         a.GünlükFiyat = Convert.ToDecimal(txtGunlukFiyat.Text);
                                                     }
+                                                    else
+                                                    {
+                                                        MessageBox.Show("Geçerli Bir Günlük Fiyat Giriniz!", "Eksik Bilgi!");
+                                                        return;
+                                                    }
                                                     a.Marka = txtMarka.Text.Substring(0, 1).ToUpper() + txtMarka.Text.Substring(1).ToLower();
                                                     a.Model = txtModel.Text.Substring(0, 1).ToUpper() + txtModel.Text.Substring(1).ToLower(); 
                                                     a.Renk = txtRenk.Text.Substring(0, 1).ToUpper() + txtRenk.Text.Substring(1).ToLower(); 
@@ -302,6 +312,10 @@ namespace PL.RentACar
                     {
                         MessageBox.Show("Marka Giriniz!", "Eksik Bilgi!");
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Günlük Fiyat Giriniz!", "Eksik Bilgi!");
                 }
             }
             else
