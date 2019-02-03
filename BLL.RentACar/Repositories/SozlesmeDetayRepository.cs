@@ -80,9 +80,10 @@ namespace BLL.RentACar.Repositories
 
         public List<SozlesmeDetay> SozlesmeDetayListeleByTarih(DateTime baslangic, DateTime bitis)
         {
+            DateTime b = Convert.ToDateTime(baslangic.ToShortDateString());
             List<SozlesmeDetay> SozlesmeDetay = (from s in Genel.ent.SozlesmeDetaylar
-                               where s.BaslangicTarihi==baslangic && s.BitisTarihi==bitis
-                               select s).ToList();
+                               where s.Silindi==false && s.BaslangicTarihi.Day == b.Day && s.BaslangicTarihi.Month == b.Month && s.BaslangicTarihi.Year == b.Year && s.BitisTarihi.Day == bitis.Day && s.BitisTarihi.Month == bitis.Month && s.BitisTarihi.Year == bitis.Year
+                                                 select s).ToList();
 
             return SozlesmeDetay;
         }

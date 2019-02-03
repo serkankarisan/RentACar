@@ -31,6 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSozlesmeSorgulama));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dtpSBitis = new System.Windows.Forms.DateTimePicker();
+            this.dtpSBaslangic = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.txtEhliyetNo = new System.Windows.Forms.TextBox();
             this.dgvSozlesmeler = new System.Windows.Forms.DataGridView();
@@ -41,7 +46,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.dtpBitis = new System.Windows.Forms.DateTimePicker();
             this.dtpBaslangıc = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,6 +58,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeler)).BeginInit();
@@ -77,6 +82,11 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Azure;
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.dtpSBitis);
+            this.tabPage1.Controls.Add(this.dtpSBaslangic);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.txtEhliyetNo);
             this.tabPage1.Controls.Add(this.dgvSozlesmeler);
@@ -92,11 +102,67 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Sozlesmeler";
             // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.Location = new System.Drawing.Point(346, 55);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 20);
+            this.label11.TabIndex = 120;
+            this.label11.Text = "Bitiş";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.Location = new System.Drawing.Point(21, 55);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(87, 20);
+            this.label12.TabIndex = 119;
+            this.label12.Text = "Başlangıç";
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.Location = new System.Drawing.Point(21, 22);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(149, 20);
+            this.label13.TabIndex = 118;
+            this.label13.Text = "Tarih aralığı seçin";
+            // 
+            // dtpSBitis
+            // 
+            this.dtpSBitis.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpSBitis.Location = new System.Drawing.Point(350, 79);
+            this.dtpSBitis.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpSBitis.Name = "dtpSBitis";
+            this.dtpSBitis.Size = new System.Drawing.Size(242, 26);
+            this.dtpSBitis.TabIndex = 117;
+            this.dtpSBitis.ValueChanged += new System.EventHandler(this.dtpSBitis_ValueChanged);
+            // 
+            // dtpSBaslangic
+            // 
+            this.dtpSBaslangic.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpSBaslangic.Location = new System.Drawing.Point(25, 79);
+            this.dtpSBaslangic.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpSBaslangic.Name = "dtpSBaslangic";
+            this.dtpSBaslangic.Size = new System.Drawing.Size(239, 26);
+            this.dtpSBaslangic.TabIndex = 116;
+            this.dtpSBaslangic.ValueChanged += new System.EventHandler(this.dtpSBaslangic_ValueChanged);
+            // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(430, 47);
+            this.label8.Location = new System.Drawing.Point(438, 117);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 20);
@@ -106,7 +172,7 @@
             // txtEhliyetNo
             // 
             this.txtEhliyetNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtEhliyetNo.Location = new System.Drawing.Point(436, 71);
+            this.txtEhliyetNo.Location = new System.Drawing.Point(444, 141);
             this.txtEhliyetNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEhliyetNo.Name = "txtEhliyetNo";
             this.txtEhliyetNo.Size = new System.Drawing.Size(148, 26);
@@ -120,11 +186,11 @@
             this.dgvSozlesmeler.BackgroundColor = System.Drawing.Color.White;
             this.dgvSozlesmeler.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvSozlesmeler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSozlesmeler.Location = new System.Drawing.Point(14, 120);
+            this.dgvSozlesmeler.Location = new System.Drawing.Point(16, 190);
             this.dgvSozlesmeler.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSozlesmeler.Name = "dgvSozlesmeler";
             this.dgvSozlesmeler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSozlesmeler.Size = new System.Drawing.Size(570, 288);
+            this.dgvSozlesmeler.Size = new System.Drawing.Size(580, 246);
             this.dgvSozlesmeler.TabIndex = 101;
             this.dgvSozlesmeler.DoubleClick += new System.EventHandler(this.dgvSozlesmeler_DoubleClick);
             // 
@@ -132,7 +198,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(216, 47);
+            this.label6.Location = new System.Drawing.Point(224, 117);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 20);
@@ -143,7 +209,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 47);
+            this.label1.Location = new System.Drawing.Point(16, 117);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 20);
@@ -153,7 +219,7 @@
             // txtTCKNo
             // 
             this.txtTCKNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTCKNo.Location = new System.Drawing.Point(222, 71);
+            this.txtTCKNo.Location = new System.Drawing.Point(230, 141);
             this.txtTCKNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTCKNo.Name = "txtTCKNo";
             this.txtTCKNo.Size = new System.Drawing.Size(148, 26);
@@ -163,7 +229,7 @@
             // txtSozlesmeId
             // 
             this.txtSozlesmeId.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSozlesmeId.Location = new System.Drawing.Point(14, 71);
+            this.txtSozlesmeId.Location = new System.Drawing.Point(22, 141);
             this.txtSozlesmeId.Margin = new System.Windows.Forms.Padding(4);
             this.txtSozlesmeId.Name = "txtSozlesmeId";
             this.txtSozlesmeId.Size = new System.Drawing.Size(148, 26);
@@ -217,18 +283,6 @@
             this.label7.TabIndex = 114;
             this.label7.Text = "Başlangıç";
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(28, 17);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 20);
-            this.label5.TabIndex = 113;
-            this.label5.Text = "Tarih aralığı seçin";
-            // 
             // dtpBitis
             // 
             this.dtpBitis.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -277,11 +331,11 @@
             this.dgvSozlesmeDetay.BackgroundColor = System.Drawing.Color.White;
             this.dgvSozlesmeDetay.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvSozlesmeDetay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSozlesmeDetay.Location = new System.Drawing.Point(32, 190);
+            this.dgvSozlesmeDetay.Location = new System.Drawing.Point(22, 190);
             this.dgvSozlesmeDetay.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSozlesmeDetay.Name = "dgvSozlesmeDetay";
             this.dgvSozlesmeDetay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSozlesmeDetay.Size = new System.Drawing.Size(550, 250);
+            this.dgvSozlesmeDetay.Size = new System.Drawing.Size(570, 250);
             this.dgvSozlesmeDetay.TabIndex = 108;
             this.dgvSozlesmeDetay.DoubleClick += new System.EventHandler(this.dgvSozlesmeDetay_DoubleClick);
             // 
@@ -365,6 +419,18 @@
             this.label10.TabIndex = 90;
             this.label10.Text = "Sözleşme Sorgulama";
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(28, 17);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(254, 20);
+            this.label5.TabIndex = 113;
+            this.label5.Text = "Başlangıç ve Bitiş Tarihi Seçin ";
+            // 
             // frmSozlesmeSorgulama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -411,7 +477,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTckNo2;
         private System.Windows.Forms.TextBox txtSozlesmeId2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpBitis;
         private System.Windows.Forms.DateTimePicker dtpBaslangıc;
         private System.Windows.Forms.Label label9;
@@ -419,5 +484,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DateTimePicker dtpSBitis;
+        private System.Windows.Forms.DateTimePicker dtpSBaslangic;
+        private System.Windows.Forms.Label label5;
     }
 }

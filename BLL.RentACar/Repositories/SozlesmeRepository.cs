@@ -73,8 +73,11 @@ namespace BLL.RentACar.Repositories
 
         public List<Sozlesme> SozlesmeListeleByTarih(DateTime baslangic, DateTime bitis)
         {
-            return Genel.ent.Sozlesmeler.Where(s => s.Silindi == false && s.SozlesmeTarihi >= baslangic && s.SozlesmeTarihi <= bitis).ToList();
+            DateTime b = Convert.ToDateTime(baslangic.ToShortDateString());
+            List<Sozlesme> sl = Genel.ent.Sozlesmeler.Where(s => s.Silindi == false && s.SozlesmeTarihi >= b && s.SozlesmeTarihi.Day <= bitis.Day && s.SozlesmeTarihi.Month <= bitis.Month && s.SozlesmeTarihi.Year <= bitis.Year).ToList();
+            return sl;
         }
+           
 
         public bool SozlesmeSil(int ID)
         {

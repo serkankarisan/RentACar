@@ -21,10 +21,10 @@ namespace PL.RentACar
         SozlesmeDetayRepository sdRep = new SozlesmeDetayRepository();
         private void frmSozlesmeSorgulama_Load(object sender, EventArgs e)
         {
-            dgvSozlesmeler.DataSource = sRep.SozlesmeListele();
-            dgvSozleme();
-            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetayListele();
-            dgvSozlemeDetay();
+            dtpSBaslangic.Value = DateTime.Now;
+            dtpSBitis.Value = DateTime.Now;
+            dtpBaslangıc.Value = DateTime.Now;
+            dtpBitis.Value = DateTime.Now;
         }
 
         private void txtSozlesmeId_TextChanged(object sender, EventArgs e)
@@ -118,14 +118,35 @@ namespace PL.RentACar
 
         private void dtpBaslangıc_ValueChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgula(dtpBaslangıc.Value);
-            dgvSozlemeDetay();
+            DateTime basla = Convert.ToDateTime(dtpBaslangıc.Value.ToShortDateString());
+            if (basla > dtpBitis.Value)
+            {
+                dtpBaslangıc.Value = DateTime.Now;
+                dtpBitis.Value = DateTime.Now;
+                MessageBox.Show("Başlangıç tarihi, bitiş tarihinden sonra olamaz!", "Tekrar tarih seçiniz!");
+                return;
+            }
+            else
+            {
+                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetayListeleByTarih(basla, dtpBitis.Value);
+                dgvSozlemeDetay();
+            }
         }
 
         private void dtpBitis_ValueChanged(object sender, EventArgs e)
         {
-            dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetaySorgulab(dtpBitis.Value);
-            dgvSozlemeDetay();
+            DateTime basla = Convert.ToDateTime(dtpBaslangıc.Value.ToShortDateString());
+            if (basla > dtpBitis.Value)
+            {
+                dtpBitis.Value = DateTime.Now;
+                MessageBox.Show("Başlangıç tarihi, bitiş tarihinden sonra olamaz!", "Tekrar tarih seçiniz!");
+                return;
+            }
+            else
+            {
+                dgvSozlesmeDetay.DataSource = sdRep.SozlesmeDetayListeleByTarih(basla,dtpBitis.Value);
+                dgvSozlemeDetay();
+            }
         }
 
         private void dgvSozlesmeDetay_DoubleClick(object sender, EventArgs e)
@@ -189,6 +210,39 @@ namespace PL.RentACar
             dgvSozlesmeDetay.Columns[7].Visible = false;
             dgvSozlesmeDetay.Columns[8].Width = 175;
             dgvSozlesmeDetay.Columns[8].HeaderText = "Marka - Model";
+        }
+
+        private void dtpSBaslangic_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime basla = Convert.ToDateTime(dtpSBaslangic.Value.ToShortDateString());
+            if (basla > dtpSBitis.Value)
+            {
+                dtpSBaslangic.Value = DateTime.Now;
+                dtpSBitis.Value = DateTime.Now;
+                MessageBox.Show("Başlangıç tarihi, bitiş tarihinden sonra olamaz!", "Tekrar tarih seçiniz!");
+                return;
+            }
+            else
+            {
+                dgvSozlesmeler.DataSource = sRep.SozlesmeListeleByTarih(dtpSBaslangic.Value, dtpSBitis.Value);
+                dgvSozleme();
+            }
+        }
+
+        private void dtpSBitis_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime basla = Convert.ToDateTime(dtpSBaslangic.Value.ToShortDateString());
+            if (basla > dtpSBitis.Value)
+            {
+                dtpSBitis.Value = DateTime.Now;
+                MessageBox.Show("Başlangıç tarihi, bitiş tarihinden sonra olamaz!", "Tekrar tarih seçiniz!");
+                return;
+            }
+            else
+            {
+                dgvSozlesmeler.DataSource = sRep.SozlesmeListeleByTarih(dtpSBaslangic.Value, dtpSBitis.Value);
+                dgvSozleme();
+            }
         }
     }
 }

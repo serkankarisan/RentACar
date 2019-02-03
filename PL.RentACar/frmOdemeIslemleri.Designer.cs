@@ -91,7 +91,7 @@
             this.btnOdemeAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOdemeAl.Image = ((System.Drawing.Image)(resources.GetObject("btnOdemeAl.Image")));
             this.btnOdemeAl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOdemeAl.Location = new System.Drawing.Point(156, 415);
+            this.btnOdemeAl.Location = new System.Drawing.Point(170, 415);
             this.btnOdemeAl.Name = "btnOdemeAl";
             this.btnOdemeAl.Size = new System.Drawing.Size(133, 40);
             this.btnOdemeAl.TabIndex = 131;
@@ -105,7 +105,7 @@
             // 
             this.lblAlınan.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAlınan.AutoSize = true;
-            this.lblAlınan.Location = new System.Drawing.Point(2, 357);
+            this.lblAlınan.Location = new System.Drawing.Point(16, 357);
             this.lblAlınan.Name = "lblAlınan";
             this.lblAlınan.Size = new System.Drawing.Size(94, 20);
             this.lblAlınan.TabIndex = 129;
@@ -115,7 +115,7 @@
             // txtAlınan
             // 
             this.txtAlınan.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtAlınan.Location = new System.Drawing.Point(131, 355);
+            this.txtAlınan.Location = new System.Drawing.Point(145, 355);
             this.txtAlınan.Name = "txtAlınan";
             this.txtAlınan.ReadOnly = true;
             this.txtAlınan.Size = new System.Drawing.Size(158, 26);
@@ -130,10 +130,10 @@
             this.dgvOdeme.BackgroundColor = System.Drawing.Color.White;
             this.dgvOdeme.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvOdeme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOdeme.Location = new System.Drawing.Point(308, 74);
+            this.dgvOdeme.Location = new System.Drawing.Point(318, 74);
             this.dgvOdeme.Name = "dgvOdeme";
             this.dgvOdeme.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOdeme.Size = new System.Drawing.Size(500, 381);
+            this.dgvOdeme.Size = new System.Drawing.Size(521, 381);
             this.dgvOdeme.TabIndex = 127;
             // 
             // panel1
@@ -144,7 +144,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(828, 24);
+            this.panel1.Size = new System.Drawing.Size(856, 24);
             this.panel1.TabIndex = 130;
             // 
             // label1
@@ -165,7 +165,7 @@
             this.btnCikis.FlatAppearance.BorderSize = 0;
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
-            this.btnCikis.Location = new System.Drawing.Point(803, 1);
+            this.btnCikis.Location = new System.Drawing.Point(831, 1);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(24, 22);
             this.btnCikis.TabIndex = 88;
@@ -177,7 +177,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(2, 83);
+            this.label5.Location = new System.Drawing.Point(16, 83);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 20);
             this.label5.TabIndex = 133;
@@ -191,7 +191,7 @@
             this.cbIslemTurleri.Items.AddRange(new object[] {
             "Tahsilat",
             "Ödeme"});
-            this.cbIslemTurleri.Location = new System.Drawing.Point(6, 115);
+            this.cbIslemTurleri.Location = new System.Drawing.Point(20, 115);
             this.cbIslemTurleri.Name = "cbIslemTurleri";
             this.cbIslemTurleri.Size = new System.Drawing.Size(163, 28);
             this.cbIslemTurleri.TabIndex = 132;
@@ -201,7 +201,7 @@
             // 
             this.lblborc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblborc.AutoSize = true;
-            this.lblborc.Location = new System.Drawing.Point(2, 326);
+            this.lblborc.Location = new System.Drawing.Point(16, 326);
             this.lblborc.Name = "lblborc";
             this.lblborc.Size = new System.Drawing.Size(86, 20);
             this.lblborc.TabIndex = 135;
@@ -211,7 +211,7 @@
             // txtBorc
             // 
             this.txtBorc.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtBorc.Location = new System.Drawing.Point(131, 323);
+            this.txtBorc.Location = new System.Drawing.Point(145, 323);
             this.txtBorc.Name = "txtBorc";
             this.txtBorc.ReadOnly = true;
             this.txtBorc.Size = new System.Drawing.Size(158, 26);
@@ -222,7 +222,7 @@
             // 
             this.lblsozlesme.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblsozlesme.AutoSize = true;
-            this.lblsozlesme.Location = new System.Drawing.Point(2, 294);
+            this.lblsozlesme.Location = new System.Drawing.Point(16, 294);
             this.lblsozlesme.Name = "lblsozlesme";
             this.lblsozlesme.Size = new System.Drawing.Size(123, 20);
             this.lblsozlesme.TabIndex = 137;
@@ -232,7 +232,7 @@
             // txtSozlesmeTutar
             // 
             this.txtSozlesmeTutar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSozlesmeTutar.Location = new System.Drawing.Point(131, 291);
+            this.txtSozlesmeTutar.Location = new System.Drawing.Point(145, 291);
             this.txtSozlesmeTutar.Name = "txtSozlesmeTutar";
             this.txtSozlesmeTutar.ReadOnly = true;
             this.txtSozlesmeTutar.Size = new System.Drawing.Size(158, 26);
@@ -249,7 +249,7 @@
             this.btnOdemeYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOdemeYap.Image = ((System.Drawing.Image)(resources.GetObject("btnOdemeYap.Image")));
             this.btnOdemeYap.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOdemeYap.Location = new System.Drawing.Point(131, 415);
+            this.btnOdemeYap.Location = new System.Drawing.Point(145, 415);
             this.btnOdemeYap.Name = "btnOdemeYap";
             this.btnOdemeYap.Size = new System.Drawing.Size(158, 40);
             this.btnOdemeYap.TabIndex = 138;
@@ -269,7 +269,7 @@
             this.btnSozlesmeSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSozlesmeSec.Image = ((System.Drawing.Image)(resources.GetObject("btnSozlesmeSec.Image")));
             this.btnSozlesmeSec.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSozlesmeSec.Location = new System.Drawing.Point(6, 149);
+            this.btnSozlesmeSec.Location = new System.Drawing.Point(20, 149);
             this.btnSozlesmeSec.Name = "btnSozlesmeSec";
             this.btnSozlesmeSec.Size = new System.Drawing.Size(167, 40);
             this.btnSozlesmeSec.TabIndex = 139;
@@ -289,7 +289,7 @@
             this.btnAracSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAracSec.Image = ((System.Drawing.Image)(resources.GetObject("btnAracSec.Image")));
             this.btnAracSec.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAracSec.Location = new System.Drawing.Point(6, 149);
+            this.btnAracSec.Location = new System.Drawing.Point(20, 149);
             this.btnAracSec.Name = "btnAracSec";
             this.btnAracSec.Size = new System.Drawing.Size(134, 40);
             this.btnAracSec.TabIndex = 140;
@@ -303,7 +303,7 @@
             // 
             this.lblTutar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTutar.AutoSize = true;
-            this.lblTutar.Location = new System.Drawing.Point(141, 354);
+            this.lblTutar.Location = new System.Drawing.Point(155, 354);
             this.lblTutar.Name = "lblTutar";
             this.lblTutar.Size = new System.Drawing.Size(46, 20);
             this.lblTutar.TabIndex = 142;
@@ -313,7 +313,7 @@
             // txtAracTutar
             // 
             this.txtAracTutar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtAracTutar.Location = new System.Drawing.Point(193, 354);
+            this.txtAracTutar.Location = new System.Drawing.Point(207, 354);
             this.txtAracTutar.Name = "txtAracTutar";
             this.txtAracTutar.Size = new System.Drawing.Size(96, 26);
             this.txtAracTutar.TabIndex = 141;
@@ -329,7 +329,7 @@
             this.btnMaasOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMaasOdeme.Image = ((System.Drawing.Image)(resources.GetObject("btnMaasOdeme.Image")));
             this.btnMaasOdeme.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMaasOdeme.Location = new System.Drawing.Point(131, 415);
+            this.btnMaasOdeme.Location = new System.Drawing.Point(145, 415);
             this.btnMaasOdeme.Name = "btnMaasOdeme";
             this.btnMaasOdeme.Size = new System.Drawing.Size(158, 40);
             this.btnMaasOdeme.TabIndex = 177;
@@ -349,7 +349,7 @@
             this.btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSec.Image = ((System.Drawing.Image)(resources.GetObject("btnSec.Image")));
             this.btnSec.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSec.Location = new System.Drawing.Point(6, 149);
+            this.btnSec.Location = new System.Drawing.Point(20, 149);
             this.btnSec.Name = "btnSec";
             this.btnSec.Size = new System.Drawing.Size(167, 40);
             this.btnSec.TabIndex = 176;
@@ -363,7 +363,7 @@
             this.lblToplam.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblToplam.AutoSize = true;
             this.lblToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblToplam.Location = new System.Drawing.Point(62, 355);
+            this.lblToplam.Location = new System.Drawing.Point(76, 355);
             this.lblToplam.Name = "lblToplam";
             this.lblToplam.Size = new System.Drawing.Size(61, 20);
             this.lblToplam.TabIndex = 175;
@@ -373,7 +373,7 @@
             // 
             this.txtToplamOdeme.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtToplamOdeme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtToplamOdeme.Location = new System.Drawing.Point(131, 354);
+            this.txtToplamOdeme.Location = new System.Drawing.Point(145, 354);
             this.txtToplamOdeme.Name = "txtToplamOdeme";
             this.txtToplamOdeme.ReadOnly = true;
             this.txtToplamOdeme.Size = new System.Drawing.Size(158, 26);
@@ -384,7 +384,7 @@
             this.lblPrim.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblPrim.AutoSize = true;
             this.lblPrim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPrim.Location = new System.Drawing.Point(62, 323);
+            this.lblPrim.Location = new System.Drawing.Point(76, 323);
             this.lblPrim.Name = "lblPrim";
             this.lblPrim.Size = new System.Drawing.Size(40, 20);
             this.lblPrim.TabIndex = 173;
@@ -395,7 +395,7 @@
             this.lblMaas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMaas.AutoSize = true;
             this.lblMaas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMaas.Location = new System.Drawing.Point(62, 291);
+            this.lblMaas.Location = new System.Drawing.Point(76, 291);
             this.lblMaas.Name = "lblMaas";
             this.lblMaas.Size = new System.Drawing.Size(48, 20);
             this.lblMaas.TabIndex = 172;
@@ -405,7 +405,7 @@
             // 
             this.txtPrim.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPrim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtPrim.Location = new System.Drawing.Point(131, 322);
+            this.txtPrim.Location = new System.Drawing.Point(145, 322);
             this.txtPrim.Name = "txtPrim";
             this.txtPrim.Size = new System.Drawing.Size(158, 26);
             this.txtPrim.TabIndex = 171;
@@ -415,7 +415,7 @@
             // 
             this.txtMaas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMaas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMaas.Location = new System.Drawing.Point(131, 290);
+            this.txtMaas.Location = new System.Drawing.Point(145, 290);
             this.txtMaas.Name = "txtMaas";
             this.txtMaas.ReadOnly = true;
             this.txtMaas.Size = new System.Drawing.Size(158, 26);
@@ -427,7 +427,7 @@
             this.lblSoyadi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSoyadi.AutoSize = true;
             this.lblSoyadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSoyadi.Location = new System.Drawing.Point(62, 259);
+            this.lblSoyadi.Location = new System.Drawing.Point(76, 259);
             this.lblSoyadi.Name = "lblSoyadi";
             this.lblSoyadi.Size = new System.Drawing.Size(57, 20);
             this.lblSoyadi.TabIndex = 169;
@@ -438,7 +438,7 @@
             this.lblAdi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAdi.AutoSize = true;
             this.lblAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdi.Location = new System.Drawing.Point(62, 227);
+            this.lblAdi.Location = new System.Drawing.Point(76, 227);
             this.lblAdi.Name = "lblAdi";
             this.lblAdi.Size = new System.Drawing.Size(32, 20);
             this.lblAdi.TabIndex = 168;
@@ -448,7 +448,7 @@
             // 
             this.txtSoyadi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSoyadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSoyadi.Location = new System.Drawing.Point(131, 258);
+            this.txtSoyadi.Location = new System.Drawing.Point(145, 258);
             this.txtSoyadi.Name = "txtSoyadi";
             this.txtSoyadi.ReadOnly = true;
             this.txtSoyadi.Size = new System.Drawing.Size(158, 26);
@@ -458,7 +458,7 @@
             // 
             this.txtAdi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdi.Location = new System.Drawing.Point(131, 226);
+            this.txtAdi.Location = new System.Drawing.Point(145, 226);
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.ReadOnly = true;
             this.txtAdi.Size = new System.Drawing.Size(158, 26);
@@ -469,7 +469,7 @@
             this.lblPersonel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblPersonel.AutoSize = true;
             this.lblPersonel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPersonel.Location = new System.Drawing.Point(12, 195);
+            this.lblPersonel.Location = new System.Drawing.Point(26, 195);
             this.lblPersonel.Name = "lblPersonel";
             this.lblPersonel.Size = new System.Drawing.Size(79, 20);
             this.lblPersonel.TabIndex = 165;
@@ -485,7 +485,7 @@
             this.btnAracOdemeAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAracOdemeAl.Image = ((System.Drawing.Image)(resources.GetObject("btnAracOdemeAl.Image")));
             this.btnAracOdemeAl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAracOdemeAl.Location = new System.Drawing.Point(156, 415);
+            this.btnAracOdemeAl.Location = new System.Drawing.Point(170, 415);
             this.btnAracOdemeAl.Name = "btnAracOdemeAl";
             this.btnAracOdemeAl.Size = new System.Drawing.Size(133, 40);
             this.btnAracOdemeAl.TabIndex = 178;
@@ -499,7 +499,7 @@
             // 
             this.lblSozlesmeOdeme.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSozlesmeOdeme.AutoSize = true;
-            this.lblSozlesmeOdeme.Location = new System.Drawing.Point(2, 386);
+            this.lblSozlesmeOdeme.Location = new System.Drawing.Point(16, 386);
             this.lblSozlesmeOdeme.Name = "lblSozlesmeOdeme";
             this.lblSozlesmeOdeme.Size = new System.Drawing.Size(61, 20);
             this.lblSozlesmeOdeme.TabIndex = 180;
@@ -509,7 +509,7 @@
             // txtSozlesmeOdeme
             // 
             this.txtSozlesmeOdeme.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSozlesmeOdeme.Location = new System.Drawing.Point(131, 383);
+            this.txtSozlesmeOdeme.Location = new System.Drawing.Point(145, 383);
             this.txtSozlesmeOdeme.Name = "txtSozlesmeOdeme";
             this.txtSozlesmeOdeme.Size = new System.Drawing.Size(158, 26);
             this.txtSozlesmeOdeme.TabIndex = 179;
@@ -520,7 +520,7 @@
             this.lblMusteriSoyadi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMusteriSoyadi.AutoSize = true;
             this.lblMusteriSoyadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMusteriSoyadi.Location = new System.Drawing.Point(2, 230);
+            this.lblMusteriSoyadi.Location = new System.Drawing.Point(16, 230);
             this.lblMusteriSoyadi.Name = "lblMusteriSoyadi";
             this.lblMusteriSoyadi.Size = new System.Drawing.Size(113, 20);
             this.lblMusteriSoyadi.TabIndex = 184;
@@ -531,7 +531,7 @@
             this.lblMusteriAdi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMusteriAdi.AutoSize = true;
             this.lblMusteriAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMusteriAdi.Location = new System.Drawing.Point(2, 198);
+            this.lblMusteriAdi.Location = new System.Drawing.Point(16, 198);
             this.lblMusteriAdi.Name = "lblMusteriAdi";
             this.lblMusteriAdi.Size = new System.Drawing.Size(88, 20);
             this.lblMusteriAdi.TabIndex = 183;
@@ -541,7 +541,7 @@
             // 
             this.txtMusteriSoyadi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMusteriSoyadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMusteriSoyadi.Location = new System.Drawing.Point(131, 227);
+            this.txtMusteriSoyadi.Location = new System.Drawing.Point(145, 227);
             this.txtMusteriSoyadi.Name = "txtMusteriSoyadi";
             this.txtMusteriSoyadi.ReadOnly = true;
             this.txtMusteriSoyadi.Size = new System.Drawing.Size(158, 26);
@@ -551,7 +551,7 @@
             // 
             this.txtMusteriAdi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMusteriAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMusteriAdi.Location = new System.Drawing.Point(131, 195);
+            this.txtMusteriAdi.Location = new System.Drawing.Point(145, 195);
             this.txtMusteriAdi.Name = "txtMusteriAdi";
             this.txtMusteriAdi.ReadOnly = true;
             this.txtMusteriAdi.Size = new System.Drawing.Size(158, 26);
@@ -562,7 +562,7 @@
             this.lblPlaka.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblPlaka.AutoSize = true;
             this.lblPlaka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPlaka.Location = new System.Drawing.Point(22, 293);
+            this.lblPlaka.Location = new System.Drawing.Point(36, 293);
             this.lblPlaka.Name = "lblPlaka";
             this.lblPlaka.Size = new System.Drawing.Size(48, 20);
             this.lblPlaka.TabIndex = 188;
@@ -573,7 +573,7 @@
             this.lblmarka.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblmarka.AutoSize = true;
             this.lblmarka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblmarka.Location = new System.Drawing.Point(22, 227);
+            this.lblmarka.Location = new System.Drawing.Point(36, 227);
             this.lblmarka.Name = "lblmarka";
             this.lblmarka.Size = new System.Drawing.Size(53, 20);
             this.lblmarka.TabIndex = 187;
@@ -583,7 +583,7 @@
             // 
             this.txtPlaka.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPlaka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtPlaka.Location = new System.Drawing.Point(131, 290);
+            this.txtPlaka.Location = new System.Drawing.Point(145, 290);
             this.txtPlaka.Name = "txtPlaka";
             this.txtPlaka.ReadOnly = true;
             this.txtPlaka.Size = new System.Drawing.Size(158, 26);
@@ -593,7 +593,7 @@
             // 
             this.txtMarka.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMarka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMarka.Location = new System.Drawing.Point(131, 226);
+            this.txtMarka.Location = new System.Drawing.Point(145, 226);
             this.txtMarka.Name = "txtMarka";
             this.txtMarka.ReadOnly = true;
             this.txtMarka.Size = new System.Drawing.Size(158, 26);
@@ -604,7 +604,7 @@
             this.lblAracDurumu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAracDurumu.AutoSize = true;
             this.lblAracDurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAracDurumu.Location = new System.Drawing.Point(22, 325);
+            this.lblAracDurumu.Location = new System.Drawing.Point(36, 325);
             this.lblAracDurumu.Name = "lblAracDurumu";
             this.lblAracDurumu.Size = new System.Drawing.Size(103, 20);
             this.lblAracDurumu.TabIndex = 192;
@@ -615,7 +615,7 @@
             this.lblModel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblModel.AutoSize = true;
             this.lblModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblModel.Location = new System.Drawing.Point(22, 261);
+            this.lblModel.Location = new System.Drawing.Point(36, 261);
             this.lblModel.Name = "lblModel";
             this.lblModel.Size = new System.Drawing.Size(52, 20);
             this.lblModel.TabIndex = 191;
@@ -625,7 +625,7 @@
             // 
             this.txtAracDurumu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtAracDurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAracDurumu.Location = new System.Drawing.Point(131, 322);
+            this.txtAracDurumu.Location = new System.Drawing.Point(145, 322);
             this.txtAracDurumu.Name = "txtAracDurumu";
             this.txtAracDurumu.ReadOnly = true;
             this.txtAracDurumu.Size = new System.Drawing.Size(158, 26);
@@ -635,7 +635,7 @@
             // 
             this.txtModel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtModel.Location = new System.Drawing.Point(131, 258);
+            this.txtModel.Location = new System.Drawing.Point(145, 258);
             this.txtModel.Name = "txtModel";
             this.txtModel.ReadOnly = true;
             this.txtModel.Size = new System.Drawing.Size(158, 26);
@@ -644,7 +644,7 @@
             // txtSozlesmeTarihi
             // 
             this.txtSozlesmeTarihi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSozlesmeTarihi.Location = new System.Drawing.Point(131, 259);
+            this.txtSozlesmeTarihi.Location = new System.Drawing.Point(145, 259);
             this.txtSozlesmeTarihi.Name = "txtSozlesmeTarihi";
             this.txtSozlesmeTarihi.ReadOnly = true;
             this.txtSozlesmeTarihi.Size = new System.Drawing.Size(158, 26);
@@ -655,7 +655,7 @@
             // 
             this.lblSozlesmeTarihi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSozlesmeTarihi.AutoSize = true;
-            this.lblSozlesmeTarihi.Location = new System.Drawing.Point(2, 262);
+            this.lblSozlesmeTarihi.Location = new System.Drawing.Point(16, 262);
             this.lblSozlesmeTarihi.Name = "lblSozlesmeTarihi";
             this.lblSozlesmeTarihi.Size = new System.Drawing.Size(121, 20);
             this.lblSozlesmeTarihi.TabIndex = 194;
@@ -667,7 +667,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(828, 478);
+            this.ClientSize = new System.Drawing.Size(856, 478);
             this.Controls.Add(this.lblPrim);
             this.Controls.Add(this.txtBorc);
             this.Controls.Add(this.lblAdi);
