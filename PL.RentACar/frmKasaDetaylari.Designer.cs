@@ -51,10 +51,10 @@
             this.dgvKasaDetay.BackgroundColor = System.Drawing.Color.White;
             this.dgvKasaDetay.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvKasaDetay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKasaDetay.Location = new System.Drawing.Point(21, 162);
+            this.dgvKasaDetay.Location = new System.Drawing.Point(16, 162);
             this.dgvKasaDetay.Margin = new System.Windows.Forms.Padding(4);
             this.dgvKasaDetay.Name = "dgvKasaDetay";
-            this.dgvKasaDetay.Size = new System.Drawing.Size(501, 254);
+            this.dgvKasaDetay.Size = new System.Drawing.Size(510, 254);
             this.dgvKasaDetay.TabIndex = 95;
             // 
             // label1

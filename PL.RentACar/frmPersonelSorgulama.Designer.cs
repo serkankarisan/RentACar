@@ -44,6 +44,7 @@
             // 
             // txtAdi
             // 
+            this.txtAdi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtAdi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAdi.Location = new System.Drawing.Point(55, 102);
@@ -55,6 +56,7 @@
             // 
             // textBox8
             // 
+            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox8.BackColor = System.Drawing.Color.Azure;
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -67,6 +69,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(14, 102);
@@ -78,6 +81,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(236, 104);
@@ -89,6 +93,7 @@
             // 
             // txtSoyadi
             // 
+            this.txtSoyadi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSoyadi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSoyadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSoyadi.Location = new System.Drawing.Point(302, 104);
@@ -100,9 +105,7 @@
             // 
             // dgvPersonel
             // 
-            this.dgvPersonel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPersonel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgvPersonel.BackgroundColor = System.Drawing.Color.White;
             this.dgvPersonel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -110,7 +113,7 @@
             this.dgvPersonel.Margin = new System.Windows.Forms.Padding(6);
             this.dgvPersonel.Name = "dgvPersonel";
             this.dgvPersonel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPersonel.Size = new System.Drawing.Size(493, 223);
+            this.dgvPersonel.Size = new System.Drawing.Size(850, 225);
             this.dgvPersonel.TabIndex = 40;
             this.dgvPersonel.DoubleClick += new System.EventHandler(this.dgvPersonel_DoubleClick);
             // 
@@ -121,7 +124,7 @@
             this.btnCikis.FlatAppearance.BorderSize = 0;
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
-            this.btnCikis.Location = new System.Drawing.Point(510, 1);
+            this.btnCikis.Location = new System.Drawing.Point(855, 1);
             this.btnCikis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCikis.Name = "btnCikis";
             this.btnCikis.Size = new System.Drawing.Size(25, 24);
@@ -138,7 +141,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(535, 25);
+            this.panel2.Size = new System.Drawing.Size(880, 25);
             this.panel2.TabIndex = 89;
             // 
             // label5
@@ -157,7 +160,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(535, 390);
+            this.ClientSize = new System.Drawing.Size(880, 390);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.txtAdi);
             this.Controls.Add(this.panel2);

@@ -125,7 +125,10 @@ namespace PL.RentACar
                     Genel.AracID = liste[i].Id;                    
                 }               
             }
-            this.Close();
+            if (MessageBox.Show("Araç Sorgulama Sayafasından Ayrılmak İstiyor musunuz?", "Sayfa Kapatılsın mı?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void btnCikis_Click(object sender, EventArgs e)

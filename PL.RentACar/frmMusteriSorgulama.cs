@@ -82,7 +82,10 @@ namespace PL.RentACar
         private void dgvMusteriler_DoubleClick(object sender, EventArgs e)
         {
             Genel.MusteriID = Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value);
-            this.Close();
+            if (MessageBox.Show("Müşteri Sorgulama Sayafasından Ayrılmak İstiyor musunuz?", "Sayfa Kapatılsın mı?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

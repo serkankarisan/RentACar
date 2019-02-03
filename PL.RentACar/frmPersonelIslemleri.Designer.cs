@@ -126,7 +126,7 @@
             this.txtAd.Location = new System.Drawing.Point(97, 80);
             this.txtAd.Margin = new System.Windows.Forms.Padding(6);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(135, 26);
+            this.txtAd.Size = new System.Drawing.Size(150, 26);
             this.txtAd.TabIndex = 16;
             // 
             // txtSoyad
@@ -136,7 +136,7 @@
             this.txtSoyad.Location = new System.Drawing.Point(97, 109);
             this.txtSoyad.Margin = new System.Windows.Forms.Padding(6);
             this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(135, 26);
+            this.txtSoyad.Size = new System.Drawing.Size(150, 26);
             this.txtSoyad.TabIndex = 17;
             // 
             // txtEmail
@@ -167,7 +167,7 @@
             this.txtMaas.Location = new System.Drawing.Point(97, 271);
             this.txtMaas.Margin = new System.Windows.Forms.Padding(6);
             this.txtMaas.Name = "txtMaas";
-            this.txtMaas.Size = new System.Drawing.Size(135, 26);
+            this.txtMaas.Size = new System.Drawing.Size(150, 26);
             this.txtMaas.TabIndex = 21;
             // 
             // textBox8

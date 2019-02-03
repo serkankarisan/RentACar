@@ -64,16 +64,14 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 28);
+            this.tabControl1.Location = new System.Drawing.Point(27, 33);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(880, 477);
+            this.tabControl1.Size = new System.Drawing.Size(625, 477);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -90,14 +88,15 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(872, 444);
+            this.tabPage1.Size = new System.Drawing.Size(617, 444);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Sozlesmeler";
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(484, 49);
+            this.label8.Location = new System.Drawing.Point(430, 47);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 20);
@@ -106,7 +105,8 @@
             // 
             // txtEhliyetNo
             // 
-            this.txtEhliyetNo.Location = new System.Drawing.Point(490, 73);
+            this.txtEhliyetNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtEhliyetNo.Location = new System.Drawing.Point(436, 71);
             this.txtEhliyetNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEhliyetNo.Name = "txtEhliyetNo";
             this.txtEhliyetNo.Size = new System.Drawing.Size(148, 26);
@@ -115,25 +115,24 @@
             // 
             // dgvSozlesmeler
             // 
-            this.dgvSozlesmeler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSozlesmeler.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgvSozlesmeler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvSozlesmeler.BackgroundColor = System.Drawing.Color.White;
             this.dgvSozlesmeler.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvSozlesmeler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSozlesmeler.Location = new System.Drawing.Point(22, 122);
+            this.dgvSozlesmeler.Location = new System.Drawing.Point(14, 120);
             this.dgvSozlesmeler.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSozlesmeler.Name = "dgvSozlesmeler";
             this.dgvSozlesmeler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSozlesmeler.Size = new System.Drawing.Size(832, 288);
+            this.dgvSozlesmeler.Size = new System.Drawing.Size(570, 288);
             this.dgvSozlesmeler.TabIndex = 101;
             this.dgvSozlesmeler.DoubleClick += new System.EventHandler(this.dgvSozlesmeler_DoubleClick);
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(250, 49);
+            this.label6.Location = new System.Drawing.Point(216, 47);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 20);
@@ -142,8 +141,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 49);
+            this.label1.Location = new System.Drawing.Point(8, 47);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 20);
@@ -152,7 +152,8 @@
             // 
             // txtTCKNo
             // 
-            this.txtTCKNo.Location = new System.Drawing.Point(256, 73);
+            this.txtTCKNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTCKNo.Location = new System.Drawing.Point(222, 71);
             this.txtTCKNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTCKNo.Name = "txtTCKNo";
             this.txtTCKNo.Size = new System.Drawing.Size(148, 26);
@@ -161,7 +162,8 @@
             // 
             // txtSozlesmeId
             // 
-            this.txtSozlesmeId.Location = new System.Drawing.Point(22, 73);
+            this.txtSozlesmeId.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSozlesmeId.Location = new System.Drawing.Point(14, 71);
             this.txtSozlesmeId.Margin = new System.Windows.Forms.Padding(4);
             this.txtSozlesmeId.Name = "txtSozlesmeId";
             this.txtSozlesmeId.Size = new System.Drawing.Size(148, 26);
@@ -187,15 +189,16 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(872, 444);
+            this.tabPage2.Size = new System.Drawing.Size(617, 444);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Sozlesme Detayları";
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(337, 37);
+            this.label9.Location = new System.Drawing.Point(336, 50);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 20);
@@ -204,9 +207,10 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(4, 37);
+            this.label7.Location = new System.Drawing.Point(28, 50);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 20);
@@ -215,9 +219,10 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(4, 4);
+            this.label5.Location = new System.Drawing.Point(28, 17);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(149, 20);
@@ -226,26 +231,29 @@
             // 
             // dtpBitis
             // 
-            this.dtpBitis.Location = new System.Drawing.Point(341, 61);
+            this.dtpBitis.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpBitis.Location = new System.Drawing.Point(340, 74);
             this.dtpBitis.Margin = new System.Windows.Forms.Padding(4);
             this.dtpBitis.Name = "dtpBitis";
-            this.dtpBitis.Size = new System.Drawing.Size(297, 26);
+            this.dtpBitis.Size = new System.Drawing.Size(242, 26);
             this.dtpBitis.TabIndex = 112;
             this.dtpBitis.ValueChanged += new System.EventHandler(this.dtpBitis_ValueChanged);
             // 
             // dtpBaslangıc
             // 
-            this.dtpBaslangıc.Location = new System.Drawing.Point(8, 61);
+            this.dtpBaslangıc.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpBaslangıc.Location = new System.Drawing.Point(32, 74);
             this.dtpBaslangıc.Margin = new System.Windows.Forms.Padding(4);
             this.dtpBaslangıc.Name = "dtpBaslangıc";
-            this.dtpBaslangıc.Size = new System.Drawing.Size(297, 26);
+            this.dtpBaslangıc.Size = new System.Drawing.Size(239, 26);
             this.dtpBaslangıc.TabIndex = 111;
             this.dtpBaslangıc.ValueChanged += new System.EventHandler(this.dtpBaslangıc_ValueChanged);
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(486, 119);
+            this.label2.Location = new System.Drawing.Point(430, 132);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 20);
@@ -254,7 +262,8 @@
             // 
             // txtEhliyetNo2
             // 
-            this.txtEhliyetNo2.Location = new System.Drawing.Point(490, 143);
+            this.txtEhliyetNo2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtEhliyetNo2.Location = new System.Drawing.Point(434, 156);
             this.txtEhliyetNo2.Margin = new System.Windows.Forms.Padding(4);
             this.txtEhliyetNo2.Name = "txtEhliyetNo2";
             this.txtEhliyetNo2.Size = new System.Drawing.Size(148, 26);
@@ -263,25 +272,24 @@
             // 
             // dgvSozlesmeDetay
             // 
-            this.dgvSozlesmeDetay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSozlesmeDetay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgvSozlesmeDetay.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvSozlesmeDetay.BackgroundColor = System.Drawing.Color.White;
             this.dgvSozlesmeDetay.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvSozlesmeDetay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSozlesmeDetay.Location = new System.Drawing.Point(8, 177);
+            this.dgvSozlesmeDetay.Location = new System.Drawing.Point(32, 190);
             this.dgvSozlesmeDetay.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSozlesmeDetay.Name = "dgvSozlesmeDetay";
             this.dgvSozlesmeDetay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSozlesmeDetay.Size = new System.Drawing.Size(856, 251);
+            this.dgvSozlesmeDetay.Size = new System.Drawing.Size(550, 250);
             this.dgvSozlesmeDetay.TabIndex = 108;
             this.dgvSozlesmeDetay.DoubleClick += new System.EventHandler(this.dgvSozlesmeDetay_DoubleClick);
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(245, 119);
+            this.label3.Location = new System.Drawing.Point(228, 132);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 20);
@@ -290,8 +298,9 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 119);
+            this.label4.Location = new System.Drawing.Point(28, 132);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 20);
@@ -300,7 +309,8 @@
             // 
             // txtTckNo2
             // 
-            this.txtTckNo2.Location = new System.Drawing.Point(249, 143);
+            this.txtTckNo2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTckNo2.Location = new System.Drawing.Point(232, 156);
             this.txtTckNo2.Margin = new System.Windows.Forms.Padding(4);
             this.txtTckNo2.Name = "txtTckNo2";
             this.txtTckNo2.Size = new System.Drawing.Size(148, 26);
@@ -309,7 +319,8 @@
             // 
             // txtSozlesmeId2
             // 
-            this.txtSozlesmeId2.Location = new System.Drawing.Point(8, 143);
+            this.txtSozlesmeId2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSozlesmeId2.Location = new System.Drawing.Point(32, 156);
             this.txtSozlesmeId2.Margin = new System.Windows.Forms.Padding(4);
             this.txtSozlesmeId2.Name = "txtSozlesmeId2";
             this.txtSozlesmeId2.Size = new System.Drawing.Size(148, 26);
@@ -323,7 +334,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(864, 1);
+            this.button1.Location = new System.Drawing.Point(666, 1);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 24);
@@ -340,7 +351,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(889, 25);
+            this.panel1.Size = new System.Drawing.Size(691, 25);
             this.panel1.TabIndex = 0;
             // 
             // label10
@@ -359,7 +370,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(889, 516);
+            this.ClientSize = new System.Drawing.Size(691, 516);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
