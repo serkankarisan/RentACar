@@ -64,6 +64,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnYenile = new System.Windows.Forms.Button();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).BeginInit();
             this.tsMusteriIslemleri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -310,6 +312,8 @@
             this.tsMusteriIslemleri.BackColor = System.Drawing.Color.MediumTurquoise;
             this.tsMusteriIslemleri.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
+            this.toolStripLabel1,
+            this.toolStripSeparator2,
             this.tsYeni,
             this.toolStripSeparator5,
             this.tsKaydet,
@@ -403,6 +407,19 @@
             this.btnYenile.UseVisualStyleBackColor = false;
             this.btnYenile.Click += new System.EventHandler(this.btnYenile_Click);
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.toolStripLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(138, 22);
+            this.toolStripLabel1.Text = "Müşteri İşlemleri";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // frmMusteriIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -489,5 +506,7 @@
         private System.Windows.Forms.ComboBox cbEmail;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnYenile;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }

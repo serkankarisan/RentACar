@@ -39,12 +39,26 @@ namespace PL.RentACar
         {
             frm.ShowDialog();
             dgvSozlesmeDetay.DataSource = sdr.SozlesmeDetayListeleBySozlesmeId(Genel.SozID);
-            dgvSozlesmeDetay.Columns[6].Visible = false;
-            dgvSozlesmeDetay.Columns[7].Visible = false;
+            sdgridDuzenle();
             txtAracSayisi.Text = dgvSozlesmeDetay.RowCount.ToString();
             txtSozlesmeTutari.Text = sdr.SozlesmeTutarGetirBySozlesmeId(Genel.SozID).ToString();
         }
-
+        private void sdgridDuzenle()
+        {
+            dgvSozlesmeDetay.Columns[0].Visible = false;
+            dgvSozlesmeDetay.Columns[1].Visible = false;
+            dgvSozlesmeDetay.Columns[2].Visible = false;
+            dgvSozlesmeDetay.Columns[3].Width = 80;
+            dgvSozlesmeDetay.Columns[3].HeaderText = "Araç Tutarı";
+            dgvSozlesmeDetay.Columns[4].Width = 125;
+            dgvSozlesmeDetay.Columns[4].HeaderText = "Başlangıç Tarihi";
+            dgvSozlesmeDetay.Columns[5].Width = 125;
+            dgvSozlesmeDetay.Columns[5].HeaderText = "Bitiş Tarihi";
+            dgvSozlesmeDetay.Columns[6].Visible = false;
+            dgvSozlesmeDetay.Columns[7].Visible = false;
+            dgvSozlesmeDetay.Columns[8].Width = 175;
+            dgvSozlesmeDetay.Columns[8].HeaderText = "Marka - Model";
+        }
         private void frmTeslimAl_Load(object sender, EventArgs e)
         {
             cbAracDurumu.Enabled = false;
@@ -59,6 +73,7 @@ namespace PL.RentACar
             cbYakitDurumu.Enabled = true;
             AracID = Convert.ToInt32(dgvSozlesmeDetay.SelectedRows[0].Cells[2].Value);
             a = ar.AracGetirById(AracID);
+            pbFoto.Image = Image.FromFile(Application.StartupPath + "" + a.ResimYolu);
             txtMarka.Text = a.Marka;
             txtModel.Text = a.Model;
             txtTip.Text = a.Tip;
@@ -155,6 +170,7 @@ namespace PL.RentACar
                 {
                     sdr.SozlesmeDetaySil(SozlesmeDetayId);
                     dgvSozlesmeDetay.DataSource = sdr.SozlesmeDetayListeleBySozlesmeId(Genel.SozID);
+                    sdgridDuzenle();
                     Arac eski = ar.AracGetirById(AracID);
                     Arac a = new Arac();
                     a.Id = AracID;
@@ -281,7 +297,7 @@ namespace PL.RentACar
 
         private void cbAracDurumu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (txtAracDurumu.Text.Trim().ToLower() != cbAracDurumu.Text.Trim().ToLower())
+            if (txtAracDurumu.Text.Trim().ToLower() != cbAracDurumu.Text.Trim().ToLower() && cbAracDurumu.Text.Trim().ToLower()!="hasar yok")
             {
                 txtEkstraTutar.Enabled = true;
                 txtEkstraTutar.ReadOnly = false;
@@ -300,7 +316,7 @@ namespace PL.RentACar
 
         private void cbYakitDurumu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (txtYakitDurumu.Text.Trim().ToLower() != cbYakitDurumu.Text.Trim().ToLower())
+            if ( Convert.ToInt32(txtYakitDurumu.Text.Substring(1)) > Convert.ToInt32(cbYakitDurumu.Text.Substring(1)))
             {
                 txtEkstraTutar.Enabled = true;
                 txtEkstraTutar.ReadOnly = false;
@@ -308,12 +324,17 @@ namespace PL.RentACar
                 int AlindigiYakit = Convert.ToInt32(cbYakitDurumu.Text.Substring(1));
                 int YakitFarki = VerildigiYakit - AlindigiYakit;
             }
-            else if (txtYakitDurumu.Text.Trim().ToLower() == cbYakitDurumu.Text.Trim().ToLower() && txtAracDurumu.Text.Trim().ToLower() == cbAracDurumu.Text.Trim().ToLower())
+            else if ( Convert.ToInt32(txtYakitDurumu.Text.Substring(1)) < Convert.ToInt32(cbYakitDurumu.Text.Substring(1)) && txtAracDurumu.Text.Trim().ToLower() == cbAracDurumu.Text.Trim().ToLower())
             {
                 txtEkstraTutar.Enabled = false;
                 txtEkstraTutar.ReadOnly = true;
             }
-            else if (txtYakitDurumu.Text.Trim().ToLower() == cbYakitDurumu.Text.Trim().ToLower() && !txtEkstraTutar.Enabled)
+            else if (Convert.ToInt32(txtYakitDurumu.Text.Substring(1)) > Convert.ToInt32(cbYakitDurumu.Text.Substring(1)) && !txtEkstraTutar.Enabled)
+            {
+                txtEkstraTutar.Enabled = false;
+                txtEkstraTutar.ReadOnly = true;
+            }
+            else if (txtAracDurumu.Text.Trim().ToLower() == cbAracDurumu.Text.Trim().ToLower() && !txtEkstraTutar.Enabled)
             {
                 txtEkstraTutar.Enabled = false;
                 txtEkstraTutar.ReadOnly = true;

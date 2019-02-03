@@ -152,7 +152,7 @@ namespace PL.RentACar
             dgvAraclar.Columns[7].Width = 100;
             dgvAraclar.Columns[7].HeaderText = "Durum";
             dgvAraclar.Columns[8].Width = 75;
-            dgvAraclar.Columns[8].HeaderText="Depo";
+            dgvAraclar.Columns[8].HeaderText = "Depo";
             dgvAraclar.Columns[9].Visible = false;
             dgvAraclar.Columns[10].Visible = false;
             dgvAraclar.Columns[11].Visible = false;

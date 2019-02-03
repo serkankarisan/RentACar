@@ -53,6 +53,7 @@
             this.txtSozlesmeId2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeler)).BeginInit();
@@ -333,6 +334,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -340,6 +342,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(889, 25);
             this.panel1.TabIndex = 0;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(3, 3);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(178, 20);
+            this.label10.TabIndex = 90;
+            this.label10.Text = "Sözleşme Sorgulama";
             // 
             // frmSozlesmeSorgulama
             // 
@@ -364,6 +377,7 @@
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSozlesmeDetay)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -393,5 +407,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -37,6 +37,7 @@
             this.dgvPersonel = new System.Windows.Forms.DataGridView();
             this.btnCikis = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonel)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -131,6 +132,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.btnCikis);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -138,6 +140,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(535, 25);
             this.panel2.TabIndex = 89;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(3, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(170, 20);
+            this.label5.TabIndex = 90;
+            this.label5.Text = "Personel Sorgulama";
             // 
             // frmPersonelSorgulama
             // 
@@ -161,6 +174,7 @@
             this.Load += new System.EventHandler(this.frmPersonelSorgulama_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonel)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,5 +189,6 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -56,6 +56,8 @@
             this.dgvKullanicilar = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.button1 = new System.Windows.Forms.Button();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +67,7 @@
             this.tsYeni.Image = ((System.Drawing.Image)(resources.GetObject("tsYeni.Image")));
             this.tsYeni.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsYeni.Name = "tsYeni";
-            this.tsYeni.Size = new System.Drawing.Size(54, 24);
+            this.tsYeni.Size = new System.Drawing.Size(53, 24);
             this.tsYeni.Text = "&Yeni";
             this.tsYeni.Click += new System.EventHandler(this.tsYeni_Click);
             // 
@@ -304,6 +306,8 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
+            this.toolStripLabel1,
+            this.toolStripSeparator2,
             this.tsYeni,
             this.toolStripSeparator5,
             this.tsKaydet,
@@ -331,6 +335,19 @@
             this.button1.TabIndex = 85;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.toolStripLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(147, 24);
+            this.toolStripLabel1.Text = "Kullanıcı İşlemleri";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // frmKullaniciIslemleri
             // 
@@ -399,5 +416,7 @@
         private System.Windows.Forms.DataGridView dgvKullanicilar;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }

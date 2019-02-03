@@ -76,6 +76,7 @@
             this.txtModel = new System.Windows.Forms.TextBox();
             this.txtSozlesmeTarihi = new System.Windows.Forms.TextBox();
             this.lblSozlesmeTarihi = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdeme)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -138,6 +139,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnCikis);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -649,6 +651,17 @@
             this.lblSozlesmeTarihi.Text = "Sözleşme Tarihi";
             this.lblSozlesmeTarihi.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(2, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 20);
+            this.label1.TabIndex = 90;
+            this.label1.Text = "Ödeme İşlemleri";
+            // 
             // frmOdemeIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -710,6 +723,7 @@
             this.Load += new System.EventHandler(this.frmOdemeIslemleri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdeme)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -764,5 +778,6 @@
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtSozlesmeTarihi;
         private System.Windows.Forms.Label lblSozlesmeTarihi;
+        private System.Windows.Forms.Label label1;
     }
 }
