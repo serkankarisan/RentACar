@@ -213,7 +213,7 @@ namespace PL.RentACar
                                 kh.Silindi = false;
                                 if (khr.KasaHareketEkle(kh))
                             {
-                                if (srepo.SozlesmeSil(srepo.SozlesmeGetirById(Genel.SozID)))
+                                if (srepo.SozlesmeSil(Genel.SozID))
                                 {
                                     txtEkstraTutar.Enabled = false;
                                     txtEkstraTutar.ReadOnly = true;

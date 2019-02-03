@@ -89,7 +89,8 @@ namespace BLL.RentACar.Repositories
             KasaHareket silinen = (from kh in Genel.ent.KasaHareketler
                                    where kh.Id == ID
                                    select kh).FirstOrDefault();
-            Genel.ent.KasaHareketler.Remove(silinen);
+            silinen.Silindi = true;
+            //Genel.ent.KasaHareketler.Remove(silinen);
             try
             {
                 Genel.ent.SaveChanges(); //Arakatmana göre veritabanı güncellenir.

@@ -46,8 +46,8 @@ namespace BLL.RentACar.Repositories
             Yetki silinen = (from a in Genel.ent.Yetkiler
                             where a.Id == ID
                             select a).FirstOrDefault();
-            Genel.ent.Yetkiler.Remove(silinen);
-
+            //Genel.ent.Yetkiler.Remove(silinen);
+            silinen.Silindi = true;
             try
             {
                 Genel.ent.SaveChanges();
