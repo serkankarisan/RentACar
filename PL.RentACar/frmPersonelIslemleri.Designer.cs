@@ -52,10 +52,10 @@
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.tsSil = new System.Windows.Forms.ToolStripButton();
             this.tsMusteriIslemleri = new System.Windows.Forms.ToolStrip();
-            this.txtTelefon = new System.Windows.Forms.MaskedTextBox();
-            this.cbEmail = new System.Windows.Forms.ComboBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.txtTelefon = new System.Windows.Forms.MaskedTextBox();
+            this.cbEmail = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersoneller)).BeginInit();
             this.tsMusteriIslemleri.SuspendLayout();
             this.SuspendLayout();
@@ -157,7 +157,7 @@
             this.txtAdres.Margin = new System.Windows.Forms.Padding(6);
             this.txtAdres.Multiline = true;
             this.txtAdres.Name = "txtAdres";
-            this.txtAdres.Size = new System.Drawing.Size(200, 72);
+            this.txtAdres.Size = new System.Drawing.Size(215, 72);
             this.txtAdres.TabIndex = 20;
             // 
             // txtMaas
@@ -309,26 +309,6 @@
             this.tsMusteriIslemleri.TabIndex = 85;
             this.tsMusteriIslemleri.Text = "toolStrip1";
             // 
-            // txtTelefon
-            // 
-            this.txtTelefon.Location = new System.Drawing.Point(97, 138);
-            this.txtTelefon.Mask = "(999) 000-0000";
-            this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(150, 26);
-            this.txtTelefon.TabIndex = 86;
-            // 
-            // cbEmail
-            // 
-            this.cbEmail.FormattingEnabled = true;
-            this.cbEmail.Items.AddRange(new object[] {
-            "@gmail.com",
-            "@hotmail.com",
-            "@outlook.com"});
-            this.cbEmail.Location = new System.Drawing.Point(187, 164);
-            this.cbEmail.Name = "cbEmail";
-            this.cbEmail.Size = new System.Drawing.Size(125, 28);
-            this.cbEmail.TabIndex = 87;
-            // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
@@ -341,6 +321,27 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // txtTelefon
+            // 
+            this.txtTelefon.Location = new System.Drawing.Point(97, 138);
+            this.txtTelefon.Mask = "(999) 000-0000";
+            this.txtTelefon.Name = "txtTelefon";
+            this.txtTelefon.Size = new System.Drawing.Size(150, 26);
+            this.txtTelefon.TabIndex = 86;
+            // 
+            // cbEmail
+            // 
+            this.cbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbEmail.FormattingEnabled = true;
+            this.cbEmail.Items.AddRange(new object[] {
+            "@gmail.com",
+            "@hotmail.com",
+            "@outlook.com"});
+            this.cbEmail.Location = new System.Drawing.Point(187, 167);
+            this.cbEmail.Name = "cbEmail";
+            this.cbEmail.Size = new System.Drawing.Size(125, 26);
+            this.cbEmail.TabIndex = 87;
             // 
             // frmPersonelIslemleri
             // 

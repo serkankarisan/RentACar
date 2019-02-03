@@ -27,7 +27,7 @@ namespace PL.RentACar
             {
                 if (!string.IsNullOrEmpty(txtSoyad.Text))
                 {
-                    if (!string.IsNullOrEmpty(txtTelefon.Text))
+                    if (!string.IsNullOrEmpty(txtTelefon.Text)&&txtTelefon.Text.Trim().Length==14)
                     {
                         if (!string.IsNullOrEmpty(txtEmail.Text))
                         {
@@ -39,16 +39,24 @@ namespace PL.RentACar
                                     {
                                         Personel yeni = new Personel();
                                         yeni.Adi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
-                                        yeni.Soyadi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
+                                        yeni.Soyadi = txtSoyad.Text.Substring(0, 1).ToUpper() + txtSoyad.Text.Substring(1).ToLower();
                                         yeni.Telefon = txtTelefon.Text;
-                                        yeni.Email = txtEmail.Text + cbEmail.Text;
+                                        yeni.Email = txtEmail.Text.ToLower() + cbEmail.Text.ToLower();
                                         if (per.PersonelKontrol(yeni))
                                         {
                                             MessageBox.Show("Önceden Kayıt Edilmiş Telefon veya E-Mail Girişi!", "Hata!");
                                         }
                                         else
                                         {
-                                            yeni.Adres = txtAdres.Text;
+                                            if (txtAdres.Text.Contains("-"))
+                                            {
+                                                string[] Adres = txtAdres.Text.Split('-');
+                                                yeni.Adres = Adres[0].Substring(0, 1).ToUpper() + Adres[0].Substring(1).ToLower() + "-" + Adres[1].Substring(0, 1).ToUpper() + Adres[1].Substring(1).ToLower();
+                                            }
+                                            else
+                                            {
+                                                yeni.Adres = txtAdres.Text.Substring(0, 1).ToUpper() + txtAdres.Text.Substring(1).ToLower(); ;
+                                            }
                                             yeni.Maas = Convert.ToDecimal(txtMaas.Text);
                                             if (per.PersonelEkle(yeni))
                                             {
@@ -80,7 +88,7 @@ namespace PL.RentACar
                             MessageBox.Show("Email Girmelisiniz.", "Bu Alan Boş Geçilemez.");
                     }
                     else
-                        MessageBox.Show("Telefon Girmelisiniz.", "Bu Alan Boş Geçilemez.");
+                        MessageBox.Show("Geçerli Bir Telefon Girmelisiniz.", "Bu Alan Boş Geçilemez.");
                 }
                 else
                     MessageBox.Show("Soyad Girmelisiniz.", "Bu Alan Boş Geçilemez.");
@@ -139,7 +147,7 @@ namespace PL.RentACar
             {
                 if (!string.IsNullOrEmpty(txtSoyad.Text))
                 {
-                    if (!string.IsNullOrEmpty(txtTelefon.Text))
+                    if (!string.IsNullOrEmpty(txtTelefon.Text) && txtTelefon.Text.Trim().Length == 14)
                     {
                         if (!string.IsNullOrEmpty(txtEmail.Text))
                         {
@@ -154,14 +162,22 @@ namespace PL.RentACar
                                         degisen.Adi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
                                         degisen.Soyadi = txtSoyad.Text.Substring(0, 1).ToUpper() + txtSoyad.Text.Substring(1).ToLower();
                                         degisen.Telefon = txtTelefon.Text;
-                                        degisen.Email = txtEmail.Text + cbEmail.Text;
+                                        degisen.Email = txtEmail.Text.ToLower() + cbEmail.Text.ToLower();
                                         if (per.PersonelKontrolByDegistir(degisen))
                                         {
                                             MessageBox.Show("Önceden Kayıt Edilmiş Telefon veya E-Mail Girişi!", "Değişim Hatası.");
                                         }
                                         else
                                         {
-                                            degisen.Adres = txtAdres.Text;
+                                            if (txtAdres.Text.Contains("-"))
+                                            {
+                                                string[] Adres = txtAdres.Text.Split('-');
+                                                degisen.Adres=Adres[0].Substring(0, 1).ToUpper() + Adres[0].Substring(1).ToLower()+"-"+ Adres[1].Substring(0, 1).ToUpper() + Adres[1].Substring(1).ToLower();
+                                            }
+                                            else
+                                            {
+                                                degisen.Adres = txtAdres.Text.Substring(0, 1).ToUpper() + txtAdres.Text.Substring(1).ToLower(); ;
+                                            }
                                             degisen.Maas = Convert.ToDecimal(txtMaas.Text);
                                             if (per.PersonelGuncelle(degisen))
                                             {
@@ -191,7 +207,7 @@ namespace PL.RentACar
                             MessageBox.Show("Email Girmelisiniz.", "Bu Alan Boş Geçilemez.");
                     }
                     else
-                        MessageBox.Show("Telefon Girmelisiniz.", "Bu Alan Boş Geçilemez.");
+                        MessageBox.Show("Geçerli Bir Telefon Girmelisiniz.", "Bu Alan Boş Geçilemez.");
                 }
                 else
                     MessageBox.Show("Soyad Girmelisiniz.", "Bu Alan Boş Geçilemez.");
@@ -237,6 +253,8 @@ namespace PL.RentACar
 
         private void Enable()
         {
+            cbEmail.Enabled = true;
+            txtTelefon.Enabled = true;
             foreach (Control t in this.Controls)
             {
                 if (t is TextBox)
@@ -247,6 +265,8 @@ namespace PL.RentACar
         }
         private void Disable()
         {
+            cbEmail.Enabled = false;
+            txtTelefon.Enabled = false;
             foreach (Control t in this.Controls)
             {
                 if (t is TextBox)

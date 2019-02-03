@@ -44,14 +44,14 @@ namespace PL.RentACar
 
                     if (!string.IsNullOrEmpty(txtAdres.Text))
                     {
-                        if (!string.IsNullOrEmpty(txtTelefon.Text))
+                        if (!string.IsNullOrEmpty(txtTelefon.Text) && txtTelefon.Text.Trim().Length == 14)
                         {
                             if (!string.IsNullOrEmpty(txtEmail.Text))
                             {
                                 Musteri yeni = new Musteri();
                                 yeni.Adi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
                                 yeni.Soyadi = txtSoyad.Text.Substring(0, 1).ToUpper() + txtSoyad.Text.Substring(1).ToLower();
-                                yeni.Email = txtEmail.Text + cbEmail.Text;
+                                yeni.Email = txtEmail.Text.ToLower() + cbEmail.Text.ToLower();
                                 if (!musrepo.MusteriEmailKontrol(yeni.Email))
                                 {
                                     if (long.TryParse(txtEhliyetNo.Text, out long eno))
@@ -73,18 +73,17 @@ namespace PL.RentACar
                                         return;
                                     }
 
-                                    if (txtTelefon.Text.Trim().Length == 14)
-                                    {
                                         yeni.Telefon = txtTelefon.Text;
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Telefon Numarasını Kontrol Edin!");
-                                        return;
-                                    }
-
-                                    yeni.Adres = txtAdres.Text.Substring(0, 1).ToUpper() + txtAdres.Text.Substring(1).ToLower();
-                                    yeni.DogumTarihi = Convert.ToDateTime(dtpDogumTarihi.Value.ToShortDateString());
+                                        if (txtAdres.Text.Contains("-"))
+                                        {
+                                            string[] Adres = txtAdres.Text.Split('-');
+                                            yeni.Adres = Adres[0].Substring(0, 1).ToUpper() + Adres[0].Substring(1).ToLower() + "-" + Adres[1].Substring(0, 1).ToUpper() + Adres[1].Substring(1).ToLower();
+                                        }
+                                        else
+                                        {
+                                            yeni.Adres = txtAdres.Text.Substring(0, 1).ToUpper() + txtAdres.Text.Substring(1).ToLower(); ;
+                                        }
+                                        yeni.DogumTarihi = Convert.ToDateTime(dtpDogumTarihi.Value.ToShortDateString());
                                     yeni.Cinsiyet = cbCinsiyet.Text.Substring(0, 1).ToUpper() + cbCinsiyet.Text.Substring(1).ToLower();
                                     yeni.EhliyetTarihi = Convert.ToDateTime(dtpEhliyetTarihi.Value.ToShortDateString());
                                     if (musrepo.MusteriKontrol(yeni))
@@ -120,6 +119,10 @@ namespace PL.RentACar
                             {
                                 MessageBox.Show("Email Girmelisiniz!", "Bu Alan Boş Geçilemez!");
                             }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Geçerli Bir Telefon Girmelisiniz!", "Bu Alan Boş Geçilemez!");
                         }
                     }
                     else
@@ -194,14 +197,14 @@ namespace PL.RentACar
 
                     if (!string.IsNullOrEmpty(txtAdres.Text))
                     {
-                        if (!string.IsNullOrEmpty(txtTelefon.Text))
+                        if (!string.IsNullOrEmpty(txtTelefon.Text) && txtTelefon.Text.Trim().Length == 14)
                         {
                             if (!string.IsNullOrEmpty(txtEmail.Text))
                             {
                                 Musteri degisen = new Musteri();
                                 degisen.Adi = txtAd.Text.Substring(0, 1).ToUpper() + txtAd.Text.Substring(1).ToLower();
                                 degisen.Soyadi = txtSoyad.Text.Substring(0, 1).ToUpper() + txtSoyad.Text.Substring(1).ToLower();
-                                degisen.Email = txtEmail.Text + cbEmail.Text;
+                                degisen.Email = txtEmail.Text.ToLower() + cbEmail.Text.ToLower();
                                 if (long.TryParse(txtEhliyetNo.Text, out long eno))
                                 {
                                     degisen.EhliyetNo = txtEhliyetNo.Text;
@@ -220,17 +223,16 @@ namespace PL.RentACar
                                     MessageBox.Show("Geçerli Bir TC Kimlik No Girin!");
                                     return;
                                 }
-
-                                if (txtTelefon.Text.Trim().Length == 14)
+                                degisen.Telefon = txtTelefon.Text;
+                                degisen.Adres = txtAdres.Text.Substring(0, 1).ToUpper() + txtAdres.Text.Substring(1).ToLower(); if (txtAdres.Text.Contains("-"))
                                 {
-                                    degisen.Telefon = txtTelefon.Text;
+                                    string[] Adres = txtAdres.Text.Split('-');
+                                    degisen.Adres = Adres[0].Substring(0, 1).ToUpper() + Adres[0].Substring(1).ToLower() + "-" + Adres[1].Substring(0, 1).ToUpper() + Adres[1].Substring(1).ToLower();
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Telefon Numarasını Kontrol Edin!");
-                                    return;
+                                    degisen.Adres = txtAdres.Text.Substring(0, 1).ToUpper() + txtAdres.Text.Substring(1).ToLower(); ;
                                 }
-                                degisen.Adres = txtAdres.Text.Substring(0, 1).ToUpper() + txtAdres.Text.Substring(1).ToLower();
                                 degisen.TcKimlikNo = txtTCKNo.Text;
                                 degisen.DogumTarihi = Convert.ToDateTime(dtpDogumTarihi.Value.ToShortDateString());
                                 degisen.Cinsiyet = cbCinsiyet.Text.Substring(0, 1).ToUpper() + cbCinsiyet.Text.Substring(1).ToLower();
@@ -261,6 +263,10 @@ namespace PL.RentACar
                             {
                                 MessageBox.Show("Email Girmelisiniz!", "Bu Alan Boş Geçilemez!");
                             }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Geçerli Bir Telefon Girmelisiniz!", "Bu Alan Boş Geçilemez!");
                         }
                     }
                     else

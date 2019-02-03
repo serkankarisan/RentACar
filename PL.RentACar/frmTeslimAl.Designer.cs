@@ -449,6 +449,7 @@
             // cbAracDurumu
             // 
             this.cbAracDurumu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbAracDurumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAracDurumu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbAracDurumu.FormattingEnabled = true;
             this.cbAracDurumu.Items.AddRange(new object[] {
@@ -465,6 +466,7 @@
             // cbYakitDurumu
             // 
             this.cbYakitDurumu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbYakitDurumu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbYakitDurumu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbYakitDurumu.FormattingEnabled = true;
             this.cbYakitDurumu.Items.AddRange(new object[] {

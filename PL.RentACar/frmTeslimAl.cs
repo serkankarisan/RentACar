@@ -117,7 +117,7 @@ namespace PL.RentACar
                 mh.Tarih = DateTime.Now;
                 mh.MusteriId = MusteriID;
                 mh.ParaBirimi = "TL";
-                if (txtEkstraTutar.Enabled)
+                if (!txtEkstraTutar.ReadOnly)
                 {
                     if (Convert.ToDecimal(txtEkstraTutar.Text.Trim()) != Convert.ToDecimal(0))
                     {
@@ -194,7 +194,7 @@ namespace PL.RentACar
                                 kh.SozlesmeId = Genel.SozID;
                                 kh.GelirGiderId = 2;
                                 kh.Tarih = DateTime.Now;
-                                if (txtEkstraTutar.Enabled)
+                                if (!txtEkstraTutar.ReadOnly)
                                 {
                                     if (Convert.ToDecimal(txtEkstraTutar.Text.Trim()) != Convert.ToDecimal(0))
                                     {
@@ -218,7 +218,8 @@ namespace PL.RentACar
                                     cbAracDurumu.Enabled = false;
                                     cbYakitDurumu.Enabled = false;
                                     MessageBox.Show("Arac Teslim Alındı.", "İşlem Başarılı.");
-                                }
+                                Temizle();
+                            }
                             
                         }
                         else
@@ -228,7 +229,7 @@ namespace PL.RentACar
                             kh.SozlesmeId = Genel.SozID;
                             kh.GelirGiderId = 2;
                             kh.Tarih = DateTime.Now;
-                            if (txtEkstraTutar.Enabled)
+                            if (!txtEkstraTutar.ReadOnly)
                             {
                                 if (Convert.ToDecimal(txtEkstraTutar.Text.Trim()) != Convert.ToDecimal(0))
                                 {
@@ -252,6 +253,7 @@ namespace PL.RentACar
                                 cbAracDurumu.Enabled = false;
                                 cbYakitDurumu.Enabled = false;
                                 MessageBox.Show("Arac Teslim Alındı.", "İşlem Başarılı.");
+                                Temizle();
                             }
                         }
                     }
@@ -340,6 +342,20 @@ namespace PL.RentACar
                 txtEkstraTutar.ReadOnly = true;
             }
 
+        }
+        private void Temizle()
+        {
+            pbFoto.Image = null;
+            cbAracDurumu.SelectedIndex = 0;
+            cbYakitDurumu.SelectedIndex = 3;
+            rdnYes.Enabled = true;
+            foreach (Control t in this.Controls)
+            {
+                if (t is TextBox)
+                {
+                    t.Text = "";
+                }
+            }
         }
     }
 }
