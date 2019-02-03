@@ -28,7 +28,7 @@ namespace PL.RentACar
             dtpBitis.Enabled = false;
             dtpBaslangic.Enabled = false;
             dgvMusteriler.DataSource = mr.MusteriListele();
-            dgvMusteriler.Columns[0].Visible = false;
+            musteridgv();
             MusteriId = Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value);
             txtPuan.Text = mhr.MusteriHareketPuanGetir(MusteriId).ToString();
         }
@@ -36,26 +36,31 @@ namespace PL.RentACar
         private void txtAd_TextChanged(object sender, EventArgs e)
         {
            dgvMusteriler.DataSource = mr.MusteriSorgula(txtAd.Text, txtSoyad.Text, txtTCKNo.Text, txtEhliyetNo.Text);
-            
+            musteridgv();
+
         }
 
         private void txtSoyad_TextChanged(object sender, EventArgs e)
         {
             dgvMusteriler.DataSource = mr.MusteriSorgula(txtAd.Text, txtSoyad.Text, txtTCKNo.Text, txtEhliyetNo.Text);
+            musteridgv();
         }
 
         private void txtTCKNo_TextChanged(object sender, EventArgs e)
         {
             dgvMusteriler.DataSource = mr.MusteriSorgula(txtAd.Text, txtSoyad.Text, txtTCKNo.Text, txtEhliyetNo.Text);
+            musteridgv();
         }
 
         private void txtEhliyetNo_TextChanged(object sender, EventArgs e)
         {
             dgvMusteriler.DataSource = mr.MusteriSorgula(txtAd.Text, txtSoyad.Text, txtTCKNo.Text, txtEhliyetNo.Text);
+            musteridgv();
         }
 
         private void dgvMusteriler_DoubleClick(object sender, EventArgs e)
         {
+            dgvMusteriler.Width = 710;
             MusteriId = Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value);
             Musteri m = mr.MusteriGetirById(MusteriId);
             txtAd.Text = m.Adi;
@@ -68,12 +73,14 @@ namespace PL.RentACar
             txtEhliyetNo.ReadOnly = true;
             MusteriHareketId = Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value);
             dgvMusteriler.DataSource = mhr.MusteriHareketListeleByMusteri(MusteriHareketId);
+            musterihareketdgv();
             dtpBitis.Enabled = true;
             dtpBaslangic.Enabled = true;
         }
 
         private void btnGeri_Click(object sender, EventArgs e)
         {
+            dgvMusteriler.Width = 950;
             txtAd.Clear();
             txtSoyad.Clear();
             txtTCKNo.Clear();
@@ -83,7 +90,7 @@ namespace PL.RentACar
             txtTCKNo.ReadOnly = false;
             txtEhliyetNo.ReadOnly = false;
             dgvMusteriler.DataSource = mr.MusteriListele();
-            dgvMusteriler.Columns[0].Visible = false;
+            musteridgv();
             txtPuan.Text = mhr.MusteriHareketPuanGetir(MusteriId).ToString();
             dtpBitis.Enabled = false;
             dtpBaslangic.Enabled = false;
@@ -102,6 +109,7 @@ namespace PL.RentACar
             else
             {
                 dgvMusteriler.DataSource = mhr.MusteriHareketSorgula(MusteriHareketId, basla, dtpBitis.Value);
+                musterihareketdgv();
             }
         }
 
@@ -117,10 +125,51 @@ namespace PL.RentACar
             else
             {
                 dgvMusteriler.DataSource = mhr.MusteriHareketSorgula(MusteriHareketId, basla, dtpBitis.Value);
+                musterihareketdgv();
             }
             
         }
-
+        private void musteridgv()
+        {
+            dgvMusteriler.Columns[0].Visible = false;
+            dgvMusteriler.Columns[1].Width = 100;
+            dgvMusteriler.Columns[1].HeaderText="Ad";
+            dgvMusteriler.Columns[2].Width = 100;
+            dgvMusteriler.Columns[2].HeaderText = "Soyad";
+            dgvMusteriler.Columns[3].Width = 125;
+            dgvMusteriler.Columns[3].HeaderText = "Telefon";
+            dgvMusteriler.Columns[4].Width = 175;
+            dgvMusteriler.Columns[4].HeaderText = "Email";
+            dgvMusteriler.Columns[5].Width = 175;
+            dgvMusteriler.Columns[5].HeaderText = "Adres";
+            dgvMusteriler.Columns[6].Width = 125;
+            dgvMusteriler.Columns[6].HeaderText = "TC Kimlik No";
+            dgvMusteriler.Columns[7].Width = 100;
+            dgvMusteriler.Columns[7].HeaderText = "Doğum Tarihi";
+            dgvMusteriler.Columns[8].Visible = false;
+            dgvMusteriler.Columns[9].Width = 80;
+            dgvMusteriler.Columns[9].HeaderText = "Ehliyet No";
+            dgvMusteriler.Columns[10].Visible = false;
+            dgvMusteriler.Columns[11].Visible = false;
+        }
+        private void musterihareketdgv()
+        {
+            dgvMusteriler.Columns[0].Visible = false;
+            dgvMusteriler.Columns[1].Width = 125;
+            dgvMusteriler.Columns[1].HeaderText = "Tarih";
+            dgvMusteriler.Columns[2].Visible = false;
+            dgvMusteriler.Columns[3].Width = 75;
+            dgvMusteriler.Columns[3].HeaderText = "Para Birimi";
+            dgvMusteriler.Columns[4].Width = 75;
+            dgvMusteriler.Columns[4].HeaderText = "Puan";
+            dgvMusteriler.Columns[5].Width = 100;
+            dgvMusteriler.Columns[5].HeaderText = "Tutar";
+            dgvMusteriler.Columns[6].Width = 125;
+            dgvMusteriler.Columns[6].HeaderText = "Tutar Türü";
+            dgvMusteriler.Columns[7].Visible = false;
+            dgvMusteriler.Columns[8].Width = 150;
+            dgvMusteriler.Columns[8].HeaderText = "Müşteri Ad Soyad";
+        }
         private void btnCikis_Click(object sender, EventArgs e)
         {
             this.Close();

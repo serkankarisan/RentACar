@@ -47,16 +47,24 @@ namespace PL.RentACar
         {
             dgvMusteriler.DataSource = Liste;
             dgvMusteriler.Columns[0].Visible = false;
-            dgvMusteriler.Columns[1].Width = 105;
-            dgvMusteriler.Columns[2].Width = 105;
+            dgvMusteriler.Columns[1].Width = 100;
+            dgvMusteriler.Columns[1].HeaderText = "Ad";
+            dgvMusteriler.Columns[2].Width = 100;
+            dgvMusteriler.Columns[2].HeaderText = "Soyad";
             dgvMusteriler.Columns[3].Width = 125;
+            dgvMusteriler.Columns[3].HeaderText = "Telefon";
             dgvMusteriler.Columns[4].Width = 175;
+            dgvMusteriler.Columns[4].HeaderText = "Email";
             dgvMusteriler.Columns[5].Width = 175;
+            dgvMusteriler.Columns[5].HeaderText = "Adres";
             dgvMusteriler.Columns[6].Width = 125;
+            dgvMusteriler.Columns[6].HeaderText = "TC Kimlik No";
             dgvMusteriler.Columns[7].Width = 100;
-            dgvMusteriler.Columns[8].Width = 90;
-            dgvMusteriler.Columns[9].Width = 90;
-            dgvMusteriler.Columns[10].Width = 100;
+            dgvMusteriler.Columns[7].HeaderText = "Doğum Tarihi";
+            dgvMusteriler.Columns[8].Visible = false;
+            dgvMusteriler.Columns[9].Width = 80;
+            dgvMusteriler.Columns[9].HeaderText = "Ehliyet No";
+            dgvMusteriler.Columns[10].Visible = false;
             dgvMusteriler.Columns[11].Visible = false;
         }
 

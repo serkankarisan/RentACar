@@ -57,6 +57,8 @@
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.tsMusteriIslemleri = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.cbEmail = new System.Windows.Forms.ComboBox();
             this.txtTelefon = new System.Windows.Forms.MaskedTextBox();
@@ -64,8 +66,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnYenile = new System.Windows.Forms.Button();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).BeginInit();
             this.tsMusteriIslemleri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,8 +73,9 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 382);
+            this.label8.Location = new System.Drawing.Point(12, 381);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 20);
             this.label8.TabIndex = 77;
@@ -82,7 +83,8 @@
             // 
             // dtpDogumTarihi
             // 
-            this.dtpDogumTarihi.Location = new System.Drawing.Point(121, 322);
+            this.dtpDogumTarihi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpDogumTarihi.Location = new System.Drawing.Point(121, 321);
             this.dtpDogumTarihi.Name = "dtpDogumTarihi";
             this.dtpDogumTarihi.Size = new System.Drawing.Size(224, 26);
             this.dtpDogumTarihi.TabIndex = 6;
@@ -101,7 +103,8 @@
             // 
             // dtpEhliyetTarihi
             // 
-            this.dtpEhliyetTarihi.Location = new System.Drawing.Point(121, 411);
+            this.dtpEhliyetTarihi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpEhliyetTarihi.Location = new System.Drawing.Point(121, 410);
             this.dtpEhliyetTarihi.Name = "dtpEhliyetTarihi";
             this.dtpEhliyetTarihi.Size = new System.Drawing.Size(224, 26);
             this.dtpEhliyetTarihi.TabIndex = 9;
@@ -113,8 +116,9 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 351);
+            this.label10.Location = new System.Drawing.Point(12, 350);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 20);
             this.label10.TabIndex = 80;
@@ -122,19 +126,21 @@
             // 
             // cbCinsiyet
             // 
+            this.cbCinsiyet.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbCinsiyet.FormattingEnabled = true;
             this.cbCinsiyet.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
-            this.cbCinsiyet.Location = new System.Drawing.Point(121, 351);
+            this.cbCinsiyet.Location = new System.Drawing.Point(121, 350);
             this.cbCinsiyet.Name = "cbCinsiyet";
             this.cbCinsiyet.Size = new System.Drawing.Size(121, 28);
             this.cbCinsiyet.TabIndex = 7;
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 322);
+            this.label9.Location = new System.Drawing.Point(12, 321);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(103, 20);
             this.label9.TabIndex = 78;
@@ -142,7 +148,8 @@
             // 
             // txtEhliyetNo
             // 
-            this.txtEhliyetNo.Location = new System.Drawing.Point(121, 382);
+            this.txtEhliyetNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtEhliyetNo.Location = new System.Drawing.Point(121, 381);
             this.txtEhliyetNo.MaxLength = 6;
             this.txtEhliyetNo.Name = "txtEhliyetNo";
             this.txtEhliyetNo.Size = new System.Drawing.Size(150, 26);
@@ -150,8 +157,9 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 411);
+            this.label7.Location = new System.Drawing.Point(12, 410);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 20);
             this.label7.TabIndex = 75;
@@ -159,24 +167,23 @@
             // 
             // dgvMusteriler
             // 
-            this.dgvMusteriler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMusteriler.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvMusteriler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvMusteriler.BackgroundColor = System.Drawing.Color.White;
             this.dgvMusteriler.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvMusteriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMusteriler.Location = new System.Drawing.Point(383, 67);
+            this.dgvMusteriler.Location = new System.Drawing.Point(351, 66);
             this.dgvMusteriler.Name = "dgvMusteriler";
             this.dgvMusteriler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMusteriler.Size = new System.Drawing.Size(525, 406);
+            this.dgvMusteriler.Size = new System.Drawing.Size(735, 406);
             this.dgvMusteriler.TabIndex = 0;
             this.dgvMusteriler.DoubleClick += new System.EventHandler(this.dgvMusteriler_DoubleClick);
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 293);
+            this.label6.Location = new System.Drawing.Point(12, 292);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 20);
             this.label6.TabIndex = 73;
@@ -219,8 +226,9 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 215);
+            this.label5.Location = new System.Drawing.Point(12, 214);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 20);
             this.label5.TabIndex = 72;
@@ -243,8 +251,9 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 184);
+            this.label4.Location = new System.Drawing.Point(12, 183);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 20);
             this.label4.TabIndex = 71;
@@ -252,8 +261,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 155);
+            this.label3.Location = new System.Drawing.Point(12, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 20);
             this.label3.TabIndex = 70;
@@ -261,8 +271,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 126);
+            this.label2.Location = new System.Drawing.Point(12, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 69;
@@ -270,8 +281,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 97);
+            this.label1.Location = new System.Drawing.Point(12, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 20);
             this.label1.TabIndex = 68;
@@ -279,7 +291,8 @@
             // 
             // txtTCKNo
             // 
-            this.txtTCKNo.Location = new System.Drawing.Point(121, 293);
+            this.txtTCKNo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTCKNo.Location = new System.Drawing.Point(121, 292);
             this.txtTCKNo.MaxLength = 11;
             this.txtTCKNo.Name = "txtTCKNo";
             this.txtTCKNo.Size = new System.Drawing.Size(150, 26);
@@ -287,7 +300,8 @@
             // 
             // txtAdres
             // 
-            this.txtAdres.Location = new System.Drawing.Point(121, 215);
+            this.txtAdres.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtAdres.Location = new System.Drawing.Point(121, 214);
             this.txtAdres.Multiline = true;
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(224, 72);
@@ -295,14 +309,16 @@
             // 
             // txtSoyad
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(121, 126);
+            this.txtSoyad.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSoyad.Location = new System.Drawing.Point(121, 125);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(150, 26);
             this.txtSoyad.TabIndex = 1;
             // 
             // txtAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(121, 97);
+            this.txtAd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtAd.Location = new System.Drawing.Point(121, 96);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(150, 26);
             this.txtAd.TabIndex = 0;
@@ -323,89 +339,9 @@
             this.tsSil});
             this.tsMusteriIslemleri.Location = new System.Drawing.Point(0, 0);
             this.tsMusteriIslemleri.Name = "tsMusteriIslemleri";
-            this.tsMusteriIslemleri.Size = new System.Drawing.Size(920, 25);
+            this.tsMusteriIslemleri.Size = new System.Drawing.Size(1098, 25);
             this.tsMusteriIslemleri.TabIndex = 1;
             this.tsMusteriIslemleri.Text = "toolStrip1";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(121, 184);
-            this.txtEmail.Multiline = true;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 28);
-            this.txtEmail.TabIndex = 3;
-            // 
-            // cbEmail
-            // 
-            this.cbEmail.FormattingEnabled = true;
-            this.cbEmail.Items.AddRange(new object[] {
-            "@gmail.com",
-            "@hotmail.com",
-            "@outlook.com"});
-            this.cbEmail.Location = new System.Drawing.Point(220, 184);
-            this.cbEmail.Name = "cbEmail";
-            this.cbEmail.Size = new System.Drawing.Size(125, 28);
-            this.cbEmail.TabIndex = 81;
-            // 
-            // txtTelefon
-            // 
-            this.txtTelefon.Location = new System.Drawing.Point(121, 155);
-            this.txtTelefon.Mask = "(999) 000-0000";
-            this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(150, 26);
-            this.txtTelefon.TabIndex = 2;
-            // 
-            // btnCikis
-            // 
-            this.btnCikis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCikis.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnCikis.FlatAppearance.BorderSize = 0;
-            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
-            this.btnCikis.Location = new System.Drawing.Point(895, 0);
-            this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(25, 24);
-            this.btnCikis.TabIndex = 84;
-            this.btnCikis.UseVisualStyleBackColor = false;
-            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(365, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 86;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(383, 39);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(125, 20);
-            this.label11.TabIndex = 82;
-            this.label11.Text = "Müşteri Listesi";
-            // 
-            // btnYenile
-            // 
-            this.btnYenile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnYenile.BackColor = System.Drawing.Color.Transparent;
-            this.btnYenile.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnYenile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnYenile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnYenile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnYenile.Image = ((System.Drawing.Image)(resources.GetObject("btnYenile.Image")));
-            this.btnYenile.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnYenile.Location = new System.Drawing.Point(806, 35);
-            this.btnYenile.Name = "btnYenile";
-            this.btnYenile.Size = new System.Drawing.Size(98, 28);
-            this.btnYenile.TabIndex = 87;
-            this.btnYenile.Text = "Yenile";
-            this.btnYenile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnYenile.UseVisualStyleBackColor = false;
-            this.btnYenile.Click += new System.EventHandler(this.btnYenile_Click);
             // 
             // toolStripLabel1
             // 
@@ -420,12 +356,97 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // txtEmail
+            // 
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtEmail.Location = new System.Drawing.Point(121, 183);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 28);
+            this.txtEmail.TabIndex = 3;
+            // 
+            // cbEmail
+            // 
+            this.cbEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbEmail.FormattingEnabled = true;
+            this.cbEmail.Items.AddRange(new object[] {
+            "@gmail.com",
+            "@hotmail.com",
+            "@outlook.com"});
+            this.cbEmail.Location = new System.Drawing.Point(220, 183);
+            this.cbEmail.Name = "cbEmail";
+            this.cbEmail.Size = new System.Drawing.Size(125, 28);
+            this.cbEmail.TabIndex = 81;
+            // 
+            // txtTelefon
+            // 
+            this.txtTelefon.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTelefon.Location = new System.Drawing.Point(121, 154);
+            this.txtTelefon.Mask = "(999) 000-0000";
+            this.txtTelefon.Name = "txtTelefon";
+            this.txtTelefon.Size = new System.Drawing.Size(150, 26);
+            this.txtTelefon.TabIndex = 2;
+            // 
+            // btnCikis
+            // 
+            this.btnCikis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCikis.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnCikis.FlatAppearance.BorderSize = 0;
+            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCikis.Image = ((System.Drawing.Image)(resources.GetObject("btnCikis.Image")));
+            this.btnCikis.Location = new System.Drawing.Point(1073, 0);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(25, 24);
+            this.btnCikis.TabIndex = 84;
+            this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(333, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 86;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.Location = new System.Drawing.Point(351, 38);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(125, 20);
+            this.label11.TabIndex = 82;
+            this.label11.Text = "Müşteri Listesi";
+            // 
+            // btnYenile
+            // 
+            this.btnYenile.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnYenile.BackColor = System.Drawing.Color.Transparent;
+            this.btnYenile.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnYenile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnYenile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYenile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnYenile.Image = ((System.Drawing.Image)(resources.GetObject("btnYenile.Image")));
+            this.btnYenile.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnYenile.Location = new System.Drawing.Point(808, 33);
+            this.btnYenile.Name = "btnYenile";
+            this.btnYenile.Size = new System.Drawing.Size(98, 28);
+            this.btnYenile.TabIndex = 87;
+            this.btnYenile.Text = "Yenile";
+            this.btnYenile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnYenile.UseVisualStyleBackColor = false;
+            this.btnYenile.Click += new System.EventHandler(this.btnYenile_Click);
+            // 
             // frmMusteriIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(920, 485);
+            this.ClientSize = new System.Drawing.Size(1098, 485);
             this.Controls.Add(this.cbEmail);
             this.Controls.Add(this.btnYenile);
             this.Controls.Add(this.txtTelefon);
