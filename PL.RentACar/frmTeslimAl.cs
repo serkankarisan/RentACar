@@ -50,7 +50,7 @@ namespace PL.RentACar
             dgvSozlesmeDetay.Columns[2].Visible = false;
             dgvSozlesmeDetay.Columns[3].Width = 80;
             dgvSozlesmeDetay.Columns[3].HeaderText = "Araç Tutarı";
-            dgvSozlesmeDetay.Columns[4].Width = 125;
+            dgvSozlesmeDetay.Columns[4].Width = 125; 
             dgvSozlesmeDetay.Columns[4].HeaderText = "Başlangıç Tarihi";
             dgvSozlesmeDetay.Columns[5].Width = 125;
             dgvSozlesmeDetay.Columns[5].HeaderText = "Bitiş Tarihi";
