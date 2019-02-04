@@ -24,9 +24,11 @@ namespace PL.RentACar
 
         private void frmRaporlar_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'RentDataSetMusteri.vw_musteriler' table. You can move, or remove it, as needed.
+            this.vw_musterilerTableAdapter.Fill(this.RentDataSetMusteri.vw_musteriler);
+            //this.vw_musterilerTableAdapter.FillByMusteri(this.RentDataSetMusteri.vw_musteriler, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtTCKNo.Text.Trim(), txtEhliyetNo.Text.Trim());
             DateTime basla = Convert.ToDateTime(dtpBaslangic.Value.ToShortDateString());
             // TODO: This line of code loads data into the 'RentACarDataSetMusteri.vw_musteriler' table. You can move, or remove it, as needed.
-            this.vw_musterilerTableAdapter.FillByMusteri(this.RentACarDataSetMusteri.vw_musteriler, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtEhliyetNo.Text.Trim(), txtTCKNo.Text.Trim());
             // TODO: This line of code loads data into the 'RentACarDataSet2.KasaHareketler' table. You can move, or remove it, as needed.
             this.KasaHareketlerTableAdapter.FillBykasa(this.RentACarDataSet2.KasaHareketler,basla,dtpBitis.Value);
             // TODO: This line of code loads data into the 'RentACarDataSet1.MusteriHareketler' table. You can move, or remove it, as needed.
@@ -120,7 +122,7 @@ namespace PL.RentACar
             }
             else if (tabControl1.SelectedIndex == 2)
             {
-                this.vw_musterilerTableAdapter.FillByMusteri(this.RentACarDataSetMusteri.vw_musteriler, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtEhliyetNo.Text.Trim(), txtTCKNo.Text.Trim());
+                this.vw_musterilerTableAdapter.FillByMusteri(this.RentDataSetMusteri.vw_musteriler, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtTCKNo.Text.Trim(), txtEhliyetNo.Text.Trim());
                 this.reportViewer3.RefreshReport();
             }
            
@@ -135,7 +137,7 @@ namespace PL.RentACar
             }
             else if (tabControl1.SelectedIndex == 2)
             {
-                this.vw_musterilerTableAdapter.FillByMusteri(this.RentACarDataSetMusteri.vw_musteriler, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtEhliyetNo.Text.Trim(), txtTCKNo.Text.Trim());
+                this.vw_musterilerTableAdapter.FillByMusteri(this.RentDataSetMusteri.vw_musteriler, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtTCKNo.Text.Trim(), txtEhliyetNo.Text.Trim());
                 this.reportViewer3.RefreshReport();
             }
         }
@@ -149,7 +151,7 @@ namespace PL.RentACar
             }
             else if (tabControl1.SelectedIndex == 2)
             {
-                this.vw_musterilerTableAdapter.FillByMusteri(this.RentACarDataSetMusteri.vw_musteriler, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtEhliyetNo.Text.Trim(), txtTCKNo.Text.Trim());
+                this.vw_musterilerTableAdapter.FillByMusteri(this.RentDataSetMusteri.vw_musteriler, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtTCKNo.Text.Trim(), txtEhliyetNo.Text.Trim());
                 this.reportViewer3.RefreshReport();
             }
         }
@@ -163,7 +165,7 @@ namespace PL.RentACar
             }
             else if (tabControl1.SelectedIndex == 2)
             {
-                this.vw_musterilerTableAdapter.FillByMusteri(this.RentACarDataSetMusteri.vw_musteriler, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtEhliyetNo.Text.Trim(), txtTCKNo.Text.Trim());
+                this.vw_musterilerTableAdapter.FillByMusteri(this.RentDataSetMusteri.vw_musteriler, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtTCKNo.Text.Trim(), txtEhliyetNo.Text.Trim());
                 this.reportViewer3.RefreshReport();
             }
         }

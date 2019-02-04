@@ -2,18 +2,18 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="RentACarDataSetMusteri">
+    <DataSource Name="RentDataSetMusteri">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>a4400563-4159-482f-b56b-b899eb879884</rd:DataSourceID>
+      <rd:DataSourceID>dbf69d7b-2432-4fc3-bd84-639117cd7bcc</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="DataSetMusteriHareket">
       <Query>
-        <DataSourceName>RentACarDataSetMusteri</DataSourceName>
+        <DataSourceName>RentDataSetMusteri</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -99,8 +99,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>RentACarDataSetMusteri</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Galatasaray\Source\Repos\serkankarisan\RentACar_23012019\PL.RentACar\RentACarDataSetMusteri.xsd</rd:SchemaPath>
+        <rd:DataSetName>RentDataSetMusteri</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Galatasaray\Source\Repos\serkankarisan\RentACar_23012019\PL.RentACar\RentDataSetMusteri.xsd</rd:SchemaPath>
         <rd:TableName>vw_musteriler</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -125,10 +125,10 @@
                   <Width>2.5cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.26187cm</Width>
+                  <Width>2.5cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.05563cm</Width>
+                  <Width>2.5cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.5cm</Width>
@@ -137,10 +137,10 @@
                   <Width>2.5cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.16146cm</Width>
+                  <Width>2.5cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.89688cm</Width>
+                  <Width>2.5cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -695,7 +695,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!MusteriGetirisi.Value)</Value>
+                                  <Value>=Fields!MusteriGetirisi.Value</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
                                     <Color>#333333</Color>
@@ -845,11 +845,11 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DataSet1</DataSetName>
+            <DataSetName>DataSetMusteriHareket</DataSetName>
             <Top>1.5875cm</Top>
-            <Left>1.27cm</Left>
+            <Left>2.2225cm</Left>
             <Height>1.2cm</Height>
-            <Width>23.87583cm</Width>
+            <Width>22.5cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -863,7 +863,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>MÜŞTERİ RAPORLAMA</Value>
+                    <Value>MUSTERİ RAPOR</Value>
                     <Style>
                       <FontSize>20pt</FontSize>
                     </Style>
@@ -873,10 +873,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox19</rd:DefaultName>
-            <Top>0.60537cm</Top>
-            <Left>9.83933cm</Left>
-            <Height>0.86458cm</Height>
-            <Width>7.74067cm</Width>
+            <Top>0.26141cm</Top>
+            <Left>9.7225cm</Left>
+            <Height>0.94396cm</Height>
+            <Width>7.5cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -957,12 +957,6 @@
                       <Style />
                     </ChartDataLabel>
                   </ChartEmptyPoints>
-                  <CustomProperties>
-                    <CustomProperty>
-                      <Name>DrawingStyle</Name>
-                      <Value>Cylinder</Value>
-                    </CustomProperty>
-                  </CustomProperties>
                   <ValueAxisName>Primary</ValueAxisName>
                   <CategoryAxisName>Primary</CategoryAxisName>
                   <ChartSmartLabel>
@@ -1198,9 +1192,6 @@
                     </ChartAxisScaleBreak>
                   </ChartAxis>
                 </ChartValueAxes>
-                <ChartThreeDProperties>
-                  <Enabled>true</Enabled>
-                </ChartThreeDProperties>
                 <Style>
                   <BackgroundColor>#00ffffff</BackgroundColor>
                   <BackgroundGradientType>None</BackgroundGradientType>
@@ -1228,7 +1219,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>GETİRİYE GÖRE MÜŞTERİLER</Caption>
+                <Caption>Chart Title</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -1257,11 +1248,11 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>DataSet1</DataSetName>
-            <Top>3.35703cm</Top>
-            <Left>1.27cm</Left>
-            <Height>6.64042cm</Height>
-            <Width>9.76188cm</Width>
+            <DataSetName>DataSetMusteriHareket</DataSetName>
+            <Top>3.5687cm</Top>
+            <Left>2.2225cm</Left>
+            <Height>5.84667cm</Height>
+            <Width>10cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -1330,7 +1321,7 @@
                       <DataElementOutput>Output</DataElementOutput>
                     </ChartDataPoint>
                   </ChartDataPoints>
-                  <Subtype>Stacked</Subtype>
+                  <Subtype>PercentStacked</Subtype>
                   <Style />
                   <ChartEmptyPoints>
                     <Style />
@@ -1606,7 +1597,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>PUANA GÖRE MÜŞTERİLER</Caption>
+                <Caption>Chart Title</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -1635,11 +1626,11 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>DataSet1</DataSetName>
-            <Top>3.35703cm</Top>
-            <Left>14.0875cm</Left>
-            <Height>6.64042cm</Height>
-            <Width>11.05833cm</Width>
+            <DataSetName>DataSetMusteriHareket</DataSetName>
+            <Top>3.5687cm</Top>
+            <Left>14.7225cm</Left>
+            <Height>5.84667cm</Height>
+            <Width>10cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -1651,10 +1642,10 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>4.75892in</Height>
+        <Height>4.73809in</Height>
         <Style />
       </Body>
-      <Width>10.03535in</Width>
+      <Width>10.05567in</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
@@ -1674,5 +1665,5 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>85669c7f-800d-4c54-addc-0b30ba03306a</rd:ReportID>
+  <rd:ReportID>a8088806-be2f-4f13-8c55-777ea4a28177</rd:ReportID>
 </Report>
