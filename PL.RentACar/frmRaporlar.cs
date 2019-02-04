@@ -34,13 +34,8 @@ namespace PL.RentACar
             lblSoyad.Visible = false;
             lblTC.Visible = false;
             lblEhNo.Visible = false;
-            lblBaslangic.Visible = false;
-            lblBitis.Visible = false;
-            dtpBaslangic.Visible = false;
-            dtpBitis.Visible = false;
             // TODO: This line of code loads data into the 'RentACarDataSetM.view_musteri' table. You can move, or remove it, as needed.
             this.view_musteriTableAdapter.Fill(this.RentACarDataSetM.view_musteri);
-            DateTime basla = Convert.ToDateTime(dtpBaslangic.Value.ToShortDateString());
             // TODO: This line of code loads data into the 'RentACarDataSet2.KasaHareketler' table. You can move, or remove it, as needed.
             this.KasaHareketlerTableAdapter.Fill(this.RentACarDataSet2.KasaHareketler);
             // TODO: This line of code loads data into the 'RentACarDataSet1.MusteriHareketler' table. You can move, or remove it, as needed.
@@ -63,10 +58,6 @@ namespace PL.RentACar
                 lblSoyad.Visible = false;
                 lblTC.Visible = false;
                 lblEhNo.Visible = false;
-                lblBaslangic.Visible = false;
-                lblBitis.Visible = false;
-                dtpBaslangic.Visible = false;
-                dtpBitis.Visible = false;
             }
             else if (tabControl1.SelectedIndex == 1)
             {
@@ -78,10 +69,6 @@ namespace PL.RentACar
                 lblEhNo.Visible = false;
                 txtTCKNo.Visible = false;
                 txtEhliyetNo.Visible = false;
-                lblBaslangic.Visible = false;
-                lblBitis.Visible = false;
-                dtpBaslangic.Visible = false;
-                dtpBitis.Visible = false;
                 this.reportViewer2.RefreshReport();
             }
             else if (tabControl1.SelectedIndex == 2)
@@ -94,10 +81,6 @@ namespace PL.RentACar
                 lblSoyad.Visible = true;
                 lblTC.Visible = true;
                 lblEhNo.Visible = true;
-                lblBaslangic.Visible = false;
-                lblBitis.Visible = false;
-                dtpBaslangic.Visible = false;
-                dtpBitis.Visible = false;
                 this.reportViewer3.RefreshReport();
             }
             else if (tabControl1.SelectedIndex == 3)
@@ -110,10 +93,6 @@ namespace PL.RentACar
                 lblEhNo.Visible = false;
                 txtTCKNo.Visible = false;
                 txtEhliyetNo.Visible = false;
-                lblBaslangic.Visible = true;
-                lblBitis.Visible = true;
-                dtpBaslangic.Visible = true;
-                dtpBitis.Visible = true;
                 this.reportViewer4.RefreshReport();
             }
         }
@@ -173,39 +152,6 @@ namespace PL.RentACar
                 this.reportViewer3.RefreshReport();
             }
         }
-        private void dtpBitis_ValueChanged(object sender, EventArgs e)
-        {
-            DateTime basla = Convert.ToDateTime(dtpBaslangic.Value.ToShortDateString());
-            DateTime bit = Convert.ToDateTime(dtpBitis.Value.ToShortDateString());
-            if (basla > bit)
-            {
-                dtpBaslangic.Value = DateTime.Now;
-                dtpBitis.Value = DateTime.Now;
-                MessageBox.Show("Başlangıç tarihi, bitiş tarihinden sonra olamaz!", "Tekrar tarih seçiniz!");
-            }
-            else
-            {
-                this.KasaHareketlerTableAdapter.Fill(this.RentACarDataSet2.KasaHareketler );
-                this.reportViewer4.RefreshReport();
-            }
-        }
 
-        private void dtpBaslangic_ValueChanged(object sender, EventArgs e)
-        {
-            DateTime basla = Convert.ToDateTime(dtpBaslangic.Value.ToShortDateString());
-            DateTime bit = Convert.ToDateTime(dtpBitis.Value.ToShortDateString());
-            if (basla > bit)
-            {
-                dtpBitis.Value = DateTime.Now;
-                dtpBaslangic.Value = DateTime.Now;
-                MessageBox.Show("Başlangıç tarihi, bitiş tarihinden sonra olamaz!", "Tekrar tarih seçiniz!");
-
-            }
-            else
-            {
-                this.KasaHareketlerTableAdapter.Fill(this.RentACarDataSet2.KasaHareketler);
-                this.reportViewer4.RefreshReport();
-            }
-        }
     }
 }

@@ -88,7 +88,7 @@ namespace PL.RentACar
                                     yeni.EhliyetTarihi = Convert.ToDateTime(dtpEhliyetTarihi.Value.ToShortDateString());
                                     if (musrepo.MusteriKontrol(yeni))
                                     {
-                                        MessageBox.Show("Bu Müşteri Kayıtlı! veya TC Kimlik No Hatalı!", "Hatalı Bilgi Girişi!");
+                                        MessageBox.Show("Bu Müşteri Kayıtlı! Telefon veya TC Kimlik No Hatalı!", "Hatalı Bilgi Girişi!");
                                     }
                                     else
                                     {
@@ -240,7 +240,7 @@ namespace PL.RentACar
                                 degisen.Id = ID;
                                 if (musrepo.MusteriKontrolFromDegistir(degisen))
                                 {
-                                    MessageBox.Show("TC Kimlik No Hatalı!", "Hatalı Bilgi Girişi!");
+                                    MessageBox.Show("Telefon veya TC Kimlik No Hatalı!", "Hatalı Bilgi Girişi!");
                                     ListeGoster();
                                     txtTCKNo.Focus();
                                                                     }

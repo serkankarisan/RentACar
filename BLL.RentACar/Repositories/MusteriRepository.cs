@@ -64,7 +64,7 @@ namespace BLL.RentACar.Repositories
 
         public bool MusteriKontrol(Musteri yeni)
         {
-            return Convert.ToBoolean(Genel.ent.Musteriler.Where(m => m.TcKimlikNo == yeni.TcKimlikNo).ToList().Count);
+            return Convert.ToBoolean(Genel.ent.Musteriler.Where(m => m.TcKimlikNo == yeni.TcKimlikNo || m.Telefon == yeni.Telefon).ToList().Count);
         }
         public bool MusteriEmailKontrol(string mail)
         {
@@ -130,7 +130,7 @@ namespace BLL.RentACar.Repositories
         //}
         public bool MusteriKontrolFromDegistir(Musteri yeni)
         {
-            return Convert.ToBoolean(Genel.ent.Musteriler.Where(m => m.TcKimlikNo == yeni.TcKimlikNo && m.Id != yeni.Id).ToList().Count);
+            return Convert.ToBoolean(Genel.ent.Musteriler.Where(m => (m.Telefon == yeni.Telefon && m.Id != yeni.Id) ||(m.TcKimlikNo == yeni.TcKimlikNo && m.Id != yeni.Id)).ToList().Count);
         }
     }
 }
