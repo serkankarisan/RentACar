@@ -125,6 +125,7 @@ namespace PL.RentACar
             }
             else if (tabControl1.SelectedIndex == 2)
             {
+                this.view_musteriTableAdapter.FillByMustri(this.RentACarDataSetM.view_musteri,txtAd.Text.Trim(),txtSoyad.Text.Trim(),txtTCKNo.Text.Trim(),txtEhliyetNo.Text.Trim());
                 this.reportViewer3.RefreshReport();
             }
            
@@ -139,6 +140,7 @@ namespace PL.RentACar
             }
             else if (tabControl1.SelectedIndex == 2)
             {
+                this.view_musteriTableAdapter.FillByMustri(this.RentACarDataSetM.view_musteri, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtTCKNo.Text.Trim(), txtEhliyetNo.Text.Trim());
                 this.reportViewer3.RefreshReport();
             }
         }
@@ -152,6 +154,7 @@ namespace PL.RentACar
             }
             else if (tabControl1.SelectedIndex == 2)
             {
+                this.view_musteriTableAdapter.FillByMustri(this.RentACarDataSetM.view_musteri, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtTCKNo.Text.Trim(), txtEhliyetNo.Text.Trim());
                 this.reportViewer3.RefreshReport();
             }
         }
@@ -165,7 +168,7 @@ namespace PL.RentACar
             }
             else if (tabControl1.SelectedIndex == 2)
             {
-               
+                this.view_musteriTableAdapter.FillByMustri(this.RentACarDataSetM.view_musteri, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtTCKNo.Text.Trim(), txtEhliyetNo.Text.Trim());
                 this.reportViewer3.RefreshReport();
             }
         }

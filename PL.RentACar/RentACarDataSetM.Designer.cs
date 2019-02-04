@@ -1289,13 +1289,23 @@ namespace PL.RentACar.RentACarDataSetMTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, MusteriGe" +
                 "tiriTuru, Silindi, Expr1, Adi, Soyadi, Telefon, Email, Adres, TcKimlikNo, DogumT" +
                 "arihi, Cinsiyet, EhliyetNo, EhliyetTarihi, Expr2 FROM dbo.view_musteri";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, MusteriGetiriTuru, Silindi, Expr1, Adi, Soyadi, Telefon, Email, Adres, TcKimlikNo, DogumTarihi, Cinsiyet, EhliyetNo, EhliyetTarihi, Expr2
+FROM            view_musteri
+WHERE        (Adi LIKE @ad + N'%') AND (Soyadi LIKE @soyad + N'%') AND (TcKimlikNo LIKE @tc + N'%') AND (EhliyetNo LIKE @ehliyetno + N'%')";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ad", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Adi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@soyad", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Soyadi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tc", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "TcKimlikNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ehliyetno", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "EhliyetNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1317,6 +1327,78 @@ namespace PL.RentACar.RentACarDataSetMTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual RentACarDataSetM.view_musteriDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            RentACarDataSetM.view_musteriDataTable dataTable = new RentACarDataSetM.view_musteriDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByMustri(RentACarDataSetM.view_musteriDataTable dataTable, string ad, string soyad, string tc, string ehliyetno) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((ad == null)) {
+                throw new global::System.ArgumentNullException("ad");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(ad));
+            }
+            if ((soyad == null)) {
+                throw new global::System.ArgumentNullException("soyad");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(soyad));
+            }
+            if ((tc == null)) {
+                throw new global::System.ArgumentNullException("tc");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(tc));
+            }
+            if ((ehliyetno == null)) {
+                throw new global::System.ArgumentNullException("ehliyetno");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(ehliyetno));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual RentACarDataSetM.view_musteriDataTable GetDataByMustri(string ad, string soyad, string tc, string ehliyetno) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((ad == null)) {
+                throw new global::System.ArgumentNullException("ad");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(ad));
+            }
+            if ((soyad == null)) {
+                throw new global::System.ArgumentNullException("soyad");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(soyad));
+            }
+            if ((tc == null)) {
+                throw new global::System.ArgumentNullException("tc");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(tc));
+            }
+            if ((ehliyetno == null)) {
+                throw new global::System.ArgumentNullException("ehliyetno");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(ehliyetno));
+            }
             RentACarDataSetM.view_musteriDataTable dataTable = new RentACarDataSetM.view_musteriDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
