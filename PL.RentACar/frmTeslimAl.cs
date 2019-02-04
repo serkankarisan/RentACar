@@ -213,7 +213,19 @@ namespace PL.RentACar
                                 kh.Silindi = false;
                                 if (khr.KasaHareketEkle(kh))
                             {
-                                if (srepo.SozlesmeSil(Genel.SozID))
+                                if (dgvSozlesmeDetay.Rows.Count==0)
+                                {
+                                    if (srepo.SozlesmeSil(Genel.SozID))
+                                    {
+                                        txtEkstraTutar.Enabled = false;
+                                        txtEkstraTutar.ReadOnly = true;
+                                        cbAracDurumu.Enabled = false;
+                                        cbYakitDurumu.Enabled = false;
+                                        MessageBox.Show("Arac Teslim Alındı ve Sözleşme Tamamlandı.", "İşlem Başarılı.");
+                                        Temizle();
+                                    }
+                                }
+                                else
                                 {
                                     txtEkstraTutar.Enabled = false;
                                     txtEkstraTutar.ReadOnly = true;
@@ -222,6 +234,7 @@ namespace PL.RentACar
                                     MessageBox.Show("Arac Teslim Alındı.", "İşlem Başarılı.");
                                     Temizle();
                                 }
+                                
                             }
                             
                         }
