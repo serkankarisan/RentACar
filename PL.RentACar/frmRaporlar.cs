@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL.RentACar.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace PL.RentACar
         {
             InitializeComponent();
         }
+        KasaHareketRepository khr = new KasaHareketRepository();
 
         private void btnCikis_Click(object sender, EventArgs e)
         {
@@ -40,7 +42,7 @@ namespace PL.RentACar
             this.view_musteriTableAdapter.Fill(this.RentACarDataSetM.view_musteri);
             DateTime basla = Convert.ToDateTime(dtpBaslangic.Value.ToShortDateString());
             // TODO: This line of code loads data into the 'RentACarDataSet2.KasaHareketler' table. You can move, or remove it, as needed.
-            this.KasaHareketlerTableAdapter.FillBykasa(this.RentACarDataSet2.KasaHareketler,basla,dtpBitis.Value);
+            this.KasaHareketlerTableAdapter.Fill(this.RentACarDataSet2.KasaHareketler);
             // TODO: This line of code loads data into the 'RentACarDataSet1.MusteriHareketler' table. You can move, or remove it, as needed.
             this.PersonellerTableAdapter.FillByPersonel(this.RentACarDataSet.Personeller,txtAd.Text.Trim(),txtSoyad.Text.Trim());
             // TODO: This line of code loads data into the 'RentACarDataSetArac.Araclar' table. You can move, or remove it, as needed.
@@ -158,7 +160,6 @@ namespace PL.RentACar
                 this.reportViewer3.RefreshReport();
             }
         }
-
         private void txtEhliyetNo_TextChanged(object sender, EventArgs e)
         {
             if (tabControl1.SelectedIndex == 1)
@@ -172,7 +173,6 @@ namespace PL.RentACar
                 this.reportViewer3.RefreshReport();
             }
         }
-
         private void dtpBitis_ValueChanged(object sender, EventArgs e)
         {
             DateTime basla = Convert.ToDateTime(dtpBaslangic.Value.ToShortDateString());
@@ -185,7 +185,7 @@ namespace PL.RentACar
             }
             else
             {
-                this.KasaHareketlerTableAdapter.FillBykasa(this.RentACarDataSet2.KasaHareketler, basla, dtpBitis.Value);
+                this.KasaHareketlerTableAdapter.Fill(this.RentACarDataSet2.KasaHareketler );
                 this.reportViewer4.RefreshReport();
             }
         }
@@ -203,7 +203,7 @@ namespace PL.RentACar
             }
             else
             {
-                this.KasaHareketlerTableAdapter.FillBykasa(this.RentACarDataSet2.KasaHareketler, basla, dtpBitis.Value);
+                this.KasaHareketlerTableAdapter.Fill(this.RentACarDataSet2.KasaHareketler);
                 this.reportViewer4.RefreshReport();
             }
         }

@@ -64,6 +64,15 @@ namespace BLL.RentACar.Repositories
                                             select kh).ToList();
             return listeTarih;
         }
+        public List<int> KasaHareketIDListeleByTarih(DateTime baslangic, DateTime bitis)
+        {
+            List<int> liste = (from kh in Genel.ent.KasaHareketler
+                                            where kh.Tarih >= baslangic && kh.Tarih <= bitis
+                                            select kh.Id).ToList();
+
+            return liste;
+        }
+
         public decimal KasaHareketToplamTutarByTarih(DateTime baslangic, DateTime bitis)
         {
             decimal ToplamGiren = (from kh in Genel.ent.KasaHareketler
