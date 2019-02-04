@@ -24,20 +24,183 @@ namespace PL.RentACar
 
         private void frmRaporlar_Load(object sender, EventArgs e)
         {
+            DateTime basla = Convert.ToDateTime(dtpBaslangic.Value.ToShortDateString());
+            // TODO: This line of code loads data into the 'RentACarDataSetMusteri.vw_musteriler' table. You can move, or remove it, as needed.
+            this.vw_musterilerTableAdapter.FillByMusteri(this.RentACarDataSetMusteri.vw_musteriler, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtEhliyetNo.Text.Trim(), txtTCKNo.Text.Trim());
             // TODO: This line of code loads data into the 'RentACarDataSet2.KasaHareketler' table. You can move, or remove it, as needed.
-            this.KasaHareketlerTableAdapter.Fill(this.RentACarDataSet2.KasaHareketler);
+            this.KasaHareketlerTableAdapter.FillBykasa(this.RentACarDataSet2.KasaHareketler,basla,dtpBitis.Value);
             // TODO: This line of code loads data into the 'RentACarDataSet1.MusteriHareketler' table. You can move, or remove it, as needed.
-            this.MusteriHareketlerTableAdapter.Fill(this.RentACarDataSet1.MusteriHareketler);
-            // TODO: This line of code loads data into the 'RentACarDataSet.Personeller' table. You can move, or remove it, as needed.
-            this.PersonellerTableAdapter.Fill(this.RentACarDataSet.Personeller);
+            this.PersonellerTableAdapter.FillByPersonel(this.RentACarDataSet.Personeller,txtAd.Text.Trim(),txtSoyad.Text.Trim());
             // TODO: This line of code loads data into the 'RentACarDataSetArac.Araclar' table. You can move, or remove it, as needed.
             this.AraclarTableAdapter.Fill(this.RentACarDataSetArac.Araclar);
+            this.reportViewer1.RefreshReport();
+            tabControl1.SelectedIndex = 1;
+            tabControl1.SelectedIndex = 0;
+        }
 
-            this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
-            this.reportViewer2.RefreshReport();
-            this.reportViewer3.RefreshReport();
-            this.reportViewer4.RefreshReport();
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex==0)
+            {
+                this.reportViewer1.RefreshReport();
+                txtAd.Visible = false;
+                txtSoyad.Visible = false;
+                txtTCKNo.Visible = false;
+                txtEhliyetNo.Visible = false;
+                lblAd.Visible = false;
+                lblSoyad.Visible = false;
+                lblTC.Visible = false;
+                lblEhNo.Visible = false;
+                lblBaslangic.Visible = false;
+                lblBitis.Visible = false;
+                dtpBaslangic.Visible = false;
+                dtpBitis.Visible = false;
+            }
+            else if (tabControl1.SelectedIndex == 1)
+            {
+                txtAd.Visible = true;
+                txtSoyad.Visible = true;
+                lblAd.Visible = true;
+                lblSoyad.Visible = true;
+                lblTC.Visible = false;
+                lblEhNo.Visible = false;
+                txtTCKNo.Visible = false;
+                txtEhliyetNo.Visible = false;
+                lblBaslangic.Visible = false;
+                lblBitis.Visible = false;
+                dtpBaslangic.Visible = false;
+                dtpBitis.Visible = false;
+                this.reportViewer2.RefreshReport();
+            }
+            else if (tabControl1.SelectedIndex == 2)
+            {
+                txtAd.Visible = true;
+                txtSoyad.Visible = true;
+                txtTCKNo.Visible = true;
+                txtEhliyetNo.Visible = true;
+                lblAd.Visible = true;
+                lblSoyad.Visible = true;
+                lblTC.Visible = true;
+                lblEhNo.Visible = true;
+                lblBaslangic.Visible = false;
+                lblBitis.Visible = false;
+                dtpBaslangic.Visible = false;
+                dtpBitis.Visible = false;
+                this.reportViewer3.RefreshReport();
+            }
+            else if (tabControl1.SelectedIndex == 3)
+            {
+                txtAd.Visible = false;
+                txtSoyad.Visible = false;
+                lblAd.Visible = false;
+                lblSoyad.Visible = false;
+                lblTC.Visible = false;
+                lblEhNo.Visible = false;
+                txtTCKNo.Visible = false;
+                txtEhliyetNo.Visible = false;
+                lblBaslangic.Visible = true;
+                lblBitis.Visible = true;
+                dtpBaslangic.Visible = true;
+                dtpBitis.Visible = true;
+                this.reportViewer4.RefreshReport();
+            }
+        }
+
+        private void txtAd_TextChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 1)
+            {
+                this.PersonellerTableAdapter.FillByPersonel(this.RentACarDataSet.Personeller, txtAd.Text.Trim(), txtSoyad.Text.Trim());
+                this.reportViewer2.RefreshReport();
+            }
+            else if (tabControl1.SelectedIndex == 2)
+            {
+                this.vw_musterilerTableAdapter.FillByMusteri(this.RentACarDataSetMusteri.vw_musteriler, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtEhliyetNo.Text.Trim(), txtTCKNo.Text.Trim());
+                this.reportViewer3.RefreshReport();
+            }
+           
+        }
+
+        private void txtSoyad_TextChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 1)
+            {
+                this.PersonellerTableAdapter.FillByPersonel(this.RentACarDataSet.Personeller, txtAd.Text.Trim(), txtSoyad.Text.Trim());
+                this.reportViewer2.RefreshReport();
+            }
+            else if (tabControl1.SelectedIndex == 2)
+            {
+                this.vw_musterilerTableAdapter.FillByMusteri(this.RentACarDataSetMusteri.vw_musteriler, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtEhliyetNo.Text.Trim(), txtTCKNo.Text.Trim());
+                this.reportViewer3.RefreshReport();
+            }
+        }
+
+        private void txtTCKNo_TextChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 1)
+            {
+                this.PersonellerTableAdapter.FillByPersonel(this.RentACarDataSet.Personeller, txtAd.Text.Trim(), txtSoyad.Text.Trim());
+                this.reportViewer2.RefreshReport();
+            }
+            else if (tabControl1.SelectedIndex == 2)
+            {
+                this.vw_musterilerTableAdapter.FillByMusteri(this.RentACarDataSetMusteri.vw_musteriler, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtEhliyetNo.Text.Trim(), txtTCKNo.Text.Trim());
+                this.reportViewer3.RefreshReport();
+            }
+        }
+
+        private void txtEhliyetNo_TextChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 1)
+            {
+                this.PersonellerTableAdapter.FillByPersonel(this.RentACarDataSet.Personeller, txtAd.Text.Trim(), txtSoyad.Text.Trim());
+                this.reportViewer2.RefreshReport();
+            }
+            else if (tabControl1.SelectedIndex == 2)
+            {
+                this.vw_musterilerTableAdapter.FillByMusteri(this.RentACarDataSetMusteri.vw_musteriler, txtAd.Text.Trim(), txtSoyad.Text.Trim(), txtEhliyetNo.Text.Trim(), txtTCKNo.Text.Trim());
+                this.reportViewer3.RefreshReport();
+            }
+        }
+
+        private void dtpBitis_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime basla = Convert.ToDateTime(dtpBaslangic.Value.ToShortDateString());
+            DateTime bit = Convert.ToDateTime(dtpBitis.Value.ToShortDateString());
+            if (basla > bit)
+            {
+                dtpBaslangic.Value = DateTime.Now;
+                dtpBitis.Value = DateTime.Now;
+                MessageBox.Show("Başlangıç tarihi, bitiş tarihinden sonra olamaz!", "Tekrar tarih seçiniz!");
+            }
+            else
+            {
+                this.KasaHareketlerTableAdapter.FillBykasa(this.RentACarDataSet2.KasaHareketler, basla, dtpBitis.Value);
+                this.reportViewer4.RefreshReport();
+            }
+        }
+
+        private void dtpBaslangic_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime basla = Convert.ToDateTime(dtpBaslangic.Value.ToShortDateString());
+            DateTime bit = Convert.ToDateTime(dtpBitis.Value.ToShortDateString());
+            if (basla > bit)
+            {
+                dtpBitis.Value = DateTime.Now;
+                dtpBaslangic.Value = DateTime.Now;
+                MessageBox.Show("Başlangıç tarihi, bitiş tarihinden sonra olamaz!", "Tekrar tarih seçiniz!");
+
+            }
+            else
+            {
+                this.KasaHareketlerTableAdapter.FillBykasa(this.RentACarDataSet2.KasaHareketler, basla, dtpBitis.Value);
+                this.reportViewer4.RefreshReport();
+            }
         }
     }
 }

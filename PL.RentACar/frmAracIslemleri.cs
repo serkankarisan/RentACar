@@ -28,11 +28,15 @@ namespace PL.RentACar
         private void tsYeni_Click(object sender, EventArgs e)
         {
             Enable();
+            txtAracDurumu.Enabled = false;
+            cbAracdurumu.Enabled = false;
             tsKaydet.Enabled = true;
             tsDegistir.Enabled = false;
             tsSil.Enabled = false;
             txtMarka.Focus();
             Temizle();
+            cbAracdurumu.SelectedIndex = 1;
+            cbAracdurumu.SelectedIndex = 0;
         }
         decimal gunlukfiyat,dg;
         private void tsKaydet_Click(object sender, EventArgs e)
@@ -186,6 +190,8 @@ namespace PL.RentACar
 
         private void frmAracIslemleri_Load(object sender, EventArgs e)
         {
+            cbAracdurumu.SelectedIndex = 0;
+            cbAracdurumu.Enabled = false;
             Disable();
             Listele();
         }
@@ -206,6 +212,7 @@ namespace PL.RentACar
             pbFoto.Image = Image.FromFile(Application.StartupPath + "" + txtResimYolu.Text);
             tsSil.Enabled = true;
             tsDegistir.Enabled = true;
+            tsKaydet.Enabled = false;
         }
 
 
@@ -269,6 +276,7 @@ namespace PL.RentACar
                                                         Listele();
                                                         tsDegistir.Enabled = false;
                                                         tsSil.Enabled = false;
+                                                        tsKaydet.Enabled = false;
                                                         Temizle();
                                                         Disable();
                                                     }

@@ -294,10 +294,13 @@ namespace PL.RentACar
                     kh.Silindi = false;
                     if (khr.KasaHareketEkle(kh))
                     {
-                        MessageBox.Show("Hareket Eklendi.", "Kayıt gerçekleşti.");
-                        Temizle();
-                        txtAracTutar.Focus();
-                        Genel.AracID = 0;
+                        if (arepo.AracSil(Genel.AracID))
+                        {
+                            MessageBox.Show("Hareket Eklendi.", "Kayıt gerçekleşti.");
+                            Temizle();
+                            txtAracTutar.Focus();
+                            Genel.AracID = 0;
+                        }
 
                     }
                     else { MessageBox.Show("Kayit gerceklesmedi"); }

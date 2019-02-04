@@ -1000,9 +1000,9 @@ namespace PL.RentACar.RentACarDataSetAracTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Araclar] WHERE (([Id] = @Original_Id) AND ([GünlükFiyat] = @Or" +
-                "iginal_GünlükFiyat) AND ([Varmi] = @Original_Varmi) AND ([Silindi] = @Original_S" +
-                "ilindi))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Araclar] WHERE (([Id] = @Original_Id) AND ([GünlükFiyat] = @Original" +
+                "_GünlükFiyat) AND ([Varmi] = @Original_Varmi) AND ([Silindi] = @Original_Silindi" +
+                "))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GünlükFiyat", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "GünlükFiyat", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1025,8 +1025,8 @@ SELECT Id, Marka, Model, GünlükFiyat, Tip, Renk, Plaka, AracDurumu, YakitDurum
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Silindi", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Silindi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Araclar] SET [Marka] = @Marka, [Model] = @Model, [GünlükFiyat] = @GünlükFiyat, [Tip] = @Tip, [Renk] = @Renk, [Plaka] = @Plaka, [AracDurumu] = @AracDurumu, [YakitDurumu] = @YakitDurumu, [Varmi] = @Varmi, [Silindi] = @Silindi WHERE (([Id] = @Original_Id) AND ([GünlükFiyat] = @Original_GünlükFiyat) AND ([Varmi] = @Original_Varmi) AND ([Silindi] = @Original_Silindi));
-SELECT Id, Marka, Model, GünlükFiyat, Tip, Renk, Plaka, AracDurumu, YakitDurumu, Varmi, Silindi FROM Araclar WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Araclar] SET [Marka] = @Marka, [Model] = @Model, [GünlükFiyat] = @GünlükFiyat, [Tip] = @Tip, [Renk] = @Renk, [Plaka] = @Plaka, [AracDurumu] = @AracDurumu, [YakitDurumu] = @YakitDurumu, [Varmi] = @Varmi, [Silindi] = @Silindi WHERE (([Id] = @Original_Id) AND ([GünlükFiyat] = @Original_GünlükFiyat) AND ([Varmi] = @Original_Varmi) AND ([Silindi] = @Original_Silindi));
+SELECT Id, Marka, Model, GünlükFiyat, Tip, Renk, Plaka, AracDurumu, YakitDurumu, Varmi, Silindi FROM Araclar WHERE (Id = @Id) ORDER BY Marka";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Marka", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marka", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Model", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1058,8 +1058,9 @@ SELECT Id, Marka, Model, GünlükFiyat, Tip, Renk, Plaka, AracDurumu, YakitDurum
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Marka, Model, GünlükFiyat, Tip, Renk, Plaka, AracDurumu, YakitDurumu, " +
-                "Varmi, Silindi FROM dbo.Araclar";
+            this._commandCollection[0].CommandText = "SELECT        Id, Marka, Model, GünlükFiyat, Tip, Renk, Plaka, AracDurumu, YakitD" +
+                "urumu, Varmi, Silindi\r\nFROM            Araclar\r\nWHERE        (Silindi <> 1) AND " +
+                "(Varmi = 1)\r\nORDER BY Marka";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

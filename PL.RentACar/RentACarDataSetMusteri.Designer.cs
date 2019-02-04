@@ -20,17 +20,17 @@ namespace PL.RentACar {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("RentACarDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("RentACarDataSetMusteri")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class RentACarDataSet1 : global::System.Data.DataSet {
+    public partial class RentACarDataSetMusteri : global::System.Data.DataSet {
         
-        private MusteriHareketlerDataTable tableMusteriHareketler;
+        private vw_musterilerDataTable tablevw_musteriler;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public RentACarDataSet1() {
+        public RentACarDataSetMusteri() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace PL.RentACar {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected RentACarDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected RentACarDataSetMusteri(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace PL.RentACar {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["MusteriHareketler"] != null)) {
-                    base.Tables.Add(new MusteriHareketlerDataTable(ds.Tables["MusteriHareketler"]));
+                if ((ds.Tables["vw_musteriler"] != null)) {
+                    base.Tables.Add(new vw_musterilerDataTable(ds.Tables["vw_musteriler"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace PL.RentACar {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public MusteriHareketlerDataTable MusteriHareketler {
+        public vw_musterilerDataTable vw_musteriler {
             get {
-                return this.tableMusteriHareketler;
+                return this.tablevw_musteriler;
             }
         }
         
@@ -127,7 +127,7 @@ namespace PL.RentACar {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            RentACarDataSet1 cln = ((RentACarDataSet1)(base.Clone()));
+            RentACarDataSetMusteri cln = ((RentACarDataSetMusteri)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace PL.RentACar {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["MusteriHareketler"] != null)) {
-                    base.Tables.Add(new MusteriHareketlerDataTable(ds.Tables["MusteriHareketler"]));
+                if ((ds.Tables["vw_musteriler"] != null)) {
+                    base.Tables.Add(new vw_musterilerDataTable(ds.Tables["vw_musteriler"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace PL.RentACar {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableMusteriHareketler = ((MusteriHareketlerDataTable)(base.Tables["MusteriHareketler"]));
+            this.tablevw_musteriler = ((vw_musterilerDataTable)(base.Tables["vw_musteriler"]));
             if ((initTable == true)) {
-                if ((this.tableMusteriHareketler != null)) {
-                    this.tableMusteriHareketler.InitVars();
+                if ((this.tablevw_musteriler != null)) {
+                    this.tablevw_musteriler.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace PL.RentACar {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "RentACarDataSet1";
+            this.DataSetName = "RentACarDataSetMusteri";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/RentACarDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/RentACarDataSetMusteri.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableMusteriHareketler = new MusteriHareketlerDataTable();
-            base.Tables.Add(this.tableMusteriHareketler);
+            this.tablevw_musteriler = new vw_musterilerDataTable();
+            base.Tables.Add(this.tablevw_musteriler);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeMusteriHareketler() {
+        private bool ShouldSerializevw_musteriler() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace PL.RentACar {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            RentACarDataSet1 ds = new RentACarDataSet1();
+            RentACarDataSetMusteri ds = new RentACarDataSetMusteri();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace PL.RentACar {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void MusteriHareketlerRowChangeEventHandler(object sender, MusteriHareketlerRowChangeEvent e);
+        public delegate void vw_musterilerRowChangeEventHandler(object sender, vw_musterilerRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class MusteriHareketlerDataTable : global::System.Data.TypedTableBase<MusteriHareketlerRow> {
+        public partial class vw_musterilerDataTable : global::System.Data.TypedTableBase<vw_musterilerRow> {
             
             private global::System.Data.DataColumn columnId;
             
@@ -295,10 +295,34 @@ namespace PL.RentACar {
             
             private global::System.Data.DataColumn columnSilindi;
             
+            private global::System.Data.DataColumn columnExpr1;
+            
+            private global::System.Data.DataColumn columnAdi;
+            
+            private global::System.Data.DataColumn columnSoyadi;
+            
+            private global::System.Data.DataColumn columnTelefon;
+            
+            private global::System.Data.DataColumn columnEmail;
+            
+            private global::System.Data.DataColumn columnAdres;
+            
+            private global::System.Data.DataColumn columnTcKimlikNo;
+            
+            private global::System.Data.DataColumn columnDogumTarihi;
+            
+            private global::System.Data.DataColumn columnCinsiyet;
+            
+            private global::System.Data.DataColumn columnEhliyetNo;
+            
+            private global::System.Data.DataColumn columnEhliyetTarihi;
+            
+            private global::System.Data.DataColumn columnExpr2;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public MusteriHareketlerDataTable() {
-                this.TableName = "MusteriHareketler";
+            public vw_musterilerDataTable() {
+                this.TableName = "vw_musteriler";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +330,7 @@ namespace PL.RentACar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal MusteriHareketlerDataTable(global::System.Data.DataTable table) {
+            internal vw_musterilerDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,7 +347,7 @@ namespace PL.RentACar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected MusteriHareketlerDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected vw_musterilerDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -394,6 +418,102 @@ namespace PL.RentACar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Expr1Column {
+                get {
+                    return this.columnExpr1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn AdiColumn {
+                get {
+                    return this.columnAdi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn SoyadiColumn {
+                get {
+                    return this.columnSoyadi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TelefonColumn {
+                get {
+                    return this.columnTelefon;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn EmailColumn {
+                get {
+                    return this.columnEmail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn AdresColumn {
+                get {
+                    return this.columnAdres;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TcKimlikNoColumn {
+                get {
+                    return this.columnTcKimlikNo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DogumTarihiColumn {
+                get {
+                    return this.columnDogumTarihi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CinsiyetColumn {
+                get {
+                    return this.columnCinsiyet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn EhliyetNoColumn {
+                get {
+                    return this.columnEhliyetNo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn EhliyetTarihiColumn {
+                get {
+                    return this.columnEhliyetTarihi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Expr2Column {
+                get {
+                    return this.columnExpr2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -403,59 +523,92 @@ namespace PL.RentACar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public MusteriHareketlerRow this[int index] {
+            public vw_musterilerRow this[int index] {
                 get {
-                    return ((MusteriHareketlerRow)(this.Rows[index]));
+                    return ((vw_musterilerRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event MusteriHareketlerRowChangeEventHandler MusteriHareketlerRowChanging;
+            public event vw_musterilerRowChangeEventHandler vw_musterilerRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event MusteriHareketlerRowChangeEventHandler MusteriHareketlerRowChanged;
+            public event vw_musterilerRowChangeEventHandler vw_musterilerRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event MusteriHareketlerRowChangeEventHandler MusteriHareketlerRowDeleting;
+            public event vw_musterilerRowChangeEventHandler vw_musterilerRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event MusteriHareketlerRowChangeEventHandler MusteriHareketlerRowDeleted;
+            public event vw_musterilerRowChangeEventHandler vw_musterilerRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddMusteriHareketlerRow(MusteriHareketlerRow row) {
+            public void Addvw_musterilerRow(vw_musterilerRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public MusteriHareketlerRow AddMusteriHareketlerRow(System.DateTime Tarih, int MusteriId, string ParaBirimi, int MusteriPuanı, decimal MusteriGetirisi, string MusteriGetiriTuru, bool Silindi) {
-                MusteriHareketlerRow rowMusteriHareketlerRow = ((MusteriHareketlerRow)(this.NewRow()));
+            public vw_musterilerRow Addvw_musterilerRow(
+                        int Id, 
+                        System.DateTime Tarih, 
+                        int MusteriId, 
+                        string ParaBirimi, 
+                        int MusteriPuanı, 
+                        decimal MusteriGetirisi, 
+                        string MusteriGetiriTuru, 
+                        bool Silindi, 
+                        int Expr1, 
+                        string Adi, 
+                        string Soyadi, 
+                        string Telefon, 
+                        string Email, 
+                        string Adres, 
+                        string TcKimlikNo, 
+                        System.DateTime DogumTarihi, 
+                        string Cinsiyet, 
+                        string EhliyetNo, 
+                        System.DateTime EhliyetTarihi, 
+                        bool Expr2) {
+                vw_musterilerRow rowvw_musterilerRow = ((vw_musterilerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        Id,
                         Tarih,
                         MusteriId,
                         ParaBirimi,
                         MusteriPuanı,
                         MusteriGetirisi,
                         MusteriGetiriTuru,
-                        Silindi};
-                rowMusteriHareketlerRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowMusteriHareketlerRow);
-                return rowMusteriHareketlerRow;
+                        Silindi,
+                        Expr1,
+                        Adi,
+                        Soyadi,
+                        Telefon,
+                        Email,
+                        Adres,
+                        TcKimlikNo,
+                        DogumTarihi,
+                        Cinsiyet,
+                        EhliyetNo,
+                        EhliyetTarihi,
+                        Expr2};
+                rowvw_musterilerRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowvw_musterilerRow);
+                return rowvw_musterilerRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public MusteriHareketlerRow FindById(int Id) {
-                return ((MusteriHareketlerRow)(this.Rows.Find(new object[] {
-                            Id})));
+            public vw_musterilerRow FindByIdExpr1(int Id, int Expr1) {
+                return ((vw_musterilerRow)(this.Rows.Find(new object[] {
+                            Id,
+                            Expr1})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                MusteriHareketlerDataTable cln = ((MusteriHareketlerDataTable)(base.Clone()));
+                vw_musterilerDataTable cln = ((vw_musterilerDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -463,7 +616,7 @@ namespace PL.RentACar {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new MusteriHareketlerDataTable();
+                return new vw_musterilerDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -477,6 +630,18 @@ namespace PL.RentACar {
                 this.columnMusteriGetirisi = base.Columns["MusteriGetirisi"];
                 this.columnMusteriGetiriTuru = base.Columns["MusteriGetiriTuru"];
                 this.columnSilindi = base.Columns["Silindi"];
+                this.columnExpr1 = base.Columns["Expr1"];
+                this.columnAdi = base.Columns["Adi"];
+                this.columnSoyadi = base.Columns["Soyadi"];
+                this.columnTelefon = base.Columns["Telefon"];
+                this.columnEmail = base.Columns["Email"];
+                this.columnAdres = base.Columns["Adres"];
+                this.columnTcKimlikNo = base.Columns["TcKimlikNo"];
+                this.columnDogumTarihi = base.Columns["DogumTarihi"];
+                this.columnCinsiyet = base.Columns["Cinsiyet"];
+                this.columnEhliyetNo = base.Columns["EhliyetNo"];
+                this.columnEhliyetTarihi = base.Columns["EhliyetTarihi"];
+                this.columnExpr2 = base.Columns["Expr2"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -498,14 +663,34 @@ namespace PL.RentACar {
                 base.Columns.Add(this.columnMusteriGetiriTuru);
                 this.columnSilindi = new global::System.Data.DataColumn("Silindi", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSilindi);
+                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr1);
+                this.columnAdi = new global::System.Data.DataColumn("Adi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdi);
+                this.columnSoyadi = new global::System.Data.DataColumn("Soyadi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSoyadi);
+                this.columnTelefon = new global::System.Data.DataColumn("Telefon", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTelefon);
+                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmail);
+                this.columnAdres = new global::System.Data.DataColumn("Adres", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdres);
+                this.columnTcKimlikNo = new global::System.Data.DataColumn("TcKimlikNo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTcKimlikNo);
+                this.columnDogumTarihi = new global::System.Data.DataColumn("DogumTarihi", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDogumTarihi);
+                this.columnCinsiyet = new global::System.Data.DataColumn("Cinsiyet", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCinsiyet);
+                this.columnEhliyetNo = new global::System.Data.DataColumn("EhliyetNo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEhliyetNo);
+                this.columnEhliyetTarihi = new global::System.Data.DataColumn("EhliyetTarihi", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEhliyetTarihi);
+                this.columnExpr2 = new global::System.Data.DataColumn("Expr2", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr2);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
+                                this.columnId,
+                                this.columnExpr1}, true));
                 this.columnId.AllowDBNull = false;
-                this.columnId.ReadOnly = true;
-                this.columnId.Unique = true;
                 this.columnTarih.AllowDBNull = false;
                 this.columnMusteriId.AllowDBNull = false;
                 this.columnParaBirimi.MaxLength = 2147483647;
@@ -514,32 +699,52 @@ namespace PL.RentACar {
                 this.columnMusteriGetiriTuru.AllowDBNull = false;
                 this.columnMusteriGetiriTuru.MaxLength = 2147483647;
                 this.columnSilindi.AllowDBNull = false;
+                this.columnExpr1.AllowDBNull = false;
+                this.columnAdi.AllowDBNull = false;
+                this.columnAdi.MaxLength = 2147483647;
+                this.columnSoyadi.AllowDBNull = false;
+                this.columnSoyadi.MaxLength = 2147483647;
+                this.columnTelefon.AllowDBNull = false;
+                this.columnTelefon.MaxLength = 2147483647;
+                this.columnEmail.AllowDBNull = false;
+                this.columnEmail.MaxLength = 2147483647;
+                this.columnAdres.AllowDBNull = false;
+                this.columnAdres.MaxLength = 2147483647;
+                this.columnTcKimlikNo.AllowDBNull = false;
+                this.columnTcKimlikNo.MaxLength = 2147483647;
+                this.columnDogumTarihi.AllowDBNull = false;
+                this.columnCinsiyet.AllowDBNull = false;
+                this.columnCinsiyet.MaxLength = 2147483647;
+                this.columnEhliyetNo.AllowDBNull = false;
+                this.columnEhliyetNo.MaxLength = 2147483647;
+                this.columnEhliyetTarihi.AllowDBNull = false;
+                this.columnExpr2.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public MusteriHareketlerRow NewMusteriHareketlerRow() {
-                return ((MusteriHareketlerRow)(this.NewRow()));
+            public vw_musterilerRow Newvw_musterilerRow() {
+                return ((vw_musterilerRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new MusteriHareketlerRow(builder);
+                return new vw_musterilerRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(MusteriHareketlerRow);
+                return typeof(vw_musterilerRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.MusteriHareketlerRowChanged != null)) {
-                    this.MusteriHareketlerRowChanged(this, new MusteriHareketlerRowChangeEvent(((MusteriHareketlerRow)(e.Row)), e.Action));
+                if ((this.vw_musterilerRowChanged != null)) {
+                    this.vw_musterilerRowChanged(this, new vw_musterilerRowChangeEvent(((vw_musterilerRow)(e.Row)), e.Action));
                 }
             }
             
@@ -547,8 +752,8 @@ namespace PL.RentACar {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.MusteriHareketlerRowChanging != null)) {
-                    this.MusteriHareketlerRowChanging(this, new MusteriHareketlerRowChangeEvent(((MusteriHareketlerRow)(e.Row)), e.Action));
+                if ((this.vw_musterilerRowChanging != null)) {
+                    this.vw_musterilerRowChanging(this, new vw_musterilerRowChangeEvent(((vw_musterilerRow)(e.Row)), e.Action));
                 }
             }
             
@@ -556,8 +761,8 @@ namespace PL.RentACar {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.MusteriHareketlerRowDeleted != null)) {
-                    this.MusteriHareketlerRowDeleted(this, new MusteriHareketlerRowChangeEvent(((MusteriHareketlerRow)(e.Row)), e.Action));
+                if ((this.vw_musterilerRowDeleted != null)) {
+                    this.vw_musterilerRowDeleted(this, new vw_musterilerRowChangeEvent(((vw_musterilerRow)(e.Row)), e.Action));
                 }
             }
             
@@ -565,14 +770,14 @@ namespace PL.RentACar {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.MusteriHareketlerRowDeleting != null)) {
-                    this.MusteriHareketlerRowDeleting(this, new MusteriHareketlerRowChangeEvent(((MusteriHareketlerRow)(e.Row)), e.Action));
+                if ((this.vw_musterilerRowDeleting != null)) {
+                    this.vw_musterilerRowDeleting(this, new vw_musterilerRowChangeEvent(((vw_musterilerRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveMusteriHareketlerRow(MusteriHareketlerRow row) {
+            public void Removevw_musterilerRow(vw_musterilerRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -581,7 +786,7 @@ namespace PL.RentACar {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                RentACarDataSet1 ds = new RentACarDataSet1();
+                RentACarDataSetMusteri ds = new RentACarDataSetMusteri();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -599,7 +804,7 @@ namespace PL.RentACar {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "MusteriHareketlerDataTable";
+                attribute2.FixedValue = "vw_musterilerDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -643,25 +848,25 @@ namespace PL.RentACar {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class MusteriHareketlerRow : global::System.Data.DataRow {
+        public partial class vw_musterilerRow : global::System.Data.DataRow {
             
-            private MusteriHareketlerDataTable tableMusteriHareketler;
+            private vw_musterilerDataTable tablevw_musteriler;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal MusteriHareketlerRow(global::System.Data.DataRowBuilder rb) : 
+            internal vw_musterilerRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableMusteriHareketler = ((MusteriHareketlerDataTable)(this.Table));
+                this.tablevw_musteriler = ((vw_musterilerDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int Id {
                 get {
-                    return ((int)(this[this.tableMusteriHareketler.IdColumn]));
+                    return ((int)(this[this.tablevw_musteriler.IdColumn]));
                 }
                 set {
-                    this[this.tableMusteriHareketler.IdColumn] = value;
+                    this[this.tablevw_musteriler.IdColumn] = value;
                 }
             }
             
@@ -669,10 +874,10 @@ namespace PL.RentACar {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime Tarih {
                 get {
-                    return ((global::System.DateTime)(this[this.tableMusteriHareketler.TarihColumn]));
+                    return ((global::System.DateTime)(this[this.tablevw_musteriler.TarihColumn]));
                 }
                 set {
-                    this[this.tableMusteriHareketler.TarihColumn] = value;
+                    this[this.tablevw_musteriler.TarihColumn] = value;
                 }
             }
             
@@ -680,10 +885,10 @@ namespace PL.RentACar {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int MusteriId {
                 get {
-                    return ((int)(this[this.tableMusteriHareketler.MusteriIdColumn]));
+                    return ((int)(this[this.tablevw_musteriler.MusteriIdColumn]));
                 }
                 set {
-                    this[this.tableMusteriHareketler.MusteriIdColumn] = value;
+                    this[this.tablevw_musteriler.MusteriIdColumn] = value;
                 }
             }
             
@@ -692,14 +897,14 @@ namespace PL.RentACar {
             public string ParaBirimi {
                 get {
                     try {
-                        return ((string)(this[this.tableMusteriHareketler.ParaBirimiColumn]));
+                        return ((string)(this[this.tablevw_musteriler.ParaBirimiColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ParaBirimi\' in table \'MusteriHareketler\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ParaBirimi\' in table \'vw_musteriler\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableMusteriHareketler.ParaBirimiColumn] = value;
+                    this[this.tablevw_musteriler.ParaBirimiColumn] = value;
                 }
             }
             
@@ -707,10 +912,10 @@ namespace PL.RentACar {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int MusteriPuanı {
                 get {
-                    return ((int)(this[this.tableMusteriHareketler.MusteriPuanıColumn]));
+                    return ((int)(this[this.tablevw_musteriler.MusteriPuanıColumn]));
                 }
                 set {
-                    this[this.tableMusteriHareketler.MusteriPuanıColumn] = value;
+                    this[this.tablevw_musteriler.MusteriPuanıColumn] = value;
                 }
             }
             
@@ -718,10 +923,10 @@ namespace PL.RentACar {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal MusteriGetirisi {
                 get {
-                    return ((decimal)(this[this.tableMusteriHareketler.MusteriGetirisiColumn]));
+                    return ((decimal)(this[this.tablevw_musteriler.MusteriGetirisiColumn]));
                 }
                 set {
-                    this[this.tableMusteriHareketler.MusteriGetirisiColumn] = value;
+                    this[this.tablevw_musteriler.MusteriGetirisiColumn] = value;
                 }
             }
             
@@ -729,10 +934,10 @@ namespace PL.RentACar {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string MusteriGetiriTuru {
                 get {
-                    return ((string)(this[this.tableMusteriHareketler.MusteriGetiriTuruColumn]));
+                    return ((string)(this[this.tablevw_musteriler.MusteriGetiriTuruColumn]));
                 }
                 set {
-                    this[this.tableMusteriHareketler.MusteriGetiriTuruColumn] = value;
+                    this[this.tablevw_musteriler.MusteriGetiriTuruColumn] = value;
                 }
             }
             
@@ -740,23 +945,155 @@ namespace PL.RentACar {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Silindi {
                 get {
-                    return ((bool)(this[this.tableMusteriHareketler.SilindiColumn]));
+                    return ((bool)(this[this.tablevw_musteriler.SilindiColumn]));
                 }
                 set {
-                    this[this.tableMusteriHareketler.SilindiColumn] = value;
+                    this[this.tablevw_musteriler.SilindiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Expr1 {
+                get {
+                    return ((int)(this[this.tablevw_musteriler.Expr1Column]));
+                }
+                set {
+                    this[this.tablevw_musteriler.Expr1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Adi {
+                get {
+                    return ((string)(this[this.tablevw_musteriler.AdiColumn]));
+                }
+                set {
+                    this[this.tablevw_musteriler.AdiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Soyadi {
+                get {
+                    return ((string)(this[this.tablevw_musteriler.SoyadiColumn]));
+                }
+                set {
+                    this[this.tablevw_musteriler.SoyadiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Telefon {
+                get {
+                    return ((string)(this[this.tablevw_musteriler.TelefonColumn]));
+                }
+                set {
+                    this[this.tablevw_musteriler.TelefonColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Email {
+                get {
+                    return ((string)(this[this.tablevw_musteriler.EmailColumn]));
+                }
+                set {
+                    this[this.tablevw_musteriler.EmailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Adres {
+                get {
+                    return ((string)(this[this.tablevw_musteriler.AdresColumn]));
+                }
+                set {
+                    this[this.tablevw_musteriler.AdresColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string TcKimlikNo {
+                get {
+                    return ((string)(this[this.tablevw_musteriler.TcKimlikNoColumn]));
+                }
+                set {
+                    this[this.tablevw_musteriler.TcKimlikNoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime DogumTarihi {
+                get {
+                    return ((global::System.DateTime)(this[this.tablevw_musteriler.DogumTarihiColumn]));
+                }
+                set {
+                    this[this.tablevw_musteriler.DogumTarihiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Cinsiyet {
+                get {
+                    return ((string)(this[this.tablevw_musteriler.CinsiyetColumn]));
+                }
+                set {
+                    this[this.tablevw_musteriler.CinsiyetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string EhliyetNo {
+                get {
+                    return ((string)(this[this.tablevw_musteriler.EhliyetNoColumn]));
+                }
+                set {
+                    this[this.tablevw_musteriler.EhliyetNoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime EhliyetTarihi {
+                get {
+                    return ((global::System.DateTime)(this[this.tablevw_musteriler.EhliyetTarihiColumn]));
+                }
+                set {
+                    this[this.tablevw_musteriler.EhliyetTarihiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Expr2 {
+                get {
+                    return ((bool)(this[this.tablevw_musteriler.Expr2Column]));
+                }
+                set {
+                    this[this.tablevw_musteriler.Expr2Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsParaBirimiNull() {
-                return this.IsNull(this.tableMusteriHareketler.ParaBirimiColumn);
+                return this.IsNull(this.tablevw_musteriler.ParaBirimiColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetParaBirimiNull() {
-                this[this.tableMusteriHareketler.ParaBirimiColumn] = global::System.Convert.DBNull;
+                this[this.tablevw_musteriler.ParaBirimiColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -764,22 +1101,22 @@ namespace PL.RentACar {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class MusteriHareketlerRowChangeEvent : global::System.EventArgs {
+        public class vw_musterilerRowChangeEvent : global::System.EventArgs {
             
-            private MusteriHareketlerRow eventRow;
+            private vw_musterilerRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public MusteriHareketlerRowChangeEvent(MusteriHareketlerRow row, global::System.Data.DataRowAction action) {
+            public vw_musterilerRowChangeEvent(vw_musterilerRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public MusteriHareketlerRow Row {
+            public vw_musterilerRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -795,7 +1132,7 @@ namespace PL.RentACar {
         }
     }
 }
-namespace PL.RentACar.RentACarDataSet1TableAdapters {
+namespace PL.RentACar.RentACarDataSetMusteriTableAdapters {
     
     
     /// <summary>
@@ -807,7 +1144,7 @@ namespace PL.RentACar.RentACarDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class MusteriHareketlerTableAdapter : global::System.ComponentModel.Component {
+    public partial class vw_musterilerTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -821,7 +1158,7 @@ namespace PL.RentACar.RentACarDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public MusteriHareketlerTableAdapter() {
+        public vw_musterilerTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -918,7 +1255,7 @@ namespace PL.RentACar.RentACarDataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "MusteriHareketler";
+            tableMapping.DataSetTable = "vw_musteriler";
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("Tarih", "Tarih");
             tableMapping.ColumnMappings.Add("MusteriId", "MusteriId");
@@ -927,48 +1264,19 @@ namespace PL.RentACar.RentACarDataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("MusteriGetirisi", "MusteriGetirisi");
             tableMapping.ColumnMappings.Add("MusteriGetiriTuru", "MusteriGetiriTuru");
             tableMapping.ColumnMappings.Add("Silindi", "Silindi");
+            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
+            tableMapping.ColumnMappings.Add("Adi", "Adi");
+            tableMapping.ColumnMappings.Add("Soyadi", "Soyadi");
+            tableMapping.ColumnMappings.Add("Telefon", "Telefon");
+            tableMapping.ColumnMappings.Add("Email", "Email");
+            tableMapping.ColumnMappings.Add("Adres", "Adres");
+            tableMapping.ColumnMappings.Add("TcKimlikNo", "TcKimlikNo");
+            tableMapping.ColumnMappings.Add("DogumTarihi", "DogumTarihi");
+            tableMapping.ColumnMappings.Add("Cinsiyet", "Cinsiyet");
+            tableMapping.ColumnMappings.Add("EhliyetNo", "EhliyetNo");
+            tableMapping.ColumnMappings.Add("EhliyetTarihi", "EhliyetTarihi");
+            tableMapping.ColumnMappings.Add("Expr2", "Expr2");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[MusteriHareketler] WHERE (([Id] = @Original_Id) AND ([Tarih] = @Original_Tarih) AND ([MusteriId] = @Original_MusteriId) AND ([MusteriPuanı] = @Original_MusteriPuanı) AND ([MusteriGetirisi] = @Original_MusteriGetirisi) AND ([Silindi] = @Original_Silindi))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tarih", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tarih", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MusteriId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MusteriId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MusteriPuanı", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MusteriPuanı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MusteriGetirisi", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "MusteriGetirisi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Silindi", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Silindi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[MusteriHareketler] ([Tarih], [MusteriId], [ParaBirimi], [MusteriPuanı], [MusteriGetirisi], [MusteriGetiriTuru], [Silindi]) VALUES (@Tarih, @MusteriId, @ParaBirimi, @MusteriPuanı, @MusteriGetirisi, @MusteriGetiriTuru, @Silindi);
-SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, MusteriGetiriTuru, Silindi FROM MusteriHareketler WHERE (Id = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tarih", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tarih", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MusteriId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MusteriId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParaBirimi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParaBirimi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MusteriPuanı", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MusteriPuanı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MusteriGetirisi", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "MusteriGetirisi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MusteriGetiriTuru", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MusteriGetiriTuru", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Silindi", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Silindi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[MusteriHareketler] SET [Tarih] = @Tarih, [MusteriId] = @MusteriId, [ParaBirimi] = @ParaBirimi, [MusteriPuanı] = @MusteriPuanı, [MusteriGetirisi] = @MusteriGetirisi, [MusteriGetiriTuru] = @MusteriGetiriTuru, [Silindi] = @Silindi WHERE (([Id] = @Original_Id) AND ([Tarih] = @Original_Tarih) AND ([MusteriId] = @Original_MusteriId) AND ([MusteriPuanı] = @Original_MusteriPuanı) AND ([MusteriGetirisi] = @Original_MusteriGetirisi) AND ([Silindi] = @Original_Silindi));
-SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, MusteriGetiriTuru, Silindi FROM MusteriHareketler WHERE (Id = @Id)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tarih", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tarih", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MusteriId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MusteriId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ParaBirimi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ParaBirimi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MusteriPuanı", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MusteriPuanı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MusteriGetirisi", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "MusteriGetirisi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MusteriGetiriTuru", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MusteriGetiriTuru", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Silindi", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Silindi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tarih", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tarih", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MusteriId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MusteriId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MusteriPuanı", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MusteriPuanı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MusteriGetirisi", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "MusteriGetirisi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Silindi", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Silindi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -981,19 +1289,31 @@ SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, Musteri
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, MusteriGe" +
-                "tiriTuru, Silindi FROM dbo.MusteriHareketler";
+                "tiriTuru, Silindi, Expr1, Adi, Soyadi, Telefon, Email, Adres, TcKimlikNo, DogumT" +
+                "arihi, Cinsiyet, EhliyetNo, EhliyetTarihi, Expr2 FROM dbo.vw_musteriler";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, MusteriGetiriTuru, Silindi, Expr1, Adi, Soyadi, Telefon, Email, Adres, TcKimlikNo, DogumTarihi, Cinsiyet, EhliyetNo, EhliyetTarihi, Expr2
+FROM            vw_musteriler
+WHERE        (Adi LIKE @ad + N'%') AND (Soyadi LIKE @soyad + N'%') AND (EhliyetNo LIKE @ehno + N'%') AND (TcKimlikNo LIKE @tc + N'%')
+ORDER BY MusteriId";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ad", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Adi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@soyad", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "Soyadi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ehno", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "EhliyetNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tc", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "TcKimlikNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(RentACarDataSet1.MusteriHareketlerDataTable dataTable) {
+        public virtual int Fill(RentACarDataSetMusteri.vw_musterilerDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1006,9 +1326,9 @@ SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, Musteri
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual RentACarDataSet1.MusteriHareketlerDataTable GetData() {
+        public virtual RentACarDataSetMusteri.vw_musterilerDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            RentACarDataSet1.MusteriHareketlerDataTable dataTable = new RentACarDataSet1.MusteriHareketlerDataTable();
+            RentACarDataSetMusteri.vw_musterilerDataTable dataTable = new RentACarDataSetMusteri.vw_musterilerDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1016,148 +1336,73 @@ SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, Musteri
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(RentACarDataSet1.MusteriHareketlerDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(RentACarDataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "MusteriHareketler");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, System.DateTime Original_Tarih, int Original_MusteriId, int Original_MusteriPuanı, decimal Original_MusteriGetirisi, bool Original_Silindi) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_Tarih));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_MusteriId));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_MusteriPuanı));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original_MusteriGetirisi));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((bool)(Original_Silindi));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime Tarih, int MusteriId, string ParaBirimi, int MusteriPuanı, decimal MusteriGetirisi, string MusteriGetiriTuru, bool Silindi) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Tarih));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(MusteriId));
-            if ((ParaBirimi == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByMusteri(RentACarDataSetMusteri.vw_musterilerDataTable dataTable, string ad, string soyad, string ehno, string tc) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((ad == null)) {
+                throw new global::System.ArgumentNullException("ad");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(ParaBirimi));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(ad));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(MusteriPuanı));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(MusteriGetirisi));
-            if ((MusteriGetiriTuru == null)) {
-                throw new global::System.ArgumentNullException("MusteriGetiriTuru");
+            if ((soyad == null)) {
+                throw new global::System.ArgumentNullException("soyad");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(MusteriGetiriTuru));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(soyad));
             }
-            this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(Silindi));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
+            if ((ehno == null)) {
+                throw new global::System.ArgumentNullException("ehno");
             }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(ehno));
             }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
+            if ((tc == null)) {
+                throw new global::System.ArgumentNullException("tc");
             }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(tc));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime Tarih, int MusteriId, string ParaBirimi, int MusteriPuanı, decimal MusteriGetirisi, string MusteriGetiriTuru, bool Silindi, int Original_Id, System.DateTime Original_Tarih, int Original_MusteriId, int Original_MusteriPuanı, decimal Original_MusteriGetirisi, bool Original_Silindi, int Id) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Tarih));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(MusteriId));
-            if ((ParaBirimi == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual RentACarDataSetMusteri.vw_musterilerDataTable GetDataByMusteri(string ad, string soyad, string ehno, string tc) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((ad == null)) {
+                throw new global::System.ArgumentNullException("ad");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(ParaBirimi));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(ad));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(MusteriPuanı));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(MusteriGetirisi));
-            if ((MusteriGetiriTuru == null)) {
-                throw new global::System.ArgumentNullException("MusteriGetiriTuru");
+            if ((soyad == null)) {
+                throw new global::System.ArgumentNullException("soyad");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(MusteriGetiriTuru));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(soyad));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(Silindi));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_Tarih));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_MusteriId));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_MusteriPuanı));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_MusteriGetirisi));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Original_Silindi));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Id));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
+            if ((ehno == null)) {
+                throw new global::System.ArgumentNullException("ehno");
             }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(ehno));
             }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
+            if ((tc == null)) {
+                throw new global::System.ArgumentNullException("tc");
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime Tarih, int MusteriId, string ParaBirimi, int MusteriPuanı, decimal MusteriGetirisi, string MusteriGetiriTuru, bool Silindi, int Original_Id, System.DateTime Original_Tarih, int Original_MusteriId, int Original_MusteriPuanı, decimal Original_MusteriGetirisi, bool Original_Silindi) {
-            return this.Update(Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, MusteriGetiriTuru, Silindi, Original_Id, Original_Tarih, Original_MusteriId, Original_MusteriPuanı, Original_MusteriGetirisi, Original_Silindi, Original_Id);
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(tc));
+            }
+            RentACarDataSetMusteri.vw_musterilerDataTable dataTable = new RentACarDataSetMusteri.vw_musterilerDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     
@@ -1173,8 +1418,6 @@ SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, Musteri
         
         private UpdateOrderOption _updateOrder;
         
-        private MusteriHareketlerTableAdapter _musteriHareketlerTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1187,20 +1430,6 @@ SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, Musteri
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public MusteriHareketlerTableAdapter MusteriHareketlerTableAdapter {
-            get {
-                return this._musteriHareketlerTableAdapter;
-            }
-            set {
-                this._musteriHareketlerTableAdapter = value;
             }
         }
         
@@ -1223,10 +1452,6 @@ SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, Musteri
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._musteriHareketlerTableAdapter != null) 
-                            && (this._musteriHareketlerTableAdapter.Connection != null))) {
-                    return this._musteriHareketlerTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -1240,9 +1465,6 @@ SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, Musteri
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._musteriHareketlerTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -1252,17 +1474,8 @@ SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, Musteri
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(RentACarDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(RentACarDataSetMusteri dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._musteriHareketlerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.MusteriHareketler.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._musteriHareketlerTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -1271,16 +1484,8 @@ SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, Musteri
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(RentACarDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(RentACarDataSetMusteri dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._musteriHareketlerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.MusteriHareketler.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._musteriHareketlerTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -1289,16 +1494,8 @@ SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, Musteri
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(RentACarDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(RentACarDataSetMusteri dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._musteriHareketlerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.MusteriHareketler.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._musteriHareketlerTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -1331,17 +1528,12 @@ SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, Musteri
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(RentACarDataSet1 dataSet) {
+        public virtual int UpdateAll(RentACarDataSetMusteri dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
-            }
-            if (((this._musteriHareketlerTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._musteriHareketlerTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -1375,15 +1567,6 @@ SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, Musteri
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._musteriHareketlerTableAdapter != null)) {
-                    revertConnections.Add(this._musteriHareketlerTableAdapter, this._musteriHareketlerTableAdapter.Connection);
-                    this._musteriHareketlerTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._musteriHareketlerTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._musteriHareketlerTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._musteriHareketlerTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._musteriHareketlerTableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1441,10 +1624,6 @@ SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, Musteri
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._musteriHareketlerTableAdapter != null)) {
-                    this._musteriHareketlerTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._musteriHareketlerTableAdapter]));
-                    this._musteriHareketlerTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

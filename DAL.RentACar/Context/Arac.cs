@@ -44,6 +44,8 @@ namespace DAL.RentACar.Context
         public Arac()
         {
             Silindi = false;
+            AracDurumu = "Hasar yok";
+            YakitDurumu = "%50";
         }
         public override string ToString()
         {
