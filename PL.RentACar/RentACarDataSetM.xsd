@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="RentDataSetMusteri" targetNamespace="http://tempuri.org/RentDataSetMusteri.xsd" xmlns:mstns="http://tempuri.org/RentDataSetMusteri.xsd" xmlns="http://tempuri.org/RentDataSetMusteri.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="RentACarDataSetM" targetNamespace="http://tempuri.org/RentACarDataSetM.xsd" xmlns:mstns="http://tempuri.org/RentACarDataSetM.xsd" xmlns="http://tempuri.org/RentACarDataSetM.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -7,12 +7,12 @@
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="RentACarConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RentACarConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PL.RentACar.Properties.Settings.GlobalReference.Default.RentACarConnectionString2" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_musterilerTableAdapter" GeneratorDataComponentClassName="vw_musterilerTableAdapter" Name="vw_musteriler" UserDataComponentName="vw_musterilerTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_musteriTableAdapter" GeneratorDataComponentClassName="view_musteriTableAdapter" Name="view_musteri" UserDataComponentName="view_musteriTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="RentACarConnectionString2 (Settings)" DbObjectName="RentACar.dbo.vw_musteriler" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="RentACarConnectionString2 (Settings)" DbObjectName="RentACar.dbo.view_musteri" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, MusteriGetiriTuru, Silindi, Expr1, Adi, Soyadi, Telefon, Email, Adres, TcKimlikNo, DogumTarihi, Cinsiyet, EhliyetNo, EhliyetTarihi, Expr2 FROM dbo.vw_musteriler</CommandText>
+                    <CommandText>SELECT Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, MusteriGetiriTuru, Silindi, Expr1, Adi, Soyadi, Telefon, Email, Adres, TcKimlikNo, DogumTarihi, Cinsiyet, EhliyetNo, EhliyetTarihi, Expr2 FROM dbo.view_musteri</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -40,34 +40,17 @@
               <Mapping SourceColumn="EhliyetTarihi" DataSetColumn="EhliyetTarihi" />
               <Mapping SourceColumn="Expr2" DataSetColumn="Expr2" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="RentACarConnectionString2 (Settings)" DbObjectName="RentACar.dbo.vw_musteriler" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByMusteri" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMusteri" GeneratorSourceName="FillByMusteri" GetMethodModifier="Public" GetMethodName="GetDataByMusteri" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByMusteri" UserSourceName="FillByMusteri">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        Id, Tarih, MusteriId, ParaBirimi, MusteriPuanı, MusteriGetirisi, MusteriGetiriTuru, Silindi, Expr1, Adi, Soyadi, Telefon, Email, Adres, TcKimlikNo, DogumTarihi, Cinsiyet, EhliyetNo, EhliyetTarihi, Expr2
-FROM            vw_musteriler
-WHERE        (Adi LIKE @ad + N'%') AND (Soyadi LIKE @soyad + N'%') AND (TcKimlikNo LIKE @TC + N'%') AND (EhliyetNo LIKE @EhNo + N'%')
-ORDER BY MusteriId DESC</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="ad" ColumnName="Adi" DataSourceName="RentACar.dbo.vw_musteriler" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@ad" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Adi" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="soyad" ColumnName="Soyadi" DataSourceName="RentACar.dbo.vw_musteriler" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@soyad" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Soyadi" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="TC" ColumnName="TcKimlikNo" DataSourceName="RentACar.dbo.vw_musteriler" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@TC" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="TcKimlikNo" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="EhNo" ColumnName="EhliyetNo" DataSourceName="RentACar.dbo.vw_musteriler" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@EhNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="EhliyetNo" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="RentDataSetMusteri" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="RentDataSetMusteri" msprop:Generator_UserDSName="RentDataSetMusteri">
+  <xs:element name="RentACarDataSetM" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="RentACarDataSetM" msprop:Generator_UserDSName="RentACarDataSetM">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="vw_musteriler" msprop:Generator_TableClassName="vw_musterilerDataTable" msprop:Generator_TableVarName="tablevw_musteriler" msprop:Generator_TablePropName="vw_musteriler" msprop:Generator_RowDeletingName="vw_musterilerRowDeleting" msprop:Generator_RowChangingName="vw_musterilerRowChanging" msprop:Generator_RowEvHandlerName="vw_musterilerRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_musterilerRowDeleted" msprop:Generator_UserTableName="vw_musteriler" msprop:Generator_RowChangedName="vw_musterilerRowChanged" msprop:Generator_RowEvArgName="vw_musterilerRowChangeEvent" msprop:Generator_RowClassName="vw_musterilerRow">
+        <xs:element name="view_musteri" msprop:Generator_TableClassName="view_musteriDataTable" msprop:Generator_TableVarName="tableview_musteri" msprop:Generator_TablePropName="view_musteri" msprop:Generator_RowDeletingName="view_musteriRowDeleting" msprop:Generator_RowChangingName="view_musteriRowChanging" msprop:Generator_RowEvHandlerName="view_musteriRowChangeEventHandler" msprop:Generator_RowDeletedName="view_musteriRowDeleted" msprop:Generator_UserTableName="view_musteri" msprop:Generator_RowChangedName="view_musteriRowChanged" msprop:Generator_RowEvArgName="view_musteriRowChangeEvent" msprop:Generator_RowClassName="view_musteriRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -156,7 +139,7 @@ ORDER BY MusteriId DESC</CommandText>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:vw_musteriler" />
+      <xs:selector xpath=".//mstns:view_musteri" />
       <xs:field xpath="mstns:Id" />
       <xs:field xpath="mstns:Expr1" />
     </xs:unique>

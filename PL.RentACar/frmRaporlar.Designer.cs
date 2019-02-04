@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRaporlar));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.AraclarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RentACarDataSetArac = new PL.RentACar.RentACarDataSetArac();
             this.PersonellerBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -46,7 +46,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.reportViewer4 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.lblEhNo = new System.Windows.Forms.Label();
@@ -58,7 +57,6 @@
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.AraclarTableAdapter = new PL.RentACar.RentACarDataSetAracTableAdapters.AraclarTableAdapter();
-            this.MusteriHareketlerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblBitis = new System.Windows.Forms.Label();
@@ -66,11 +64,12 @@
             this.dtpBitis = new System.Windows.Forms.DateTimePicker();
             this.dtpBaslangic = new System.Windows.Forms.DateTimePicker();
             this.button4 = new System.Windows.Forms.Button();
-            this.vw_musterilerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PersonellerTableAdapter = new PL.RentACar.RentACarDataSetTableAdapters.PersonellerTableAdapter();
             this.KasaHareketlerTableAdapter = new PL.RentACar.RentACarDataSet2TableAdapters.KasaHareketlerTableAdapter();
-            this.RentDataSetMusteri = new PL.RentACar.RentDataSetMusteri();
-            this.vw_musterilerTableAdapter = new PL.RentACar.RentDataSetMusteriTableAdapters.vw_musterilerTableAdapter();
+            this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.RentACarDataSetM = new PL.RentACar.RentACarDataSetM();
+            this.view_musteriBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.view_musteriTableAdapter = new PL.RentACar.RentACarDataSetMTableAdapters.view_musteriTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.AraclarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RentACarDataSetArac)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PersonellerBindingSource)).BeginInit();
@@ -82,10 +81,9 @@
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MusteriHareketlerBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vw_musterilerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RentDataSetMusteri)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RentACarDataSetM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_musteriBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // AraclarBindingSource
@@ -182,7 +180,7 @@
             this.reportViewer2.Location = new System.Drawing.Point(4, 5);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(755, 329);
+            this.reportViewer2.Size = new System.Drawing.Size(755, 336);
             this.reportViewer2.TabIndex = 90;
             // 
             // tabPage3
@@ -196,19 +194,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Müşteri Rapor";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // reportViewer3
-            // 
-            this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource3.Name = "DataSetMusteriHareket";
-            reportDataSource3.Value = this.vw_musterilerBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer3.LocalReport.ReportEmbeddedResource = "PL.RentACar.Reports.MusteriHareketRaporu.rdlc";
-            this.reportViewer3.Location = new System.Drawing.Point(4, 5);
-            this.reportViewer3.Name = "reportViewer3";
-            this.reportViewer3.ServerReport.BearerToken = null;
-            this.reportViewer3.Size = new System.Drawing.Size(755, 329);
-            this.reportViewer3.TabIndex = 90;
             // 
             // tabPage4
             // 
@@ -231,7 +216,7 @@
             this.reportViewer4.Location = new System.Drawing.Point(0, 0);
             this.reportViewer4.Name = "reportViewer4";
             this.reportViewer4.ServerReport.BearerToken = null;
-            this.reportViewer4.Size = new System.Drawing.Size(763, 339);
+            this.reportViewer4.Size = new System.Drawing.Size(763, 346);
             this.reportViewer4.TabIndex = 90;
             // 
             // lblEhNo
@@ -313,10 +298,6 @@
             // AraclarTableAdapter
             // 
             this.AraclarTableAdapter.ClearBeforeFill = true;
-            // 
-            // MusteriHareketlerBindingSource
-            // 
-            this.MusteriHareketlerBindingSource.DataMember = "MusteriHareketler";
             // 
             // label5
             // 
@@ -412,10 +393,6 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.btnCikis_Click);
             // 
-            // vw_musterilerBindingSource
-            // 
-            this.vw_musterilerBindingSource.DataMember = "vw_musteriler";
-            // 
             // PersonellerTableAdapter
             // 
             this.PersonellerTableAdapter.ClearBeforeFill = true;
@@ -424,14 +401,32 @@
             // 
             this.KasaHareketlerTableAdapter.ClearBeforeFill = true;
             // 
-            // RentDataSetMusteri
+            // reportViewer3
             // 
-            this.RentDataSetMusteri.DataSetName = "RentDataSetMusteri";
-            this.RentDataSetMusteri.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.view_musteriBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer3.LocalReport.ReportEmbeddedResource = "PL.RentACar.Reports.Report1.rdlc";
+            this.reportViewer3.Location = new System.Drawing.Point(4, 5);
+            this.reportViewer3.Name = "reportViewer3";
+            this.reportViewer3.ServerReport.BearerToken = null;
+            this.reportViewer3.Size = new System.Drawing.Size(755, 329);
+            this.reportViewer3.TabIndex = 0;
             // 
-            // vw_musterilerTableAdapter
+            // RentACarDataSetM
             // 
-            this.vw_musterilerTableAdapter.ClearBeforeFill = true;
+            this.RentACarDataSetM.DataSetName = "RentACarDataSetM";
+            this.RentACarDataSetM.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // view_musteriBindingSource
+            // 
+            this.view_musteriBindingSource.DataMember = "view_musteri";
+            this.view_musteriBindingSource.DataSource = this.RentACarDataSetM;
+            // 
+            // view_musteriTableAdapter
+            // 
+            this.view_musteriTableAdapter.ClearBeforeFill = true;
             // 
             // frmRaporlar
             // 
@@ -458,11 +453,10 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.MusteriHareketlerBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vw_musterilerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RentDataSetMusteri)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RentACarDataSetM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.view_musteriBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -482,8 +476,6 @@
         private System.Windows.Forms.BindingSource PersonellerBindingSource;
         private RentACarDataSet RentACarDataSet;
         private RentACarDataSetTableAdapters.PersonellerTableAdapter PersonellerTableAdapter;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
-        private System.Windows.Forms.BindingSource MusteriHareketlerBindingSource;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer4;
         private System.Windows.Forms.BindingSource KasaHareketlerBindingSource;
         private RentACarDataSet2 RentACarDataSet2;
@@ -496,7 +488,6 @@
         private System.Windows.Forms.TextBox txtTCKNo;
         private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.TextBox txtAd;
-        private System.Windows.Forms.BindingSource vw_musterilerBindingSource;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button4;
@@ -504,7 +495,9 @@
         private System.Windows.Forms.Label lblBaslangic;
         private System.Windows.Forms.DateTimePicker dtpBitis;
         private System.Windows.Forms.DateTimePicker dtpBaslangic;
-        private RentDataSetMusteri RentDataSetMusteri;
-        private RentDataSetMusteriTableAdapters.vw_musterilerTableAdapter vw_musterilerTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
+        private System.Windows.Forms.BindingSource view_musteriBindingSource;
+        private RentACarDataSetM RentACarDataSetM;
+        private RentACarDataSetMTableAdapters.view_musteriTableAdapter view_musteriTableAdapter;
     }
 }

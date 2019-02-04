@@ -202,10 +202,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RentACarDataSetArac.xsd</DependentUpon>
     </Compile>
-    <Compile Include="RentDataSetMusteri.Designer.cs">
+    <Compile Include="RentACarDataSetM.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RentDataSetMusteri.xsd</DependentUpon>
+      <DependentUpon>RentACarDataSetM.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="frmAnaSayfa.resx">
@@ -276,9 +276,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reports\KasaRapor.rdlc" />
-    <EmbeddedResource Include="Reports\MusteriHareketRaporu.rdlc" />
     <EmbeddedResource Include="Reports\PersonelRapor.rdlc" />
     <EmbeddedResource Include="Reports\AracRapor.rdlc" />
+    <EmbeddedResource Include="Reports\Report1.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -322,16 +322,16 @@
     <None Include="RentACarDataSetArac.xss">
       <DependentUpon>RentACarDataSetArac.xsd</DependentUpon>
     </None>
-    <None Include="RentDataSetMusteri.xsc">
-      <DependentUpon>RentDataSetMusteri.xsd</DependentUpon>
+    <None Include="RentACarDataSetM.xsc">
+      <DependentUpon>RentACarDataSetM.xsd</DependentUpon>
     </None>
-    <None Include="RentDataSetMusteri.xsd">
+    <None Include="RentACarDataSetM.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RentDataSetMusteri.Designer.cs</LastGenOutput>
+      <LastGenOutput>RentACarDataSetM.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="RentDataSetMusteri.xss">
-      <DependentUpon>RentDataSetMusteri.xsd</DependentUpon>
+    <None Include="RentACarDataSetM.xss">
+      <DependentUpon>RentACarDataSetM.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
