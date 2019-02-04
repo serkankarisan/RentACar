@@ -26,6 +26,7 @@ namespace PL.RentACar
         KasaHareketRepository khr = new KasaHareketRepository();
         SozlesmeRepository sr = new SozlesmeRepository();
         MusteriRepository mr = new MusteriRepository();
+        MusteriHareketRepository mhr = new MusteriHareketRepository();
         Personel p = new Personel();
         private void btnSec_Click(object sender, EventArgs e)
         {
@@ -250,17 +251,30 @@ namespace PL.RentACar
                 kh.Silindi = false;
                     if (khr.KasaHareketEkle(kh))
                     {
-                        Sozlesme s = new Sozlesme();
-                        s = Genel.soz;
-                        s.Alınan += Convert.ToDecimal(txtSozlesmeOdeme.Text);
-                        s.Borc = s.SozlesmeTutari-Convert.ToDecimal(txtSozlesmeOdeme.Text);
-                        sr.SozlesmeGuncelle(s);
-                        MessageBox.Show("Hareket Eklendi.", "Kayıt gerçekleşti.");
-                        txtBorc.Text = (Convert.ToDecimal(txtBorc.Text) - Convert.ToDecimal(txtSozlesmeOdeme.Text)).ToString();
-                        txtSozlesmeOdeme.Focus();
-                        Temizle();
-                        Genel.soz=null;
 
+                        int puan= mhr.MusteriHareketPuanGetir(Genel.gecicimusteriId);
+                        MusteriHareket mh = new MusteriHareket();
+                        mh.Tarih = DateTime.Now;
+                        mh.MusteriId = Genel.gecicimusteriId;
+                        mh.ParaBirimi = "TL";
+                        mh.MusteriGetirisi = Convert.ToDecimal(txtSozlesmeOdeme.Text);
+                        mh.MusteriGetiriTuru = "Kiralama Ödemesi";
+                        mh.MusteriPuanı = puan;
+                        mh.Silindi = false;
+
+                        if (mhr.MusteriHareketEkle(mh))
+                        {
+                            Sozlesme s = new Sozlesme();
+                            s = Genel.soz;
+                            s.Alınan += Convert.ToDecimal(txtSozlesmeOdeme.Text);
+                            s.Borc = s.SozlesmeTutari - Convert.ToDecimal(txtSozlesmeOdeme.Text);
+                            sr.SozlesmeGuncelle(s);
+                            MessageBox.Show("Hareket Eklendi.", "Kayıt gerçekleşti.");
+                            txtBorc.Text = (Convert.ToDecimal(txtBorc.Text) - Convert.ToDecimal(txtSozlesmeOdeme.Text)).ToString();
+                            txtSozlesmeOdeme.Focus();
+                            Temizle();
+                            Genel.soz = null;
+                        }
                     }
                     else { MessageBox.Show("Kayit gerceklesmedi"); }
             }

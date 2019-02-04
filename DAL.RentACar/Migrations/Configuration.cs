@@ -43,7 +43,7 @@ namespace DAL.RentACar.Migrations
             //   );
             //context.Yetkiler.AddOrUpdate(
             //new Yetki { Id = 1, RoleName = "Yönetici" }, new Yetki { Id = 2, RoleName = "Personel" }
-               );
+               //);
         }
     }
 }

@@ -147,7 +147,6 @@ namespace PL.RentACar
         }
         private void Temizle()
         {
-            Genel.MusteriID = 0;
             txtMusteriAdi.Clear();
             txtMusteriSoyadi.Clear();
             txtMusteriTelefon.Clear();

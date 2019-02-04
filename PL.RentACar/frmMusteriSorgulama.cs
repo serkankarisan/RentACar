@@ -83,6 +83,7 @@ namespace PL.RentACar
         {
             Genel.MusteriID = Convert.ToInt32(dgvMusteriler.SelectedRows[0].Cells[0].Value);
             if (MessageBox.Show("Müşteri Sorgulama Sayafasından Ayrılmak İstiyor musunuz?", "Sayfa Kapatılsın mı?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                Genel.gecicimusteriId = Genel.MusteriID;
             {
                 this.Close();
             }
