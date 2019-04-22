@@ -26,17 +26,6 @@ namespace PL.RentACar.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BURAKASUS\\MSSQLSERVER2017;Initial Catalog=RentACar;User ID=sa;Passwor" +
-            "d=12345w")]
-        public string RentACarConnectionString {
-            get {
-                return ((string)(this["RentACarConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WISSEN\\MSSQL2017;Initial Catalog=RentACar;User ID=sa;Password=12345w")]
         public string RentACarConnectionString1 {
             get {
@@ -52,6 +41,28 @@ namespace PL.RentACar.Properties {
         public string RentACarConnectionString2 {
             get {
                 return ((string)(this["RentACarConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TURGAY-PC\\MSSQLSERVER2017;Initial Catalog=RentACar;User ID=sa;Passwor" +
+            "d=12345w")]
+        public string RentACarConnectionString {
+            get {
+                return ((string)(this["RentACarConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-D76CETGA\\MSSQL2017;Initial Catalog=RentACar;User ID=sa;Passwor" +
+            "d=w12345")]
+        public string RentACarConnectionString3 {
+            get {
+                return ((string)(this["RentACarConnectionString3"]));
             }
         }
     }
