@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{A6654F8B-C4C0-4202-AEB1-651F9C7515E2}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.RentACar", "DAL.RentACar\DAL.RentACar.csproj", "{D49AD391-BA24-4189-B4DE-6FA87B2952EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.RentACar", "PL.RentACar\PL.RentACar.csproj", "{5C5C7684-69DA-40E9-9F49-03F61681A3BF}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{D2A3FBB3-DB3A-4949-954D-08D2D5A5CC09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,8 @@ Global
 		{5C5C7684-69DA-40E9-9F49-03F61681A3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C5C7684-69DA-40E9-9F49-03F61681A3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C5C7684-69DA-40E9-9F49-03F61681A3BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A3FBB3-DB3A-4949-954D-08D2D5A5CC09}.Debug|Any CPU.ActiveCfg = Debug
+		{D2A3FBB3-DB3A-4949-954D-08D2D5A5CC09}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
